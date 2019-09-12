@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseDeDatos", "BaseDeDatos", "{8780E6E0-A6FC-48B1-B548-EE5C0D870725}"
 	ProjectSection(SolutionItems) = preProject
-		BD.sql = BD.sql
+		BDTEC.sql = BDTEC.sql
 	EndProjectSection
 EndProject
 Global
