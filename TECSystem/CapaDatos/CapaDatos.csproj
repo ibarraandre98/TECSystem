@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDConexion.cs" />
-    <Compile Include="CD_Personas.cs" />
+    <Compile Include="CD_Calles.cs" />
+    <Compile Include="CD_Carreras.cs" />
+    <Compile Include="CD_detActividades.cs" />
+    <Compile Include="CD_detGrupos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
