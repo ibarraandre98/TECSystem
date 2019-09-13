@@ -8,11 +8,11 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    class CD_Personas
+    public class CD_Personas
     {
         CDConexion conexion = new CDConexion();
         SqlDataReader leer;
-        DataTable TablaPersonas = new DataTable();
+        DataTable tablaPersonas = new DataTable();
         SqlCommand comando = new SqlCommand();
         public DataTable MostrarPersonas()
         {
@@ -20,9 +20,9 @@ namespace CapaDatos
             comando.CommandText = "select * from personas";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
-            TablaPersonas.Load(leer);
+            tablaPersonas.Load(leer);
             conexion.CerrarConexion();
-            return TablaPersonas;
+            return tablaPersonas;
         }
 
         public void AgregarPersonas(String paterno, String materno, String nombres, String fecha_nac, int sexo, String curp, String telefono, int idCalle, String numExt, String numInt, String cp, int edoCivil, int discapacidad)
