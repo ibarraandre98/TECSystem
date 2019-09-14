@@ -8,44 +8,44 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    public class CD_Profesores
+    public class CD_tiposLocalidad
     {
+        DataTable TablaTiposLocalidad = new DataTable();
         CDConexion conexion = new CDConexion();
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
-        DataTable TablaProfesores = new DataTable();
 
-        public DataTable MostrarProfesores()
+        public DataTable MostrarTiposLocalidad()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from Profesores";
+            comando.CommandText = "select * from tiposlocadidad";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
-            TablaProfesores.Load(leer);
+            TablaTiposLocalidad.Load(leer);
             conexion.CerrarConexion();
-            return TablaProfesores;
+            return TablaTiposLocalidad;
         }
 
-        public void AgregarProfesores(String idProfesor, int idEmpleado, int idAcademia, int tipoMemb)
+        public void AgregarTiposLocalidad(String tipo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into profesores (idProfesor,idEmpleado,idAcademia,tipoMemb) values('"+idProfesor+"',"+idEmpleado+","+idAcademia+","+tipoMemb+");";
+            comando.CommandText = "insert into tiposlocalidad (tipo) values('"+tipo+"';)";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
 
-        public void EditarProfesores(String idProfesor, int idEmpleado, int idAcademia, int tipoMemb,String nuevoidProfesor)
+        public void EditarTiposLocalidad(int idTipoLoc, String tipo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update profesores set idProfesor = '"+nuevoidProfesor+"',idEmpleado = "+idEmpleado+", idAcademia = "+idAcademia+", tipoMemb = "+tipoMemb+" where idProfesor = '"+idProfesor+"';";
+            comando.CommandText = "update tiposlocalidad set tipo = '"+tipo+"' where idTipoLoc = "+idTipoLoc+";";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
 
-        public void EliminarProfesores(String idProfesor)
+        public void EliminarTiposLocalidad(int idTipoLoc)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from profesores where idProfesor = '"+idProfesor+"';";
+            comando.CommandText = "delete from tiposlocalidad where idTipoLoc = " + idTipoLoc + ";";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }

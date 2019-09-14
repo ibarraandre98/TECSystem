@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CN_Personas.cs" />
+    <Compile Include="CN_Profesores.cs" />
+    <Compile Include="CN_tiposLocalidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
