@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_Personas.cs" />
+    <Compile Include="CN_Profesores.cs" />
+    <Compile Include="CN_tiposLocalidad.cs" />
     <Compile Include="CN_Calles.cs" />
     <Compile Include="CN_Carreras.cs" />
     <Compile Include="CN_detActividades.cs" />
