@@ -33,5 +33,7 @@ namespace CapaNegocio
         {
             _CD_TiposLocalidad.EliminarTiposLocalidad(Convert.ToInt32(idTipoLoc));
         }
+
+
     }
 }
