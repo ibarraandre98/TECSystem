@@ -18,5 +18,20 @@ namespace CapaNegocio
         {
             return TablaTiposLocalidad = _CD_TiposLocalidad.MostrarTiposLocalidad();
         }
+
+        public void AgregarTiposLocalidad(String tipo)
+        {
+            _CD_TiposLocalidad.AgregarTiposLocalidad(tipo);
+        }
+
+        public void EditarTiposLocalidad(String idTipoLoc,String tipo)
+        {
+            _CD_TiposLocalidad.EditarTiposLocalidad(Convert.ToInt32(idTipoLoc), tipo);
+        }
+
+        public void EliminarTiposLocalidad(String idTipoLoc)
+        {
+            _CD_TiposLocalidad.EliminarTiposLocalidad(Convert.ToInt32(idTipoLoc));
+        }
     }
 }
