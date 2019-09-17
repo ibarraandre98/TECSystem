@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,20 +8,27 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CN_Carreras
+    public class CN_Carreras
     {
 
         private CD_Carreras objetoCD = new CD_Carreras();
 
-        public void AgregarCarrera(string nombre, int coordinador)
+        DataTable tabla = new DataTable();
+
+        public DataTable MostrarTabla()
+        {
+            return tabla = objetoCD.MostrarTabla();
+        }
+
+        public void AgregarCarrera(string nombre, string coordinador)
         {
             objetoCD.AgregarCarrera(nombre, coordinador);
         }
-        public void EditarCarrera(int idCarrera, string nombre, int coordinador)
+        public void EditarCarrera(string idCarrera, string nombre, string coordinador)
         {
             objetoCD.EditarCarrera(idCarrera, nombre, coordinador);
         }
-        public void EliminarCarrera(int idCarrera)
+        public void EliminarCarrera(string idCarrera)
         {
             objetoCD.ElimnarCarrera(idCarrera);
         }

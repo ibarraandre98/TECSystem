@@ -15,18 +15,30 @@ namespace CapaDatos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public void AgregarCalles(int localidad, string nombre)
+
+        public DataTable MostrarTabla()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from calles";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+
+        public void AgregarCalles(string localidad, string nombre)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
-            comando = new SqlCommand("insert into calles(Localidad,nombre) values(@localidad,@nombre);");
+            comando = new SqlCommand("insert into calles (Localidad,nombre) values(@localidad,@nombre);");
             comando.Parameters.AddWithValue("@localidad", localidad);
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.ExecuteNonQuery();
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void EditarCalles(int idCalle, int Localidad, int nombre)
+        public void EditarCalles(string idCalle, string Localidad, string nombre)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
@@ -38,7 +50,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void EliminarCalles(int idCalle)
+        public void EliminarCalles(string idCalle)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();

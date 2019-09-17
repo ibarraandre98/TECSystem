@@ -82,10 +82,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDConexion.cs" />
-    <Compile Include="CD_Estados.cs" />
-    <Compile Include="CD_Grupos.cs" />
-    <Compile Include="CD_Horarios.cs" />
-    <Compile Include="CD_Inasistencias.cs" />
+    <Compile Include="CD_Academias.cs" />
+    <Compile Include="CD_Actividades.cs" />
+    <Compile Include="CD_Alumnos.cs" />
+    <Compile Include="CD_Calificaciones.cs" />
     <Compile Include="CD_Personas.cs" />
     <Compile Include="CD_Profesores.cs" />
     <Compile Include="CD_tiposLocalidad.cs" />
