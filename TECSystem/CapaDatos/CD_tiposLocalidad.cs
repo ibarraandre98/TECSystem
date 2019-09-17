@@ -18,7 +18,7 @@ namespace CapaDatos
         public DataTable MostrarTiposLocalidad()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from tiposlocadidad";
+            comando.CommandText = "select * from tiposLocalidad";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             TablaTiposLocalidad.Load(leer);
