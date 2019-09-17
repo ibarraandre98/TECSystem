@@ -31,7 +31,7 @@ namespace CapaDatos
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
-            comando = new SqlCommand("insert into calles(Localidad,nombre) values(@localidad,@nombre);");
+            comando = new SqlCommand("insert into calles (Localidad,nombre) values(@localidad,@nombre);");
             comando.Parameters.AddWithValue("@localidad", localidad);
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.ExecuteNonQuery();
