@@ -15,7 +15,17 @@ namespace CapaDatos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public void AgregarCarrera(string nombre, int coordinador)
+        public DataTable MostrarTabla()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from carreras";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+        public void AgregarCarrera(string nombre, string coordinador)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
@@ -26,7 +36,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void EditarCarrera(int idCarrera, string nombre, int coordinador)
+        public void EditarCarrera(string idCarrera, string nombre, string coordinador)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
@@ -38,7 +48,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void ElimnarCarrera(int idCarrera)
+        public void ElimnarCarrera(string idCarrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();

@@ -50,6 +50,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calles.Designer.cs">
+      <DependentUpon>Calles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carreras.Designer.cs">
+      <DependentUpon>Carreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detActividades.Designer.cs">
+      <DependentUpon>detActividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="detGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detGrupos.Designer.cs">
+      <DependentUpon>detGrupos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +94,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Calles.resx">
+      <DependentUpon>Calles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carreras.resx">
+      <DependentUpon>Carreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detActividades.resx">
+      <DependentUpon>detActividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detGrupos.resx">
+      <DependentUpon>detGrupos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personas.resx">
       <DependentUpon>Personas.cs</DependentUpon>
     </EmbeddedResource>
