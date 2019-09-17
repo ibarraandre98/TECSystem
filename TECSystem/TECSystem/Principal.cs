@@ -42,7 +42,7 @@ namespace TECSystem
         #region ANIMACION DE MENU
         private void FormularioCerrar_Click(object sender, EventArgs e)
         {
-            panelMenu.Width = 50;
+            panelMenu.Width = 25;
             FormularioCerrar.Visible = false;
             FormularioAbrir.Visible = true;
             Logo.Visible = false;
@@ -126,6 +126,26 @@ namespace TECSystem
         {
             AbrirFormulario<detGrupos>();
 
+        }
+
+        private void BunifuFlatButton17_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Estados>();
+        }
+
+        private void BunifuFlatButton15_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Horarios>();
+        }
+
+        private void BunifuFlatButton14_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Inasistencias>();
+        }
+
+        private void BunifuFlatButton16_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Grupos>();
         }
     }
 }

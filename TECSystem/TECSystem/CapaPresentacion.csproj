@@ -74,6 +74,30 @@
     <Compile Include="detGrupos.Designer.cs">
       <DependentUpon>detGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estados.Designer.cs">
+      <DependentUpon>Estados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grupos.Designer.cs">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Horarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horarios.Designer.cs">
+      <DependentUpon>Horarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inasistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inasistencias.Designer.cs">
+      <DependentUpon>Inasistencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +129,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="detGrupos.resx">
       <DependentUpon>detGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estados.resx">
+      <DependentUpon>Estados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grupos.resx">
+      <DependentUpon>Grupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horarios.resx">
+      <DependentUpon>Horarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inasistencias.resx">
+      <DependentUpon>Inasistencias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personas.resx">
       <DependentUpon>Personas.cs</DependentUpon>
