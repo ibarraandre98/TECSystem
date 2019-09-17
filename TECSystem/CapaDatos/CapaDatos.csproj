@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDConexion.cs" />
+    <Compile Include="CDLocalidades.cs" />
+    <Compile Include="CDMateria.cs" />
+    <Compile Include="CDMunicipio.cs" />
     <Compile Include="CD_Academias.cs" />
     <Compile Include="CD_Actividades.cs" />
     <Compile Include="CD_Alumnos.cs" />
