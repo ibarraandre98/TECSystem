@@ -118,7 +118,7 @@
             this.bunifuFlatButton13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton13.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton13.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton13.Iconimage = global::TECSystem.Properties.Resources.Dog;
+            this.bunifuFlatButton13.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton13.Iconimage")));
             this.bunifuFlatButton13.Iconimage_right = null;
             this.bunifuFlatButton13.Iconimage_right_Selected = null;
             this.bunifuFlatButton13.Iconimage_Selected = null;
@@ -153,7 +153,7 @@
             this.bunifuFlatButton15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton15.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton15.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton15.Iconimage = global::TECSystem.Properties.Resources.Home;
+            this.bunifuFlatButton15.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton15.Iconimage")));
             this.bunifuFlatButton15.Iconimage_right = null;
             this.bunifuFlatButton15.Iconimage_right_Selected = null;
             this.bunifuFlatButton15.Iconimage_Selected = null;
@@ -188,7 +188,7 @@
             this.bunifuFlatButton14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton14.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton14.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton14.Iconimage = global::TECSystem.Properties.Resources.Edit;
+            this.bunifuFlatButton14.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton14.Iconimage")));
             this.bunifuFlatButton14.Iconimage_right = null;
             this.bunifuFlatButton14.Iconimage_right_Selected = null;
             this.bunifuFlatButton14.Iconimage_Selected = null;
@@ -223,7 +223,7 @@
             this.bunifuFlatButton19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton19.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton19.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton19.Iconimage = global::TECSystem.Properties.Resources.Config;
+            this.bunifuFlatButton19.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton19.Iconimage")));
             this.bunifuFlatButton19.Iconimage_right = null;
             this.bunifuFlatButton19.Iconimage_right_Selected = null;
             this.bunifuFlatButton19.Iconimage_Selected = null;
@@ -247,7 +247,6 @@
             this.bunifuFlatButton19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton19.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(112)))), ((int)(((byte)(140)))));
             this.bunifuFlatButton19.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             // 
             // bunifuFlatButton20
             // 
@@ -259,7 +258,7 @@
             this.bunifuFlatButton20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton20.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton20.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton20.Iconimage = global::TECSystem.Properties.Resources.Delete;
+            this.bunifuFlatButton20.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton20.Iconimage")));
             this.bunifuFlatButton20.Iconimage_right = null;
             this.bunifuFlatButton20.Iconimage_right_Selected = null;
             this.bunifuFlatButton20.Iconimage_Selected = null;
@@ -283,7 +282,6 @@
             this.bunifuFlatButton20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton20.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(112)))), ((int)(((byte)(140)))));
             this.bunifuFlatButton20.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
             // 
             // bunifuFlatButton21
             // 
@@ -295,7 +293,7 @@
             this.bunifuFlatButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton21.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton21.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton21.Iconimage = global::TECSystem.Properties.Resources.Dog;
+            this.bunifuFlatButton21.Iconimage = global::TECSystem.Properties.Resources.User;
             this.bunifuFlatButton21.Iconimage_right = null;
             this.bunifuFlatButton21.Iconimage_right_Selected = null;
             this.bunifuFlatButton21.Iconimage_Selected = null;
@@ -331,7 +329,7 @@
             this.bunifuFlatButton10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton10.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton10.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton10.Iconimage = global::TECSystem.Properties.Resources.User;
+            this.bunifuFlatButton10.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton10.Iconimage")));
             this.bunifuFlatButton10.Iconimage_right = null;
             this.bunifuFlatButton10.Iconimage_right_Selected = null;
             this.bunifuFlatButton10.Iconimage_Selected = null;
@@ -366,7 +364,7 @@
             this.bunifuFlatButton11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton11.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton11.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton11.Iconimage = global::TECSystem.Properties.Resources.Config;
+            this.bunifuFlatButton11.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton11.Iconimage")));
             this.bunifuFlatButton11.Iconimage_right = null;
             this.bunifuFlatButton11.Iconimage_right_Selected = null;
             this.bunifuFlatButton11.Iconimage_Selected = null;
@@ -401,7 +399,7 @@
             this.bunifuFlatButton12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton12.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton12.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton12.Iconimage = global::TECSystem.Properties.Resources.Delete;
+            this.bunifuFlatButton12.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton12.Iconimage")));
             this.bunifuFlatButton12.Iconimage_right = null;
             this.bunifuFlatButton12.Iconimage_right_Selected = null;
             this.bunifuFlatButton12.Iconimage_Selected = null;
@@ -436,7 +434,7 @@
             this.bunifuFlatButton16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton16.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton16.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton16.Iconimage = global::TECSystem.Properties.Resources.Lock;
+            this.bunifuFlatButton16.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton16.Iconimage")));
             this.bunifuFlatButton16.Iconimage_right = null;
             this.bunifuFlatButton16.Iconimage_right_Selected = null;
             this.bunifuFlatButton16.Iconimage_Selected = null;
@@ -471,7 +469,7 @@
             this.bunifuFlatButton17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton17.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton17.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton17.Iconimage = global::TECSystem.Properties.Resources.Pick;
+            this.bunifuFlatButton17.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton17.Iconimage")));
             this.bunifuFlatButton17.Iconimage_right = null;
             this.bunifuFlatButton17.Iconimage_right_Selected = null;
             this.bunifuFlatButton17.Iconimage_Selected = null;
@@ -506,7 +504,7 @@
             this.bunifuFlatButton18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton18.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton18.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton18.Iconimage = global::TECSystem.Properties.Resources.Search;
+            this.bunifuFlatButton18.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton18.Iconimage")));
             this.bunifuFlatButton18.Iconimage_right = null;
             this.bunifuFlatButton18.Iconimage_right_Selected = null;
             this.bunifuFlatButton18.Iconimage_Selected = null;
@@ -541,7 +539,7 @@
             this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.Iconimage = global::TECSystem.Properties.Resources.User;
+            this.bunifuFlatButton9.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton9.Iconimage")));
             this.bunifuFlatButton9.Iconimage_right = null;
             this.bunifuFlatButton9.Iconimage_right_Selected = null;
             this.bunifuFlatButton9.Iconimage_Selected = null;
@@ -576,7 +574,7 @@
             this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton8.Iconimage = global::TECSystem.Properties.Resources.Config;
+            this.bunifuFlatButton8.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton8.Iconimage")));
             this.bunifuFlatButton8.Iconimage_right = null;
             this.bunifuFlatButton8.Iconimage_right_Selected = null;
             this.bunifuFlatButton8.Iconimage_Selected = null;
@@ -611,7 +609,7 @@
             this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton7.Iconimage = global::TECSystem.Properties.Resources.Delete;
+            this.bunifuFlatButton7.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton7.Iconimage")));
             this.bunifuFlatButton7.Iconimage_right = null;
             this.bunifuFlatButton7.Iconimage_right_Selected = null;
             this.bunifuFlatButton7.Iconimage_Selected = null;
@@ -647,7 +645,7 @@
             this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = global::TECSystem.Properties.Resources.Dog;
+            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
             this.bunifuFlatButton6.Iconimage_right = null;
             this.bunifuFlatButton6.Iconimage_right_Selected = null;
             this.bunifuFlatButton6.Iconimage_Selected = null;
@@ -683,7 +681,7 @@
             this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = global::TECSystem.Properties.Resources.Edit;
+            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
             this.bunifuFlatButton5.Iconimage_right = null;
             this.bunifuFlatButton5.Iconimage_right_Selected = null;
             this.bunifuFlatButton5.Iconimage_Selected = null;
@@ -719,7 +717,7 @@
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = global::TECSystem.Properties.Resources.Home;
+            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
             this.bunifuFlatButton4.Iconimage_right = null;
             this.bunifuFlatButton4.Iconimage_right_Selected = null;
             this.bunifuFlatButton4.Iconimage_Selected = null;
@@ -755,7 +753,7 @@
             this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = global::TECSystem.Properties.Resources.Lock;
+            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
             this.bunifuFlatButton3.Iconimage_right = null;
             this.bunifuFlatButton3.Iconimage_right_Selected = null;
             this.bunifuFlatButton3.Iconimage_Selected = null;
@@ -790,7 +788,7 @@
             this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = global::TECSystem.Properties.Resources.Pick;
+            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
             this.bunifuFlatButton2.Iconimage_right = null;
             this.bunifuFlatButton2.Iconimage_right_Selected = null;
             this.bunifuFlatButton2.Iconimage_Selected = null;
@@ -825,7 +823,7 @@
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::TECSystem.Properties.Resources.Search;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
             this.bunifuFlatButton1.Iconimage_right = null;
             this.bunifuFlatButton1.Iconimage_right_Selected = null;
             this.bunifuFlatButton1.Iconimage_Selected = null;
