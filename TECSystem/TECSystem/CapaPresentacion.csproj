@@ -56,19 +56,43 @@
     <Compile Include="Academia.Designer.cs">
       <DependentUpon>Academia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas.Designer.cs">
+      <DependentUpon>Personas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profesores.Designer.cs">
+      <DependentUpon>Profesores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TiposLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposLocalidad.Designer.cs">
+      <DependentUpon>TiposLocalidad.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Personas.resx">
+      <DependentUpon>Personas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Academia.resx">
       <DependentUpon>Academia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesores.resx">
+      <DependentUpon>Profesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +104,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TiposLocalidad.resx">
+      <DependentUpon>TiposLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -98,5 +98,20 @@ namespace TECSystem
         {
             Application.Exit();
         }
+
+        private void BunifuFlatButton21_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Personas>();
+        }
+
+        private void BunifuFlatButton20_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Profesores>();
+        }
+
+        private void BunifuFlatButton19_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<TiposLocalidad>();
+        }
     }
 }

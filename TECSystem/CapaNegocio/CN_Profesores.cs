@@ -9,7 +9,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CN_Profesores
+    public class CN_Profesores
     {
         CD_Profesores _CD_Profesores = new CD_Profesores();
         DataTable TablaProfesores = new DataTable();
@@ -32,5 +32,7 @@ namespace CapaNegocio
         {
             _CD_Profesores.EliminarProfesores(idProfesor);
         }
+
+
     }
 }
