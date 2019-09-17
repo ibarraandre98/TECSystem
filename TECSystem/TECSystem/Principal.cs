@@ -104,14 +104,28 @@ namespace TECSystem
             AbrirFormulario<Personas>();
         }
 
-        private void BunifuFlatButton20_Click(object sender, EventArgs e)
+        private void BunifuFlatButton4_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Profesores>();
+            AbrirFormulario<Calles>();
+
         }
 
-        private void BunifuFlatButton19_Click(object sender, EventArgs e)
+        private void BunifuFlatButton5_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<TiposLocalidad>();
+            AbrirFormulario<Carreras>();
+
+        }
+
+        private void BunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<detActividades>();
+
+        }
+
+        private void BunifuFlatButton7_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<detGrupos>();
+
         }
     }
 }
