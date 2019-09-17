@@ -15,6 +15,16 @@ namespace CapaDatos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
+        public DataTable MostrarTabla()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from detGrupos";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
         public void AgregarGrupo(string cveGrupo, string matricula, string tipoCurso)
         {
             comando.Connection = conexion.AbrirConexion();
@@ -28,7 +38,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void EditarGrupo(int idDetGpo, string cveGrupo, string matricula, string tipoCurso)
+        public void EditarGrupo(string idDetGpo, string cveGrupo, string matricula, string tipoCurso)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
@@ -42,7 +52,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void EliminarActividad(int idDetGpo)
+        public void EliminarActividad(string idDetGpo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();

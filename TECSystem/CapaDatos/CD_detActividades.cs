@@ -15,7 +15,17 @@ namespace CapaDatos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public void AgregarActividad(int actividad, string matricula, string calificacion, string fechaEntrega )
+        public DataTable MostrarTabla()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from detActividades";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+        public void AgregarActividad(string actividad, string matricula, string calificacion, string fechaEntrega )
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
@@ -29,7 +39,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void EditarActividad(int idDetAct, int actividad, string matricula, string calificacion, string fechaEntrega)
+        public void EditarActividad(string idDetAct, string actividad, string matricula, string calificacion, string fechaEntrega)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
@@ -44,7 +54,7 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
         }
 
-        public void EliminarActividad(int idDetAct)
+        public void EliminarActividad(string idDetAct)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
