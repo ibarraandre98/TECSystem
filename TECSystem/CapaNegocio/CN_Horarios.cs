@@ -15,7 +15,7 @@ namespace CapaNegocio
         public DataTable mostrarHorarios()
         {
             DataTable tabla = new DataTable();
-            tabla = obj.MostrarHorarios;
+            tabla = obj.MostrarHorarios();
             return tabla;
         }
 
