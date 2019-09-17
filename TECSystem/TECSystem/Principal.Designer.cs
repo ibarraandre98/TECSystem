@@ -247,7 +247,7 @@
             this.bunifuFlatButton19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton19.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(112)))), ((int)(((byte)(140)))));
             this.bunifuFlatButton19.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton19.Click += new System.EventHandler(this.BunifuFlatButton19_Click);
+
             // 
             // bunifuFlatButton20
             // 
@@ -283,7 +283,7 @@
             this.bunifuFlatButton20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton20.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(112)))), ((int)(((byte)(140)))));
             this.bunifuFlatButton20.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton20.Click += new System.EventHandler(this.BunifuFlatButton20_Click);
+
             // 
             // bunifuFlatButton21
             // 
