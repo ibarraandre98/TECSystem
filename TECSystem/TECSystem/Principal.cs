@@ -93,5 +93,10 @@ namespace TECSystem
             */
         }
         #endregion
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
