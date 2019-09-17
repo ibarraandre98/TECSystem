@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_Estados.cs" />
+    <Compile Include="CN_Grupos.cs" />
+    <Compile Include="CN_Horarios.cs" />
+    <Compile Include="CN_Inasistencias.cs" />
     <Compile Include="CN_Personas.cs" />
     <Compile Include="CN_Profesores.cs" />
     <Compile Include="CN_tiposLocalidad.cs" />
