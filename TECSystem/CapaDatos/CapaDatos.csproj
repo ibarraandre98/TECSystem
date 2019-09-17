@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDConexion.cs" />
+    <Compile Include="CD_empleados.cs" />
+    <Compile Include="CD_empleos.cs" />
+    <Compile Include="CD_especialidades.cs" />
     <Compile Include="CD_Personas.cs" />
     <Compile Include="CD_Profesores.cs" />
     <Compile Include="CD_tiposLocalidad.cs" />

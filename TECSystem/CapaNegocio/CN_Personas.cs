@@ -10,7 +10,7 @@ using System.Data;
 namespace CapaNegocio
 {
     class CN_Personas
-    {
+    {  
         CD_Personas _CD_Personas = new CD_Personas();
         DataTable tablaPersonas = new DataTable();
 

@@ -9,7 +9,8 @@ namespace CapaDatos
 {
     public class CDConexion
     {
-        private SqlConnection Conexion = new SqlConnection("Data Source=.;Initial Catalog=BDTEC;Integrated Security=True");
+      //  private SqlConnection Conexion = new SqlConnection("Data Source=DESKTOP-B91CM40\OSCAR;Initial Catalog=BDTEC;Integrated Security=True");
+         private SqlConnection Conexion = new SqlConnection("Data Source=.;Initial Catalog=BDTEC;Integrated Security=True");
         public SqlConnection AbrirConexion()
         {
             if (Conexion.State == System.Data.ConnectionState.Closed)
