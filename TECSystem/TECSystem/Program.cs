@@ -16,7 +16,7 @@ namespace TECSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Academia());
+            Application.Run(new Principal());
         }
     }
 }
