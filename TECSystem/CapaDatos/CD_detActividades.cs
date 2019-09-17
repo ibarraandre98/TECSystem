@@ -25,43 +25,42 @@ namespace CapaDatos
             conexion.CerrarConexion();
             return tabla;
         }
-        public void AgregarActividad(string actividad, string matricula, string calificacion, string fechaEntrega )
+        public void AgregarActividad(string actividad, string matricula, string calificacion, DateTime fechaEntrega )
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("insert into detActividades(actividad,matricula,calificacion,fechaEntrega) values(@actividad,@matricula,@calificacion,@fechaEntrega);");
+            comando.CommandText = "insert into detActividades(actividad,matricula,calificacion,fechaEntrega) values(@actividad,@matricula,@calificacion,@fechaEntrega);";
             comando.Parameters.AddWithValue("@actividad", actividad);
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@calificacion", calificacion);
             comando.Parameters.AddWithValue("@fechaEntrega", fechaEntrega);
-
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
-        public void EditarActividad(string idDetAct, string actividad, string matricula, string calificacion, string fechaEntrega)
+        public void EditarActividad(string idDetAct, string actividad, string matricula, string calificacion, DateTime fechaEntrega)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("update detActividades set actividad=@actividad, matricula=@matricula, calificacion=@calificacion,fechaEntrega=@fechaEntrega where idDetAct=@idDetAct");
+            comando.CommandText = "update detActividades set actividad=@actividad, matricula=@matricula, calificacion=@calificacion,fechaEntrega=@fechaEntrega where idDetAct=@idDetAct";
             comando.Parameters.AddWithValue("@idDetAct", idDetAct);
             comando.Parameters.AddWithValue("@actividad", actividad);
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@calificacion", calificacion);
             comando.Parameters.AddWithValue("@fechaEntrega", fechaEntrega);
-
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
         public void EliminarActividad(string idDetAct)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("DELETE FROM detActividades WHERE idDetAct=@idDetAct");
+            comando.CommandText = "delete from detActividades where idDetAct = @idDetAct";
             comando.Parameters.AddWithValue("@idDetAct", idDetAct);
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
     }
 }

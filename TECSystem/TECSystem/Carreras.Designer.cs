@@ -141,6 +141,7 @@
             this.dtgCarreras.Name = "dtgCarreras";
             this.dtgCarreras.Size = new System.Drawing.Size(1014, 282);
             this.dtgCarreras.TabIndex = 35;
+            this.dtgCarreras.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgCarreras_CellDoubleClick);
             // 
             // label1
             // 

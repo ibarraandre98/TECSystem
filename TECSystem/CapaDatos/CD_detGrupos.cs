@@ -28,38 +28,37 @@ namespace CapaDatos
         public void AgregarGrupo(string cveGrupo, string matricula, string tipoCurso)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("insert into detGrupos(cveGrupo,matricula,tipoCurso) values(@cveGrupo,@matricula,@tipoCurso);");
+            comando.CommandText = "insert into detGrupos(cveGrupo,matricula,tipoCurso) values(@cveGrupo,@matricula,@tipoCurso);";
             comando.Parameters.AddWithValue("@cveGrupo", cveGrupo);
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@tipoCurso", tipoCurso);
-
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
         public void EditarGrupo(string idDetGpo, string cveGrupo, string matricula, string tipoCurso)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("update detGrupos set cveGrupo=@actividad, matricula=@matricula, tipoCurso=@tipoCurso where idDetGpo=@idDetGpo");
+            comando.CommandText = "update detGrupos set cveGrupo=@cveGrupo, matricula=@matricula, tipoCurso=@tipoCurso where idDetGpo=@idDetGpo";
             comando.Parameters.AddWithValue("@idDetGpo", idDetGpo);
             comando.Parameters.AddWithValue("@cveGrupo", cveGrupo);
             comando.Parameters.AddWithValue("@matricula", matricula);
-            comando.Parameters.AddWithValue("@tipoCursoa", tipoCurso);
-
+            comando.Parameters.AddWithValue("@tipoCurso", tipoCurso);
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
         public void EliminarActividad(string idDetGpo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("DELETE FROM detGrupos WHERE idDetGpo=@idDetGpo");
+            comando.CommandText = "DELETE FROM detGrupos WHERE idDetGpo=@idDetGpo";
             comando.Parameters.AddWithValue("@idDetGpo", idDetGpo);
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
     }
 }

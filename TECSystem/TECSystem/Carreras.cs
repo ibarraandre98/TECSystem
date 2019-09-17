@@ -23,14 +23,14 @@ namespace TECSystem
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             _CN_Carrera.AgregarCarrera(txtNombre.Text, txtCoordinador.Text);
-            MostrarCalles();
+            MostrarTabla();
             Limpiartxt();
         }
 
-        private void MostrarCalles()
+        private void MostrarTabla()
         {
-            CN_Calles _CN_Calles = new CN_Calles();
-            dtgCarreras.DataSource = _CN_Calles.MostrarTabla();
+            CN_Carreras _CN_Carreras = new CN_Carreras();
+            dtgCarreras.DataSource = _CN_Carreras.MostrarTabla();
         }
 
         private void Limpiartxt()
@@ -44,26 +44,37 @@ namespace TECSystem
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             _CN_Carrera.EditarCarrera(txtIdCarrera.Text, txtNombre.Text, txtCoordinador.Text);
-            MostrarCalles();
             Limpiartxt();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             btnAgregar.Enabled = true;
+            MostrarTabla();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             _CN_Carrera.EliminarCarrera(txtIdCarrera.Text);
-            MostrarCalles();
             Limpiartxt();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             btnAgregar.Enabled = true;
+            MostrarTabla();
         }
 
         private void Carreras_Load(object sender, EventArgs e)
         {
-            MostrarCalles();
+            MostrarTabla();
+        }
+
+        private void DtgCarreras_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdCarrera.Text = dtgCarreras.CurrentRow.Cells["idCarrera"].Value.ToString();
+            txtNombre.Text = dtgCarreras.CurrentRow.Cells["nombre"].Value.ToString();
+            txtCoordinador.Text = dtgCarreras.CurrentRow.Cells["coordinador"].Value.ToString();
+
+            btnAgregar.Enabled = false;
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
         }
     }
 }

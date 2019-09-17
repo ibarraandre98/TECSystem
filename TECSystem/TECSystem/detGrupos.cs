@@ -67,5 +67,18 @@ namespace TECSystem
             MostrarTabla();
 
         }
+
+        private void DtgdetGrupos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtiddetGpo.Text = dtgdetGrupos.CurrentRow.Cells["idDetGpo"].Value.ToString();
+            txtCveGrupo.Text = dtgdetGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
+            txtMatricula.Text = dtgdetGrupos.CurrentRow.Cells["matricula"].Value.ToString();
+            txtTipoCurso.Text = dtgdetGrupos.CurrentRow.Cells["tipoCurso"].Value.ToString();
+
+            btnAgregar.Enabled = false;
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
+        }
     }
-}
+    }
+

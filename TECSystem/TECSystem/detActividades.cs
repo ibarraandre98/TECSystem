@@ -22,7 +22,7 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_detActividades.AgregarACtividad(txtActividad.Text, txtMatricula.Text, txtCalificacion.Text, txtFechaEntrega.Text);
+            _CN_detActividades.AgregarACtividad(txtActividad.Text, txtMatricula.Text, txtCalificacion.Text, txtFechaEntrega.Value);
             MostrarTabla();
             Limpiartxt();
         }
@@ -44,7 +44,7 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _CN_detActividades.EditarActividad(txtIddetAct.Text, txtActividad.Text, txtMatricula.Text,txtCalificacion.Text, txtFechaEntrega.Text);
+            _CN_detActividades.EditarActividad(txtIddetAct.Text, txtActividad.Text, txtMatricula.Text,txtCalificacion.Text, txtFechaEntrega.Value);
             MostrarTabla();
             Limpiartxt();
             btnEliminar.Enabled = false;
@@ -65,6 +65,19 @@ namespace TECSystem
         private void DetActividades_Load(object sender, EventArgs e)
         {
             MostrarTabla();
+        }
+
+        private void DtgdetActividades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIddetAct.Text = dtgdetActividades.CurrentRow.Cells["idDetAct"].Value.ToString();
+            txtActividad.Text = dtgdetActividades.CurrentRow.Cells["actividad"].Value.ToString();
+            txtMatricula.Text = dtgdetActividades.CurrentRow.Cells["matricula"].Value.ToString();
+            txtCalificacion.Text = dtgdetActividades.CurrentRow.Cells["calificacion"].Value.ToString();
+            txtFechaEntrega.Text = dtgdetActividades.CurrentRow.Cells["fechaEntrega"].Value.ToString();
+
+            btnAgregar.Enabled = false;
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
         }
     }
 }

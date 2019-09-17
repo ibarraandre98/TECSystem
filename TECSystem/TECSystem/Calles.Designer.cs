@@ -141,6 +141,7 @@
             this.dtgCalles.Name = "dtgCalles";
             this.dtgCalles.Size = new System.Drawing.Size(1014, 282);
             this.dtgCalles.TabIndex = 35;
+            this.dtgCalles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgCalles_CellDoubleClick);
             // 
             // label1
             // 

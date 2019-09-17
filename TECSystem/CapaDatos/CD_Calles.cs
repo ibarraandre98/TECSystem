@@ -30,34 +30,36 @@ namespace CapaDatos
         public void AgregarCalles(string localidad, string nombre)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("insert into calles (Localidad,nombre) values(@localidad,@nombre);");
+            comando.CommandText = "insert into calles (Localidad,nombre) values(@localidad,@nombre);";
             comando.Parameters.AddWithValue("@localidad", localidad);
             comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
         public void EditarCalles(string idCalle, string Localidad, string nombre)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("update calles set Localidad=@Localidad, nombre=@nombre where idCalle=@idCalle");
+            comando.CommandText = "update calles set Localidad = @Localidad, nombre = @nombre where idCalle = @idCalle";
             comando.Parameters.AddWithValue("@idCalle", idCalle);
             comando.Parameters.AddWithValue("@Localidad", Localidad);
             comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
+            
         }
 
         public void EliminarCalles(string idCalle)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("DELETE FROM calles WHERE idCalle=@idCalle");
+            comando.CommandText= "delete from calles where idCalle = @idCalle";
             comando.Parameters.AddWithValue("@idCalle", idCalle);
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
     }

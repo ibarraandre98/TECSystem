@@ -28,34 +28,35 @@ namespace CapaDatos
         public void AgregarCarrera(string nombre, string coordinador)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("insert into carreras(nombre,coordinador) values(@nombre,@coordinador);");
+            comando.CommandText = "insert into carreras(nombre,coordinador) values(@nombre,@coordinador);";
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@coordinador", coordinador);
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
         public void EditarCarrera(string idCarrera, string nombre, string coordinador)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("update calles set nombre=@nombre, coordinador=@coordinador where idCarrera=@idCarrera");
+            comando.CommandText = "update carreras set nombre = @nombre, coordinador = @coordinador where idCarrera = @idCarrera";
             comando.Parameters.AddWithValue("@idCarrera", idCarrera);
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@coordinador", coordinador);
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
 
         public void ElimnarCarrera(string idCarrera)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("DELETE FROM carreras WHERE idCarrera=@idCarrera");
+            comando.CommandText = "delete carreras where idCarrera = @idCarrera";
             comando.Parameters.AddWithValue("@idCarrera", idCarrera);
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
+            leer = comando.ExecuteReader();
+            comando.Parameters.Clear();
+            conexion.CerrarConexion();
         }
     }
 }
