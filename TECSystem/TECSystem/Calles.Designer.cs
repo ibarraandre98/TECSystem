@@ -33,12 +33,12 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtLocalidad = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtIdCalle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgCalles = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCalles)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,24 +97,6 @@
             this.label4.TabIndex = 40;
             this.label4.Text = "Nombre";
             // 
-            // txtLocalidad
-            // 
-            this.txtLocalidad.Location = new System.Drawing.Point(145, 435);
-            this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(162, 20);
-            this.txtLocalidad.TabIndex = 39;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(39, 435);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Localidad";
-            // 
             // txtIdCalle
             // 
             this.txtIdCalle.Location = new System.Drawing.Point(145, 409);
@@ -141,6 +123,7 @@
             this.dtgCalles.Name = "dtgCalles";
             this.dtgCalles.Size = new System.Drawing.Size(1014, 282);
             this.dtgCalles.TabIndex = 35;
+            this.dtgCalles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgCalles_CellDoubleClick);
             // 
             // label1
             // 
@@ -152,6 +135,24 @@
             this.label1.Size = new System.Drawing.Size(124, 31);
             this.label1.TabIndex = 34;
             this.label1.Text = "CALLES";
+            // 
+            // txtLocalidad
+            // 
+            this.txtLocalidad.Location = new System.Drawing.Point(145, 435);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(162, 20);
+            this.txtLocalidad.TabIndex = 39;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(39, 435);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 20);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Localidad";
             // 
             // Calles
             // 
@@ -187,11 +188,11 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtLocalidad;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIdCalle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgCalles;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.Label label3;
     }
 }

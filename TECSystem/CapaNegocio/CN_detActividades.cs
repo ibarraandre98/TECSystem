@@ -19,11 +19,11 @@ namespace CapaNegocio
             return tabla = objetoCD.MostrarTabla();
         }
 
-        public void AgregarACtividad(string actividad, string matricula, string calificacion, string fechaEntrega)
+        public void AgregarACtividad(string actividad, string matricula, string calificacion, DateTime fechaEntrega)
         {
             objetoCD.AgregarActividad(actividad, matricula, calificacion, fechaEntrega);
         }
-        public void EditarActividad(string idDetAct, string actividad, string matricula, string calificacion, string fechaEntrega)
+        public void EditarActividad(string idDetAct, string actividad, string matricula, string calificacion, DateTime fechaEntrega)
         {
             objetoCD.EditarActividad(idDetAct, actividad, matricula, calificacion, fechaEntrega);
         }

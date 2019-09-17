@@ -23,11 +23,12 @@ namespace TECSystem
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             _CN_Calles.AgregarCalles(txtLocalidad.Text,txtNombre.Text);
-            MostrarCalles();
             Limpiartxt();
+            MostrarTabla();
+
         }
 
-        private void MostrarCalles()
+        private void MostrarTabla()
         {
             CN_Calles _CN_Calles = new CN_Calles();
             dtgCalles.DataSource = _CN_Calles.MostrarTabla();
@@ -44,26 +45,38 @@ namespace TECSystem
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             _CN_Calles.EditarCalles(txtIdCalle.Text, txtLocalidad.Text, txtNombre.Text);
-            MostrarCalles();
             Limpiartxt();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             btnAgregar.Enabled = true;
+            MostrarTabla();
+
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             _CN_Calles.EliminarCalles(txtIdCalle.Text);
-            MostrarCalles();
             Limpiartxt();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             btnAgregar.Enabled = true;
+            MostrarTabla();
         }
 
         private void Calles_Load(object sender, EventArgs e)
         {
-            MostrarCalles();
+            MostrarTabla();
+        }
+
+        private void DtgCalles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdCalle.Text = dtgCalles.CurrentRow.Cells["idCalle"].Value.ToString();
+            txtLocalidad.Text = dtgCalles.CurrentRow.Cells["Localidad"].Value.ToString();
+            txtNombre.Text = dtgCalles.CurrentRow.Cells["nombre"].Value.ToString();
+
+            btnAgregar.Enabled = false;
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
         }
     }
 }

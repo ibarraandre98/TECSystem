@@ -181,6 +181,7 @@
             this.dtgdetActividades.Name = "dtgdetActividades";
             this.dtgdetActividades.Size = new System.Drawing.Size(1014, 282);
             this.dtgdetActividades.TabIndex = 35;
+            this.dtgdetActividades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgdetActividades_CellDoubleClick);
             // 
             // label1
             // 

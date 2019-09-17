@@ -37,10 +37,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCveGrupo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtiddetGpo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgdetGrupos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtiddetGpo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgdetGrupos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,14 +135,6 @@
             this.label3.TabIndex = 71;
             this.label3.Text = "cveGrupo";
             // 
-            // txtiddetGpo
-            // 
-            this.txtiddetGpo.Location = new System.Drawing.Point(145, 409);
-            this.txtiddetGpo.Name = "txtiddetGpo";
-            this.txtiddetGpo.ReadOnly = true;
-            this.txtiddetGpo.Size = new System.Drawing.Size(162, 20);
-            this.txtiddetGpo.TabIndex = 70;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -161,6 +153,7 @@
             this.dtgdetGrupos.Name = "dtgdetGrupos";
             this.dtgdetGrupos.Size = new System.Drawing.Size(1014, 282);
             this.dtgdetGrupos.TabIndex = 68;
+            this.dtgdetGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgdetGrupos_CellDoubleClick);
             // 
             // label1
             // 
@@ -173,12 +166,21 @@
             this.label1.TabIndex = 67;
             this.label1.Text = "DETGRUPOS";
             // 
+            // txtiddetGpo
+            // 
+            this.txtiddetGpo.Location = new System.Drawing.Point(145, 409);
+            this.txtiddetGpo.Name = "txtiddetGpo";
+            this.txtiddetGpo.ReadOnly = true;
+            this.txtiddetGpo.Size = new System.Drawing.Size(162, 20);
+            this.txtiddetGpo.TabIndex = 81;
+            // 
             // detGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
+            this.Controls.Add(this.txtiddetGpo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
@@ -188,7 +190,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCveGrupo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtiddetGpo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgdetGrupos);
             this.Controls.Add(this.label1);
@@ -212,9 +213,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCveGrupo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtiddetGpo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgdetGrupos;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtiddetGpo;
     }
 }
