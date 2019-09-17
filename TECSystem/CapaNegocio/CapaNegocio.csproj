@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CN_Academia.cs" />
+    <Compile Include="CN_Actividades.cs" />
+    <Compile Include="CN_Alumnos.cs" />
+    <Compile Include="CN_Calificaciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

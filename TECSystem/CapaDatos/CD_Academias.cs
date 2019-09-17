@@ -34,10 +34,19 @@ namespace CapaDatos
         public void eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from academias where idNombre = @idNombre";
+            comando.CommandText = "delete from academias where idAcademia = @idAcademia";
             comando.Parameters.AddWithValue("@idNombre", id);
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
+        }
+        public void editar(int id,string nombre)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = " update academias set nombre = @nombre where idAcademia = @idAcademia";
+            comando.Parameters.AddWithValue("@idAcademia", id);
+            comando.Parameters.AddWithValue("@nombre",nombre);
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
         }
     }
 }

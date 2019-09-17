@@ -23,6 +23,14 @@ namespace CapaNegocio
         {
             obj.insertar(nombre);
         }
+        public void editar_academia(int id,string nombre)
+        {
+            obj.editar(id,nombre);
+        }
+        public void eliminar_academia(int id)
+        {
+            obj.eliminar(id);
+        }
     }
     
 }
