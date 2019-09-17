@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_Academia.cs" />
+    <Compile Include="CN_Actividades.cs" />
+    <Compile Include="CN_Alumnos.cs" />
+    <Compile Include="CN_Calificaciones.cs" />
     <Compile Include="CN_Personas.cs" />
     <Compile Include="CN_Profesores.cs" />
     <Compile Include="CN_tiposLocalidad.cs" />
