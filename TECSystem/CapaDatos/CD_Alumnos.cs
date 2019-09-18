@@ -49,7 +49,7 @@ namespace CapaDatos
         public void editar(string matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update alumnos set matricula=@matricula,idPersona=@idPersonsa,idCarrera=@idCarrera,tutor=@tutor,idEspecialidad=@idEspecialidad,estatus=@estatus where matricula=@matricula";
+            comando.CommandText = "update alumnos set idPersona=@idPersona,idCarrera=@idCarrera,tutor=@tutor,idEspecialidad=@idEspecialidad,estatus=@estatus where matricula=@matricula";
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@idPersona", idPersona);
             comando.Parameters.AddWithValue("@idCarrera", idCarrera);

@@ -172,9 +172,6 @@
     <Compile Include="TiposLocalidad.Designer.cs">
       <DependentUpon>TiposLocalidad.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Academia.resx">
-      <DependentUpon>Academia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Calles.resx">
       <DependentUpon>Calles.cs</DependentUpon>
     </EmbeddedResource>
