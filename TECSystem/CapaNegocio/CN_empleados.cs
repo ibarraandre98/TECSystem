@@ -8,28 +8,28 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CN_empleados
+    public class CN_empleados
     {
         CD_empleados _CD_empleados = new CD_empleados();
         DataTable tablaempleados = new DataTable();
 
-        public DataTable MostrarPersonas()
+        public DataTable MostrarEmpleados()
         {
             return tablaempleados = _CD_empleados.Mostrarempleados();
         }
 
-        public void Agregarempleados(int idEmpleado, int idPersona, int idEmpleo)
+        public void Agregarempleados( String idPersona, String idEmpleo)
         {
 
-            _CD_empleados.Agregarempleados(Convert.ToInt32(idEmpleado), Convert.ToInt32(idPersona), Convert.ToInt32(idEmpleo));
+            _CD_empleados.Agregarempleados( Convert.ToInt32(idPersona), Convert.ToInt32(idEmpleo));
         }
 
-        public void Editarempleados(int idEmpleado, int idPersona, int idEmpleo)
+        public void Editarempleados( String idPersona, String idEmpleo)
         {
-            _CD_empleados.Editarempleados(Convert.ToInt32(idEmpleado), Convert.ToInt32(idPersona), Convert.ToInt32(idEmpleo));
+            _CD_empleados.Editarempleados(Convert.ToInt32(idPersona), Convert.ToInt32(idEmpleo));
         }
 
-        public void Eliminarempleados(int idEmpleado)
+        public void Eliminarempleados(String idEmpleado)
         {
             _CD_empleados.Eliminarempleados(Convert.ToInt32(idEmpleado));
         }

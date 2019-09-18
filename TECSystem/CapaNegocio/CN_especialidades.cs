@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
-    class CN_especialidades
+   public class CN_especialidades
     {
         CD_especialidades _CD_especialidades = new CD_especialidades();
         DataTable tablaespecialidades = new DataTable();

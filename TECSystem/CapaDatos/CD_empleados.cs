@@ -25,20 +25,20 @@ namespace CapaDatos
             return tablaempleados;
         }
 
-        public void Agregarempleados(int idEmpleado, int idPersona, int idEmpleo)
+        public void Agregarempleados(int idPersona, int idEmpleo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into empleados" +
-                "(idEmpleado, idPersona, idEmpleo) " +
-                "values(" + idEmpleado + ", " + idPersona + "" + idEmpleo + ");";
+                "(idPersona, idEmpleo) " +
+                "values(" +idPersona + "," + idEmpleo + ");";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
 
-        public void Editarempleados(int idEmpleado, int idPersona, int idEmpleo)
+        public void Editarempleados( int idPersona, int idEmpleo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update empleados set idEmpleado = " + idEmpleado + ", idPersona = " + idPersona + ", idEmpleo = " + idEmpleo + "';";
+            comando.CommandText = "update empleados set idPersona = " + idPersona + ", idEmpleo = " + idEmpleo + ";";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
@@ -46,7 +46,9 @@ namespace CapaDatos
         public void Eliminarempleados(int idEmpleado)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from empleados where idEmpleado = '" + idEmpleado + "';";
+            comando.CommandText = "delete from empleados where idEmpleado = " + idEmpleado + ";";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
         }
     }
 }
