@@ -82,6 +82,7 @@
             this.dtgPersonas.Name = "dtgPersonas";
             this.dtgPersonas.Size = new System.Drawing.Size(1014, 282);
             this.dtgPersonas.TabIndex = 1;
+            this.dtgPersonas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPersonas_CellContentClick);
             this.dtgPersonas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgPersonas_CellDoubleClick);
             // 
             // label2

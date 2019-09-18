@@ -96,5 +96,10 @@ namespace TECSystem
             btnEditar.Enabled = false;
             btnAgregar.Enabled = true;
         }
+
+        private void dtgPersonas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

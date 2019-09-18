@@ -74,6 +74,24 @@
     <Compile Include="detGrupos.Designer.cs">
       <DependentUpon>detGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Localidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localidad.Designer.cs">
+      <DependentUpon>Localidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materias.Designer.cs">
+      <DependentUpon>Materias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Municipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Municipio.Designer.cs">
+      <DependentUpon>Municipio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +147,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="detGrupos.resx">
       <DependentUpon>detGrupos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localidad.resx">
+      <DependentUpon>Localidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Materias.resx">
+      <DependentUpon>Materias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Municipio.resx">
+      <DependentUpon>Municipio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estados.resx">
       <DependentUpon>Estados.cs</DependentUpon>

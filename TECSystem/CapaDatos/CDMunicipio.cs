@@ -15,55 +15,46 @@ namespace CapaDatos
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
-        public void AgregarMunicipio(int numero, int estado, String nombre)
+        public DataTable MostrarMunicipio()
         {
             comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from municipios;";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
+        public void AgregarMunicipio(int numero, int estado, String nombre)
+        {
+            /*comando.Connection = conexion.AbrirConexion();
             comando.Parameters.Clear();
             comando = new SqlCommand("insert into municipios(numero, Estado, nombre) values(@numero, @estado, @nombre)");
             comando.Parameters.AddWithValue("@numero", numero);
             comando.Parameters.AddWithValue("@estado", estado);
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
-        }
-        public void EditarNumeroMunicipio(int numero,int id)
-        {
+            comando.Connection = conexion.CerrarConexion();*/
+            //
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("update municipios set numero=@numero where idMunicipio=@idMunicipio");
-            comando.Parameters.AddWithValue("@numero",numero);
-            comando.Parameters.AddWithValue("@idMunicipio", id);
+            comando.CommandText = "insert into municipios values("+numero+","+estado+",'"+nombre+"');";
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
         }
-        public void EditarEstado(int estado, int id)
+        public void EditarMunicipio(string nombre,int id,int numero,int estado)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("update municipios set Estado=@estado where idMunicipio=@idMunicipio");
-            comando.Parameters.AddWithValue("@estado", estado);
-            comando.Parameters.AddWithValue("@idMunicipio", id);
-            comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
-        }
-        public void EditarNombre(string nombre,int id)
-        {
-            comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("update municipios set nombre=@nombre where idMunicipio=@idMunicipio");
-            comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.Parameters.AddWithValue("@idMunicipio", id);
+            comando.CommandText = "update municipios set nombre = '" + nombre + "', numero = " + numero + ", estado = " + estado + " where idMunicipio = " + id + ";";
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             comando.Connection = conexion.CerrarConexion();
         }
         public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("DELETE FROM municipios WHERE idMunicipio=@idMunicipio");
-            comando.Parameters.AddWithValue("@idMunicipio", id);
+            comando.CommandText = "delete from municipios where idMunicipio = " + id + ";";
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
         }
 
     }
