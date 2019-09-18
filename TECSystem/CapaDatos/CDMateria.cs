@@ -15,30 +15,38 @@ namespace CapaDatos
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
+            public DataTable MostrarMaterias()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from materias;";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.CerrarConexion();
+            return tabla;
+        }
         public void AgregarMateria(int cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("insert into materias(cveMateria,nombre,hTeoricas,hPracticas,creditos,carrera) " +
-                "values(@cveMateria,@nombre,@hTeoricas,@hPracticas,@creditos,@carrera)");
-            comando.Parameters.AddWithValue("@cveMateria", cve);
-            comando.Parameters.AddWithValue("@nombre", nombre);
-            comando.Parameters.AddWithValue("@hTeoricas", hteoricas);
-            comando.Parameters.AddWithValue("@hPracticas", hpracticas);
-            comando.Parameters.AddWithValue("@creditos",creditos);
-            comando.Parameters.AddWithValue("@carrera", carrera);
+            comando.CommandText = "insert into materias values(" + cve + ",'" + nombre + "'," + hteoricas + "," + hpracticas + "," + creditos + "," + carrera + ");";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+        }
+            public void EditarMateria(int cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
+            {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "update Materias set nombre = '"+nombre+ "', hTeoricas = '"+hteoricas+ "', hPracticas = '"+hpracticas+ "',creditos = '"+creditos+ "', carrera = "+carrera+ " where cveMateria = '"+cve+"';";
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             comando.Connection = conexion.CerrarConexion();
-        }
-        
-        public void Eliminar(int id)
+            }
+
+            public void Eliminar(int id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.Parameters.Clear();
-            comando = new SqlCommand("DELETE FROM materias WHERE cveMateria=@cveMateria");
-            comando.Parameters.AddWithValue("@cveMateria", id);
+            comando.CommandText = "delete from materias where cveMateria = " + id + ";";
+            comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
-            comando.Connection = conexion.CerrarConexion();
         }
 
     }
