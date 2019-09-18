@@ -13,21 +13,22 @@ namespace CapaNegocio
     {
         CD_Alumnos obj = new CD_Alumnos();
 
-        /*public DataTable mostrarAcademias()
+        public DataTable mostrarAlumnos()
         {
             DataTable tabla = new DataTable();
             tabla = obj.mostrar();
-            return tabla;*/
+            return tabla;
+        }
         
-        public void agregar_alumno(char matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
+        public void agregar_alumno(string matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
         {
             obj.insertar(matricula,idPersona,idCarrera,tutor,idEspecialidad,estatus);
         }
-        public void editar_alumno(char matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
+        public void editar_alumno(string matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
         {
             obj.editar(matricula, idPersona, idCarrera, tutor, idEspecialidad, estatus);
         }
-        public void eliminar_alumno(char matricula)
+        public void eliminar_alumno(string matricula)
         {
             obj.eliminar(matricula);
         }

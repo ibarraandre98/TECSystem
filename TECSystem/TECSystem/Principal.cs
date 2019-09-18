@@ -177,5 +177,25 @@ namespace TECSystem
         {
             AbrirFormulario<TiposLocalidad>();
         }
+
+        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Academias>();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Actividades>();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Alumnos>();
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Calificaciones>();
+        }
     }
 }

@@ -50,11 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Academia.cs">
+    <Compile Include="Academias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Academia.Designer.cs">
-      <DependentUpon>Academia.cs</DependentUpon>
+    <Compile Include="Academias.Designer.cs">
+      <DependentUpon>Academias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos.Designer.cs">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calificaciones.Designer.cs">
+      <DependentUpon>Calificaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Calles.cs">
       <SubType>Form</SubType>
@@ -192,6 +210,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inasistencias.resx">
       <DependentUpon>Inasistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Academias.resx">
+      <DependentUpon>Academias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos.resx">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calificaciones.resx">
+      <DependentUpon>Calificaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Personas.resx">
       <DependentUpon>Personas.cs</DependentUpon>
