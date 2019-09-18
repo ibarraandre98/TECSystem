@@ -13,8 +13,18 @@ namespace CapaDatos
         CDConexion conexion = new CDConexion();
         SqlCommand comando = new SqlCommand();
         SqlDataReader leer;
+        DataTable mos = new DataTable();
 
-        public void insertar(char grupo,char matricula,int tema,float califiacion,char tipoEval)
+        public DataTable mostrar()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from calificaciones";
+            leer = comando.ExecuteReader();
+            mos.Load(leer);
+            conexion.CerrarConexion();
+            return mos;
+        }
+        public void insertar(string grupo,string matricula,int tema,double califiacion,string tipoEval)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into calificaciones values(@grupo,@matricula,@tema,@calificacion,@tipoEval)";
@@ -35,10 +45,10 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void editar(int idCalificacion,char grupo, char matricula, int tema, float califiacion, char tipoEval)
+        public void editar(int idCalificacion,string grupo, string matricula, int tema, double califiacion, string tipoEval)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update calificaciones set(@grupo,@matricula,@tema,@calificacion,@tipoEval) where idCalifiacion=@idCalifiacion";
+            comando.CommandText = "update calificaciones set grupo=@grupo,matricula=@matricula,tema=@tema,calificacion=@calificacion,tipoEval=@tipoEval where idCalifiacion=@idCalifiacion";
             comando.Parameters.AddWithValue("@grupo", grupo);
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@tema", tema);

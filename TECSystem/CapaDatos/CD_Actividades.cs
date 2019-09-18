@@ -13,8 +13,18 @@ namespace CapaDatos
         CDConexion conexion = new CDConexion();
         SqlCommand comando = new SqlCommand();
         SqlDataReader leer;
+        DataTable mos = new DataTable();
+        public DataTable mostrar()
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from actividades";
+            leer = comando.ExecuteReader();
+            mos.Load(leer);
+            conexion.CerrarConexion();
+            return mos;
+        }
 
-        public void insertar(string nombre,string descripcion,char grupo,int tema,int ponderacion,DateTime fecha)
+        public void insertar(string nombre,string descripcion,string grupo,int tema,int ponderacion,DateTime fecha)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into actividades values(@nombre,@descripcion,@grupo,@tema,@ponderacion,@fecha)";
@@ -36,10 +46,10 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void editar(int id,string nombre, string descripcion, char grupo, int tema, int ponderacion, DateTime fecha)
+        public void editar(int id,string nombre, string descripcion, string grupo, int tema, int ponderacion, DateTime fecha)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update actividades set @nombre,@descripcion,@grupo,@tema,@ponderacion,@fecha where idActividad=@idActividad)";
+            comando.CommandText = "update actividades set nombre=@nombre,descripcion=@descripcion,grupo=@grupo,tema=@tema,ponderacion=@ponderacion,fecha=@fecha where idActividad=@idActividad";
             comando.Parameters.AddWithValue("@nombre", nombre);
             comando.Parameters.AddWithValue("@descripcion", descripcion);
             comando.Parameters.AddWithValue("@grupo", grupo);

@@ -8,21 +8,21 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CN_Actividades
+   public class CN_Actividades
     {
         CD_Actividades obj = new CD_Actividades();
 
-        /*public DataTable mostrarAcademias()
+        public DataTable mostrarActividades()
         {
             DataTable tabla = new DataTable();
             tabla = obj.mostrar();
             return tabla;
-        }*/
-        public void agregar_actividad(string nombre, string descripcion, char grupo, int tema, int ponderacion, DateTime fecha)
+        }
+        public void agregar_actividad(string nombre, string descripcion, string grupo, int tema, int ponderacion, DateTime fecha)
         {
             obj.insertar(nombre, descripcion, grupo, tema, ponderacion, fecha);
         }
-        public void editar_actividad(int id,string nombre, string descripcion, char grupo, int tema, int ponderacion, DateTime fecha)
+        public void editar_actividad(int id,string nombre, string descripcion, string grupo, int tema, int ponderacion, DateTime fecha)
         {
             obj.editar(id, nombre,descripcion,grupo,tema,ponderacion,fecha);
         }
