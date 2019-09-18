@@ -32,13 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panelSuperior = new System.Windows.Forms.Panel();
-            this.panelFormulariosFondo = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.FormularioAbrir = new System.Windows.Forms.PictureBox();
-            this.FormularioCerrar = new System.Windows.Forms.PictureBox();
             this.bunifuFlatButton13 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton15 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton14 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -61,14 +54,21 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FormularioAbrir = new System.Windows.Forms.PictureBox();
+            this.FormularioCerrar = new System.Windows.Forms.PictureBox();
+            this.panelFormulariosFondo = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FormularioAbrir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FormularioCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -107,86 +107,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(200, 740);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panelSuperior
-            // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
-            this.panelSuperior.Controls.Add(this.pictureBox3);
-            this.panelSuperior.Controls.Add(this.pictureBox2);
-            this.panelSuperior.Controls.Add(this.pictureBox1);
-            this.panelSuperior.Controls.Add(this.FormularioAbrir);
-            this.panelSuperior.Controls.Add(this.FormularioCerrar);
-            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(200, 0);
-            this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1080, 32);
-            this.panelSuperior.TabIndex = 1;
-            // 
-            // panelFormulariosFondo
-            // 
-            this.panelFormulariosFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
-            this.panelFormulariosFondo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormulariosFondo.Location = new System.Drawing.Point(200, 32);
-            this.panelFormulariosFondo.Name = "panelFormulariosFondo";
-            this.panelFormulariosFondo.Size = new System.Drawing.Size(1080, 708);
-            this.panelFormulariosFondo.TabIndex = 2;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1039, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::TECSystem.Properties.Resources.About;
-            this.pictureBox2.Location = new System.Drawing.Point(968, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::TECSystem.Properties.Resources.Calendar;
-            this.pictureBox1.Location = new System.Drawing.Point(1004, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // FormularioAbrir
-            // 
-            this.FormularioAbrir.Image = global::TECSystem.Properties.Resources.Open;
-            this.FormularioAbrir.Location = new System.Drawing.Point(0, 6);
-            this.FormularioAbrir.Name = "FormularioAbrir";
-            this.FormularioAbrir.Size = new System.Drawing.Size(20, 20);
-            this.FormularioAbrir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FormularioAbrir.TabIndex = 1;
-            this.FormularioAbrir.TabStop = false;
-            this.FormularioAbrir.Visible = false;
-            this.FormularioAbrir.Click += new System.EventHandler(this.FormularioAbrir_Click);
-            // 
-            // FormularioCerrar
-            // 
-            this.FormularioCerrar.Image = global::TECSystem.Properties.Resources.Close;
-            this.FormularioCerrar.Location = new System.Drawing.Point(0, 6);
-            this.FormularioCerrar.Name = "FormularioCerrar";
-            this.FormularioCerrar.Size = new System.Drawing.Size(20, 20);
-            this.FormularioCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FormularioCerrar.TabIndex = 0;
-            this.FormularioCerrar.TabStop = false;
-            this.FormularioCerrar.Click += new System.EventHandler(this.FormularioCerrar_Click);
             // 
             // bunifuFlatButton13
             // 
@@ -696,6 +616,7 @@
             this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton8.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(112)))), ((int)(((byte)(140)))));
             this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton8.Click += new System.EventHandler(this.bunifuFlatButton8_Click);
             // 
             // bunifuFlatButton7
             // 
@@ -965,6 +886,86 @@
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
             // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
+            this.panelSuperior.Controls.Add(this.pictureBox3);
+            this.panelSuperior.Controls.Add(this.pictureBox2);
+            this.panelSuperior.Controls.Add(this.pictureBox1);
+            this.panelSuperior.Controls.Add(this.FormularioAbrir);
+            this.panelSuperior.Controls.Add(this.FormularioCerrar);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(200, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(1080, 32);
+            this.panelSuperior.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1039, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::TECSystem.Properties.Resources.About;
+            this.pictureBox2.Location = new System.Drawing.Point(968, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::TECSystem.Properties.Resources.Calendar;
+            this.pictureBox1.Location = new System.Drawing.Point(1004, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // FormularioAbrir
+            // 
+            this.FormularioAbrir.Image = global::TECSystem.Properties.Resources.Open;
+            this.FormularioAbrir.Location = new System.Drawing.Point(0, 6);
+            this.FormularioAbrir.Name = "FormularioAbrir";
+            this.FormularioAbrir.Size = new System.Drawing.Size(20, 20);
+            this.FormularioAbrir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FormularioAbrir.TabIndex = 1;
+            this.FormularioAbrir.TabStop = false;
+            this.FormularioAbrir.Visible = false;
+            this.FormularioAbrir.Click += new System.EventHandler(this.FormularioAbrir_Click);
+            // 
+            // FormularioCerrar
+            // 
+            this.FormularioCerrar.Image = global::TECSystem.Properties.Resources.Close;
+            this.FormularioCerrar.Location = new System.Drawing.Point(0, 6);
+            this.FormularioCerrar.Name = "FormularioCerrar";
+            this.FormularioCerrar.Size = new System.Drawing.Size(20, 20);
+            this.FormularioCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FormularioCerrar.TabIndex = 0;
+            this.FormularioCerrar.TabStop = false;
+            this.FormularioCerrar.Click += new System.EventHandler(this.FormularioCerrar_Click);
+            // 
+            // panelFormulariosFondo
+            // 
+            this.panelFormulariosFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.panelFormulariosFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormulariosFondo.Location = new System.Drawing.Point(200, 32);
+            this.panelFormulariosFondo.Name = "panelFormulariosFondo";
+            this.panelFormulariosFondo.Size = new System.Drawing.Size(1080, 708);
+            this.panelFormulariosFondo.TabIndex = 2;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -979,13 +980,13 @@
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FormularioAbrir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FormularioCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
