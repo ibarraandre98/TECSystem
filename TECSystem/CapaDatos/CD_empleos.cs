@@ -25,12 +25,12 @@ namespace CapaDatos
             return tablaempleos;
         }
 
-        public void Agregarempleos(int idEmpleo, String puesto)
+        public void Agregarempleos( String puesto)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into empleos" +
-                "(idEmpleo, puesto) " +
-                "values(" + idEmpleo + ", '" + puesto + "');";
+                "(puesto) " +
+                "values('" + puesto + "');";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
