@@ -39,6 +39,7 @@ namespace TECSystem
         private void empleos_Load(object sender, EventArgs e)
         {
             Mostrarempleos();
+            //ll
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
