@@ -152,5 +152,10 @@ namespace TECSystem
         {
             AbrirFormulario<empleados>();
         }
+
+        private void bunifuFlatButton10_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<empleos>();
+        }
     }
 }

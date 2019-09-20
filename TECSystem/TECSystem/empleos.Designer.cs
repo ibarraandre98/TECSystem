@@ -31,11 +31,11 @@
             this.dtgempleos = new System.Windows.Forms.DataGridView();
             this.Puesto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.idEmpleo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.idEmpleo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgempleos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +46,7 @@
             this.dtgempleos.Name = "dtgempleos";
             this.dtgempleos.Size = new System.Drawing.Size(386, 192);
             this.dtgempleos.TabIndex = 0;
+            this.dtgempleos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgempleos_CellDoubleClick);
             // 
             // Puesto
             // 
@@ -64,14 +65,6 @@
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Puesto";
-            // 
-            // idEmpleo
-            // 
-            this.idEmpleo.Location = new System.Drawing.Point(204, 284);
-            this.idEmpleo.Name = "idEmpleo";
-            this.idEmpleo.ReadOnly = true;
-            this.idEmpleo.Size = new System.Drawing.Size(162, 20);
-            this.idEmpleo.TabIndex = 7;
             // 
             // label2
             // 
@@ -94,6 +87,7 @@
             this.btnEliminar.TabIndex = 35;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -106,6 +100,7 @@
             this.btnEditar.TabIndex = 34;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -119,22 +114,30 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // idEmpleo
+            // 
+            this.idEmpleo.Location = new System.Drawing.Point(204, 284);
+            this.idEmpleo.Name = "idEmpleo";
+            this.idEmpleo.Size = new System.Drawing.Size(162, 20);
+            this.idEmpleo.TabIndex = 36;
+            // 
             // empleos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1064, 669);
+            this.Controls.Add(this.idEmpleo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.Puesto);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.idEmpleo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgempleos);
             this.Name = "empleos";
             this.Text = "empleos";
+            this.Load += new System.EventHandler(this.empleos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgempleos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -146,10 +149,10 @@
         private System.Windows.Forms.DataGridView dtgempleos;
         private System.Windows.Forms.TextBox Puesto;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox idEmpleo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.TextBox idEmpleo;
     }
 }

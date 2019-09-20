@@ -38,7 +38,7 @@ namespace CapaDatos
         public void Editarempleos(int idEmpleo, String puesto)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update empleos set idEmpleo = " + idEmpleo + ", puesto = '" + puesto + "';";
+            comando.CommandText = "update empleos set puesto = '" + puesto + "'  where idEmpleo = "+idEmpleo+" ;";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
@@ -46,7 +46,9 @@ namespace CapaDatos
         public void Eliminarempleos(int idEmpleo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from empleos where idEmpleado = '" + idEmpleo + "';";
+            comando.CommandText = "delete from empleos where idEmpleo = '" + idEmpleo + "';";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
         }
     }
 }

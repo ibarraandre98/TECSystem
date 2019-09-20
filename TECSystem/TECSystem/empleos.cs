@@ -22,17 +22,45 @@ namespace TECSystem
         {
             _CN_empleos.Agregarempleos(Puesto.Text);
             limpiartxt();
+            Mostrarempleos();
         }
         public void limpiartxt()
         {
             idEmpleo.Clear();
             Puesto.Clear();
         }
-        private void MostrarPersonas()
+        private void Mostrarempleos()
         {
             CN_empleos _CN_empleos = new CN_empleos();
             dtgempleos.DataSource = _CN_empleos.Mostrarempleos();
             
+        }
+
+        private void empleos_Load(object sender, EventArgs e)
+        {
+            Mostrarempleos();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            _CN_empleos.Eliminarempleos(idEmpleo.Text);
+            Mostrarempleos();
+        }
+
+        private void dtgempleos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Puesto.Text = dtgempleos.CurrentRow.Cells["puesto"].Value.ToString();
+            idEmpleo.Text = dtgempleos.CurrentRow.Cells["idEmpleo"].Value.ToString();
+            btnAgregar.Enabled = false;
+            btnEliminar.Enabled = true;
+            btnEditar.Enabled = true;
+            Mostrarempleos();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            _CN_empleos.Editarempleos(idEmpleo.Text, Puesto.Text);
+            Mostrarempleos();
         }
     }
 }
