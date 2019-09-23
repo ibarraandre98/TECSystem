@@ -31,11 +31,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.Grupo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdEstados = new System.Windows.Forms.TextBox();
+            this.idHorarios = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtgEstados = new System.Windows.Forms.DataGridView();
+            this.dtgHorarios = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHorarios)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -56,6 +56,7 @@
             this.btnEliminar.TabIndex = 85;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -68,6 +69,7 @@
             this.btnEditar.TabIndex = 84;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -79,13 +81,14 @@
             this.btnAgregar.TabIndex = 83;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // txtNombre
+            // Grupo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(143, 441);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(162, 20);
-            this.txtNombre.TabIndex = 82;
+            this.Grupo.Location = new System.Drawing.Point(143, 441);
+            this.Grupo.Name = "Grupo";
+            this.Grupo.Size = new System.Drawing.Size(162, 20);
+            this.Grupo.TabIndex = 82;
             // 
             // label3
             // 
@@ -98,13 +101,13 @@
             this.label3.TabIndex = 81;
             this.label3.Text = "Grupo";
             // 
-            // txtIdEstados
+            // idHorarios
             // 
-            this.txtIdEstados.Location = new System.Drawing.Point(143, 415);
-            this.txtIdEstados.Name = "txtIdEstados";
-            this.txtIdEstados.ReadOnly = true;
-            this.txtIdEstados.Size = new System.Drawing.Size(162, 20);
-            this.txtIdEstados.TabIndex = 80;
+            this.idHorarios.Location = new System.Drawing.Point(143, 415);
+            this.idHorarios.Name = "idHorarios";
+            this.idHorarios.ReadOnly = true;
+            this.idHorarios.Size = new System.Drawing.Size(162, 20);
+            this.idHorarios.TabIndex = 80;
             // 
             // label2
             // 
@@ -117,13 +120,14 @@
             this.label2.TabIndex = 79;
             this.label2.Text = "idHorarios";
             // 
-            // dtgEstados
+            // dtgHorarios
             // 
-            this.dtgEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEstados.Location = new System.Drawing.Point(41, 97);
-            this.dtgEstados.Name = "dtgEstados";
-            this.dtgEstados.Size = new System.Drawing.Size(1014, 282);
-            this.dtgEstados.TabIndex = 78;
+            this.dtgHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgHorarios.Location = new System.Drawing.Point(41, 97);
+            this.dtgHorarios.Name = "dtgHorarios";
+            this.dtgHorarios.Size = new System.Drawing.Size(1014, 282);
+            this.dtgHorarios.TabIndex = 78;
+            this.dtgHorarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgHorarios_CellDoubleClick);
             // 
             // label1
             // 
@@ -172,6 +176,8 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1"});
             this.comboBox1.Location = new System.Drawing.Point(143, 472);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(162, 21);
@@ -180,6 +186,8 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "1"});
             this.comboBox2.Location = new System.Drawing.Point(471, 414);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(162, 21);
@@ -188,6 +196,8 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "123"});
             this.comboBox3.Location = new System.Drawing.Point(471, 441);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(162, 21);
@@ -208,15 +218,16 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.Grupo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtIdEstados);
+            this.Controls.Add(this.idHorarios);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtgEstados);
+            this.Controls.Add(this.dtgHorarios);
             this.Controls.Add(this.label1);
             this.Name = "Horarios";
             this.Text = "Horarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).EndInit();
+            this.Load += new System.EventHandler(this.Horarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgHorarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,11 +238,11 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox Grupo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdEstados;
+        private System.Windows.Forms.TextBox idHorarios;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtgEstados;
+        private System.Windows.Forms.DataGridView dtgHorarios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

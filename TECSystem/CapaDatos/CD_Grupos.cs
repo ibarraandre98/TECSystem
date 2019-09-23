@@ -25,16 +25,17 @@ namespace CapaDatos
             return tablaGrupos;
         }
 
-        public void insertar(char materia,string profesor)
+        public void insertar(string cveGrupo,string materia,string profesor)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into grupos values(@materia,@profesor)";
+            comando.CommandText = "insert into grupos values(@cveGrupo,@materia,@profesor)";
+            comando.Parameters.AddWithValue("@cveGrupo", cveGrupo);
             comando.Parameters.AddWithValue("@materia", materia);
             comando.Parameters.AddWithValue("@profesor", profesor);
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void eliminar(char cveGrupo)
+        public void eliminar(string cveGrupo)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from grupos where cveGrupo = @cveGrupo";
@@ -42,7 +43,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void editar(char cveGrupo,char materia,string profesor)
+        public void editar(string cveGrupo,string materia,string profesor)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update grupos set (@materia,@profesor) where cveGrupo=@cveGrupo";

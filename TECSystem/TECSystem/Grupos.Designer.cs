@@ -31,15 +31,15 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.Materia = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdEstados = new System.Windows.Forms.TextBox();
+            this.cveGrupo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtgEstados = new System.Windows.Forms.DataGridView();
+            this.dtgGrupos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Profesor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGrupos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -52,6 +52,7 @@
             this.btnEliminar.TabIndex = 85;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -64,6 +65,7 @@
             this.btnEditar.TabIndex = 84;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -75,13 +77,14 @@
             this.btnAgregar.TabIndex = 83;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // txtNombre
+            // Materia
             // 
-            this.txtNombre.Location = new System.Drawing.Point(126, 427);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(162, 20);
-            this.txtNombre.TabIndex = 82;
+            this.Materia.Location = new System.Drawing.Point(126, 427);
+            this.Materia.Name = "Materia";
+            this.Materia.Size = new System.Drawing.Size(162, 20);
+            this.Materia.TabIndex = 82;
             // 
             // label3
             // 
@@ -94,13 +97,12 @@
             this.label3.TabIndex = 81;
             this.label3.Text = "Materia";
             // 
-            // txtIdEstados
+            // cveGrupo
             // 
-            this.txtIdEstados.Location = new System.Drawing.Point(126, 401);
-            this.txtIdEstados.Name = "txtIdEstados";
-            this.txtIdEstados.ReadOnly = true;
-            this.txtIdEstados.Size = new System.Drawing.Size(162, 20);
-            this.txtIdEstados.TabIndex = 80;
+            this.cveGrupo.Location = new System.Drawing.Point(126, 401);
+            this.cveGrupo.Name = "cveGrupo";
+            this.cveGrupo.Size = new System.Drawing.Size(162, 20);
+            this.cveGrupo.TabIndex = 80;
             // 
             // label2
             // 
@@ -113,13 +115,15 @@
             this.label2.TabIndex = 79;
             this.label2.Text = "cveGrupo";
             // 
-            // dtgEstados
+            // dtgGrupos
             // 
-            this.dtgEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEstados.Location = new System.Drawing.Point(24, 83);
-            this.dtgEstados.Name = "dtgEstados";
-            this.dtgEstados.Size = new System.Drawing.Size(1014, 282);
-            this.dtgEstados.TabIndex = 78;
+            this.dtgGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgGrupos.Location = new System.Drawing.Point(24, 83);
+            this.dtgGrupos.Name = "dtgGrupos";
+            this.dtgGrupos.Size = new System.Drawing.Size(1014, 282);
+            this.dtgGrupos.TabIndex = 78;
+            this.dtgGrupos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgGrupos_CellContentClick);
+            this.dtgGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgGrupos_CellDoubleClick);
             // 
             // label1
             // 
@@ -132,12 +136,12 @@
             this.label1.TabIndex = 77;
             this.label1.Text = "GRUPOS";
             // 
-            // textBox1
+            // Profesor
             // 
-            this.textBox1.Location = new System.Drawing.Point(126, 453);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 87;
+            this.Profesor.Location = new System.Drawing.Point(126, 453);
+            this.Profesor.Name = "Profesor";
+            this.Profesor.Size = new System.Drawing.Size(162, 20);
+            this.Profesor.TabIndex = 87;
             // 
             // label4
             // 
@@ -156,20 +160,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(903, 595);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Profesor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.Materia);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtIdEstados);
+            this.Controls.Add(this.cveGrupo);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtgEstados);
+            this.Controls.Add(this.dtgGrupos);
             this.Controls.Add(this.label1);
             this.Name = "Grupos";
             this.Text = "Grupos";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).EndInit();
+            this.Load += new System.EventHandler(this.Grupos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgGrupos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,13 +185,13 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox Materia;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdEstados;
+        private System.Windows.Forms.TextBox cveGrupo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtgEstados;
+        private System.Windows.Forms.DataGridView dtgGrupos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Profesor;
         private System.Windows.Forms.Label label4;
     }
 }
