@@ -13,6 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseDeDatos", "BaseDeDatos"
 	ProjectSection(SolutionItems) = preProject
 		BD_JOINS.sql = BD_JOINS.sql
 		BDTEC.sql = BDTEC.sql
+		nuevaBD.sql = nuevaBD.sql
 	EndProjectSection
 EndProject
 Global
