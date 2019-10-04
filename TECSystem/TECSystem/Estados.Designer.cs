@@ -32,9 +32,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.Nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdEstados = new System.Windows.Forms.TextBox();
+            this.idEstados = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgEstados = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,9 +48,9 @@
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnAgregar);
-            this.panel1.Controls.Add(this.txtNombre);
+            this.panel1.Controls.Add(this.Nombre);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.txtIdEstados);
+            this.panel1.Controls.Add(this.idEstados);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dtgEstados);
             this.panel1.Controls.Add(this.label1);
@@ -71,6 +71,7 @@
             this.btnEliminar.TabIndex = 76;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -83,6 +84,7 @@
             this.btnEditar.TabIndex = 75;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -94,13 +96,14 @@
             this.btnAgregar.TabIndex = 74;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // txtNombre
+            // Nombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(138, 454);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(162, 20);
-            this.txtNombre.TabIndex = 71;
+            this.Nombre.Location = new System.Drawing.Point(138, 454);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(162, 20);
+            this.Nombre.TabIndex = 71;
             // 
             // label3
             // 
@@ -113,13 +116,13 @@
             this.label3.TabIndex = 70;
             this.label3.Text = "Nombre";
             // 
-            // txtIdEstados
+            // idEstados
             // 
-            this.txtIdEstados.Location = new System.Drawing.Point(138, 428);
-            this.txtIdEstados.Name = "txtIdEstados";
-            this.txtIdEstados.ReadOnly = true;
-            this.txtIdEstados.Size = new System.Drawing.Size(162, 20);
-            this.txtIdEstados.TabIndex = 69;
+            this.idEstados.Location = new System.Drawing.Point(138, 428);
+            this.idEstados.Name = "idEstados";
+            this.idEstados.ReadOnly = true;
+            this.idEstados.Size = new System.Drawing.Size(162, 20);
+            this.idEstados.TabIndex = 69;
             // 
             // label2
             // 
@@ -140,6 +143,7 @@
             this.dtgEstados.Size = new System.Drawing.Size(1014, 282);
             this.dtgEstados.TabIndex = 67;
             this.dtgEstados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgEstados_CellContentClick);
+            this.dtgEstados.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DtgEstados_CellMouseDoubleClick);
             // 
             // label1
             // 
@@ -173,9 +177,9 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox Nombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdEstados;
+        private System.Windows.Forms.TextBox idEstados;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgEstados;
         private System.Windows.Forms.Label label1;

@@ -13,21 +13,22 @@ namespace CapaDatos
     {
         CDConexion conexion = new CDConexion();
         SqlDataReader leer;
+        DataTable mos = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        /*public DataTable mostrar()
+        public DataTable mostrar()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from academias";
+            comando.CommandText = "select * from alumnos";
             leer = comando.ExecuteReader();
             mos.Load(leer);
             conexion.CerrarConexion();
             return mos;
-        }*/
-        public void insertar(char matricula,int idPersona,int idCarrera,string tutor,int idEspecialidad,int estatus)
+        }
+        public void insertar(string matricula,int idPersona,int idCarrera,string tutor,int idEspecialidad,int estatus)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into alumnos values(@matricula,@idPeronsa,@idCarrera,@tutor,@idEspecialidad,@estatus)";
+            comando.CommandText = "insert into alumnos values(@matricula,@idPersona,@idCarrera,@tutor,@idEspecialidad,@estatus)";
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@idPersona", idPersona);
             comando.Parameters.AddWithValue("@idCarrera", idCarrera);
@@ -37,7 +38,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void eliminar(char matricula)
+        public void eliminar(string matricula)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from alumnos where matricula = @matricula";
@@ -45,10 +46,10 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void editar(char matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
+        public void editar(string matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update alumnos set (@matricula,@idPeronsa,@idCarrera,@tutor,@idEspecialidad,@estatus) where matricula=@matricula";
+            comando.CommandText = "update alumnos set idPersona=@idPersona,idCarrera=@idCarrera,tutor=@tutor,idEspecialidad=@idEspecialidad,estatus=@estatus where matricula=@matricula";
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@idPersona", idPersona);
             comando.Parameters.AddWithValue("@idCarrera", idCarrera);

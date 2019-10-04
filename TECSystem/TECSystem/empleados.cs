@@ -51,6 +51,7 @@ namespace TECSystem
         {
             
             _CN_Empleados.Editarempleados(idPersona.Text, idEmpleo.Text);
+            MostrarEmpleados();
             limpiar();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;

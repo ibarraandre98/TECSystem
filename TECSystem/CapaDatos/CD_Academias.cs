@@ -35,7 +35,7 @@ namespace CapaDatos
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from academias where idAcademia = @idAcademia";
-            comando.Parameters.AddWithValue("@idNombre", id);
+            comando.Parameters.AddWithValue("@idAcademia", id);
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }

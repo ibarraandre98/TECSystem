@@ -18,15 +18,15 @@ namespace CapaNegocio
             tabla = obj.mostrar();
             return tabla;}
 
-        public void agregar_grupo(char materia,string profesor)
+        public void agregar_grupo(string cveGrupo,string materia,string profesor)
         {
-            obj.insertar(materia,profesor);
+            obj.insertar(cveGrupo,materia,profesor);
         }
-        public void editar_grupo(char materia,string profesor,char cveGrupo)
+        public void editar_grupo(string materia,string profesor,string cveGrupo)
         {
             obj.editar(cveGrupo,materia,profesor);
         }
-        public void eliminar_grupo(char cveGrupo)
+        public void eliminar_grupo(string cveGrupo)
         {
             obj.eliminar(cveGrupo);
         }

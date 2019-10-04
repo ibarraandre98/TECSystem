@@ -34,16 +34,16 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.Grupo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIdEstados = new System.Windows.Forms.TextBox();
+            this.idInasistencia = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtgEstados = new System.Windows.Forms.DataGridView();
+            this.dtgInasistencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).BeginInit();
+            this.Matricula = new System.Windows.Forms.TextBox();
+            this.tipoInasistencia = new System.Windows.Forms.TextBox();
+            this.Fecha = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgInasistencias)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -89,6 +89,7 @@
             this.btnEliminar.TabIndex = 100;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -101,6 +102,7 @@
             this.btnEditar.TabIndex = 99;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -112,13 +114,14 @@
             this.btnAgregar.TabIndex = 98;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // txtNombre
+            // Grupo
             // 
-            this.txtNombre.Location = new System.Drawing.Point(158, 466);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(162, 20);
-            this.txtNombre.TabIndex = 97;
+            this.Grupo.Location = new System.Drawing.Point(158, 466);
+            this.Grupo.Name = "Grupo";
+            this.Grupo.Size = new System.Drawing.Size(162, 20);
+            this.Grupo.TabIndex = 97;
             // 
             // label3
             // 
@@ -131,13 +134,13 @@
             this.label3.TabIndex = 96;
             this.label3.Text = "Grupo";
             // 
-            // txtIdEstados
+            // idInasistencia
             // 
-            this.txtIdEstados.Location = new System.Drawing.Point(158, 437);
-            this.txtIdEstados.Name = "txtIdEstados";
-            this.txtIdEstados.ReadOnly = true;
-            this.txtIdEstados.Size = new System.Drawing.Size(162, 20);
-            this.txtIdEstados.TabIndex = 95;
+            this.idInasistencia.Location = new System.Drawing.Point(158, 437);
+            this.idInasistencia.Name = "idInasistencia";
+            this.idInasistencia.ReadOnly = true;
+            this.idInasistencia.Size = new System.Drawing.Size(162, 20);
+            this.idInasistencia.TabIndex = 95;
             // 
             // label2
             // 
@@ -150,13 +153,14 @@
             this.label2.TabIndex = 94;
             this.label2.Text = "idInasistencia";
             // 
-            // dtgEstados
+            // dtgInasistencias
             // 
-            this.dtgEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEstados.Location = new System.Drawing.Point(36, 117);
-            this.dtgEstados.Name = "dtgEstados";
-            this.dtgEstados.Size = new System.Drawing.Size(1014, 282);
-            this.dtgEstados.TabIndex = 93;
+            this.dtgInasistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgInasistencias.Location = new System.Drawing.Point(36, 117);
+            this.dtgInasistencias.Name = "dtgInasistencias";
+            this.dtgInasistencias.Size = new System.Drawing.Size(1014, 282);
+            this.dtgInasistencias.TabIndex = 93;
+            this.dtgInasistencias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgInasistencias_CellDoubleClick);
             // 
             // label1
             // 
@@ -169,27 +173,27 @@
             this.label1.TabIndex = 92;
             this.label1.Text = "INASISTENCIAS";
             // 
-            // textBox1
+            // Matricula
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 498);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 107;
+            this.Matricula.Location = new System.Drawing.Point(158, 498);
+            this.Matricula.Name = "Matricula";
+            this.Matricula.Size = new System.Drawing.Size(162, 20);
+            this.Matricula.TabIndex = 107;
             // 
-            // textBox2
+            // tipoInasistencia
             // 
-            this.textBox2.Location = new System.Drawing.Point(515, 464);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 109;
+            this.tipoInasistencia.Location = new System.Drawing.Point(515, 464);
+            this.tipoInasistencia.Name = "tipoInasistencia";
+            this.tipoInasistencia.Size = new System.Drawing.Size(162, 20);
+            this.tipoInasistencia.TabIndex = 109;
             // 
-            // textBox3
+            // Fecha
             // 
-            this.textBox3.Location = new System.Drawing.Point(515, 435);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(162, 20);
-            this.textBox3.TabIndex = 108;
+            this.Fecha.Location = new System.Drawing.Point(515, 435);
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Size = new System.Drawing.Size(162, 20);
+            this.Fecha.TabIndex = 108;
             // 
             // Inasistencias
             // 
@@ -197,24 +201,25 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tipoInasistencia);
+            this.Controls.Add(this.Fecha);
+            this.Controls.Add(this.Matricula);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.Grupo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtIdEstados);
+            this.Controls.Add(this.idInasistencia);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dtgEstados);
+            this.Controls.Add(this.dtgInasistencias);
             this.Controls.Add(this.label1);
             this.Name = "Inasistencias";
             this.Text = "Inasistencias";
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).EndInit();
+            this.Load += new System.EventHandler(this.Inasistencias_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgInasistencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,14 +232,14 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox Grupo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIdEstados;
+        private System.Windows.Forms.TextBox idInasistencia;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dtgEstados;
+        private System.Windows.Forms.DataGridView dtgInasistencias;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Matricula;
+        private System.Windows.Forms.TextBox tipoInasistencia;
+        private System.Windows.Forms.TextBox Fecha;
     }
 }

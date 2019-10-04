@@ -18,7 +18,8 @@ namespace CapaNegocio
         {
             DataTable tabla = new DataTable();
             tabla = obj.MostrarEstados();
-            return tabla;}
+            return tabla;
+        }
 
         public void agregar_estado(string nombre)
         {

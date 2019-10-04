@@ -26,20 +26,20 @@ namespace CapaDatos
             return tablaHorarios;
         }
 
-        public void AgregarHorarios(string nombre,string grupo,int dia,int hora,string aula)
+        public void AgregarHorarios(int idHorario,string grupo,int dia,int hora,string aula)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into horarios" +
-                "(nombre,grupo,dia,hora,aula) " +
-                "values('" + nombre + "','" + grupo + "','" + dia + "','" + hora + "','" + aula + "');";
+                "(idHorario,grupo,dia,hora,aula) " +
+                "values('" + grupo + "','" + dia + "','" + hora + "','" + aula + "');";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
 
-        public void EditarHorarios(int idHorario, string nombre,string grupo,int dia,int hora,string aula)
+        public void EditarHorarios(int idHorario, string grupo,int dia,int hora,string aula)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update horarios set nombre = '" + nombre + "',grupo='"+grupo+"hora='"+hora+"',aula='"+aula+"' where idHorario = '" + idHorario + "';";
+            comando.CommandText = "update horarios grupo='"+grupo+"hora='"+hora+"',aula='"+aula+"' where idHorario = '" + idHorario + "';";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }

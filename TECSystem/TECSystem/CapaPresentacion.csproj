@@ -50,6 +50,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Academias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Academias.Designer.cs">
+      <DependentUpon>Academias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Actividades.Designer.cs">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos.Designer.cs">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calificaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calificaciones.Designer.cs">
+      <DependentUpon>Calificaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,23 +98,29 @@
     <Compile Include="detGrupos.Designer.cs">
       <DependentUpon>detGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Localidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localidad.Designer.cs">
+      <DependentUpon>Localidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Materias.Designer.cs">
+      <DependentUpon>Materias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Municipio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Municipio.Designer.cs">
+      <DependentUpon>Municipio.cs</DependentUpon>
+    </Compile>
     <Compile Include="empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="empleados.Designer.cs">
       <DependentUpon>empleados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="empleos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="empleos.Designer.cs">
-      <DependentUpon>empleos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="especialidades.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="especialidades.Designer.cs">
-      <DependentUpon>especialidades.cs</DependentUpon>
     </Compile>
     <Compile Include="Estados.cs">
       <SubType>Form</SubType>
@@ -136,6 +166,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TiposLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TiposLocalidad.Designer.cs">
+      <DependentUpon>TiposLocalidad.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Calles.resx">
       <DependentUpon>Calles.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,11 +187,14 @@
     <EmbeddedResource Include="empleados.resx">
       <DependentUpon>empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="empleos.resx">
-      <DependentUpon>empleos.cs</DependentUpon>
+    <EmbeddedResource Include="Localidad.resx">
+      <DependentUpon>Localidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="especialidades.resx">
-      <DependentUpon>especialidades.cs</DependentUpon>
+    <EmbeddedResource Include="Materias.resx">
+      <DependentUpon>Materias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Municipio.resx">
+      <DependentUpon>Municipio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estados.resx">
       <DependentUpon>Estados.cs</DependentUpon>
@@ -169,11 +208,26 @@
     <EmbeddedResource Include="Inasistencias.resx">
       <DependentUpon>Inasistencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Academias.resx">
+      <DependentUpon>Academias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Actividades.resx">
+      <DependentUpon>Actividades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos.resx">
+      <DependentUpon>Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calificaciones.resx">
+      <DependentUpon>Calificaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personas.resx">
       <DependentUpon>Personas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profesores.resx">
+      <DependentUpon>Profesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -185,6 +239,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TiposLocalidad.resx">
+      <DependentUpon>TiposLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

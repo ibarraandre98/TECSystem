@@ -19,13 +19,13 @@ namespace CapaNegocio
             return tabla;
         }
 
-        public void agregar_horarios(string nombre, string grupo, int dia, int hora, string aula)
+        public void agregar_horarios(int idHorario, string grupo, int dia, int hora, string aula)
         {
-            obj.AgregarHorarios(nombre, grupo, dia, hora, aula);
+            obj.AgregarHorarios(idHorario, grupo, dia, hora, aula);
         }
-        public void editar_horarios(int idHorario, string nombre, string grupo, int dia, int hora, string aula)
+        public void editar_horarios(int idHorario,  string grupo, int dia, int hora, string aula)
         {
-            obj.EditarHorarios(idHorario, nombre, grupo, dia, hora, aula);
+            obj.EditarHorarios(idHorario, grupo, dia, hora, aula);
         }
         public void eliminar_horarios(int idHorario)
         {

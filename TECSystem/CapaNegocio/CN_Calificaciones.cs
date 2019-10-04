@@ -9,21 +9,21 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class CN_Calificaciones
+    public class CN_Calificaciones
     {
         CD_Calificaciones obj = new CD_Calificaciones();
 
-        /*public DataTable mostrarAcademias()
+        public DataTable mostrarCalificaciones()
         {
             DataTable tabla = new DataTable();
             tabla = obj.mostrar();
             return tabla;
-        }*/
-        public void agregar_calificacion(char grupo, char matricula, int tema, float califiacion, char tipoEval)
+        }
+        public void agregar_calificacion(string grupo, string matricula, int tema, double califiacion, string tipoEval)
         {
             obj.insertar(grupo,matricula,tema,califiacion,tipoEval);
         }
-        public void editar_calificacion(int id,char grupo, char matricula, int tema, float califiacion, char tipoEval)
+        public void editar_calificacion(int id,string grupo, string matricula, int tema, double califiacion, string tipoEval)
         {
             obj.editar(id, grupo,matricula,tema,califiacion,tipoEval);
         }
