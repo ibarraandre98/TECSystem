@@ -32,13 +32,13 @@
             this.dtgPersonas = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +49,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(38, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 31);
+            this.label1.Size = new System.Drawing.Size(168, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "MUNICPIO";
+            this.label1.Text = "MUNICIPIO";
             // 
             // dtgPersonas
             // 
@@ -79,13 +79,6 @@
             this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 12;
             this.label4.Text = "Nombre";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(146, 367);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(162, 20);
-            this.txtEstado.TabIndex = 11;
             // 
             // label3
             // 
@@ -152,18 +145,29 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // cbEstado
+            // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(146, 366);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(162, 21);
+            this.cbEstado.TabIndex = 34;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
+            this.cbEstado.SelectionChangeCommitted += new System.EventHandler(this.cbEstado_SelectionChangeCommitted);
+            // 
             // Municipio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label2);
@@ -185,12 +189,12 @@
         private System.Windows.Forms.DataGridView dtgPersonas;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbEstado;
     }
 }

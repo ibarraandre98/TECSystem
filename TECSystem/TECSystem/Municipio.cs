@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,32 +23,40 @@ namespace TECSystem
         private void Municipio_Load(object sender, EventArgs e)
         {
             MostrarMunicipio();
+            MostrarEstados();
         }
         private void MostrarMunicipio()
         {
             CN_Municipio _CN_Municipio = new CN_Municipio();
             dtgPersonas.DataSource = _CN_Municipio.MostrarMunicipios();
         }
+        private void MostrarEstados()
+        {
+            CN_Estados _CN_Estados = new CN_Estados();
+            cbEstado.DataSource = _CN_Estados.mostrarEstados();
+            cbEstado.ValueMember = "idEstado";
+            cbEstado.DisplayMember = "nombre";
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             CN_Municipio _CN_Municipio = new CN_Municipio();
-            _CN_Municipio.AgregarMunicipio(Convert.ToInt32(txtEstado.Text), Convert.ToInt32(txtNumero.Text), txtNombre.Text);
+            _CN_Municipio.AgregarMunicipio(Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()), txtNombre.Text);
             MostrarMunicipio();
         }
 
         private void dtgPersonas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtNumero.Text = dtgPersonas.CurrentRow.Cells["numero"].Value.ToString();
-            txtNombre.Text = dtgPersonas.CurrentRow.Cells["nombre"].Value.ToString();
-            txtEstado.Text = dtgPersonas.CurrentRow.Cells["Estado"].Value.ToString();
+            txtNumero.Text = dtgPersonas.CurrentRow.Cells["NumeroMunicipio"].Value.ToString();
+            txtNombre.Text = dtgPersonas.CurrentRow.Cells["Municipio"].Value.ToString();
+            cbEstado.SelectedValue = dtgPersonas.CurrentRow.Cells["idEstado"].Value.ToString();
             id = Convert.ToInt32(dtgPersonas.CurrentRow.Cells["idMunicipio"].Value.ToString());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             CN_Municipio _CN_Municipio = new CN_Municipio();
-            _CN_Municipio.EditarMunicipio(txtNombre.Text, id, Convert.ToInt32(txtNumero.Text), Convert.ToInt32(txtEstado.Text));
+            _CN_Municipio.EditarMunicipio(txtNombre.Text, id, Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()));
             MostrarMunicipio();
         }
 
@@ -56,6 +65,16 @@ namespace TECSystem
             CN_Municipio _CN_Municipio = new CN_Municipio();
             _CN_Municipio.eliminarMunicipio(id);
             MostrarMunicipio();
+        }
+
+        private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cbEstado_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            MessageBox.Show(cbEstado.SelectedValue.ToString());
         }
     }
 }

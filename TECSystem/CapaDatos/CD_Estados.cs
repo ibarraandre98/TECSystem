@@ -11,16 +11,18 @@ namespace CapaDatos
     public class CD_Estados
     {
         CDConexion conexion = new CDConexion();
-        SqlDataReader leer;
         DataTable tablaEstados = new DataTable();
         SqlCommand comando = new SqlCommand();
         public DataTable MostrarEstados()
         {
+            comando = new SqlCommand();
+            SqlDataReader leer;
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "select * from estados";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             tablaEstados.Load(leer);
+            leer.Close();
             conexion.CerrarConexion();
             return tablaEstados;
         }
@@ -49,6 +51,16 @@ namespace CapaDatos
             comando.CommandText = "delete from estados where idEstado = '" + idEstado + "';";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
+        }
+
+        public SqlDataReader MostrarEstadosComboBox()
+        {
+            SqlDataReader leer;
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select * from estados";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            return leer;
         }
     }
 }

@@ -13,9 +13,10 @@ namespace CapaNegocio
     {
         private CD_Municipio objetoCD = new CD_Municipio();
         DataTable tablaMunicipio = new DataTable();
+        DataTable tablaMunicipioEstado = new DataTable();
         public DataTable MostrarMunicipios()
         {
-            return tablaMunicipio =objetoCD.MostrarMunicipio();
+            return tablaMunicipio = objetoCD.MostrarMunicipio();
         }
         public void AgregarMunicipio(int numero, int estado, string nombre)
         {
@@ -28,6 +29,10 @@ namespace CapaNegocio
         public void eliminarMunicipio(int id)
         {
             objetoCD.Eliminar(id);
+        }
+        public DataTable MostrarMunicipiosEstado(String idEstado)
+        {
+            return tablaMunicipioEstado = objetoCD.MostrarMunicipioEstado(Convert.ToInt32(idEstado));
         }
 
     }
