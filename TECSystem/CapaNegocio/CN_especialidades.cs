@@ -18,9 +18,9 @@ namespace CapaNegocio
             return tablaespecialidades = _CD_especialidades.Mostrarespecialidades();
         }
 
-        public void Agregarespecialidades(string idEspecialidad, String nombre, String carrera)
+        public void Agregarespecialidades( String nombre, String carrera)
         {
-            _CD_especialidades.Agregarespecialidades(Convert.ToInt32(idEspecialidad), nombre, carrera);
+            _CD_especialidades.Agregarespecialidades( nombre, carrera);
         }
 
         public void Editarespecialidades(string idEspecialidad, String nombre, String carrera)
@@ -28,7 +28,7 @@ namespace CapaNegocio
             _CD_especialidades.Editarespecialidades(Convert.ToInt32(idEspecialidad), nombre, carrera);
         }
 
-        public void Eliminarespecialidades(int idEspecialidad)
+        public void Eliminarespecialidades(String idEspecialidad)
         {
             _CD_especialidades.Eliminarespecialidades(Convert.ToInt32(idEspecialidad));
         }

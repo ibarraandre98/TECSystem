@@ -12,22 +12,22 @@ namespace CapaNegocio
         CD_empleos _CD_empleos = new CD_empleos();
         DataTable tablaempleos = new DataTable();
 
-        public DataTable Mostrarempleados()
+        public DataTable Mostrarempleos()
         {
             return tablaempleos = _CD_empleos.Mostrarempleos();
         }
 
-        public void Agregarempleados(String idEmpleo, String puesto)
+        public void Agregarempleos(String puesto)
         {
-            _CD_empleos.Agregarempleos(Convert.ToInt32(idEmpleo), puesto);
+            _CD_empleos.Agregarempleos( puesto);
         }
 
-        public void Editarempleados(String idEmpleo, String puesto)
+        public void Editarempleos(String idEmpleo, String puesto)
         {
             _CD_empleos.Editarempleos(Convert.ToInt32(idEmpleo), puesto);
         }
 
-        public void Eliminarempleados(String idEmpleado)
+        public void Eliminarempleos(String idEmpleado)
         {
             _CD_empleos.Eliminarempleos(Convert.ToInt32(idEmpleado));
         }

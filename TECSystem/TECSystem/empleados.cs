@@ -35,7 +35,7 @@ namespace TECSystem
         }
         public void limpiar()
         {
-           
+            idEmpleado.Clear();
             idEmpleo.Text = "";
             idPersona.Text = "";
         }

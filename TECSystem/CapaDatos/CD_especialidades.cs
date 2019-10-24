@@ -25,12 +25,12 @@ namespace CapaDatos
             return tablaespecialidades;
         }
 
-        public void Agregarespecialidades(int idEspecialidad, String nombre, String carrera)
+        public void Agregarespecialidades( String nombre, String carrera)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into especialidades" +
-                "(idEspecialidad, nombre,carrera) " +
-                "values(" + idEspecialidad + ", '" + nombre + "','" + carrera + "');";
+                "( nombre,carrera) " +
+                "values('" + nombre + "','" + carrera + "');";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
@@ -38,7 +38,7 @@ namespace CapaDatos
         public void Editarespecialidades(int idEspecialidad, String nombre, String carrera)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update especialidades set idEspecialidad = " + idEspecialidad + ", nombre = '" + nombre + "',carrera='" + carrera + ";";
+            comando.CommandText = "update especialidades set nombre = '" + nombre + "',carrera='" + carrera + " where idEspecialidad = " + idEspecialidad + "; ";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
@@ -46,7 +46,9 @@ namespace CapaDatos
         public void Eliminarespecialidades(int idEspecialidad)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from especialidades where idEspecialidad = '" + idEspecialidad + "';";
+            comando.CommandText = "delete from especialidades where idEspecialidad = " + idEspecialidad + ";";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
         }
     }
 }
