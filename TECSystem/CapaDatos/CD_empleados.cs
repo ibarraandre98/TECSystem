@@ -17,7 +17,13 @@ namespace CapaDatos
         public DataTable Mostrarempleados()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from empleados";
+            comando.CommandText = "select empleados.idEmpleado,empleados.idPersona," +
+                "personas.nombres as Nombre, personas.materno as Materno, " +
+                "personas.paterno as Paterno, personas.curp as Curp, empleos.idEmpleo," +
+                "empleos.puesto as Puesto " +
+                "from empleados " +
+                "join personas on empleados.idPersona = personas.idPersona " +
+                "join empleos on empleados.idEmpleo = empleos.idEmpleo";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             tablaempleados.Load(leer);

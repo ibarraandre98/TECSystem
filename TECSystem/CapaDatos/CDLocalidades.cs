@@ -14,6 +14,7 @@ namespace CapaDatos
         CDConexion conexion = new CDConexion();
         SqlDataReader leer;
         DataTable tabla = new DataTable();
+        DataTable tablaLocalidadesMunicipio = new DataTable();
         SqlCommand comando = new SqlCommand();
         public DataTable MostrarLocalidades()
         {
@@ -59,6 +60,19 @@ namespace CapaDatos
             comando.CommandText = "delete from localidades where idLocalidad = " + id + ";";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
+        }
+
+        public DataTable MostrarLocalidadesMunicipio(int idMunicipio)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select localidades.idLocalidad, localidades.nombre, " +
+                "localidades.Municipio, localidades.tipo from localidades " +
+                "where Municipio = " + idMunicipio + ";";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tablaLocalidadesMunicipio.Load(leer);
+            conexion.CerrarConexion();
+            return tablaLocalidadesMunicipio;
         }
 
     }

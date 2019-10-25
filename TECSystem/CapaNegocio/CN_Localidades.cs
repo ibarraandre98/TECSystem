@@ -11,23 +11,29 @@ namespace CapaNegocio
 {
     public class CN_Localidades
     {
-        private CDLocalidades objetoCD = new CDLocalidades();
+        private CDLocalidades _CD_Localidades = new CDLocalidades();
         DataTable tablaLocalidad = new DataTable();
+        DataTable tablaLocalidadesMunicipio = new DataTable();
         public DataTable MostrarLocalidades()
         {
-            return tablaLocalidad = objetoCD.MostrarLocalidades();
+            return tablaLocalidad = _CD_Localidades.MostrarLocalidades();
         }
         public void AgregarLocalidad(int municipio, string nombre, int tipo)
         {
-            objetoCD.AgregarLocalidad(municipio,nombre,tipo);
+            _CD_Localidades.AgregarLocalidad(municipio,nombre,tipo);
         }
         public void EditarMunicipio(int municipio,string nombre, int id,int tipo)
         {
-            objetoCD.EditarMunicipio(municipio,id,nombre,tipo);
+            _CD_Localidades.EditarMunicipio(municipio,id,nombre,tipo);
         }
         public void Eliminar(int id)
         {
-            objetoCD.Eliminar(id);
+            _CD_Localidades.Eliminar(id);
+        }
+
+        public DataTable MostrarLocalidadesMunicipio(String idMunicipio)
+        {
+            return tablaLocalidadesMunicipio = _CD_Localidades.MostrarLocalidadesMunicipio(Convert.ToInt32(idMunicipio));
         }
 
     }
