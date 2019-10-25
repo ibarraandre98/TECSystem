@@ -18,7 +18,12 @@ namespace CapaDatos
         public DataTable MostrarLocalidades()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from localidades;";
+            comando.CommandText = "select localidades.idLocalidad,municipios.idMunicipio as idMunicipio,municipios.nombre as Municipio, " +
+                "estados.idEstado as idEstado,estados.nombre as Estado,localidades.nombre as Nombre_Localidad," +
+                "tiposLocalidad.idTipoLoc as idTipoLocalidad, tiposLocalidad.tipo as Tipo_Localidad from localidades " +
+                "join municipios on localidades.Municipio = municipios.idMunicipio " +
+                "join estados on municipios.Estado = estados.idEstado " +
+                "join tiposLocalidad on localidades.tipo = tiposLocalidad.idTipoLoc";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             tabla.Load(leer);

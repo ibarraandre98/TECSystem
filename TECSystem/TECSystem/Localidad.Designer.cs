@@ -32,7 +32,7 @@
             this.dtgPersonas = new System.Windows.Forms.DataGridView();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -87,12 +87,12 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Tipo";
             // 
-            // txtNombre
+            // txtLocalidad
             // 
-            this.txtNombre.Location = new System.Drawing.Point(127, 371);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(162, 20);
-            this.txtNombre.TabIndex = 35;
+            this.txtLocalidad.Location = new System.Drawing.Point(127, 371);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(162, 20);
+            this.txtLocalidad.TabIndex = 35;
             // 
             // label3
             // 
@@ -157,6 +157,7 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(162, 21);
             this.cbEstado.TabIndex = 42;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             this.cbEstado.SelectionChangeCommitted += new System.EventHandler(this.cbEstado_SelectionChangeCommitted);
             // 
             // label5
@@ -174,15 +175,6 @@
             // 
             this.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipo.FormattingEnabled = true;
-            this.cbTipo.Items.AddRange(new object[] {
-            "Colonia",
-            "Congregación",
-            "Ejido",
-            "Fraccionamiento",
-            "Pueblo",
-            "Ranchería",
-            "Unidad Habitacional",
-            "Zona Industrial"});
             this.cbTipo.Location = new System.Drawing.Point(127, 399);
             this.cbTipo.Name = "cbTipo";
             this.cbTipo.Size = new System.Drawing.Size(162, 21);
@@ -203,7 +195,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtLocalidad);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgPersonas);
@@ -224,7 +216,7 @@
         private System.Windows.Forms.DataGridView dtgPersonas;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtLocalidad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
