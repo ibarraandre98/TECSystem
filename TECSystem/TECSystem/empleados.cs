@@ -95,6 +95,10 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            CN_Personas _CN_Personas = new CN_Personas();
+            _CN_Personas.AgregarPersonas(txtPaterno.Text,txtMaterno.Text, txtNombre.Text,
+                dtpFechaNac.Value, cbSexo.SelectedValue,txtCurp.Text, txtTelefono.Text,
+                )
             _CN_Empleados.Agregarempleados(idPersona.Text,cbEmpleo.SelectedValue.ToString());
             limpiar();
             MostrarEmpleados();
