@@ -25,12 +25,15 @@ namespace CapaDatos
             return tablaPersonas;
         }
 
-        public void AgregarPersonas(String paterno, String materno, String nombres, DateTime fecha_nac, int sexo, String curp, String telefono, int idCalle, String numExt, String numInt, String cp, int edoCivil, int discapacidad)
+        public void AgregarPersonas(String paterno, String materno, String nombres, DateTime fecha_nac, int sexo, String curp, String telefono, String numExt, String numInt, String cp, int edoCivil, int discapacidad, String calle, int localidad)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into personas" +
-                "(paterno, materno, nombres,fecha_nac, sexo, curp, telefono, idCalle, numExt, numInt, cp, edoCivil, discapacidad) " +
-                "values('"+paterno+"', '"+materno+ "', '"+nombres+ "', '"+fecha_nac.ToShortDateString()+ "', "+sexo+ ", '"+curp+ "', '"+telefono+ "', "+idCalle+ ", '"+numExt+ "', '"+numInt+ "', '"+cp+ "', "+edoCivil+ ", "+discapacidad+");";
+            comando.CommandText = "insert into personas (paterno,materno,nombres,fecha_nac,sexo,curp,telefono,numExt,numInt,cp," +
+                "edoCivil,discapacidad,calle,localidades) values('"+paterno+"', '"+materno+"', '"+nombres+"', '"+fecha_nac.ToShortDateString()+"'," +
+                " "+sexo+", '"+curp+"', '"+telefono+"', '"+numExt+"', '"+numInt+"', '"+cp+"', "+edoCivil+", "+discapacidad+", '"+calle+"', "+localidad+")";
+            //comando.CommandText = "insert into personas" +
+            //    "(paterno, materno, nombres,fecha_nac, sexo, curp, telefono, idCalle, numExt, numInt, cp, edoCivil, discapacidad) " +
+            //    "values('"+paterno+"', '"+materno+ "', '"+nombres+ "', '"+fecha_nac.ToShortDateString()+ "', "+sexo+ ", '"+curp+ "', '"+telefono+ "', "+idCalle+ ", '"+numExt+ "', '"+numInt+ "', '"+cp+ "', "+edoCivil+ ", "+discapacidad+");";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }

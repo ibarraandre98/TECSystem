@@ -30,12 +30,19 @@ namespace TECSystem
         {
             MostrarEmpleados();
             MostrarEmpleos();
-            cbSexo.SelectedIndex = 0;
-            cbEdoCivil.SelectedIndex = 0;
             MostrarEstados();
             MostrarMunicipio(cbEstado.SelectedValue.ToString());
             MostrarTiposLocalidades();
+            primerValorCB();
         }
+
+        private void primerValorCB()
+        {
+            cbSexo.SelectedIndex = 0;
+            cbEdoCivil.SelectedIndex = 0;
+            cbDiscapacidad.SelectedIndex = 0;
+        }
+
         private void MostrarEmpleados()
         {
             CN_empleados _CN_Empleados = new CN_empleados();
@@ -82,8 +89,6 @@ namespace TECSystem
             cbLocalidad.DataSource = MostrarLocalidadesMunicipio;
             cbLocalidad.ValueMember = "idLocalidad";
             cbLocalidad.DisplayMember = "nombre";
-            
-
         }
 
 
@@ -96,9 +101,11 @@ namespace TECSystem
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             CN_Personas _CN_Personas = new CN_Personas();
-            _CN_Personas.AgregarPersonas(txtPaterno.Text,txtMaterno.Text, txtNombre.Text,
-                dtpFechaNac.Value, cbSexo.SelectedValue,txtCurp.Text, txtTelefono.Text,
-                )
+            _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, dtpFechaNac.Value, 
+                cbSexo.SelectedValue.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text, 
+                cbEdoCivil.SelectedValue.ToString(), cbDiscapacidad.SelectedValue.ToString(), txtCalle.Text, 
+                cbLocalidad.SelectedValue.ToString());
+
             _CN_Empleados.Agregarempleados(idPersona.Text,cbEmpleo.SelectedValue.ToString());
             limpiar();
             MostrarEmpleados();

@@ -57,7 +57,6 @@
             this.txtInt = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtDiscapacidad = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -67,12 +66,13 @@
             this.label17 = new System.Windows.Forms.Label();
             this.cbTipoLocalidad = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textCalle = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtCP = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbEdoCivil = new System.Windows.Forms.ComboBox();
+            this.cbDiscapacidad = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgempleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -355,13 +355,6 @@
             this.label13.TabIndex = 101;
             this.label13.Text = "Estado civil:";
             // 
-            // txtDiscapacidad
-            // 
-            this.txtDiscapacidad.Location = new System.Drawing.Point(864, 206);
-            this.txtDiscapacidad.Name = "txtDiscapacidad";
-            this.txtDiscapacidad.Size = new System.Drawing.Size(160, 20);
-            this.txtDiscapacidad.TabIndex = 104;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -452,12 +445,12 @@
             this.label18.TabIndex = 111;
             this.label18.Text = "Tipo Localidad:";
             // 
-            // textCalle
+            // txtCalle
             // 
-            this.textCalle.Location = new System.Drawing.Point(652, 331);
-            this.textCalle.Name = "textCalle";
-            this.textCalle.Size = new System.Drawing.Size(160, 20);
-            this.textCalle.TabIndex = 114;
+            this.txtCalle.Location = new System.Drawing.Point(652, 331);
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(160, 20);
+            this.txtCalle.TabIndex = 114;
             // 
             // label19
             // 
@@ -510,17 +503,29 @@
             this.cbEdoCivil.Size = new System.Drawing.Size(162, 21);
             this.cbEdoCivil.TabIndex = 118;
             // 
+            // cbDiscapacidad
+            // 
+            this.cbDiscapacidad.FormattingEnabled = true;
+            this.cbDiscapacidad.Items.AddRange(new object[] {
+            "Soltero",
+            "Casado"});
+            this.cbDiscapacidad.Location = new System.Drawing.Point(863, 206);
+            this.cbDiscapacidad.Name = "cbDiscapacidad";
+            this.cbDiscapacidad.Size = new System.Drawing.Size(162, 21);
+            this.cbDiscapacidad.TabIndex = 119;
+            // 
             // empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1064, 669);
+            this.Controls.Add(this.cbDiscapacidad);
             this.Controls.Add(this.cbEdoCivil);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCP);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textCalle);
+            this.Controls.Add(this.txtCalle);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.cbTipoLocalidad);
             this.Controls.Add(this.label18);
@@ -530,7 +535,6 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtDiscapacidad);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtInt);
@@ -601,7 +605,6 @@
         private System.Windows.Forms.TextBox txtInt;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtDiscapacidad;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cbEstado;
         private System.Windows.Forms.Label label15;
@@ -611,11 +614,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cbTipoLocalidad;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textCalle;
+        private System.Windows.Forms.TextBox txtCalle;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbEdoCivil;
+        private System.Windows.Forms.ComboBox cbDiscapacidad;
     }
 }

@@ -32,8 +32,8 @@ namespace TECSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, txtNacimiento.Value, txtSexo.Text,
-                txtCURP.Text, txtTel.Text, txtCalle.Text, txtnumExterior.Text, txtInterior.Text, txtCP.Text, txtEdoCivil.Text, txtDiscapacidad.Text);
+            //_CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, txtNacimiento.Value, txtSexo.Text,
+            //    txtCURP.Text, txtTel.Text, txtCalle.Text, txtnumExterior.Text, txtInterior.Text, txtCP.Text, txtEdoCivil.Text, txtDiscapacidad.Text);
             MostrarPersonas();
             Limpiartxt();
         }
