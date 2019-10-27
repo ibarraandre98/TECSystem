@@ -56,5 +56,18 @@ namespace CapaDatos
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
+
+        public int ultimoID()
+        {
+            int id;
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = " select top 1 idEmpleado from empleados order by idEmpleado desc";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            leer.Read();
+            id = Convert.ToInt32(leer["idEmpleado"].ToString());
+            conexion.CerrarConexion();
+            return id;
+        }
     }
 }

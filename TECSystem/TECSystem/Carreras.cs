@@ -33,6 +33,12 @@ namespace TECSystem
             dtgCarreras.DataSource = _CN_Carreras.MostrarTabla();
         }
 
+        private void MostrarEmpleados()
+        {
+            CN_empleados _CN_Empleados = new CN_empleados();
+            dtgEmpleados.DataSource = _CN_Empleados.MostrarEmpleados();
+        }
+
         private void Limpiartxt()
         {
             txtIdCarrera.Clear();
@@ -64,17 +70,22 @@ namespace TECSystem
         private void Carreras_Load(object sender, EventArgs e)
         {
             MostrarTabla();
+            MostrarEmpleados();
         }
 
         private void DtgCarreras_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtIdCarrera.Text = dtgCarreras.CurrentRow.Cells["idCarrera"].Value.ToString();
             txtNombre.Text = dtgCarreras.CurrentRow.Cells["nombre"].Value.ToString();
-            txtCoordinador.Text = dtgCarreras.CurrentRow.Cells["coordinador"].Value.ToString();
 
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
+        }
+
+        private void DtgEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCoordinador.Text = dtgEmpleados.CurrentRow.Cells["idEmpleado"].Value.ToString();
         }
     }
 }

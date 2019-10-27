@@ -39,7 +39,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtgCarreras = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtgEmpleados = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCarreras)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -139,7 +141,7 @@
             this.dtgCarreras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCarreras.Location = new System.Drawing.Point(43, 91);
             this.dtgCarreras.Name = "dtgCarreras";
-            this.dtgCarreras.Size = new System.Drawing.Size(1014, 282);
+            this.dtgCarreras.Size = new System.Drawing.Size(264, 282);
             this.dtgCarreras.TabIndex = 35;
             this.dtgCarreras.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgCarreras_CellDoubleClick);
             // 
@@ -154,12 +156,22 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "CARRERAS";
             // 
+            // dtgEmpleados
+            // 
+            this.dtgEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmpleados.Location = new System.Drawing.Point(405, 91);
+            this.dtgEmpleados.Name = "dtgEmpleados";
+            this.dtgEmpleados.Size = new System.Drawing.Size(264, 282);
+            this.dtgEmpleados.TabIndex = 66;
+            this.dtgEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgEmpleados_CellDoubleClick);
+            // 
             // Carreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
+            this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
@@ -176,6 +188,7 @@
             this.Text = "Carreras";
             this.Load += new System.EventHandler(this.Carreras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgCarreras)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +206,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgCarreras;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dtgEmpleados;
     }
 }

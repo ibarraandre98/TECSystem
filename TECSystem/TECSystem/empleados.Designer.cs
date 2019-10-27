@@ -30,13 +30,9 @@
         {
             this.dtgempleados = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.idPersona = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.idEmpleado = new System.Windows.Forms.TextBox();
-            this.Empleado = new System.Windows.Forms.Label();
             this.cbEmpleo = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -73,6 +69,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cbEdoCivil = new System.Windows.Forms.ComboBox();
             this.cbDiscapacidad = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbAcademia = new System.Windows.Forms.ComboBox();
+            this.txtIDProfesor = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.cbTipoMemb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgempleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,24 +97,6 @@
             this.label1.Size = new System.Drawing.Size(191, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "EMPLEADOS";
-            // 
-            // idPersona
-            // 
-            this.idPersona.Location = new System.Drawing.Point(179, 445);
-            this.idPersona.Name = "idPersona";
-            this.idPersona.Size = new System.Drawing.Size(162, 20);
-            this.idPersona.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(67, 445);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "idPersona";
             // 
             // btnAgregar
             // 
@@ -150,24 +134,6 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // idEmpleado
-            // 
-            this.idEmpleado.Location = new System.Drawing.Point(179, 419);
-            this.idEmpleado.Name = "idEmpleado";
-            this.idEmpleado.Size = new System.Drawing.Size(162, 20);
-            this.idEmpleado.TabIndex = 78;
-            // 
-            // Empleado
-            // 
-            this.Empleado.AutoSize = true;
-            this.Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empleado.ForeColor = System.Drawing.Color.White;
-            this.Empleado.Location = new System.Drawing.Point(56, 417);
-            this.Empleado.Name = "Empleado";
-            this.Empleado.Size = new System.Drawing.Size(103, 20);
-            this.Empleado.TabIndex = 79;
-            this.Empleado.Text = "idEmpleado";
             // 
             // cbEmpleo
             // 
@@ -507,12 +473,80 @@
             // 
             this.cbDiscapacidad.FormattingEnabled = true;
             this.cbDiscapacidad.Items.AddRange(new object[] {
-            "Soltero",
-            "Casado"});
+            "Ninguna",
+            "Auditiva",
+            "Visual",
+            "Intelectual",
+            "Visceral",
+            "Motriz"});
             this.cbDiscapacidad.Location = new System.Drawing.Point(863, 206);
             this.cbDiscapacidad.Name = "cbDiscapacidad";
             this.cbDiscapacidad.Size = new System.Drawing.Size(162, 21);
             this.cbDiscapacidad.TabIndex = 119;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(436, 424);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 15);
+            this.label3.TabIndex = 123;
+            this.label3.Text = "Academia:";
+            // 
+            // cbAcademia
+            // 
+            this.cbAcademia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAcademia.FormattingEnabled = true;
+            this.cbAcademia.Location = new System.Drawing.Point(439, 442);
+            this.cbAcademia.Name = "cbAcademia";
+            this.cbAcademia.Size = new System.Drawing.Size(162, 21);
+            this.cbAcademia.TabIndex = 122;
+            // 
+            // txtIDProfesor
+            // 
+            this.txtIDProfesor.Location = new System.Drawing.Point(652, 386);
+            this.txtIDProfesor.Name = "txtIDProfesor";
+            this.txtIDProfesor.Size = new System.Drawing.Size(160, 20);
+            this.txtIDProfesor.TabIndex = 125;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(648, 368);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(83, 15);
+            this.label21.TabIndex = 124;
+            this.label21.Text = "ID Profesor:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(650, 424);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(83, 15);
+            this.label22.TabIndex = 127;
+            this.label22.Text = "Tipo Memb:";
+            // 
+            // cbTipoMemb
+            // 
+            this.cbTipoMemb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoMemb.FormattingEnabled = true;
+            this.cbTipoMemb.Items.AddRange(new object[] {
+            "Miembro",
+            "Vocal 2",
+            "Vocal 1",
+            "Secretario (a)",
+            "Presidente"});
+            this.cbTipoMemb.Location = new System.Drawing.Point(653, 442);
+            this.cbTipoMemb.Name = "cbTipoMemb";
+            this.cbTipoMemb.Size = new System.Drawing.Size(162, 21);
+            this.cbTipoMemb.TabIndex = 126;
             // 
             // empleados
             // 
@@ -520,6 +554,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1064, 669);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.cbTipoMemb);
+            this.Controls.Add(this.txtIDProfesor);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbAcademia);
             this.Controls.Add(this.cbDiscapacidad);
             this.Controls.Add(this.cbEdoCivil);
             this.Controls.Add(this.label4);
@@ -556,13 +596,9 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEmpleo);
-            this.Controls.Add(this.Empleado);
-            this.Controls.Add(this.idEmpleado);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.idPersona);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtgempleados);
             this.Name = "empleados";
@@ -578,13 +614,9 @@
 
         private System.Windows.Forms.DataGridView dtgempleados;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox idPersona;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.TextBox idEmpleado;
-        private System.Windows.Forms.Label Empleado;
         private System.Windows.Forms.ComboBox cbEmpleo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombre;
@@ -621,5 +653,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbEdoCivil;
         private System.Windows.Forms.ComboBox cbDiscapacidad;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbAcademia;
+        private System.Windows.Forms.TextBox txtIDProfesor;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.ComboBox cbTipoMemb;
     }
 }

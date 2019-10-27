@@ -33,5 +33,10 @@ namespace CapaNegocio
         {
             _CD_Personas.EliminarPersona(Convert.ToInt32(idPersona));
         }
+
+        public int ultimoID()
+        {
+            return _CD_Personas.ultimoID();
+        }
     }
 }

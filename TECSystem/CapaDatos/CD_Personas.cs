@@ -29,7 +29,7 @@ namespace CapaDatos
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into personas (paterno,materno,nombres,fecha_nac,sexo,curp,telefono,numExt,numInt,cp," +
-                "edoCivil,discapacidad,calle,localidades) values('"+paterno+"', '"+materno+"', '"+nombres+"', '"+fecha_nac.ToShortDateString()+"'," +
+                "edoCivil,discapacidad,calle,localidades) values('"+paterno+"', '"+materno+"', '"+nombres+"', convert(datetime,'"+fecha_nac.ToString("MM-dd-yyyy")+"',101)," +
                 " "+sexo+", '"+curp+"', '"+telefono+"', '"+numExt+"', '"+numInt+"', '"+cp+"', "+edoCivil+", "+discapacidad+", '"+calle+"', "+localidad+")";
             //comando.CommandText = "insert into personas" +
             //    "(paterno, materno, nombres,fecha_nac, sexo, curp, telefono, idCalle, numExt, numInt, cp, edoCivil, discapacidad) " +
@@ -52,6 +52,19 @@ namespace CapaDatos
             comando.CommandText = "delete from personas where idPersona = '"+idPersona+"';";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
+        }
+
+        public int ultimoID()
+        {
+            int id;
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "select top 1 idPersona from personas order by idPersona DESC";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            leer.Read();
+            id = Convert.ToInt32(leer["idPersona"].ToString());
+            conexion.CerrarConexion();
+            return id;
         }
     }
 }

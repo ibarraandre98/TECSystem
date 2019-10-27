@@ -16,6 +16,8 @@ namespace TECSystem
         CN_empleados _CN_Empleados = new CN_empleados();
         DataTable MostrarLocalidadesMunicipio;
         DataRow row;
+        int IDPersona;
+        int IDEmpleado;
         public empleados()
         {
             InitializeComponent();
@@ -34,6 +36,7 @@ namespace TECSystem
             MostrarMunicipio(cbEstado.SelectedValue.ToString());
             MostrarTiposLocalidades();
             primerValorCB();
+            MostrarAcademias();
         }
 
         private void primerValorCB()
@@ -41,6 +44,15 @@ namespace TECSystem
             cbSexo.SelectedIndex = 0;
             cbEdoCivil.SelectedIndex = 0;
             cbDiscapacidad.SelectedIndex = 0;
+            cbTipoMemb.SelectedIndex = 0;
+        }
+
+        private void MostrarAcademias()
+        {
+            CN_Academia _CN_Academia = new CN_Academia();
+            cbAcademia.DataSource = _CN_Academia.mostrarAcademias();
+            cbAcademia.ValueMember = "idAcademia";
+            cbAcademia.DisplayMember = "nombre";
         }
 
         private void MostrarEmpleados()
@@ -92,31 +104,26 @@ namespace TECSystem
         }
 
 
-        public void limpiar()
-        {
-            idEmpleado.Clear();
-            idPersona.Text = "";
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             CN_Personas _CN_Personas = new CN_Personas();
+            CN_Profesores _CN_Profesores = new CN_Profesores();
             _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, dtpFechaNac.Value, 
-                cbSexo.SelectedValue.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text, 
-                cbEdoCivil.SelectedValue.ToString(), cbDiscapacidad.SelectedValue.ToString(), txtCalle.Text, 
+                cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text, 
+                cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text, 
                 cbLocalidad.SelectedValue.ToString());
-
-            _CN_Empleados.Agregarempleados(idPersona.Text,cbEmpleo.SelectedValue.ToString());
-            limpiar();
+            IDPersona = _CN_Personas.ultimoID();
+            _CN_Empleados.Agregarempleados(IDPersona.ToString(),cbEmpleo.SelectedValue.ToString());
+            IDEmpleado = _CN_Empleados.UltimoID();
+            _CN_Profesores.AgregarProfesores(txtIDProfesor.Text, IDEmpleado.ToString(), cbAcademia.SelectedValue.ToString(), 
+                cbTipoMemb.SelectedIndex.ToString());
             MostrarEmpleados();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             
-            _CN_Empleados.Editarempleados(idPersona.Text, cbEmpleo.SelectedValue.ToString());
             MostrarEmpleados();
-            limpiar();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
             btnAgregar.Enabled = true;
@@ -124,7 +131,7 @@ namespace TECSystem
 
         private void dtgempleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            idPersona.Text = dtgempleados.CurrentRow.Cells["idPersona"].Value.ToString();
+
             cbEmpleo.SelectedValue = dtgempleados.CurrentRow.Cells["idEmpleo"].Value.ToString();
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
@@ -133,8 +140,7 @@ namespace TECSystem
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            _CN_Empleados.Eliminarempleados(idEmpleado.Text);
-            idEmpleado.Clear();
+
             MostrarEmpleados();
         }
 

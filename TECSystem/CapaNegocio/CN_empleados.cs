@@ -33,5 +33,10 @@ namespace CapaNegocio
         {
             _CD_empleados.Eliminarempleados(Convert.ToInt32(idEmpleado));
         }
+        
+        public int UltimoID()
+        {
+            return _CD_empleados.ultimoID();
+        }
     }
 }
