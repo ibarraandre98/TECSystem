@@ -22,7 +22,7 @@ namespace CapaNegocio
         {
             obj.insertar(cveGrupo,materia,profesor);
         }
-        public void editar_grupo(string materia,string profesor,string cveGrupo)
+        public void editar_grupo(string cveGrupo, string materia,string profesor)
         {
             obj.editar(cveGrupo,materia,profesor);
         }

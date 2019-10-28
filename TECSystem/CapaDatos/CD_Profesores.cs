@@ -18,7 +18,11 @@ namespace CapaDatos
         public DataTable MostrarProfesores()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from Profesores";
+            comando.CommandText = " select profesores.idProfesor, profesores.idEmpleado, empleados.idPersona, personas.nombres, " +
+                "personas.paterno, personas.materno, profesores.idAcademia, academias.nombre, profesores.tipoMemb from profesores " +
+                "join empleados on profesores.idEmpleado = empleados.idEmpleado " +
+                "join personas on empleados.idPersona = personas.idPersona " +
+                "join academias on profesores.idAcademia = academias.idAcademia";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             TablaProfesores.Load(leer);

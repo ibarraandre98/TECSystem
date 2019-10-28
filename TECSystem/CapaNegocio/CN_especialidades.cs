@@ -12,6 +12,7 @@ namespace CapaNegocio
     {
         CD_especialidades _CD_especialidades = new CD_especialidades();
         DataTable tablaespecialidades = new DataTable();
+        DataTable tablaEspecialidadesCarrera = new DataTable();
 
         public DataTable Mostrarespecialidades()
         {
@@ -31,6 +32,11 @@ namespace CapaNegocio
         public void Eliminarespecialidades(String idEspecialidad)
         {
             _CD_especialidades.Eliminarespecialidades(Convert.ToInt32(idEspecialidad));
+        }
+
+        public DataTable MostrarEspecialidadesCarrera(String carrera)
+        {
+            return _CD_especialidades.MostrarEspecialidadesCarrera(Convert.ToInt32(carrera));
         }
     }
 }
