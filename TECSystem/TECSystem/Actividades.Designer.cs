@@ -36,8 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.idActividad = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.ponderacion = new System.Windows.Forms.TextBox();
@@ -47,7 +45,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.dgvGrupos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
             // 
             // tema
@@ -122,30 +122,12 @@
             this.label3.TabIndex = 68;
             this.label3.Text = "nombre:";
             // 
-            // idActividad
-            // 
-            this.idActividad.Location = new System.Drawing.Point(266, 390);
-            this.idActividad.Name = "idActividad";
-            this.idActividad.Size = new System.Drawing.Size(162, 20);
-            this.idActividad.TabIndex = 67;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(160, 390);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
-            this.label2.TabIndex = 66;
-            this.label2.Text = "idActividad:";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1014, 282);
+            this.dataGridView1.Size = new System.Drawing.Size(398, 282);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
@@ -233,12 +215,22 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // dgvGrupos
+            // 
+            this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrupos.Location = new System.Drawing.Point(514, 71);
+            this.dgvGrupos.Name = "dgvGrupos";
+            this.dgvGrupos.Size = new System.Drawing.Size(398, 282);
+            this.dgvGrupos.TabIndex = 85;
+            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrupos_CellDoubleClick);
+            // 
             // Actividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
+            this.Controls.Add(this.dgvGrupos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
@@ -256,13 +248,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.idActividad);
-            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Actividades";
             this.Text = "Actividades";
             this.Load += new System.EventHandler(this.Actividades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,8 +269,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox idActividad;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ponderacion;
@@ -289,5 +278,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.DataGridView dgvGrupos;
     }
 }

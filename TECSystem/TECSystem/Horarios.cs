@@ -21,7 +21,7 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            horarios.agregar_horarios(Convert.ToInt32(idHorarios),Grupo.Text,Convert.ToInt32(comboBox1.SelectedItem),Convert.ToInt32(comboBox2.SelectedItem),Convert.ToString(comboBox3.SelectedItem));
+            horarios.agregar_horarios(Grupo.Text,Convert.ToInt32(comboBox1.SelectedIndex.ToString()),Convert.ToInt32(comboBox2.SelectedIndex.ToString()),Convert.ToString(comboBox3.SelectedIndex.ToString()));
             MostrarTabla();
             limpiar();
         }
@@ -62,6 +62,7 @@ namespace TECSystem
         private void Horarios_Load(object sender, EventArgs e)
         {
             dtgHorarios.DataSource = grupos.mostrarHorarios();
+            MostrarGrupos();
         }
 
         private void DtgHorarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -74,6 +75,17 @@ namespace TECSystem
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
+        }
+
+        private void MostrarGrupos()
+        {
+            CN_Grupos _CN_Grupos = new CN_Grupos();
+            dgvGrupos.DataSource = _CN_Grupos.mostrarGrupos();
+        }
+
+        private void DgvGrupos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Grupo.Text = dgvGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
         }
     }
 }

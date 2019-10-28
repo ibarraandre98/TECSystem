@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "TECSystem\CapaPresentacion.csproj", "{A0CAA00B-AA82-4BB0-B437-1D7D012FB1DD}"
 EndProject
@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BaseDeDatos", "BaseDeDatos", "{8780E6E0-A6FC-48B1-B548-EE5C0D870725}"
 	ProjectSection(SolutionItems) = preProject
 		BD241019.sql = BD241019.sql
+		BD281019.sql = BD281019.sql
 		BD_JOINS.sql = BD_JOINS.sql
 		BDTEC.sql = BDTEC.sql
 		nuevaBD.sql = nuevaBD.sql

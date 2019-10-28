@@ -13,6 +13,8 @@ namespace TECSystem
 {
     public partial class Actividades : Form
     {
+        String IDActividad;
+        int IDGrupo;
         CN_Actividades obj = new CN_Actividades();
         public Actividades()
         {
@@ -30,19 +32,20 @@ namespace TECSystem
         {
             obj.agregar_actividad(nombre.Text, descripcion.Text, grupo.Text, Convert.ToInt32(tema.Text), Convert.ToInt32(ponderacion.Text), fecha.Value);
             mostrar_actividad();
+            MostrarGrupos();
             limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            obj.editar_actividad(Convert.ToInt32(idActividad.Text), nombre.Text, descripcion.Text, grupo.Text, Convert.ToInt32(tema.Text), Convert.ToInt32(ponderacion.Text), fecha.Value);
+            obj.editar_actividad(Convert.ToInt32(IDActividad), nombre.Text, descripcion.Text, grupo.Text, Convert.ToInt32(tema.Text), Convert.ToInt32(ponderacion.Text), fecha.Value);
             mostrar_actividad();
             limpiar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            obj.eliminar_actividad(Convert.ToInt32(idActividad.Text));
+            obj.eliminar_actividad(Convert.ToInt32(IDActividad));
             mostrar_actividad();
             limpiar();
         }
@@ -57,20 +60,31 @@ namespace TECSystem
             mostrar_actividad();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
+            MostrarGrupos();
         }
 
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
-            idActividad.Text = dataGridView1.CurrentRow.Cells["idActividad"].Value.ToString();
+            IDActividad = dataGridView1.CurrentRow.Cells["idActividad"].Value.ToString();
             nombre.Text = dataGridView1.CurrentRow.Cells["nombre"].Value.ToString();
             descripcion.Text = dataGridView1.CurrentRow.Cells["descripcion"].Value.ToString();
-            grupo.Text = dataGridView1.CurrentRow.Cells["grupo"].Value.ToString();
             tema.Text = dataGridView1.CurrentRow.Cells["tema"].Value.ToString();
             ponderacion.Text = dataGridView1.CurrentRow.Cells["ponderacion"].Value.ToString();
             fecha.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells["fecha"].Value.ToString());
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
             btnAgregar.Enabled = false;
+        }
+
+        private void MostrarGrupos()
+        {
+            CN_Grupos _CN_Grupos = new CN_Grupos();
+            dgvGrupos.DataSource = _CN_Grupos.mostrarGrupos();
+        }
+
+        private void DgvGrupos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            grupo.Text = dgvGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
         }
     }
 }

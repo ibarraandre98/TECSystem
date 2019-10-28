@@ -19,9 +19,9 @@ namespace CapaNegocio
             return tabla;
         }
 
-        public void agregar_horarios(int idHorario, string grupo, int dia, int hora, string aula)
+        public void agregar_horarios(string grupo, int dia, int hora, string aula)
         {
-            obj.AgregarHorarios(idHorario, grupo, dia, hora, aula);
+            obj.AgregarHorarios(grupo, dia, hora, aula);
         }
         public void editar_horarios(int idHorario,  string grupo, int dia, int hora, string aula)
         {

@@ -18,7 +18,13 @@ namespace CapaDatos
         public DataTable mostrar()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from grupos";
+            comando.CommandText = " select grupos.cveGrupo, grupos.materia, materias.nombre, grupos.profesor, " +
+                "profesores.idEmpleado, empleados.idPersona, personas.nombres, personas.paterno, personas.materno " +
+                "from grupos " +
+                "join materias on grupos.materia = materias.cveMateria " +
+                "join profesores on grupos.profesor = profesores.idProfesor " +
+                "join empleados on profesores.idEmpleado = empleados.idEmpleado " +
+                "join personas on empleados.idPersona = personas.idPersona";
             leer = comando.ExecuteReader();
             tablaGrupos.Load(leer);
             conexion.CerrarConexion();

@@ -26,11 +26,11 @@ namespace CapaDatos
             return tablaHorarios;
         }
 
-        public void AgregarHorarios(int idHorario,string grupo,int dia,int hora,string aula)
+        public void AgregarHorarios(string grupo,int dia,int hora,string aula)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into horarios" +
-                "(idHorario,grupo,dia,hora,aula) " +
+                "(grupo,dia,hora,aula) " +
                 "values('" + grupo + "','" + dia + "','" + hora + "','" + aula + "');";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();

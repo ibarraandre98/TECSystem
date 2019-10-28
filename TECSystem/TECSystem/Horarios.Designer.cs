@@ -40,10 +40,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.dgvGrupos = new System.Windows.Forms.DataGridView();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHorarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -123,9 +125,9 @@
             // dtgHorarios
             // 
             this.dtgHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgHorarios.Location = new System.Drawing.Point(41, 97);
+            this.dtgHorarios.Location = new System.Drawing.Point(12, 92);
             this.dtgHorarios.Name = "dtgHorarios";
-            this.dtgHorarios.Size = new System.Drawing.Size(1014, 282);
+            this.dtgHorarios.Size = new System.Drawing.Size(360, 282);
             this.dtgHorarios.TabIndex = 78;
             this.dtgHorarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgHorarios_CellDoubleClick);
             // 
@@ -173,15 +175,24 @@
             this.label6.TabIndex = 88;
             this.label6.Text = "Aula";
             // 
-            // comboBox1
+            // comboBox3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1"});
-            this.comboBox1.Location = new System.Drawing.Point(143, 472);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 21);
-            this.comboBox1.TabIndex = 89;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "123"});
+            this.comboBox3.Location = new System.Drawing.Point(471, 441);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(162, 21);
+            this.comboBox3.TabIndex = 91;
+            // 
+            // dgvGrupos
+            // 
+            this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrupos.Location = new System.Drawing.Point(448, 92);
+            this.dgvGrupos.Name = "dgvGrupos";
+            this.dgvGrupos.Size = new System.Drawing.Size(398, 282);
+            this.dgvGrupos.TabIndex = 92;
+            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrupos_CellDoubleClick);
             // 
             // comboBox2
             // 
@@ -193,15 +204,15 @@
             this.comboBox2.Size = new System.Drawing.Size(162, 21);
             this.comboBox2.TabIndex = 90;
             // 
-            // comboBox3
+            // comboBox1
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "123"});
-            this.comboBox3.Location = new System.Drawing.Point(471, 441);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(162, 21);
-            this.comboBox3.TabIndex = 91;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1"});
+            this.comboBox1.Location = new System.Drawing.Point(143, 472);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(162, 21);
+            this.comboBox1.TabIndex = 89;
             // 
             // Horarios
             // 
@@ -209,6 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1008, 555);
+            this.Controls.Add(this.dgvGrupos);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -228,6 +240,7 @@
             this.Text = "Horarios";
             this.Load += new System.EventHandler(this.Horarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgHorarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,8 +260,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.DataGridView dgvGrupos;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
