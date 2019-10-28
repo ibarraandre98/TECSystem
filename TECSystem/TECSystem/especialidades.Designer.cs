@@ -1,6 +1,6 @@
 ﻿namespace TECSystem
 {
-    partial class especialidades
+    partial class Especialidades
     {
         /// <summary>
         /// Required designer variable.
@@ -28,152 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Empleado = new System.Windows.Forms.Label();
-            this.idEspecialidad = new System.Windows.Forms.TextBox();
+            this.dtgEspecialidades = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCarrera = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtgCarreras = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Carrera = new System.Windows.Forms.TextBox();
-            this.nombre = new System.Windows.Forms.TextBox();
-            this.dtgespecialidades = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgespecialidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEspecialidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCarreras)).BeginInit();
             this.SuspendLayout();
             // 
-            // Empleado
+            // dtgEspecialidades
             // 
-            this.Empleado.AutoSize = true;
-            this.Empleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Empleado.ForeColor = System.Drawing.Color.White;
-            this.Empleado.Location = new System.Drawing.Point(162, 343);
-            this.Empleado.Name = "Empleado";
-            this.Empleado.Size = new System.Drawing.Size(125, 20);
-            this.Empleado.TabIndex = 89;
-            this.Empleado.Text = "idEspecialidad";
-            // 
-            // idEspecialidad
-            // 
-            this.idEspecialidad.Location = new System.Drawing.Point(313, 343);
-            this.idEspecialidad.Name = "idEspecialidad";
-            this.idEspecialidad.Size = new System.Drawing.Size(100, 20);
-            this.idEspecialidad.TabIndex = 88;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(698, 492);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(138, 34);
-            this.btnEliminar.TabIndex = 87;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(534, 492);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(138, 34);
-            this.btnEditar.TabIndex = 86;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(372, 492);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(138, 34);
-            this.btnAgregar.TabIndex = 85;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(216, 395);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 20);
-            this.label4.TabIndex = 84;
-            this.label4.Text = "Carrera";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(216, 367);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 20);
-            this.label3.TabIndex = 83;
-            this.label3.Text = "Nombre";
-            // 
-            // Carrera
-            // 
-            this.Carrera.Location = new System.Drawing.Point(313, 395);
-            this.Carrera.Name = "Carrera";
-            this.Carrera.Size = new System.Drawing.Size(100, 20);
-            this.Carrera.TabIndex = 82;
-            // 
-            // nombre
-            // 
-            this.nombre.Location = new System.Drawing.Point(313, 369);
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(100, 20);
-            this.nombre.TabIndex = 81;
-            // 
-            // dtgespecialidades
-            // 
-            this.dtgespecialidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgespecialidades.Location = new System.Drawing.Point(113, 70);
-            this.dtgespecialidades.Name = "dtgespecialidades";
-            this.dtgespecialidades.Size = new System.Drawing.Size(532, 267);
-            this.dtgespecialidades.TabIndex = 80;
-            this.dtgespecialidades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgespecialidades_CellDoubleClick);
+            this.dtgEspecialidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEspecialidades.Location = new System.Drawing.Point(37, 74);
+            this.dtgEspecialidades.Name = "dtgEspecialidades";
+            this.dtgEspecialidades.Size = new System.Drawing.Size(264, 282);
+            this.dtgEspecialidades.TabIndex = 37;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 36);
+            this.label1.Location = new System.Drawing.Point(31, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(263, 31);
-            this.label1.TabIndex = 90;
+            this.label1.TabIndex = 36;
             this.label1.Text = "ESPECIALIDADES";
             // 
-            // especialidades
+            // txtCarrera
+            // 
+            this.txtCarrera.Location = new System.Drawing.Point(139, 410);
+            this.txtCarrera.Name = "txtCarrera";
+            this.txtCarrera.Size = new System.Drawing.Size(162, 20);
+            this.txtCarrera.TabIndex = 45;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(33, 410);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 20);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Carrera";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(139, 384);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(162, 20);
+            this.txtNombre.TabIndex = 43;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(33, 384);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Nombre";
+            // 
+            // dtgCarreras
+            // 
+            this.dtgCarreras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgCarreras.Location = new System.Drawing.Point(399, 74);
+            this.dtgCarreras.Name = "dtgCarreras";
+            this.dtgCarreras.Size = new System.Drawing.Size(264, 282);
+            this.dtgCarreras.TabIndex = 46;
+            this.dtgCarreras.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgCarreras_CellDoubleClick);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Location = new System.Drawing.Point(461, 481);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(138, 34);
+            this.btnEliminar.TabIndex = 68;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.White;
+            this.btnEditar.Enabled = false;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(297, 481);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(138, 34);
+            this.btnEditar.TabIndex = 67;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackColor = System.Drawing.Color.White;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Location = new System.Drawing.Point(124, 481);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(138, 34);
+            this.btnAgregar.TabIndex = 66;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // Especialidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1064, 669);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Empleado);
-            this.Controls.Add(this.idEspecialidad);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.dtgCarreras);
+            this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Carrera);
-            this.Controls.Add(this.nombre);
-            this.Controls.Add(this.dtgespecialidades);
-            this.Name = "especialidades";
-            this.Text = "especialidades";
-            this.Load += new System.EventHandler(this.especialidades_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgespecialidades)).EndInit();
+            this.Controls.Add(this.dtgEspecialidades);
+            this.Controls.Add(this.label1);
+            this.Name = "Especialidades";
+            this.Text = "Especialidades";
+            this.Load += new System.EventHandler(this.Especialidades_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEspecialidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgCarreras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,16 +169,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label Empleado;
-        private System.Windows.Forms.TextBox idEspecialidad;
+        private System.Windows.Forms.DataGridView dtgEspecialidades;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCarrera;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dtgCarreras;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Carrera;
-        private System.Windows.Forms.TextBox nombre;
-        private System.Windows.Forms.DataGridView dtgespecialidades;
-        private System.Windows.Forms.Label label1;
     }
 }

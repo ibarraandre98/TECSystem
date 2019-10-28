@@ -197,5 +197,10 @@ namespace TECSystem
         {
             AbrirFormulario<Calificaciones>();
         }
+
+        private void Logo_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Especialidades>();
+        }
     }
 }

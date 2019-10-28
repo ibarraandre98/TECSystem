@@ -15,9 +15,9 @@ namespace CapaNegocio
 
         DataTable tabla = new DataTable();
 
-        public DataTable MostrarTabla()
+        public DataTable MostrarCarreras()
         {
-            return tabla = objetoCD.MostrarTabla();
+            return tabla = objetoCD.MostrarCarreras();
         }
 
         public void AgregarCarrera(string nombre, string coordinador)

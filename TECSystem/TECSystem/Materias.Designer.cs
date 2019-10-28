@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dtgPersonas = new System.Windows.Forms.DataGridView();
-            this.txtCarrera = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCreditos = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.cbCarrera = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,13 +67,6 @@
             this.dtgPersonas.Size = new System.Drawing.Size(750, 282);
             this.dtgPersonas.TabIndex = 2;
             this.dtgPersonas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgPersonas_CellDoubleClick);
-            // 
-            // txtCarrera
-            // 
-            this.txtCarrera.Location = new System.Drawing.Point(463, 418);
-            this.txtCarrera.Name = "txtCarrera";
-            this.txtCarrera.Size = new System.Drawing.Size(162, 20);
-            this.txtCarrera.TabIndex = 33;
             // 
             // label15
             // 
@@ -212,16 +205,24 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // cbCarrera
+            // 
+            this.cbCarrera.FormattingEnabled = true;
+            this.cbCarrera.Location = new System.Drawing.Point(463, 420);
+            this.cbCarrera.Name = "cbCarrera";
+            this.cbCarrera.Size = new System.Drawing.Size(162, 21);
+            this.cbCarrera.TabIndex = 37;
+            // 
             // Materias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(811, 539);
+            this.Controls.Add(this.cbCarrera);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtCreditos);
             this.Controls.Add(this.label10);
@@ -249,7 +250,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgPersonas;
-        private System.Windows.Forms.TextBox txtCarrera;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtCreditos;
         private System.Windows.Forms.Label label10;
@@ -264,5 +264,6 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbCarrera;
     }
 }

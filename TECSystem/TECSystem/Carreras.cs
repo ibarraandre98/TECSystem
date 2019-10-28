@@ -30,7 +30,7 @@ namespace TECSystem
         private void MostrarTabla()
         {
             CN_Carreras _CN_Carreras = new CN_Carreras();
-            dtgCarreras.DataSource = _CN_Carreras.MostrarTabla();
+            dtgCarreras.DataSource = _CN_Carreras.MostrarCarreras();
         }
 
         private void MostrarEmpleados()

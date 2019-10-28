@@ -15,10 +15,13 @@ namespace CapaDatos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable MostrarTabla()
+        public DataTable MostrarCarreras()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from carreras";
+            comando.CommandText = "select carreras.idCarrera, carreras.nombre, carreras.coordinador, empleados.idPersona, " +
+                "personas.nombres, personas.paterno, personas.materno from carreras " +
+                "join empleados on carreras.coordinador = empleados.idEmpleado " +
+                "join personas on empleados.idPersona = personas.idPersona";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             tabla.Load(leer);

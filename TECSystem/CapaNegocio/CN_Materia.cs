@@ -17,7 +17,7 @@ namespace CapaNegocio
         {
             return tablaMaterias = objetoCD.MostrarMaterias();
         }
-        public void AgregarMateria(int cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
+        public void AgregarMateria(String cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
         {
             objetoCD.AgregarMateria(cve,nombre,hteoricas,hpracticas,creditos,carrera);
         }

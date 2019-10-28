@@ -18,17 +18,20 @@ namespace CapaDatos
             public DataTable MostrarMaterias()
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "select * from materias;";
+            comando.CommandText = " select materias.cveMateria, materias.nombre, materias.hTeoricas, materias.hPracticas, materias.creditos, " +
+                "materias.carrera, carreras.nombre as Nombre_Carrera " +
+                "from materias " +
+                "join carreras on materias.carrera = carreras.idCarrera";
             comando.CommandType = CommandType.Text;
             leer = comando.ExecuteReader();
             tabla.Load(leer);
             conexion.CerrarConexion();
             return tabla;
         }
-        public void AgregarMateria(int cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
+        public void AgregarMateria(String cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into materias values(" + cve + ",'" + nombre + "'," + hteoricas + "," + hpracticas + "," + creditos + "," + carrera + ");";
+            comando.CommandText = "insert into materias values('" + cve + "','" + nombre + "'," + hteoricas + "," + hpracticas + "," + creditos + "," + carrera + ");";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
