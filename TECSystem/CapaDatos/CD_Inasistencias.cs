@@ -29,11 +29,13 @@ namespace CapaDatos
         public void AgregarInasistencias( string grupo, string matricula, DateTime fecha , int tipoInasistencia)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "insert into inasistencias" +
-                "(grupo,matricula,fecha,tipoInasistencia) " +
-                "values('" + grupo + "','" + matricula + "','" + "', convert(datetime,'" + fecha.ToString("MM-dd-yyyy") + "',101),'" + tipoInasistencia +"');";
+            comando.CommandText = "insert into inasistencias " +
+                "(grupo, matricula, fecha, tipoinasistencia) " +
+                "values " +
+                "('"+grupo+"', '"+matricula+ "', convert(datetime,'" + fecha.ToString("MM-dd-yyyy") + "',101), '"+tipoInasistencia+"');";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
         }
 
         public void EditarInasistencias(int idInasistencia,  string grupo, string matricula, DateTime fecha, int tipoInasistencia)
@@ -42,6 +44,7 @@ namespace CapaDatos
             comando.CommandText = "update inasistencias set grupo = '" + grupo + "',matricula='" + matricula+ "fecha='" + fecha + "',tipoInasistencia='" + tipoInasistencia+ "' where idInasistencia = '" + idInasistencia+ "';";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
         }
 
         public void EliminarInasistencia(int idInasistencia)
@@ -50,6 +53,7 @@ namespace CapaDatos
             comando.CommandText = "delete from inasistencias where idInasistencia = '" + idInasistencia + "';";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
         }
     }
 }
