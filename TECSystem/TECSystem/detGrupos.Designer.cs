@@ -41,7 +41,11 @@
             this.dtgdetGrupos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtiddetGpo = new System.Windows.Forms.TextBox();
+            this.dgvGrupo = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgdetGrupos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -151,7 +155,7 @@
             this.dtgdetGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgdetGrupos.Location = new System.Drawing.Point(43, 91);
             this.dtgdetGrupos.Name = "dtgdetGrupos";
-            this.dtgdetGrupos.Size = new System.Drawing.Size(1014, 282);
+            this.dtgdetGrupos.Size = new System.Drawing.Size(264, 282);
             this.dtgdetGrupos.TabIndex = 68;
             this.dtgdetGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgdetGrupos_CellDoubleClick);
             // 
@@ -174,12 +178,30 @@
             this.txtiddetGpo.Size = new System.Drawing.Size(162, 20);
             this.txtiddetGpo.TabIndex = 81;
             // 
+            // dgvGrupo
+            // 
+            this.dgvGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrupo.Location = new System.Drawing.Point(375, 91);
+            this.dgvGrupo.Name = "dgvGrupo";
+            this.dgvGrupo.Size = new System.Drawing.Size(264, 282);
+            this.dgvGrupo.TabIndex = 82;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(700, 91);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(264, 282);
+            this.dataGridView1.TabIndex = 83;
+            // 
             // detGrupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvGrupo);
             this.Controls.Add(this.txtiddetGpo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -198,6 +220,8 @@
             this.Text = "detGrupos";
             this.Load += new System.EventHandler(this.DetGrupos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgdetGrupos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +241,7 @@
         private System.Windows.Forms.DataGridView dtgdetGrupos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtiddetGpo;
+        private System.Windows.Forms.DataGridView dgvGrupo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

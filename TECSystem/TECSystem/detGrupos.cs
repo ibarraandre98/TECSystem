@@ -79,6 +79,11 @@ namespace TECSystem
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
         }
+
+        private void MostrarGrupos()
+        {
+
+        }
     }
     }
 
