@@ -40,10 +40,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtgInasistencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.Matricula = new System.Windows.Forms.TextBox();
+            this.txtMatricula = new System.Windows.Forms.TextBox();
             this.tipoInasistencia = new System.Windows.Forms.TextBox();
-            this.Fecha = new System.Windows.Forms.TextBox();
+            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.dgvGrupo = new System.Windows.Forms.DataGridView();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInasistencias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupo)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -158,7 +162,7 @@
             this.dtgInasistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgInasistencias.Location = new System.Drawing.Point(36, 117);
             this.dtgInasistencias.Name = "dtgInasistencias";
-            this.dtgInasistencias.Size = new System.Drawing.Size(1014, 282);
+            this.dtgInasistencias.Size = new System.Drawing.Size(284, 282);
             this.dtgInasistencias.TabIndex = 93;
             this.dtgInasistencias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgInasistencias_CellDoubleClick);
             // 
@@ -173,12 +177,12 @@
             this.label1.TabIndex = 92;
             this.label1.Text = "INASISTENCIAS";
             // 
-            // Matricula
+            // txtMatricula
             // 
-            this.Matricula.Location = new System.Drawing.Point(158, 498);
-            this.Matricula.Name = "Matricula";
-            this.Matricula.Size = new System.Drawing.Size(162, 20);
-            this.Matricula.TabIndex = 107;
+            this.txtMatricula.Location = new System.Drawing.Point(158, 498);
+            this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.Size = new System.Drawing.Size(162, 20);
+            this.txtMatricula.TabIndex = 107;
             // 
             // tipoInasistencia
             // 
@@ -187,13 +191,30 @@
             this.tipoInasistencia.Size = new System.Drawing.Size(162, 20);
             this.tipoInasistencia.TabIndex = 109;
             // 
-            // Fecha
+            // dgvAlumnos
             // 
-            this.Fecha.Location = new System.Drawing.Point(515, 435);
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Size = new System.Drawing.Size(162, 20);
-            this.Fecha.TabIndex = 108;
+            this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnos.Location = new System.Drawing.Point(705, 117);
+            this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.Size = new System.Drawing.Size(264, 282);
+            this.dgvAlumnos.TabIndex = 111;
+            this.dgvAlumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAlumnos_CellDoubleClick);
+            // 
+            // dgvGrupo
+            // 
+            this.dgvGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrupo.Location = new System.Drawing.Point(380, 117);
+            this.dgvGrupo.Name = "dgvGrupo";
+            this.dgvGrupo.Size = new System.Drawing.Size(264, 282);
+            this.dgvGrupo.TabIndex = 110;
+            this.dgvGrupo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrupo_CellDoubleClick);
+            // 
+            // dtpFecha
+            // 
+            this.dtpFecha.Location = new System.Drawing.Point(516, 434);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(161, 20);
+            this.dtpFecha.TabIndex = 112;
             // 
             // Inasistencias
             // 
@@ -201,9 +222,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dtpFecha);
+            this.Controls.Add(this.dgvAlumnos);
+            this.Controls.Add(this.dgvGrupo);
             this.Controls.Add(this.tipoInasistencia);
-            this.Controls.Add(this.Fecha);
-            this.Controls.Add(this.Matricula);
+            this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -220,6 +243,8 @@
             this.Text = "Inasistencias";
             this.Load += new System.EventHandler(this.Inasistencias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgInasistencias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,8 +263,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgInasistencias;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox Matricula;
+        private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.TextBox tipoInasistencia;
-        private System.Windows.Forms.TextBox Fecha;
+        private System.Windows.Forms.DataGridView dgvAlumnos;
+        private System.Windows.Forms.DataGridView dgvGrupo;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
     }
 }

@@ -26,17 +26,17 @@ namespace CapaDatos
             return tablaInasistencias;
         }
 
-        public void AgregarInasistencias( string grupo, string matricula, string fecha , int tipoInasistencia)
+        public void AgregarInasistencias( string grupo, string matricula, DateTime fecha , int tipoInasistencia)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into inasistencias" +
                 "(grupo,matricula,fecha,tipoInasistencia) " +
-                "values('" + grupo + "','" + matricula + "','" + fecha + "','" + tipoInasistencia +"');";
+                "values('" + grupo + "','" + matricula + "','" + "', convert(datetime,'" + fecha.ToString("MM-dd-yyyy") + "',101),'" + tipoInasistencia +"');";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
 
-        public void EditarInasistencias(int idInasistencia,  string grupo, string matricula, string fecha, int tipoInasistencia)
+        public void EditarInasistencias(int idInasistencia,  string grupo, string matricula, DateTime fecha, int tipoInasistencia)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update inasistencias set grupo = '" + grupo + "',matricula='" + matricula+ "fecha='" + fecha + "',tipoInasistencia='" + tipoInasistencia+ "' where idInasistencia = '" + idInasistencia+ "';";

@@ -31,7 +31,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtTipoCurso = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,10 +41,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtiddetGpo = new System.Windows.Forms.TextBox();
             this.dgvGrupo = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.cbTipoCurso = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgdetGrupos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -84,13 +84,6 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // txtTipoCurso
-            // 
-            this.txtTipoCurso.Location = new System.Drawing.Point(145, 487);
-            this.txtTipoCurso.Name = "txtTipoCurso";
-            this.txtTipoCurso.Size = new System.Drawing.Size(162, 20);
-            this.txtTipoCurso.TabIndex = 76;
             // 
             // label5
             // 
@@ -185,14 +178,29 @@
             this.dgvGrupo.Name = "dgvGrupo";
             this.dgvGrupo.Size = new System.Drawing.Size(264, 282);
             this.dgvGrupo.TabIndex = 82;
+            this.dgvGrupo.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrupo_CellDoubleClick);
             // 
-            // dataGridView1
+            // dgvAlumnos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(700, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(264, 282);
-            this.dataGridView1.TabIndex = 83;
+            this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnos.Location = new System.Drawing.Point(700, 91);
+            this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.Size = new System.Drawing.Size(264, 282);
+            this.dgvAlumnos.TabIndex = 83;
+            this.dgvAlumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvAlumnos_CellDoubleClick);
+            // 
+            // cbTipoCurso
+            // 
+            this.cbTipoCurso.FormattingEnabled = true;
+            this.cbTipoCurso.Items.AddRange(new object[] {
+            "CN: Curso Normal",
+            "CR: Curso Repetición",
+            "CE: Curso Especial",
+            "CA: Curso Autodidacta"});
+            this.cbTipoCurso.Location = new System.Drawing.Point(145, 489);
+            this.cbTipoCurso.Name = "cbTipoCurso";
+            this.cbTipoCurso.Size = new System.Drawing.Size(162, 21);
+            this.cbTipoCurso.TabIndex = 84;
             // 
             // detGrupos
             // 
@@ -200,13 +208,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cbTipoCurso);
+            this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.dgvGrupo);
             this.Controls.Add(this.txtiddetGpo);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtTipoCurso);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.label4);
@@ -221,7 +229,7 @@
             this.Load += new System.EventHandler(this.DetGrupos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgdetGrupos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +239,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtTipoCurso;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.Label label4;
@@ -242,6 +249,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtiddetGpo;
         private System.Windows.Forms.DataGridView dgvGrupo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAlumnos;
+        private System.Windows.Forms.ComboBox cbTipoCurso;
     }
 }

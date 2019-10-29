@@ -19,11 +19,11 @@ namespace CapaNegocio
             return tabla;
         }
 
-        public void agregar_inasistencias(string grupo, string matricula, string fecha,int tipoInasistencia)
+        public void agregar_inasistencias(string grupo, string matricula, DateTime fecha,int tipoInasistencia)
         {
             obj.AgregarInasistencias(grupo,matricula,fecha,tipoInasistencia);
         }
-        public void editar_inasistencias(int idInasistencia, string grupo, string matricula, string fecha, int tipoInasistencia)
+        public void editar_inasistencias(int idInasistencia, string grupo, string matricula, DateTime fecha, int tipoInasistencia)
         {
             obj.EditarInasistencias(idInasistencia,grupo,matricula,fecha,tipoInasistencia);
         }

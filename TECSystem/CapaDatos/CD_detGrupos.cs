@@ -32,7 +32,8 @@ namespace CapaDatos
             comando.Parameters.AddWithValue("@cveGrupo", cveGrupo);
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@tipoCurso", tipoCurso);
-            leer = comando.ExecuteReader();
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }
