@@ -79,6 +79,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
+            this.panelMenu.Controls.Add(this.bunifuFlatButton9);
             this.panelMenu.Controls.Add(this.bunifuFlatButton13);
             this.panelMenu.Controls.Add(this.bunifuFlatButton15);
             this.panelMenu.Controls.Add(this.bunifuFlatButton14);
@@ -91,7 +92,6 @@
             this.panelMenu.Controls.Add(this.bunifuFlatButton16);
             this.panelMenu.Controls.Add(this.bunifuFlatButton17);
             this.panelMenu.Controls.Add(this.bunifuFlatButton18);
-            this.panelMenu.Controls.Add(this.bunifuFlatButton9);
             this.panelMenu.Controls.Add(this.bunifuFlatButton8);
             this.panelMenu.Controls.Add(this.bunifuFlatButton7);
             this.panelMenu.Controls.Add(this.bunifuFlatButton6);
