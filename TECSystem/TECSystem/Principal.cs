@@ -43,8 +43,6 @@ namespace TECSystem
         private void FormularioCerrar_Click(object sender, EventArgs e)
         {
             panelMenu.Width = 25;
-            FormularioCerrar.Visible = false;
-            FormularioAbrir.Visible = true;
             Logo.Visible = false;
             
         }
@@ -52,8 +50,6 @@ namespace TECSystem
         private void FormularioAbrir_Click(object sender, EventArgs e)
         {
             panelMenu.Width = 200;
-            FormularioCerrar.Visible = !false;
-            FormularioAbrir.Visible = !true;
             Logo.Visible = !false;
         }
         #endregion
@@ -96,7 +92,9 @@ namespace TECSystem
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de salir?", "Salir", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if(dialogResult == DialogResult.Yes)
+                Application.Exit();
         }
 
         private void hideSubMenu()
@@ -261,6 +259,11 @@ namespace TECSystem
         {
             AbrirFormulario<Materias>();
             hideSubMenu();
+        }
+
+        private void PbMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
