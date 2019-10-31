@@ -203,25 +203,9 @@ namespace TECSystem
             AbrirFormulario<Especialidades>();
         }
 
-
-        private void bunifuFlatButton22_MouseEnter(object sender, EventArgs e)
+        private void bunifuFlatButton10_Click(object sender, EventArgs e)
         {
-            panelUbicacion.Visible = true;
-        }
 
-        private void bunifuFlatButton22_MouseLeave(object sender, EventArgs e)
-        {
-            panelUbicacion.Visible = false;
-        }
-
-        private void button1_MouseEnter(object sender, EventArgs e)
-        {
-            panelUbicacion.Visible = true;
-        }
-
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-            panelUbicacion.Visible = false;
         }
     }
 }
