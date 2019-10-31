@@ -8,7 +8,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    public class CN_detGrupos
+    public class CN_DetGrupos
     {
         private CD_DetGrupos objetoCD = new CD_DetGrupos();
 

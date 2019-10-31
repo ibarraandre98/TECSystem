@@ -13,7 +13,7 @@ namespace TECSystem
 {
     public partial class Empleos : Form
     {
-        CN_empleos _CN_Empleos = new CN_empleos();
+        CN_Empleos _CN_Empleos = new CN_Empleos();
         String IDEmpleo;
         public Empleos()
         {
@@ -22,7 +22,7 @@ namespace TECSystem
 
         private void MostrarEmpleos()
         {
-            CN_empleos _CN_Empleos = new CN_empleos();
+            CN_Empleos _CN_Empleos = new CN_Empleos();
             dtgEmpleos.DataSource = _CN_Empleos.Mostrarempleos();
         }
 

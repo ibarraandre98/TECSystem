@@ -8,7 +8,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    public class CN_empleados
+    public class CN_Empleados
     {
         CD_Empleados _CD_empleados = new CD_Empleados();
         DataTable tablaempleados = new DataTable();

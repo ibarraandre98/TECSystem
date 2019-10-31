@@ -50,7 +50,7 @@ namespace TECSystem
 
         private void MostrarTiposLocalidades()
         {
-            CN_tiposLocalidad _CN_TiposLocalidad = new CN_tiposLocalidad();
+            CN_TiposLocalidad _CN_TiposLocalidad = new CN_TiposLocalidad();
             cbTipo.DataSource = _CN_TiposLocalidad.MostrarTiposLocalidad();
             cbTipo.ValueMember = "idTipoLoc";
             cbTipo.DisplayMember = "tipo";

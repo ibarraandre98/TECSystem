@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using CapaDatos;
 namespace CapaNegocio
 {
-    public class CN_empleos
+    public class CN_Empleos
     {
         CD_Empleos _CD_empleos = new CD_Empleos();
         DataTable tablaempleos = new DataTable();

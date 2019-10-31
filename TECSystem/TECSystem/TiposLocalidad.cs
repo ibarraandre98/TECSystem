@@ -13,7 +13,7 @@ namespace TECSystem
 {
     public partial class TiposLocalidad : Form
     {
-        CN_tiposLocalidad _CN_TiposLocalidad = new CN_tiposLocalidad();
+        CN_TiposLocalidad _CN_TiposLocalidad = new CN_TiposLocalidad();
         public TiposLocalidad()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace TECSystem
 
         private void MostrarTiposLocalidades()
         {
-            CN_tiposLocalidad _CN_TiposLocalidad = new CN_tiposLocalidad();
+            CN_TiposLocalidad _CN_TiposLocalidad = new CN_TiposLocalidad();
             dtgtiposLoca.DataSource = _CN_TiposLocalidad.MostrarTiposLocalidad();
         }
 

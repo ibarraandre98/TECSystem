@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace CapaNegocio
 {
-    public class CN_tiposLocalidad
+    public class CN_TiposLocalidad
     {
         CD_TiposLocalidad _CD_TiposLocalidad = new CD_TiposLocalidad();
         DataTable TablaTiposLocalidad = new DataTable();

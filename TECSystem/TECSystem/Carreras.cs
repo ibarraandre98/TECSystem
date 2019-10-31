@@ -35,7 +35,7 @@ namespace TECSystem
 
         private void MostrarEmpleados()
         {
-            CN_empleados _CN_Empleados = new CN_empleados();
+            CN_Empleados _CN_Empleados = new CN_Empleados();
             dtgEmpleados.DataSource = _CN_Empleados.MostrarEmpleados();
         }
 

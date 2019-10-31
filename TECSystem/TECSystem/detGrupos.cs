@@ -13,7 +13,7 @@ namespace TECSystem
 {
     public partial class detGrupos : Form
     {
-        CN_detGrupos _CN_detGrupos = new CN_detGrupos();
+        CN_DetGrupos _CN_detGrupos = new CN_DetGrupos();
         String IDGrupo;
         String Matricula;
 
@@ -31,7 +31,7 @@ namespace TECSystem
 
         private void MostrarTabla()
         {
-            CN_detGrupos _CN_detGrupos = new CN_detGrupos();
+            CN_DetGrupos _CN_detGrupos = new CN_DetGrupos();
             dtgdetGrupos.DataSource = _CN_detGrupos.MostrarTabla();
         }
 
