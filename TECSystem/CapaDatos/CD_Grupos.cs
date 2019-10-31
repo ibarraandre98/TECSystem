@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class CD_Grupos
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
         DataTable tablaGrupos = new DataTable();

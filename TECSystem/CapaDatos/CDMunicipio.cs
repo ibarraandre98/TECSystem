@@ -11,7 +11,7 @@ namespace CapaDatos
 {
     public class CD_Municipio
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         DataTable tablaMunicipioEstado = new DataTable();

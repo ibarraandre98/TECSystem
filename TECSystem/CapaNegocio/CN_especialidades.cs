@@ -10,7 +10,7 @@ namespace CapaNegocio
 {
    public class CN_especialidades
     {
-        CD_especialidades _CD_especialidades = new CD_especialidades();
+        CD_Especialidades _CD_especialidades = new CD_Especialidades();
         DataTable tablaespecialidades = new DataTable();
         DataTable tablaEspecialidadesCarrera = new DataTable();
 

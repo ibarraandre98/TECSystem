@@ -11,7 +11,7 @@ namespace CapaNegocio
 {
     public class CN_tiposLocalidad
     {
-        CD_tiposLocalidad _CD_TiposLocalidad = new CD_tiposLocalidad();
+        CD_TiposLocalidad _CD_TiposLocalidad = new CD_TiposLocalidad();
         DataTable TablaTiposLocalidad = new DataTable();
 
         public DataTable MostrarTiposLocalidad()

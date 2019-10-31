@@ -9,7 +9,7 @@ namespace CapaNegocio
 {
     public class CN_empleos
     {
-        CD_empleos _CD_empleos = new CD_empleos();
+        CD_Empleos _CD_empleos = new CD_Empleos();
         DataTable tablaempleos = new DataTable();
 
         public DataTable Mostrarempleos()

@@ -11,7 +11,7 @@ namespace CapaNegocio
 {
     public class CN_Materia
     {
-        private CDMateria objetoCD = new CDMateria();
+        private CD_Materia objetoCD = new CD_Materia();
         DataTable tablaMaterias = new DataTable();
         public DataTable MostrarMaterias()
         {

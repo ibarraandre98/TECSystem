@@ -10,7 +10,7 @@ namespace CapaNegocio
 {
     public class CN_detActividades
     {
-        private CD_detActividades objetoCD = new CD_detActividades();
+        private CD_DetActividades objetoCD = new CD_DetActividades();
 
         DataTable tabla = new DataTable();
 
