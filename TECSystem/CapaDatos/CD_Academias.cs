@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 namespace CapaDatos
 {
     public class CD_Academias{
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable mos= new DataTable();
         SqlCommand comando = new SqlCommand();

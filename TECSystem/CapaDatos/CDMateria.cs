@@ -9,9 +9,9 @@ using CapaDatos;
 
 namespace CapaDatos
 {
-    public class CDMateria
+    public class CD_Materia
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();

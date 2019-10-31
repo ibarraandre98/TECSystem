@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class CD_Inasistencias
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable tablaInasistencias = new DataTable();
         SqlCommand comando = new SqlCommand();

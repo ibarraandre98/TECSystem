@@ -13,7 +13,7 @@ namespace TECSystem
 {
     public partial class detActividades : Form
     {
-        CN_detActividades _CN_detActividades = new CN_detActividades();
+        CN_DetActividades _CN_detActividades = new CN_DetActividades();
         String Actividad;
         String Matricula;
 
@@ -31,7 +31,7 @@ namespace TECSystem
 
         private void MostrarTabla()
         {
-            CN_detActividades _CN_detActividades = new CN_detActividades();
+            CN_DetActividades _CN_detActividades = new CN_DetActividades();
             dtgdetActividades.DataSource = _CN_detActividades.MostrarTabla();
         }
 

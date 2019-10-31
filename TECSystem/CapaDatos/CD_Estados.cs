@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class CD_Estados
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         DataTable tablaEstados = new DataTable();
         SqlCommand comando = new SqlCommand();
         public DataTable MostrarEstados()
