@@ -140,7 +140,8 @@ namespace TECSystem
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(dtgempleados.CurrentRow.Cells["idEmpleo"].Value.ToString());
+         
             MostrarEmpleados();
         }
 
