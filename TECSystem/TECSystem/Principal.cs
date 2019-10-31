@@ -193,8 +193,8 @@ namespace TECSystem
 
         private void BtnEmpleos_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Empleos>();
-            //hideSubMenu();
+            AbrirFormulario<Empleos>();
+            hideSubMenu();
         }
 
         private void BtnEmpleados_Click(object sender, EventArgs e)

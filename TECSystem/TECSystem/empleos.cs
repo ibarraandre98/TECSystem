@@ -8,60 +8,85 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
+
 namespace TECSystem
 {
-    public partial class empleos : Form
+    public partial class Empleos : Form
     {
-        CN_empleos _CN_empleos = new CN_empleos();
-        public empleos()
+        CN_empleos _CN_Empleos = new CN_empleos();
+        String IDEmpleo;
+        public Empleos()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void MostrarEmpleos()
         {
-            _CN_empleos.Agregarempleos(Puesto.Text);
-            limpiartxt();
-            Mostrarempleos();
-        }
-        public void limpiartxt()
-        {
-            idEmpleo.Clear();
-            Puesto.Clear();
-        }
-        private void Mostrarempleos()
-        {
-            CN_empleos _CN_empleos = new CN_empleos();
-            dtgempleos.DataSource = _CN_empleos.Mostrarempleos();
-            
+            CN_empleos _CN_Empleos = new CN_empleos();
+            dtgEmpleos.DataSource = _CN_Empleos.Mostrarempleos();
         }
 
-        private void empleos_Load(object sender, EventArgs e)
+        private void Empleos_Load(object sender, EventArgs e)
         {
-            Mostrarempleos();
-            //ll
+            MostrarEmpleos();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_empleos.Eliminarempleos(idEmpleo.Text);
-            Mostrarempleos();
+            _CN_Empleos.Agregarempleos(txtEmpleo.Text);
+            limpiarCampos();
+            MostrarEmpleos();
         }
 
-        private void dtgempleos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void limpiarCampos()
         {
-            Puesto.Text = dtgempleos.CurrentRow.Cells["puesto"].Value.ToString();
-            idEmpleo.Text = dtgempleos.CurrentRow.Cells["idEmpleo"].Value.ToString();
+            txtEmpleo.Clear();
+            IDEmpleo = null;
+        }
+
+        private void DtgEmpleos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            IDEmpleo = dtgEmpleos.CurrentRow.Cells["idEmpleo"].Value.ToString();
+            txtEmpleo.Text = dtgEmpleos.CurrentRow.Cells["puesto"].Value.ToString();
+            inhabilitarAgregar();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            _CN_Empleos.Editarempleos(IDEmpleo, txtEmpleo.Text);
+            limpiarCampos();
+            habilitarAgregar();
+            MostrarEmpleos();
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            habilitarAgregar();
+        }
+
+        private void inhabilitarAgregar()
+        {
             btnAgregar.Enabled = false;
-            btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
-            Mostrarempleos();
+            btnEliminar.Enabled = true;
+            btnCancelar.Enabled = true;
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void habilitarAgregar()
         {
-            _CN_empleos.Editarempleos(idEmpleo.Text, Puesto.Text);
-            Mostrarempleos();
+            btnAgregar.Enabled = true;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnCancelar.Enabled = false;
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            _CN_Empleos.Eliminarempleos(IDEmpleo);
+            limpiarCampos();
+            habilitarAgregar();
+            MostrarEmpleos();
         }
     }
 }
