@@ -37,6 +37,10 @@ namespace TECSystem
         private void Principal_Load(object sender, EventArgs e)
         {
             lblBienvenido.Text = $"Bienvenido: {Program.nombre} {Program.apellidos}";
+            if (!Program.user.Equals("Admin"))
+            {
+                pbUser.Enabled = false;
+            }
         }
 
         #region ANIMACION DE MENU

@@ -45,5 +45,64 @@ namespace TECSystem
             MostrarUsuarios();
             limpiarCampos();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals("Admin"))
+                MessageBox.Show("No puede editar este usuario");
+            else
+            {
+                _CN_Login.EditarUsuario(txtUsuario.Text, txtNombre.Text, txtApellidos.Text, txtEmail.Text, txtContraseña.Text);
+                HabilitarAgregar();
+                MostrarUsuarios();
+                limpiarCampos();
+            }
+        }
+
+        private void dgvUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtUsuario.Text = dgvUsuarios.CurrentRow.Cells["usuario"].Value.ToString();
+            txtContraseña.Text = dgvUsuarios.CurrentRow.Cells["pass"].Value.ToString();
+            txtApellidos.Text = dgvUsuarios.CurrentRow.Cells["apellidos"].Value.ToString();
+            txtNombre.Text = dgvUsuarios.CurrentRow.Cells["nombre"].Value.ToString();
+            txtEmail.Text = dgvUsuarios.CurrentRow.Cells["email"].Value.ToString();
+            DeshabilitarAgregar();
+        }
+
+        private void HabilitarAgregar()
+        {
+            txtUsuario.Enabled = false;
+            btnAgregar.Enabled = true;
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnCancelar.Enabled = false;
+        }
+
+        private void DeshabilitarAgregar()
+        {
+            txtUsuario.Enabled = false;
+            btnAgregar.Enabled = false;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnCancelar.Enabled = true;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals("Admin"))
+                MessageBox.Show("No puede eliminar este usuario");
+            else
+            {
+                _CN_Login.EliminarUsuario(txtUsuario.Text);
+                HabilitarAgregar();
+                MostrarUsuarios();
+                limpiarCampos();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            HabilitarAgregar();
+        }
     }
 }

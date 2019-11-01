@@ -22,7 +22,7 @@ namespace CapaNegocio
 
         public void AgregarUsuario(String usuario, String nombre, String apellidos, String email, String pass)
         {
-            _CD_Login.AgregarUsuario(nombre,apellidos,email,usuario,pass);
+            _CD_Login.AgregarUsuario(usuario,nombre,apellidos,email,pass);
         }
 
         public void EditarUsuario(String usuario, String nombre, String apellidos, String email, String pass)
