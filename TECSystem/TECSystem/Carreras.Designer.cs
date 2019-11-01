@@ -31,7 +31,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtCoordinador = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.dtgCarreras = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.dtgEmpleados = new System.Windows.Forms.DataGridView();
+            this.lblCoordinador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCarreras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpleados)).BeginInit();
             this.SuspendLayout();
@@ -81,13 +81,6 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // txtCoordinador
-            // 
-            this.txtCoordinador.Location = new System.Drawing.Point(145, 461);
-            this.txtCoordinador.Name = "txtCoordinador";
-            this.txtCoordinador.Size = new System.Drawing.Size(162, 20);
-            this.txtCoordinador.TabIndex = 41;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -101,7 +94,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(145, 435);
+            this.txtNombre.Location = new System.Drawing.Point(156, 435);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(162, 20);
             this.txtNombre.TabIndex = 39;
@@ -119,7 +112,8 @@
             // 
             // txtIdCarrera
             // 
-            this.txtIdCarrera.Location = new System.Drawing.Point(145, 409);
+            this.txtIdCarrera.Enabled = false;
+            this.txtIdCarrera.Location = new System.Drawing.Point(156, 409);
             this.txtIdCarrera.Name = "txtIdCarrera";
             this.txtIdCarrera.ReadOnly = true;
             this.txtIdCarrera.Size = new System.Drawing.Size(162, 20);
@@ -165,17 +159,27 @@
             this.dtgEmpleados.TabIndex = 66;
             this.dtgEmpleados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgEmpleados_CellDoubleClick);
             // 
+            // lblCoordinador
+            // 
+            this.lblCoordinador.AutoSize = true;
+            this.lblCoordinador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoordinador.ForeColor = System.Drawing.Color.White;
+            this.lblCoordinador.Location = new System.Drawing.Point(152, 461);
+            this.lblCoordinador.Name = "lblCoordinador";
+            this.lblCoordinador.Size = new System.Drawing.Size(0, 20);
+            this.lblCoordinador.TabIndex = 67;
+            // 
             // Carreras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
+            this.Controls.Add(this.lblCoordinador);
             this.Controls.Add(this.dtgEmpleados);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtCoordinador);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label3);
@@ -198,7 +202,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtCoordinador;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label3;
@@ -207,5 +210,6 @@
         private System.Windows.Forms.DataGridView dtgCarreras;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dtgEmpleados;
+        private System.Windows.Forms.Label lblCoordinador;
     }
 }
