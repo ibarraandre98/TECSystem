@@ -94,7 +94,7 @@ namespace TECSystem
         private void MostrarAlumnos()
         {
             CN_Alumnos _CN_Alumnos = new CN_Alumnos();
-            dgvAlumnos.DataSource = _CN_Alumnos.mostrarAlumnos();
+            dgvAlumnos.DataSource = _CN_Alumnos.MostrarAlumnos();
         }
 
         private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
