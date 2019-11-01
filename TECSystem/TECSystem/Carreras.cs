@@ -14,6 +14,7 @@ namespace TECSystem
     public partial class Carreras : Form
     {
         CN_Carreras _CN_Carrera = new CN_Carreras();
+        string id;
 
         public Carreras()
         {
@@ -22,9 +23,22 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_Carrera.AgregarCarrera(txtNombre.Text, txtCoordinador.Text);
-            MostrarTabla();
-            Limpiartxt();
+            if (txtNombre.Text.Length > 0)
+            {
+                if (lblCoordinador.Text.Length > 0)
+                {
+                    _CN_Carrera.AgregarCarrera(txtNombre.Text, id);
+                    MostrarTabla();
+                    Limpiartxt();
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un coordinador");
+                }
+            }
+            else {
+                MessageBox.Show("Ingrese nombre");
+            }
         }
 
         private void MostrarTabla()
@@ -42,19 +56,27 @@ namespace TECSystem
         private void Limpiartxt()
         {
             txtIdCarrera.Clear();
-            txtCoordinador.Clear();
+            lblCoordinador.Text = "";
             txtNombre.Clear();
         }
 
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _CN_Carrera.EditarCarrera(txtIdCarrera.Text, txtNombre.Text, txtCoordinador.Text);
-            Limpiartxt();
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnAgregar.Enabled = true;
-            MostrarTabla();
+            if (lblCoordinador.Text.Length > 0)
+            {
+                _CN_Carrera.EditarCarrera(txtIdCarrera.Text, txtNombre.Text, id);
+                Limpiartxt();
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnAgregar.Enabled = true;
+                MostrarTabla();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un coordinador");
+            }
+
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -77,15 +99,27 @@ namespace TECSystem
         {
             txtIdCarrera.Text = dtgCarreras.CurrentRow.Cells["idCarrera"].Value.ToString();
             txtNombre.Text = dtgCarreras.CurrentRow.Cells["nombre"].Value.ToString();
+            id = dtgCarreras.CurrentRow.Cells["coordinador"].Value.ToString();
+            //MessageBox.Show(id);
 
+            foreach (DataGridViewRow row in dtgEmpleados.Rows)
+            {
+                if (dtgCarreras.CurrentRow.Cells["coordinador"].Value.ToString().Equals(row.Cells["idEmpleado"].Value.ToString()))
+                {
+                    lblCoordinador.Text = row.Cells["nombre"].Value.ToString() + " " + row.Cells["paterno"].Value.ToString() + " " + row.Cells["materno"].Value.ToString(); 
+                    break;
+                }
+            }
+        
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
         }
-
         private void DtgEmpleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtCoordinador.Text = dtgEmpleados.CurrentRow.Cells["idEmpleado"].Value.ToString();
+            id= dtgEmpleados.CurrentRow.Cells["idEmpleado"].Value.ToString();
+            lblCoordinador.Text = dtgEmpleados.CurrentRow.Cells["Nombre"].Value.ToString() +" "+ dtgEmpleados.CurrentRow.Cells["Paterno"].Value.ToString() +" "+ dtgEmpleados.CurrentRow.Cells["Materno"].Value.ToString();
+            
         }
     }
 }

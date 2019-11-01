@@ -744,6 +744,7 @@
             this.bunifuFlatButton4.ButtonText = "Calles";
             this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton4.Enabled = false;
             this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
             this.bunifuFlatButton4.Iconimage_right = null;
