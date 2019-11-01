@@ -36,7 +36,7 @@ namespace TECSystem
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            lblBienvenido.Text = $"Bienvenido: {Program.nombre} {Program.apellidos}";
         }
 
         #region ANIMACION DE MENU
@@ -264,6 +264,11 @@ namespace TECSystem
         private void PbMinimizar_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Usuarios>();
         }
     }
 }
