@@ -8,10 +8,10 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    public class CD_tiposLocalidad
+    public class CD_TiposLocalidad
     {
         DataTable TablaTiposLocalidad = new DataTable();
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         SqlCommand comando = new SqlCommand();
 

@@ -114,7 +114,7 @@ namespace TECSystem
 
         private void MostrarTiposLocalidades()
         {
-            CN_tiposLocalidad _CN_TiposLocalidad = new CN_tiposLocalidad();
+            CN_TiposLocalidad _CN_TiposLocalidad = new CN_TiposLocalidad();
             cbTipoLocalidad.DataSource = _CN_TiposLocalidad.MostrarTiposLocalidad();
             cbTipoLocalidad.ValueMember = "idTipoLoc";
             cbTipoLocalidad.DisplayMember = "tipo";
@@ -162,7 +162,7 @@ namespace TECSystem
 
         private void MostrarEspecialidades()
         {
-            CN_especialidades _CN_Especialidades = new CN_especialidades();
+            CN_Especialidades _CN_Especialidades = new CN_Especialidades();
             cbEspecialidad.DataSource = _CN_Especialidades.MostrarEspecialidadesCarrera(cbCarrera.SelectedValue.ToString());
             cbEspecialidad.ValueMember = "idEspecialidad";
             cbEspecialidad.DisplayMember = "nombre";

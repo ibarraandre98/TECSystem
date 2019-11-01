@@ -43,7 +43,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dtgdetActividades = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgvActividad = new System.Windows.Forms.DataGridView();
+            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dtgdetActividades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActividad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFechaEntrega
@@ -179,7 +183,7 @@
             this.dtgdetActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgdetActividades.Location = new System.Drawing.Point(43, 91);
             this.dtgdetActividades.Name = "dtgdetActividades";
-            this.dtgdetActividades.Size = new System.Drawing.Size(1014, 282);
+            this.dtgdetActividades.Size = new System.Drawing.Size(264, 282);
             this.dtgdetActividades.TabIndex = 35;
             this.dtgdetActividades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DtgdetActividades_CellDoubleClick);
             // 
@@ -194,12 +198,32 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "DETACTIVIDADES";
             // 
+            // dgvActividad
+            // 
+            this.dgvActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvActividad.Location = new System.Drawing.Point(381, 91);
+            this.dgvActividad.Name = "dgvActividad";
+            this.dgvActividad.Size = new System.Drawing.Size(264, 282);
+            this.dgvActividad.TabIndex = 67;
+            this.dgvActividad.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvActividad_CellDoubleClick);
+            // 
+            // dgvAlumnos
+            // 
+            this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAlumnos.Location = new System.Drawing.Point(702, 91);
+            this.dgvAlumnos.Name = "dgvAlumnos";
+            this.dgvAlumnos.Size = new System.Drawing.Size(264, 282);
+            this.dgvAlumnos.TabIndex = 68;
+            this.dgvAlumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellDoubleClick);
+            // 
             // detActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
+            this.Controls.Add(this.dgvAlumnos);
+            this.Controls.Add(this.dgvActividad);
             this.Controls.Add(this.txtFechaEntrega);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -220,6 +244,8 @@
             this.Text = "detActividades";
             this.Load += new System.EventHandler(this.DetActividades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgdetActividades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvActividad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +268,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgdetActividades;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvActividad;
+        private System.Windows.Forms.DataGridView dgvAlumnos;
     }
 }

@@ -328,3 +328,13 @@ PROFE					YOMERO
 6 Unidad habitacional			6 Ranchería
 7 Ranchería				7 Unidad habitacional
 8 Zona industrial			8 Zona industrial
+
+
+
+create table usuarios_Login(
+idUsuario int identity(1,1) primary key not null,
+nombre varchar(40) not null,
+apellidos varchar(80) not null,
+email varchar(50) not null,
+usuario varchar(15) not null,
+pass varchar(10) not null)

@@ -98,6 +98,12 @@
     <Compile Include="detGrupos.Designer.cs">
       <DependentUpon>detGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="empleos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="empleos.Designer.cs">
+      <DependentUpon>empleos.cs</DependentUpon>
+    </Compile>
     <Compile Include="especialidades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,12 @@
     </Compile>
     <Compile Include="Localidad.Designer.cs">
       <DependentUpon>Localidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Materias.cs">
       <SubType>Form</SubType>
@@ -178,6 +190,12 @@
     <Compile Include="TiposLocalidad.Designer.cs">
       <DependentUpon>TiposLocalidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Calles.resx">
       <DependentUpon>Calles.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,11 +211,17 @@
     <EmbeddedResource Include="empleados.resx">
       <DependentUpon>empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="empleos.resx">
+      <DependentUpon>empleos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="especialidades.resx">
       <DependentUpon>especialidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Localidad.resx">
       <DependentUpon>Localidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Materias.resx">
       <DependentUpon>Materias.cs</DependentUpon>
@@ -250,6 +274,9 @@
     </Compile>
     <EmbeddedResource Include="TiposLocalidad.resx">
       <DependentUpon>TiposLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

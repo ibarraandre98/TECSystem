@@ -13,7 +13,9 @@ namespace TECSystem
 {
     public partial class detActividades : Form
     {
-        CN_detActividades _CN_detActividades = new CN_detActividades();
+        CN_DetActividades _CN_detActividades = new CN_DetActividades();
+        String Actividad;
+        String Matricula;
 
         public detActividades()
         {
@@ -22,14 +24,14 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_detActividades.AgregarACtividad(txtActividad.Text, txtMatricula.Text, txtCalificacion.Text, txtFechaEntrega.Value);
+            _CN_detActividades.AgregarACtividad(Actividad, txtMatricula.Text, txtCalificacion.Text, txtFechaEntrega.Value);
             MostrarTabla();
             Limpiartxt();
         }
 
         private void MostrarTabla()
         {
-            CN_detActividades _CN_detActividades = new CN_detActividades();
+            CN_DetActividades _CN_detActividades = new CN_DetActividades();
             dtgdetActividades.DataSource = _CN_detActividades.MostrarTabla();
         }
 
@@ -65,6 +67,8 @@ namespace TECSystem
         private void DetActividades_Load(object sender, EventArgs e)
         {
             MostrarTabla();
+            MostrarActividades();
+            MostrarAlumnos();
         }
 
         private void DtgdetActividades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -78,6 +82,30 @@ namespace TECSystem
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
+        }
+
+        private void MostrarActividades()
+        {
+            CN_Actividades _CN_Actividades = new CN_Actividades();
+            dgvActividad.DataSource = _CN_Actividades.mostrarActividades();
+        }
+
+        private void dgvActividad_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Actividad = dgvActividad.CurrentRow.Cells["idActividad"].Value.ToString();
+            txtActividad.Text = dgvActividad.CurrentRow.Cells["nombre"].Value.ToString();
+        }
+
+        private void MostrarAlumnos()
+        {
+            CN_Alumnos _CN_Alumnos = new CN_Alumnos();
+            dgvAlumnos.DataSource = _CN_Alumnos.mostrarAlumnos();
+        }
+
+        private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Matricula = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
+            txtMatricula.Text = Matricula;
         }
     }
 }

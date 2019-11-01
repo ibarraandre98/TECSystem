@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class CD_detGrupos
+    public class CD_DetGrupos
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
@@ -32,7 +32,8 @@ namespace CapaDatos
             comando.Parameters.AddWithValue("@cveGrupo", cveGrupo);
             comando.Parameters.AddWithValue("@matricula", matricula);
             comando.Parameters.AddWithValue("@tipoCurso", tipoCurso);
-            leer = comando.ExecuteReader();
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
             comando.Parameters.Clear();
             conexion.CerrarConexion();
         }

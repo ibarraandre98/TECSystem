@@ -13,7 +13,7 @@ namespace TECSystem
 {
     public partial class Especialidades : Form
     {
-        CN_especialidades _CN_Especialidades = new CN_especialidades();
+        CN_Especialidades _CN_Especialidades = new CN_Especialidades();
         public Especialidades()
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace TECSystem
 
         private void MostrarEspecialidades()
         {
-            CN_especialidades _CN_Especialidades = new CN_especialidades();
+            CN_Especialidades _CN_Especialidades = new CN_Especialidades();
             dtgEspecialidades.DataSource = _CN_Especialidades.Mostrarespecialidades();
         }
 

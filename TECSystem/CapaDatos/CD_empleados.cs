@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class CD_empleados
+    public class CD_Empleados
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable tablaempleados = new DataTable();
         SqlCommand comando = new SqlCommand();

@@ -13,7 +13,7 @@ namespace TECSystem
 {
     public partial class empleados : Form
     {
-        CN_empleados _CN_Empleados = new CN_empleados();
+        CN_Empleados _CN_Empleados = new CN_Empleados();
         DataTable MostrarLocalidadesMunicipio;
         DataRow row;
         int IDPersona;
@@ -57,13 +57,13 @@ namespace TECSystem
 
         private void MostrarEmpleados()
         {
-            CN_empleados _CN_Empleados = new CN_empleados();
+            CN_Empleados _CN_Empleados = new CN_Empleados();
             dtgempleados.DataSource = _CN_Empleados.MostrarEmpleados();
         }
 
         public void MostrarEmpleos()
         {
-            CN_empleos _CN_empleos = new CN_empleos();
+            CN_Empleos _CN_empleos = new CN_Empleos();
             cbEmpleo.DataSource = _CN_empleos.Mostrarempleos();
             cbEmpleo.ValueMember = "idEmpleo";
             cbEmpleo.DisplayMember = "puesto";
@@ -87,7 +87,7 @@ namespace TECSystem
 
         private void MostrarTiposLocalidades()
         {
-            CN_tiposLocalidad _CN_TiposLocalidad = new CN_tiposLocalidad();
+            CN_TiposLocalidad _CN_TiposLocalidad = new CN_TiposLocalidad();
             cbTipoLocalidad.DataSource = _CN_TiposLocalidad.MostrarTiposLocalidad();
             cbTipoLocalidad.ValueMember = "idTipoLoc";
             cbTipoLocalidad.DisplayMember = "tipo";

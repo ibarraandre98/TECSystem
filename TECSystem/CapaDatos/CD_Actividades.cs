@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class CD_Actividades
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlCommand comando = new SqlCommand();
         SqlDataReader leer;
         DataTable mos = new DataTable();

@@ -8,9 +8,9 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    public class CN_detGrupos
+    public class CN_DetGrupos
     {
-        private CD_detGrupos objetoCD = new CD_detGrupos();
+        private CD_DetGrupos objetoCD = new CD_DetGrupos();
 
         DataTable tabla = new DataTable();
 

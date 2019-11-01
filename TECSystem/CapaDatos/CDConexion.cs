@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class CDConexion
+    public class CD_Conexion
     {
         //private SqlConnection Conexion = new SqlConnection("Data Source =.;Initial Catalog=BaseDeDatosTec;Integrated Security=true");
         //private SqlConnection Conexion = new SqlConnection("Data Source =.;Initial Catalog=basetec;Integrated Security=true");

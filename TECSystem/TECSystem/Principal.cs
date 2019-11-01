@@ -36,15 +36,17 @@ namespace TECSystem
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            lblBienvenido.Text = $"Bienvenido: {Program.nombre} {Program.apellidos}";
+            if (!Program.user.Equals("Admin"))
+            {
+                pbUser.Enabled = false;
+            }
         }
 
         #region ANIMACION DE MENU
         private void FormularioCerrar_Click(object sender, EventArgs e)
         {
             panelMenu.Width = 25;
-            FormularioCerrar.Visible = false;
-            FormularioAbrir.Visible = true;
             Logo.Visible = false;
             
         }
@@ -52,8 +54,6 @@ namespace TECSystem
         private void FormularioAbrir_Click(object sender, EventArgs e)
         {
             panelMenu.Width = 200;
-            FormularioCerrar.Visible = !false;
-            FormularioAbrir.Visible = !true;
             Logo.Visible = !false;
         }
         #endregion
@@ -96,111 +96,183 @@ namespace TECSystem
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de salir?", "Salir", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if(dialogResult == DialogResult.Yes)
+                Application.Exit();
         }
 
-        private void BunifuFlatButton21_Click(object sender, EventArgs e)
+        private void hideSubMenu()
         {
-            AbrirFormulario<Personas>();
+            if (panelUbicacion.Visible == true)
+                panelUbicacion.Visible = false;
+            if (panelCarreras.Visible == true)
+                panelCarreras.Visible = false;
+            if (panelEmpleados.Visible == true)
+                panelEmpleados.Visible = false;
+            if (panelAlumnos.Visible == true)
+                panelAlumnos.Visible = false;
+            if (panelMaterias.Visible == true)
+                panelMaterias.Visible = false;
         }
 
-        private void BunifuFlatButton4_Click(object sender, EventArgs e)
+        private void showSubMenu(Panel subMenu)
         {
-            AbrirFormulario<Calles>();
-
+            if (subMenu.Visible == false)
+            {
+                hideSubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
         }
 
-        private void BunifuFlatButton5_Click(object sender, EventArgs e)
+        private void BtnPrinUbicacion_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Carreras>();
-
+            showSubMenu(panelUbicacion);
         }
 
-        private void BunifuFlatButton6_Click(object sender, EventArgs e)
+        private void BtnPrinCarreras_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<detActividades>();
-
+            showSubMenu(panelCarreras);
         }
 
-        private void BunifuFlatButton7_Click(object sender, EventArgs e)
+        private void BtnPrinEmpleados_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<detGrupos>();
-
+            showSubMenu(panelEmpleados);
         }
 
-        private void BunifuFlatButton17_Click(object sender, EventArgs e)
+        private void BtnPrinAlumnos_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelAlumnos);
+        }
+
+        private void BtnPrinMaterias_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelMaterias);
+        }
+
+        private void BtnEstados_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Estados>();
+            hideSubMenu();
         }
 
-        private void BunifuFlatButton15_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Horarios>();
-        }
-
-        private void BunifuFlatButton14_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Inasistencias>();
-        }
-
-        private void BunifuFlatButton16_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Grupos>();
-        }
-
-        private void bunifuFlatButton8_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<empleados>();
-        }
-
-        private void bunifuFlatButton11_Click(object sender, EventArgs e)
+        private void BtnMunicipios_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Municipio>();
+            hideSubMenu();
         }
 
-        private void bunifuFlatButton13_Click(object sender, EventArgs e)
+        private void BtnLocalidades_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Localidad>();
+            hideSubMenu();
         }
 
-        private void bunifuFlatButton12_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Materias>();
-        }
-
-        private void bunifuFlatButton20_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Profesores>();
-        }
-
-        private void bunifuFlatButton19_Click(object sender, EventArgs e)
+        private void BtnTiposLocalidad_Click(object sender, EventArgs e)
         {
             AbrirFormulario<TiposLocalidad>();
+            hideSubMenu();
         }
 
-        private void bunifuFlatButton9_Click(object sender, EventArgs e)
+        private void BtnCarreras_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Academias>();
+            AbrirFormulario<Carreras>();
+            hideSubMenu();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Actividades>();
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Alumnos>();
-        }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<Calificaciones>();
-        }
-
-        private void Logo_Click(object sender, EventArgs e)
+        private void BtnEspecialidades_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Especialidades>();
+            hideSubMenu();
+        }
+
+        private void BtnAcademias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Academias>();
+            hideSubMenu();
+        }
+
+        private void BtnEmpleos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Empleos>();
+            hideSubMenu();
+        }
+
+        private void BtnEmpleados_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<empleados>();
+            hideSubMenu();
+        }
+
+        private void BtnProfesores_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Profesores>();
+            hideSubMenu();
+        }
+
+        private void BtnAlumnos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Alumnos>();
+            hideSubMenu();
+        }
+
+        private void BtnCalificaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Calificaciones>();
+            hideSubMenu();
+        }
+
+        private void BtnInasistencias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Inasistencias>();
+            hideSubMenu();
+        }
+
+        private void BtnGrupos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Grupos>();
+            hideSubMenu();
+        }
+
+        private void BtnDetGrupos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<detGrupos>();
+            hideSubMenu();
+        }
+
+        private void BtnHorarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Horarios>();
+            hideSubMenu();
+        }
+
+        private void BtnActividades_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Actividades>();
+            hideSubMenu();
+        }
+
+        private void BtnDetActividades_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<detActividades>();
+            hideSubMenu();
+        }
+
+        private void BtnMaterias_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Materias>();
+            hideSubMenu();
+        }
+
+        private void PbMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Usuarios>();
         }
     }
 }

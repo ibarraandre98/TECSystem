@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     public class CD_Horarios
     {
-        CDConexion conexion = new CDConexion();
+        CD_Conexion conexion = new CD_Conexion();
         SqlDataReader leer;
         DataTable tablaHorarios = new DataTable();
         SqlCommand comando = new SqlCommand();
