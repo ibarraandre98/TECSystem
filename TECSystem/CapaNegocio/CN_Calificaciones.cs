@@ -11,25 +11,25 @@ namespace CapaNegocio
 {
     public class CN_Calificaciones
     {
-        CD_Calificaciones obj = new CD_Calificaciones();
+        CD_Calificaciones _CD_Calificaciones = new CD_Calificaciones();
 
-        public DataTable mostrarCalificaciones()
+        public DataTable MostrarCalificaciones()
         {
             DataTable tabla = new DataTable();
-            tabla = obj.mostrar();
+            tabla = _CD_Calificaciones.MostrarCalificaciones();
             return tabla;
         }
-        public void agregar_calificacion(string grupo, string matricula, int tema, double califiacion, string tipoEval)
+        public void AgregarCalificacion(String grupo, String matricula, String tema, String califiacion, String tipoEval)
         {
-            obj.insertar(grupo,matricula,tema,califiacion,tipoEval);
+            _CD_Calificaciones.InsertarCalificaciones(grupo,matricula,Convert.ToInt32(tema),Convert.ToDouble(califiacion),tipoEval);
         }
-        public void editar_calificacion(int id,string grupo, string matricula, int tema, double califiacion, string tipoEval)
+        public void EditarCalificacion(String id,String grupo, String matricula, String tema, String califiacion, String tipoEval)
         {
-            obj.editar(id, grupo,matricula,tema,califiacion,tipoEval);
+            _CD_Calificaciones.EditarTarea(Convert.ToInt32(id), grupo,matricula,Convert.ToInt32(tema),Convert.ToDouble(califiacion),tipoEval);
         }
-        public void eliminar_calificacion(int id)
+        public void EliminarCalificacion(String id)
         {
-            obj.eliminar(id);
+            _CD_Calificaciones.EliminarTarea(Convert.ToInt32(id));
         }
     }
 }

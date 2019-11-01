@@ -14,7 +14,7 @@ namespace CapaDatos
         DataTable mos= new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable mostrar()
+        public DataTable MostrarAcademias()
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "select * from academias";
@@ -23,7 +23,7 @@ namespace CapaDatos
             conexion.CerrarConexion();
             return mos;
         }
-        public void insertar(string nombre)
+        public void InsertarAcademia(string nombre)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into academias values (@nombre)";
@@ -31,7 +31,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();          
         }
-        public void eliminar(int id)
+        public void EliminarAcademia(int id)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from academias where idAcademia = @idAcademia";
@@ -39,7 +39,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void editar(int id,string nombre)
+        public void EditarAcademia(int id,string nombre)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = " update academias set nombre = @nombre where idAcademia = @idAcademia";

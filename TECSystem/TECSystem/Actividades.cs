@@ -15,12 +15,12 @@ namespace TECSystem
     {
         String IDActividad;
         int IDGrupo;
-        CN_Actividades obj = new CN_Actividades();
+        CN_Actividades _CN_Actividades = new CN_Actividades();
         public Actividades()
         {
             InitializeComponent();
         }
-        public void limpiar()
+        public void Limpiar()
         {
             nombre.Text = "";
             descripcion.Text = "";
@@ -30,34 +30,34 @@ namespace TECSystem
         }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            obj.agregar_actividad(nombre.Text, descripcion.Text, grupo.Text, Convert.ToInt32(tema.Text), Convert.ToInt32(ponderacion.Text), fecha.Value);
-            mostrar_actividad();
+            _CN_Actividades.AgregarActividad(nombre.Text, descripcion.Text, grupo.Text, tema.Text,ponderacion.Text, fecha.Value);
+            MostrarActividad();
             MostrarGrupos();
-            limpiar();
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            obj.editar_actividad(Convert.ToInt32(IDActividad), nombre.Text, descripcion.Text, grupo.Text, Convert.ToInt32(tema.Text), Convert.ToInt32(ponderacion.Text), fecha.Value);
-            mostrar_actividad();
-            limpiar();
+            _CN_Actividades.EditarActividad(IDActividad, nombre.Text, descripcion.Text, grupo.Text,tema.Text,ponderacion.Text, fecha.Value);
+            MostrarActividad();
+            Limpiar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            obj.eliminar_actividad(Convert.ToInt32(IDActividad));
-            mostrar_actividad();
-            limpiar();
+            _CN_Actividades.EliminarActividad(IDActividad);
+            MostrarActividad();
+            Limpiar();
         }
-        private void mostrar_actividad()
+        private void MostrarActividad()
         {
             CN_Actividades obj = new CN_Actividades();
-            dataGridView1.DataSource = obj.mostrarActividades();
+            dataGridView1.DataSource = obj.MostrarActividades();
         }
 
         private void Actividades_Load(object sender, EventArgs e)
         {
-            mostrar_actividad();
+            MostrarActividad();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
             MostrarGrupos();

@@ -50,7 +50,7 @@ namespace TECSystem
         private void MostrarAcademias()
         {
             CN_Academia _CN_Academia = new CN_Academia();
-            cbAcademia.DataSource = _CN_Academia.mostrarAcademias();
+            cbAcademia.DataSource = _CN_Academia.MostrarAcademias();
             cbAcademia.ValueMember = "idAcademia";
             cbAcademia.DisplayMember = "nombre";
         }

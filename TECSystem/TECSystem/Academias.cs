@@ -13,17 +13,17 @@ namespace TECSystem
 {
     public partial class Academias : Form
     {
-        CN_Academia obj = new CN_Academia();
+        CN_Academia _CN_Academia = new CN_Academia();
         public Academias()
         {
             InitializeComponent();
         }
-        private void mostraracademias()
+        private void MostrarAcademias()
         {
-            CN_Academia obj = new CN_Academia();
-            dataGridView1.DataSource = obj.mostrarAcademias();
+            CN_Academia _CN_Academia = new CN_Academia();
+            dataGridView1.DataSource = _CN_Academia.MostrarAcademias();
         }
-        public void limpiar()
+        public void Limpiar()
         {
             idAcademia.Text = "";
             nombre.Text = "";
@@ -31,30 +31,30 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            obj.agregar_academia(nombre.Text);
-            mostraracademias();
-            limpiar();
+            _CN_Academia.AgregarAcademia(nombre.Text);
+            MostrarAcademias();
+            Limpiar();
         }
 
         private void Academias_Load(object sender, EventArgs e)
         {
-            mostraracademias();
+            MostrarAcademias();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            obj.eliminar_academia(Convert.ToInt32(idAcademia.Text));
-            mostraracademias();
-            limpiar();
+            _CN_Academia.EliminarAcademia(idAcademia.Text);
+            MostrarAcademias();
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            obj.editar_academia(Convert.ToInt32(idAcademia.Text), nombre.Text);
-            limpiar();
-            mostraracademias();
+            _CN_Academia.EditarAcademia((idAcademia.Text), nombre.Text);
+            Limpiar();
+            MostrarAcademias();
         }
 
         private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

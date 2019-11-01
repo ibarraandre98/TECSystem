@@ -52,7 +52,7 @@
             // 
             // tema
             // 
-            this.tema.Location = new System.Drawing.Point(629, 390);
+            this.tema.Location = new System.Drawing.Point(266, 471);
             this.tema.Name = "tema";
             this.tema.Size = new System.Drawing.Size(162, 20);
             this.tema.TabIndex = 75;
@@ -62,7 +62,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(569, 390);
+            this.label6.Location = new System.Drawing.Point(206, 471);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 20);
             this.label6.TabIndex = 74;
@@ -70,7 +70,8 @@
             // 
             // grupo
             // 
-            this.grupo.Location = new System.Drawing.Point(266, 468);
+            this.grupo.Enabled = false;
+            this.grupo.Location = new System.Drawing.Point(629, 469);
             this.grupo.Name = "grupo";
             this.grupo.Size = new System.Drawing.Size(162, 20);
             this.grupo.TabIndex = 73;
@@ -80,7 +81,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(200, 468);
+            this.label5.Location = new System.Drawing.Point(563, 469);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 72;

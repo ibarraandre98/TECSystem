@@ -10,25 +10,25 @@ namespace CapaNegocio
 {
    public class CN_Actividades
     {
-        CD_Actividades obj = new CD_Actividades();
+        CD_Actividades _CD_Actividades = new CD_Actividades();
 
-        public DataTable mostrarActividades()
+        public DataTable MostrarActividades()
         {
             DataTable tabla = new DataTable();
-            tabla = obj.mostrar();
+            tabla = _CD_Actividades.MostrarActividades();
             return tabla;
         }
-        public void agregar_actividad(string nombre, string descripcion, string grupo, int tema, int ponderacion, DateTime fecha)
+        public void AgregarActividad(String nombre, String descripcion, String grupo, String tema, String ponderacion, DateTime fecha)
         {
-            obj.insertar(nombre, descripcion, grupo, tema, ponderacion, fecha);
+            _CD_Actividades.InsertarActividades(nombre, descripcion, grupo, Convert.ToInt32(tema), Convert.ToInt32(ponderacion), fecha);
         }
-        public void editar_actividad(int id,string nombre, string descripcion, string grupo, int tema, int ponderacion, DateTime fecha)
+        public void EditarActividad(String id,String nombre, String descripcion, String grupo, String tema, String ponderacion, DateTime fecha)
         {
-            obj.editar(id, nombre,descripcion,grupo,tema,ponderacion,fecha);
+            _CD_Actividades.EditarActividades(Convert.ToInt32(id), nombre,descripcion,grupo,Convert.ToInt32(tema),Convert.ToInt32(ponderacion),fecha);
         }
-        public void eliminar_actividad(int id)
+        public void EliminarActividad(String id)
         {
-            obj.eliminar(id);
+            _CD_Actividades.EliminarActividades(Convert.ToInt32(id));
         }
     }
 }

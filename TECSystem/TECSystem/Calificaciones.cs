@@ -19,7 +19,7 @@ namespace TECSystem
             InitializeComponent();
         }
 
-        public void limpiar()
+        public void Limpiar()
         {
             grupo.Text = "";
             matricula.Text = "";
@@ -32,33 +32,33 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            obj.agregar_calificacion(grupo.Text, matricula.Text, Convert.ToInt32(tema.Text), Convert.ToDouble(calificacion.Text), tipoevaluacion.Text);
-            mostrarCalificaciones();
-            limpiar();
+            obj.AgregarCalificacion(grupo.Text, matricula.Text, tema.Text,calificacion.Text, tipoevaluacion.Text);
+            MostrarCalificaciones();
+            Limpiar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            obj.eliminar_calificacion(Convert.ToInt32(idCalificacion.Text));
-            mostrarCalificaciones();
-            limpiar();
+            obj.EliminarCalificacion(idCalificacion.Text);
+            MostrarCalificaciones();
+            Limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            obj.editar_calificacion(Convert.ToInt32(idCalificacion.Text),grupo.Text, matricula.Text, Convert.ToInt32(tema.Text), Convert.ToDouble(calificacion.Text), tipoevaluacion.Text);
-            mostrarCalificaciones();
-            limpiar();
+            obj.EditarCalificacion((idCalificacion.Text),grupo.Text, matricula.Text, (tema.Text), (calificacion.Text), tipoevaluacion.Text);
+            MostrarCalificaciones();
+            Limpiar();
         }
-        private void mostrarCalificaciones()
+        private void MostrarCalificaciones()
         {
             CN_Calificaciones obj = new CN_Calificaciones();
-            dataGridView1.DataSource = obj.mostrarCalificaciones();
+            dataGridView1.DataSource = obj.MostrarCalificaciones();
         }
 
         private void Calificaciones_Load(object sender, EventArgs e)
         {
-            mostrarCalificaciones();
+            MostrarCalificaciones();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
         }

@@ -15,7 +15,7 @@ namespace CapaDatos
         SqlDataReader leer;
         DataTable mos = new DataTable();
 
-        public DataTable mostrar()
+        public DataTable MostrarCalificaciones()
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "select * from calificaciones";
@@ -24,7 +24,7 @@ namespace CapaDatos
             conexion.CerrarConexion();
             return mos;
         }
-        public void insertar(string grupo,string matricula,int tema,double califiacion,string tipoEval)
+        public void InsertarCalificaciones(string grupo,string matricula,int tema,double califiacion,string tipoEval)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into calificaciones values(@grupo,@matricula,@tema,@calificacion,@tipoEval)";
@@ -37,7 +37,7 @@ namespace CapaDatos
 
             conexion.CerrarConexion();
         }
-        public void eliminar(int id)
+        public void EliminarTarea(int id)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from calificaciones where idCalifiacion = @idCalifiacion";
@@ -45,7 +45,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void editar(int idCalificacion,string grupo, string matricula, int tema, double califiacion, string tipoEval)
+        public void EditarTarea(int idCalificacion,string grupo, string matricula, int tema, double califiacion, string tipoEval)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update calificaciones set grupo=@grupo,matricula=@matricula,tema=@tema,calificacion=@calificacion,tipoEval=@tipoEval where idCalifiacion=@idCalifiacion";

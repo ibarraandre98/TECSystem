@@ -14,7 +14,7 @@ namespace CapaDatos
         SqlCommand comando = new SqlCommand();
         SqlDataReader leer;
         DataTable mos = new DataTable();
-        public DataTable mostrar()
+        public DataTable MostrarActividades()
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "select * from actividades";
@@ -24,7 +24,7 @@ namespace CapaDatos
             return mos;
         }
 
-        public void insertar(string nombre,string descripcion,string grupo,int tema,int ponderacion,DateTime fecha)
+        public void InsertarActividades(string nombre,string descripcion,string grupo,int tema,int ponderacion,DateTime fecha)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into actividades values(@nombre,@descripcion,@grupo,@tema,@ponderacion,@fecha)";
@@ -38,7 +38,7 @@ namespace CapaDatos
 
             conexion.CerrarConexion();
         }
-        public void eliminar(int id)
+        public void EliminarActividades(int id)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from actividades where idActividad = @idActividad";
@@ -46,7 +46,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void editar(int id,string nombre, string descripcion, string grupo, int tema, int ponderacion, DateTime fecha)
+        public void EditarActividades(int id,string nombre, string descripcion, string grupo, int tema, int ponderacion, DateTime fecha)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update actividades set nombre=@nombre,descripcion=@descripcion,grupo=@grupo,tema=@tema,ponderacion=@ponderacion,fecha=@fecha where idActividad=@idActividad";
