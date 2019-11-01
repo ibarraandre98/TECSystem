@@ -37,6 +37,10 @@ namespace TECSystem
                 _Pri.Show();
                 this.Hide();
             }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
 
         private void pbCerrar_Click(object sender, EventArgs e)
