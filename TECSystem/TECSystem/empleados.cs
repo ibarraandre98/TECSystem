@@ -18,6 +18,8 @@ namespace TECSystem
         DataRow row;
         int IDPersona;
         int IDEmpleado;
+        String idpersona="";
+        String idempleado = "";
         public empleados()
         {
             InitializeComponent();
@@ -133,6 +135,12 @@ namespace TECSystem
         {
 
             cbEmpleo.SelectedValue = dtgempleados.CurrentRow.Cells["idEmpleo"].Value.ToString();
+            txtNombre.Text = Convert.ToString(dtgempleados.CurrentRow.Cells[2].Value);
+            txtMaterno.Text = Convert.ToString(dtgempleados.CurrentRow.Cells[3].Value);
+            txtPaterno.Text = Convert.ToString(dtgempleados.CurrentRow.Cells[4].Value);
+            txtCurp.Text = Convert.ToString(dtgempleados.CurrentRow.Cells[5].Value);
+            idpersona= Convert.ToString(dtgempleados.CurrentRow.Cells[1].Value);
+            idempleado= Convert.ToString(dtgempleados.CurrentRow.Cells[0].Value);
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
