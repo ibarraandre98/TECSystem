@@ -24,7 +24,14 @@ namespace CapaDatos
             conexion.CerrarConexion();
             return tablaPersonas;
         }
-
+        public void Eliminar_Persona(int idpersona)
+        {
+            comando.Connection = conexion.AbrirConexion();
+            comando.CommandText = "execute eliminarpersona " + idpersona + ";";
+            comando.CommandType = CommandType.Text;
+            comando.ExecuteNonQuery();
+            conexion.CerrarConexion();
+        }
         public void AgregarPersonas(String paterno, String materno, String nombres, DateTime fecha_nac, int sexo, String curp, String telefono, String numExt, String numInt, String cp, int edoCivil, int discapacidad, String calle, int localidad)
         {
             comando.Connection = conexion.AbrirConexion();

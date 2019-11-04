@@ -29,7 +29,16 @@ namespace CapaDatos
             conexion.CerrarConexion();
             return TablaProfesores;
         }
-
+        public void Eliminar_Profesor( int idempleado)
+        {
+            comando.Connection = conexion.AbrirConexion();
+           
+            comando.CommandText = "execute eliminarprofesor";
+            comando.CommandType = CommandType.StoredProcedure;
+            comando.Parameters.Add("@idEmpleado",idempleado);
+            comando.ExecuteNonQuery();
+            conexion.CerrarConexion();
+        }
         public void AgregarProfesores(String idProfesor, int idEmpleado, int idAcademia, int tipoMemb)
         {
             comando.Connection = conexion.AbrirConexion();

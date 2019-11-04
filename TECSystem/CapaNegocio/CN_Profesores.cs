@@ -17,6 +17,10 @@ namespace CapaNegocio
         {
             return TablaProfesores = _CD_Profesores.MostrarProfesores();
         }
+        public void Eliminar_Profesor(String idempleado)
+        {
+            _CD_Profesores.Eliminar_Profesor(Convert.ToInt32(idempleado));
+        }
 
         public void AgregarProfesores(String idProfesor, String idEmpleado, String idAcademia, String tipoMemb)
         {

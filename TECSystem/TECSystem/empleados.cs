@@ -148,8 +148,11 @@ namespace TECSystem
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(dtgempleados.CurrentRow.Cells["idEmpleo"].Value.ToString());
-         
+            //MessageBox.Show(dtgempleados.CurrentRow.Cells["idEmpleo"].Value.ToString());
+            CN_Personas _CN_Personas = new CN_Personas();
+            CN_Profesores _CN_Profesores = new CN_Profesores();
+            _CN_Profesores.Eliminar_Profesor(idempleado);
+            _CN_Personas.Eliminar_Persona(idpersona);
             MostrarEmpleados();
         }
 
