@@ -16,7 +16,7 @@ namespace CapaDatos
         DataTable mos = new DataTable();
         SqlCommand comando = new SqlCommand();
 
-        public DataTable MostrarAlumnos()
+        public DataTable mostrar()
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = " select alumnos.matricula, alumnos.idPersona, personas.nombres as Nombre, personas.paterno as Paterno, " +
@@ -39,7 +39,7 @@ namespace CapaDatos
             conexion.CerrarConexion();
             return mos;
         }
-        public void InsertarAlumnos(string matricula,int idPersona,int idCarrera,string tutor,int idEspecialidad,int estatus)
+        public void insertar(string matricula,int idPersona,int idCarrera,string tutor,int idEspecialidad,int estatus)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "insert into alumnos values(@matricula,@idPersona,@idCarrera,@tutor,@idEspecialidad,@estatus)";
@@ -52,7 +52,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void EliminarAlumnos(string matricula)
+        public void eliminar(string matricula)
         {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "delete from alumnos where matricula = @matricula";
@@ -60,11 +60,12 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             conexion.CerrarConexion();
         }
-        public void EditarAlumnos(string matricula, int idPersona,int idCarrera, string tutor, int idEspecialidad, int estatus)
+        public void editar(string matricula, int idPersona, int idCarrera, string tutor, int idEspecialidad, int estatus)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update alumnos set idCarrera=@idCarrera,tutor=@tutor,idEspecialidad=@idEspecialidad,estatus=@estatus where matricula=@matricula";
+            comando.CommandText = "update alumnos set idPersona=@idPersona,idCarrera=@idCarrera,tutor=@tutor,idEspecialidad=@idEspecialidad,estatus=@estatus where matricula=@matricula";
             comando.Parameters.AddWithValue("@matricula", matricula);
+            comando.Parameters.AddWithValue("@idPersona", idPersona);
             comando.Parameters.AddWithValue("@idCarrera", idCarrera);
             comando.Parameters.AddWithValue("@tutor", tutor);
             comando.Parameters.AddWithValue("@idEspecialidad", idEspecialidad);

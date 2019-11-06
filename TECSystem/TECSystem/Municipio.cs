@@ -76,5 +76,14 @@ namespace TECSystem
         {
             MessageBox.Show(cbEstado.SelectedValue.ToString());
         }
+
+        private void dtgPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            txtNumero.Text = dtgPersonas.CurrentRow.Cells[1].Value.ToString();
+            cbEstado.SelectedIndex = cbEstado.FindStringExact(dtgPersonas.CurrentRow.Cells[3].Value.ToString());
+            txtNombre.Text = dtgPersonas.CurrentRow.Cells[4].Value.ToString();
+            id = Convert.ToInt32(dtgPersonas.CurrentRow.Cells["idMunicipio"].Value.ToString());
+        }
     }
 }

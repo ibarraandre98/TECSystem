@@ -21,11 +21,11 @@ namespace CapaNegocio
         {
             objetoCD.AgregarMateria(cve,nombre,hteoricas,hpracticas,creditos,carrera);
         }
-        public void EditarMateria(int cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
+        public void EditarMateria(string cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
         {
             objetoCD.EditarMateria(cve, nombre, hteoricas, hpracticas, creditos, carrera);
         }
-        public void EliminarMateria(int id)
+        public void EliminarMateria(string id)
         {
             objetoCD.Eliminar(id);
         }

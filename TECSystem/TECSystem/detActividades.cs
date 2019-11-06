@@ -87,7 +87,7 @@ namespace TECSystem
         private void MostrarActividades()
         {
             CN_Actividades _CN_Actividades = new CN_Actividades();
-            dgvActividad.DataSource = _CN_Actividades.MostrarActividades();
+            dgvActividad.DataSource = _CN_Actividades.mostrarActividades();
         }
 
         private void dgvActividad_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -99,7 +99,7 @@ namespace TECSystem
         private void MostrarAlumnos()
         {
             CN_Alumnos _CN_Alumnos = new CN_Alumnos();
-            dgvAlumnos.DataSource = _CN_Alumnos.MostrarAlumnos();
+            dgvAlumnos.DataSource = _CN_Alumnos.mostrarAlumnos();
         }
 
         private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

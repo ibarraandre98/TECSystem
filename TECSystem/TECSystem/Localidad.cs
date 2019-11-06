@@ -76,7 +76,7 @@ namespace TECSystem
         private void button1_Click(object sender, EventArgs e)
         {
             CN_Localidades _CN_Localidades = new CN_Localidades();
-            _CN_Localidades.EditarMunicipio(Convert.ToInt32(cbMunicipio.Text), txtLocalidad.Text, id,Convert.ToInt32(cbTipo.Text));
+            _CN_Localidades.EditarMunicipio(cbMunicipio.Text, txtLocalidad.Text, id, Convert.ToInt32(cbTipo.SelectedValue.ToString()));
             MostrarLocalidad();
         }
 
@@ -99,6 +99,15 @@ namespace TECSystem
 
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void dtgPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = Convert.ToInt32(dtgPersonas.CurrentRow.Cells["idLocalidad"].Value.ToString());
+            cbEstado.SelectedIndex=cbEstado.FindStringExact(dtgPersonas.CurrentRow.Cells[4].Value.ToString());
+            cbMunicipio.SelectedIndex= cbMunicipio.FindStringExact(dtgPersonas.CurrentRow.Cells[2].Value.ToString());
+            txtLocalidad.Text = dtgPersonas.CurrentRow.Cells[5].Value.ToString();
+            cbTipo.SelectedIndex = cbTipo.FindStringExact(dtgPersonas.CurrentRow.Cells[7].Value.ToString());
         }
     }
 }

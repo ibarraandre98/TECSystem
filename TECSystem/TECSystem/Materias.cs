@@ -57,15 +57,59 @@ namespace TECSystem
         private void button1_Click(object sender, EventArgs e)
         {
             CN_Materia _CN_Materia = new CN_Materia();
-            _CN_Materia.EditarMateria(Convert.ToInt32(txtMateria.Text),txtNombre.Text, Convert.ToInt32(txtTeoricas.Text), Convert.ToInt32(txtPracticas.Text), Convert.ToInt32(txtCreditos.Text), Convert.ToInt32(cbCarrera.SelectedValue.ToString()));
+            _CN_Materia.EditarMateria(txtMateria.Text, txtNombre.Text, Convert.ToInt32(txtTeoricas.Text), Convert.ToInt32(txtPracticas.Text), Convert.ToInt32(txtCreditos.Text), Convert.ToInt32(cbCarrera.SelectedValue.ToString()));
             MostrarMaterias();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             CN_Materia _CN_Materia = new CN_Materia();
-            _CN_Materia.EliminarMateria(Convert.ToInt32(txtMateria.Text));
+            _CN_Materia.EliminarMateria(txtMateria.Text);
             MostrarMaterias();
+        }
+
+        private void txtPracticas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCreditos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCarrera_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTeoricas_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtgPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMateria.Text = dtgPersonas.CurrentRow.Cells[0].Value.ToString();
+            txtNombre.Text = dtgPersonas.CurrentRow.Cells[1].Value.ToString();
+            txtTeoricas.Text = dtgPersonas.CurrentRow.Cells[2].Value.ToString();
+            txtPracticas.Text = dtgPersonas.CurrentRow.Cells[3].Value.ToString();
+            txtCreditos.Text = dtgPersonas.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }

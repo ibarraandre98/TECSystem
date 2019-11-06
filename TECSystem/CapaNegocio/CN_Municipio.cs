@@ -14,6 +14,7 @@ namespace CapaNegocio
         private CD_Municipio objetoCD = new CD_Municipio();
         DataTable tablaMunicipio = new DataTable();
         DataTable tablaMunicipioEstado = new DataTable();
+
         public DataTable MostrarMunicipios()
         {
             return tablaMunicipio = objetoCD.MostrarMunicipio();
