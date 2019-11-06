@@ -21,7 +21,7 @@ namespace TECSystem
             InitializeComponent();
         }
 
-        public void Limpiar()
+        public void limpiar()
         {
             grupo.Text = "";
             matricula.Text = "";
@@ -34,33 +34,33 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            obj.AgregarCalificacion(grupo.Text, matricula.Text, tema.Text,calificacion.Text, tipoevaluacion.Text);
-            MostrarCalificaciones();
-            Limpiar();
+            obj.agregar_calificacion(grupo.Text, matricula.Text, Convert.ToInt32(tema.Text), Convert.ToDouble(calificacion.Text), tipoevaluacion.Text);
+            mostrarCalificaciones();
+            limpiar();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            obj.EliminarCalificacion(idCalificacion.Text);
-            MostrarCalificaciones();
-            Limpiar();
+            obj.eliminar_calificacion(Convert.ToInt32(idCalificacion.Text));
+            mostrarCalificaciones();
+            limpiar();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            obj.EditarCalificacion((idCalificacion.Text),grupo.Text, matricula.Text, (tema.Text), (calificacion.Text), tipoevaluacion.Text);
-            MostrarCalificaciones();
-            Limpiar();
+            obj.editar_calificacion(Convert.ToInt32(idCalificacion.Text),grupo.Text, matricula.Text, Convert.ToInt32(tema.Text), Convert.ToDouble(calificacion.Text), tipoevaluacion.Text);
+            mostrarCalificaciones();
+            limpiar();
         }
-        private void MostrarCalificaciones()
+        private void mostrarCalificaciones()
         {
             CN_Calificaciones obj = new CN_Calificaciones();
-            dataGridView1.DataSource = obj.MostrarCalificaciones();
+            dataGridView1.DataSource = obj.mostrarCalificaciones();
         }
 
         private void Calificaciones_Load(object sender, EventArgs e)
         {
-            MostrarCalificaciones();
+            mostrarCalificaciones();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
             MostrarGrupos();
@@ -94,7 +94,7 @@ namespace TECSystem
         private void MostrarAlumnos()
         {
             CN_Alumnos _CN_Alumnos = new CN_Alumnos();
-            dgvAlumnos.DataSource = _CN_Alumnos.MostrarAlumnos();
+            dgvAlumnos.DataSource = _CN_Alumnos.mostrarAlumnos();
         }
 
         private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

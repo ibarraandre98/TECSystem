@@ -22,7 +22,7 @@ namespace CapaNegocio
         {
             _CD_Localidades.AgregarLocalidad(municipio,nombre,tipo);
         }
-        public void EditarMunicipio(int municipio,string nombre, int id,int tipo)
+        public void EditarMunicipio(string municipio,string nombre, int id,int tipo)
         {
             _CD_Localidades.EditarMunicipio(municipio,id,nombre,tipo);
         }

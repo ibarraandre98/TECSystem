@@ -35,7 +35,7 @@ namespace CapaDatos
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
-            public void EditarMateria(int cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
+            public void EditarMateria(string cve, string nombre, int hteoricas, int hpracticas, int creditos, int carrera)
             {
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "update Materias set nombre = '"+nombre+ "', hTeoricas = '"+hteoricas+ "', hPracticas = '"+hpracticas+ "',creditos = '"+creditos+ "', carrera = "+carrera+ " where cveMateria = '"+cve+"';";
@@ -44,10 +44,10 @@ namespace CapaDatos
             comando.Connection = conexion.CerrarConexion();
             }
 
-            public void Eliminar(int id)
+            public void Eliminar(string id)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "delete from materias where cveMateria = " + id + ";";
+            comando.CommandText = "delete from materias where cveMateria = '" + id + "';";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }

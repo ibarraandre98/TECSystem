@@ -63,11 +63,9 @@
             this.btnPrinUbicacion = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.panelSuperior = new System.Windows.Forms.Panel();
-            this.pbMinimizar = new System.Windows.Forms.PictureBox();
             this.pbCerrar = new System.Windows.Forms.PictureBox();
             this.panelFormulariosFondo = new System.Windows.Forms.Panel();
-            this.lblBienvenido = new System.Windows.Forms.Label();
-            this.pbUser = new System.Windows.Forms.PictureBox();
+            this.pbMinimizar = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelMaterias.SuspendLayout();
             this.panelAlumnos.SuspendLayout();
@@ -76,9 +74,8 @@
             this.panelUbicacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panelSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -979,8 +976,6 @@
             // panelSuperior
             // 
             this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
-            this.panelSuperior.Controls.Add(this.pbUser);
-            this.panelSuperior.Controls.Add(this.lblBienvenido);
             this.panelSuperior.Controls.Add(this.pbMinimizar);
             this.panelSuperior.Controls.Add(this.pbCerrar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
@@ -988,19 +983,6 @@
             this.panelSuperior.Name = "panelSuperior";
             this.panelSuperior.Size = new System.Drawing.Size(1080, 32);
             this.panelSuperior.TabIndex = 1;
-            // 
-            // pbMinimizar
-            // 
-            this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.Image")));
-            this.pbMinimizar.Location = new System.Drawing.Point(1001, 3);
-            this.pbMinimizar.Name = "pbMinimizar";
-            this.pbMinimizar.Size = new System.Drawing.Size(20, 20);
-            this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMinimizar.TabIndex = 5;
-            this.pbMinimizar.TabStop = false;
-            this.pbMinimizar.Click += new System.EventHandler(this.PbMinimizar_Click);
             // 
             // pbCerrar
             // 
@@ -1024,29 +1006,18 @@
             this.panelFormulariosFondo.Size = new System.Drawing.Size(1080, 708);
             this.panelFormulariosFondo.TabIndex = 2;
             // 
-            // lblBienvenido
+            // pbMinimizar
             // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenido.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblBienvenido.Location = new System.Drawing.Point(6, 4);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(131, 25);
-            this.lblBienvenido.TabIndex = 6;
-            this.lblBienvenido.Text = "Bienvenido :";
-            // 
-            // pbUser
-            // 
-            this.pbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
-            this.pbUser.Location = new System.Drawing.Point(963, 3);
-            this.pbUser.Name = "pbUser";
-            this.pbUser.Size = new System.Drawing.Size(20, 20);
-            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUser.TabIndex = 7;
-            this.pbUser.TabStop = false;
-            this.pbUser.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.Image")));
+            this.pbMinimizar.Location = new System.Drawing.Point(1001, 3);
+            this.pbMinimizar.Name = "pbMinimizar";
+            this.pbMinimizar.Size = new System.Drawing.Size(20, 20);
+            this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbMinimizar.TabIndex = 5;
+            this.pbMinimizar.TabStop = false;
+            this.pbMinimizar.Click += new System.EventHandler(this.PbMinimizar_Click);
             // 
             // Principal
             // 
@@ -1059,7 +1030,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema TEC";
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelMaterias.ResumeLayout(false);
@@ -1069,10 +1040,8 @@
             this.panelUbicacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panelSuperior.ResumeLayout(false);
-            this.panelSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1115,8 +1084,6 @@
         private System.Windows.Forms.Panel panelAlumnos;
         private System.Windows.Forms.Button btnPrinAlumnos;
         private System.Windows.Forms.PictureBox pbMinimizar;
-        private System.Windows.Forms.Label lblBienvenido;
-        private System.Windows.Forms.PictureBox pbUser;
     }
 }
 

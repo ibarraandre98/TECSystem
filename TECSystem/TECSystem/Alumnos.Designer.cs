@@ -511,7 +511,6 @@
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.Size = new System.Drawing.Size(371, 267);
             this.dgvAlumnos.TabIndex = 37;
-            this.dgvAlumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellDoubleClick);
             // 
             // dgvProfesores
             // 

@@ -46,10 +46,10 @@ namespace CapaDatos
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
-        public void EditarMunicipio(int municipio,int id,string nombre,int tipo)
+        public void EditarMunicipio(string municipio,int id,string nombre,int tipo)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update localidades set nombre = '" + nombre + "', Municipio = " + municipio + ", tipo = " + tipo + " where idLocalidad = " + id + ";";
+            comando.CommandText = "update localidades set nombre = '" + nombre + "', Municipio = '" + municipio + "', tipo = " + tipo + " where idLocalidad = " + id + ";";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
             comando.Connection = conexion.CerrarConexion();

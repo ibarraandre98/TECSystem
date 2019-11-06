@@ -11,25 +11,25 @@ namespace CapaNegocio
 {
     public class CN_Academia
     {
-        CD_Academias _CD_Academias = new CD_Academias();
+        CD_Academias obj = new CD_Academias();
 
-        public DataTable MostrarAcademias()
+        public DataTable mostrarAcademias()
         {
             DataTable tabla = new DataTable();
-            tabla = _CD_Academias.MostrarAcademias();
+            tabla = obj.mostrar();
             return tabla;
         }
-        public void AgregarAcademia(String nombre)
+        public void agregar_academia(String nombre)
         {
-            _CD_Academias.InsertarAcademia(nombre);
+            obj.insertar(nombre);
         }
-        public void EditarAcademia(String id,String nombre)
+        public void editar_academia(int id,string nombre)
         {
-            _CD_Academias.EditarAcademia(Convert.ToInt32(id),nombre);
+            obj.editar(id,nombre);
         }
-        public void EliminarAcademia(String id)
+        public void eliminar_academia(int id)
         {
-            _CD_Academias.EliminarAcademia(Convert.ToInt32(id));
+            obj.eliminar(id);
         }
     }
     
