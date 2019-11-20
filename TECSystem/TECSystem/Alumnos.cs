@@ -36,6 +36,9 @@ namespace TECSystem
                 cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,
                 cbLocalidad.SelectedValue.ToString());
             IDPersona = _CN_Personas.ultimoID();
+            _CN_Alumnos.AgregarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor, cbEspecialidad.SelectedValue.ToString(), cbEstatus.SelectedIndex.ToString());
+            MostrarAlumnos();
+            Limpiar();
             _CN_Alumnos.AgregarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor,cbEspecialidad.SelectedValue.ToString(), cbEstatus.SelectedIndex.ToString());
             MostrarAlumnos();
             Limpiar();
@@ -48,6 +51,8 @@ namespace TECSystem
         }
         private void Alumnos_Load(object sender, EventArgs e)
         {
+
+            MostrarAlumnos();
             
             MostrarAlumnos();
             btnEditar.Enabled = true;
@@ -70,6 +75,9 @@ namespace TECSystem
         }
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            _CN_Alumnos.EditarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor, (cbEspecialidad.SelectedValue.ToString()), cbEstatus.SelectedIndex.ToString());
+            MostrarAlumnos();
+            Limpiar();
             _CN_Alumnos.EditarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor, (cbEspecialidad.SelectedValue.ToString()),cbEstatus.SelectedIndex.ToString());
             MostrarAlumnos();
             Limpiar();
@@ -181,6 +189,39 @@ namespace TECSystem
         private void CbCarrera_SelectionChangeCommitted(object sender, EventArgs e)
         {
             MostrarEspecialidades();
+        }
+
+        private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtNombre.Text = dgvAlumnos.CurrentRow.Cells["Nombre"].Value.ToString();
+            txtPaterno.Text = dgvAlumnos.CurrentRow.Cells["Paterno"].Value.ToString();
+            txtMaterno.Text = dgvAlumnos.CurrentRow.Cells["Materno"].Value.ToString();
+            txtCurp.Text = dgvAlumnos.CurrentRow.Cells["curp"].Value.ToString();
+            txtTelefono.Text = dgvAlumnos.CurrentRow.Cells["telefono"].Value.ToString();
+            dtpFechaNac.Value = Convert.ToDateTime(dgvAlumnos.CurrentRow.Cells["Fecha_Nacimiento"].Value.ToString());
+            cbDiscapacidad.SelectedValue = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["discapacidad"].Value.ToString());
+            cbEstado.SelectedValue = dgvAlumnos.CurrentRow.Cells["Estado"].Value.ToString();
+            MostrarMunicipio(cbEstado.SelectedValue.ToString());
+            cbMunicipio.SelectedValue = dgvAlumnos.CurrentRow.Cells["Municipio"].Value.ToString();
+            MostrarLocalidades(cbMunicipio.SelectedValue.ToString());
+            cbLocalidad.SelectedValue = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["localidades"].Value.ToString());
+            cbTipoLocalidad.SelectedValue = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["tipo"].Value.ToString());
+            txtCalle.Text = dgvAlumnos.CurrentRow.Cells["calle"].Value.ToString();
+            txtExt.Text = dgvAlumnos.CurrentRow.Cells["numExt"].Value.ToString();
+            txtInt.Text = dgvAlumnos.CurrentRow.Cells["numInt"].Value.ToString();
+            txtCP.Text = dgvAlumnos.CurrentRow.Cells["cp"].Value.ToString();
+            txtMatricula.Text = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
+            cbEstatus.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["estatus"].Value.ToString());
+
+            IDProfesor = dgvAlumnos.CurrentRow.Cells["tutor"].Value.ToString();
+            foreach (DataGridViewRow row in dgvProfesores.Rows)
+            {
+                if (dgvAlumnos.CurrentRow.Cells["tutor"].Value.ToString().Equals(row.Cells["idProfesor"].Value.ToString()))
+                {
+                    tutor.Text = $"{row.Cells["nombres"].Value.ToString()} {row.Cells["paterno"].Value.ToString()} {row.Cells["materno"].Value.ToString()}";
+                    break;
+                }
+            }
         }
 
         private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
