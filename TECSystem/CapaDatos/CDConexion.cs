@@ -14,7 +14,7 @@ namespace CapaDatos
         //private SqlConnection Conexion = new SqlConnection("Server=LAPTOP-KF9P88JK\\SQLEXPRESS;DataBase=BaseDeDatosTec;Integrated Security=true");
         //private SqlConnection Conexion = new SqlConnection("Server=LAPTOP-KF9P88JK\\SQLEXPRESS;DataBase=BDTEC;Integrated Security=true");
         private SqlConnection Conexion = new SqlConnection("Server=MIGUEL-GONZALEZ\\SQLEXPRESS;DataBase=BaseDeDatosTec;Integrated Security=true");
-        private SqlConnection Conexion = new SqlConnection("Server=LAPTOP-KF9P88JK\\SQLEXPRESS;DataBase=BaseDeDatosTec;Integrated Security=true");
+        //private SqlConnection Conexion = new SqlConnection("Server=LAPTOP-KF9P88JK\\SQLEXPRESS;DataBase=BaseDeDatosTec;Integrated Security=true");
         //private SqlConnection Conexion = new SqlConnection("Server=MIGUELGONZALEZ\\SQLEXPRESS;DataBase=BDTEC;Integrated Security=true");
 
         public SqlConnection AbrirConexion()

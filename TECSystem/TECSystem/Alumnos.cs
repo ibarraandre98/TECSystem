@@ -36,12 +36,7 @@ namespace TECSystem
                 cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,
                 cbLocalidad.SelectedValue.ToString());
             IDPersona = _CN_Personas.ultimoID();
-            _CN_Alumnos.AgregarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor, cbEspecialidad.SelectedValue.ToString(), cbEstatus.SelectedIndex.ToString());
-            MostrarAlumnos();
-            Limpiar();
-            _CN_Alumnos.AgregarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor,cbEspecialidad.SelectedValue.ToString(), cbEstatus.SelectedIndex.ToString());
-            MostrarAlumnos();
-            Limpiar();
+           
             _CN_Alumnos.agregar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
             mostrar_alumnos();
             limpiar();
@@ -55,9 +50,7 @@ namespace TECSystem
         private void Alumnos_Load(object sender, EventArgs e)
         {
 
-            MostrarAlumnos();
-            
-            MostrarAlumnos();
+           
             mostrar_alumnos();
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
@@ -80,30 +73,25 @@ namespace TECSystem
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            _CN_Alumnos.EditarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor, (cbEspecialidad.SelectedValue.ToString()), cbEstatus.SelectedIndex.ToString());
-            MostrarAlumnos();
-            Limpiar();
-            _CN_Alumnos.EditarAlumno(txtMatricula.Text, IDPersona.ToString(), cbCarrera.SelectedValue.ToString(), IDProfesor, (cbEspecialidad.SelectedValue.ToString()),cbEstatus.SelectedIndex.ToString());
-            MostrarAlumnos();
-            Limpiar();
-            _CN_Alumnos.editar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), tutor.Text, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
+            var fe = dtpFechaNac.Value;
+            var fe2 = DateTime.Parse(fe.ToString());
+            var final = fe2.ToShortDateString();
+            MessageBox.Show(final);
+            CN_Personas _CN_Personas = new CN_Personas();
+            IDPersona = _CN_Personas.ultimoID();
+
+            _CN_Personas.EditarPersonas(Convert.ToString(IDPersona),txtPaterno.Text,txtMaterno.Text,txtNombre.Text,
+                dtpFechaNac.Value,cbSexo.SelectedIndex.ToString(),txtCurp.Text,txtTelefono.Text,txtExt.Text,
+                txtInt.Text,txtCP.Text,cbEdoCivil.SelectedIndex.ToString(),cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,cbLocalidad.SelectedIndex.ToString());
+
+
+
+            _CN_Alumnos.editar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
             mostrar_alumnos();
             limpiar();
         }
 
-        private void dataGridView1_DoubleClick(object sender, EventArgs e)
-        {
-            txtMatricula.Text = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
-            cbCarrera.SelectedValue = dgvAlumnos.CurrentRow.Cells["idCarrera"].Value.ToString();
-            tutor.Text = dgvAlumnos.CurrentRow.Cells["tutor"].Value.ToString();
-            cbEspecialidad.SelectedValue = dgvAlumnos.CurrentRow.Cells["idEspecialidad"].Value.ToString();
-            cbEstatus.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["estatus"].Value.ToString());
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
-            btnAgregar.Enabled = false;
-
-        }
-
+       
 
         private void primerValorCB()
         {
@@ -199,8 +187,10 @@ namespace TECSystem
             MostrarEspecialidades();
         }
 
-        private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dgvAlumnos_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
+
             txtNombre.Text = dgvAlumnos.CurrentRow.Cells["Nombre"].Value.ToString();
             txtPaterno.Text = dgvAlumnos.CurrentRow.Cells["Paterno"].Value.ToString();
             txtMaterno.Text = dgvAlumnos.CurrentRow.Cells["Materno"].Value.ToString();
@@ -231,9 +221,6 @@ namespace TECSystem
                 }
             }
         }
-
-      
-        }
     }
     }
-}
+    
