@@ -36,11 +36,11 @@ namespace TECSystem
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            lblBienvenido.Text = $"Bienvenido: {Program.nombre} {Program.apellidos}";
-            if (!Program.user.Equals("Admin"))
-            {
-                pbUser.Enabled = false;
-            }
+            //lblBienvenido.Text = $"Bienvenido: {Program.nombre} {Program.apellidos}";
+            //if (!Program.user.Equals("Admin"))
+            //{
+            //    pbUser.Enabled = false;
+            //}
         }
 
         #region ANIMACION DE MENU
@@ -273,6 +273,18 @@ namespace TECSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Usuarios>();
+        }
+
+        private void btnCer_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

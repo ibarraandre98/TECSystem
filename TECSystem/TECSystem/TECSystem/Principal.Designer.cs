@@ -33,6 +33,17 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelMaterias = new System.Windows.Forms.Panel();
+            this.panelAlumnos = new System.Windows.Forms.Panel();
+            this.panelEmpleados = new System.Windows.Forms.Panel();
+            this.panelCarreras = new System.Windows.Forms.Panel();
+            this.panelUbicacion = new System.Windows.Forms.Panel();
+            this.panelSuperior = new System.Windows.Forms.Panel();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.panelFormulariosFondo = new System.Windows.Forms.Panel();
+            this.btnCer = new System.Windows.Forms.Button();
+            this.btnMax = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
+            this.pbUser = new System.Windows.Forms.PictureBox();
             this.btnDetActividades = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnActividades = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMaterias = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -40,55 +51,43 @@
             this.btnHorarios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDetGrupos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPrinMaterias = new System.Windows.Forms.Button();
-            this.panelAlumnos = new System.Windows.Forms.Panel();
             this.btnAlumnos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCalificaciones = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnInasistencias = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPrinAlumnos = new System.Windows.Forms.Button();
-            this.panelEmpleados = new System.Windows.Forms.Panel();
             this.btnEmpleos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEmpleados = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnProfesores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPrinEmpleados = new System.Windows.Forms.Button();
-            this.panelCarreras = new System.Windows.Forms.Panel();
             this.btnCarreras = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEspecialidades = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAcademias = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPrinCarreras = new System.Windows.Forms.Button();
-            this.panelUbicacion = new System.Windows.Forms.Panel();
             this.btnEstados = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMunicipios = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLocalidades = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTiposLocalidad = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPrinUbicacion = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
-            this.panelSuperior = new System.Windows.Forms.Panel();
-            this.pbMinimizar = new System.Windows.Forms.PictureBox();
-            this.pbCerrar = new System.Windows.Forms.PictureBox();
-            this.panelFormulariosFondo = new System.Windows.Forms.Panel();
-            this.lblBienvenido = new System.Windows.Forms.Label();
-            this.pbUser = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelMaterias.SuspendLayout();
             this.panelAlumnos.SuspendLayout();
             this.panelEmpleados.SuspendLayout();
             this.panelCarreras.SuspendLayout();
             this.panelUbicacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.panelSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 30;
+            this.bunifuElipse1.ElipseRadius = 5;
             this.bunifuElipse1.TargetControl = this;
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
+            this.panelMenu.BackColor = System.Drawing.Color.AliceBlue;
             this.panelMenu.Controls.Add(this.panelMaterias);
             this.panelMenu.Controls.Add(this.btnPrinMaterias);
             this.panelMenu.Controls.Add(this.panelAlumnos);
@@ -104,11 +103,12 @@
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(200, 740);
+            this.panelMenu.Size = new System.Drawing.Size(200, 773);
             this.panelMenu.TabIndex = 0;
             // 
             // panelMaterias
             // 
+            this.panelMaterias.BackColor = System.Drawing.Color.AliceBlue;
             this.panelMaterias.Controls.Add(this.btnDetActividades);
             this.panelMaterias.Controls.Add(this.btnActividades);
             this.panelMaterias.Controls.Add(this.btnMaterias);
@@ -121,6 +121,155 @@
             this.panelMaterias.Size = new System.Drawing.Size(200, 173);
             this.panelMaterias.TabIndex = 23;
             this.panelMaterias.Visible = false;
+            // 
+            // panelAlumnos
+            // 
+            this.panelAlumnos.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelAlumnos.Controls.Add(this.btnAlumnos);
+            this.panelAlumnos.Controls.Add(this.btnCalificaciones);
+            this.panelAlumnos.Controls.Add(this.btnInasistencias);
+            this.panelAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelAlumnos.Location = new System.Drawing.Point(0, 461);
+            this.panelAlumnos.Name = "panelAlumnos";
+            this.panelAlumnos.Size = new System.Drawing.Size(200, 80);
+            this.panelAlumnos.TabIndex = 24;
+            this.panelAlumnos.Visible = false;
+            // 
+            // panelEmpleados
+            // 
+            this.panelEmpleados.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelEmpleados.Controls.Add(this.btnEmpleos);
+            this.panelEmpleados.Controls.Add(this.btnEmpleados);
+            this.panelEmpleados.Controls.Add(this.btnProfesores);
+            this.panelEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelEmpleados.Location = new System.Drawing.Point(0, 343);
+            this.panelEmpleados.Name = "panelEmpleados";
+            this.panelEmpleados.Size = new System.Drawing.Size(200, 75);
+            this.panelEmpleados.TabIndex = 24;
+            this.panelEmpleados.Visible = false;
+            // 
+            // panelCarreras
+            // 
+            this.panelCarreras.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelCarreras.Controls.Add(this.btnCarreras);
+            this.panelCarreras.Controls.Add(this.btnEspecialidades);
+            this.panelCarreras.Controls.Add(this.btnAcademias);
+            this.panelCarreras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCarreras.Location = new System.Drawing.Point(0, 218);
+            this.panelCarreras.Name = "panelCarreras";
+            this.panelCarreras.Size = new System.Drawing.Size(200, 82);
+            this.panelCarreras.TabIndex = 24;
+            this.panelCarreras.Visible = false;
+            // 
+            // panelUbicacion
+            // 
+            this.panelUbicacion.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelUbicacion.Controls.Add(this.btnEstados);
+            this.panelUbicacion.Controls.Add(this.btnMunicipios);
+            this.panelUbicacion.Controls.Add(this.btnLocalidades);
+            this.panelUbicacion.Controls.Add(this.btnTiposLocalidad);
+            this.panelUbicacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUbicacion.Location = new System.Drawing.Point(0, 75);
+            this.panelUbicacion.Name = "panelUbicacion";
+            this.panelUbicacion.Size = new System.Drawing.Size(200, 100);
+            this.panelUbicacion.TabIndex = 22;
+            this.panelUbicacion.Visible = false;
+            // 
+            // panelSuperior
+            // 
+            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.panelSuperior.Controls.Add(this.btnCer);
+            this.panelSuperior.Controls.Add(this.btnMax);
+            this.panelSuperior.Controls.Add(this.btnMin);
+            this.panelSuperior.Controls.Add(this.pbUser);
+            this.panelSuperior.Controls.Add(this.lblBienvenido);
+            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSuperior.Location = new System.Drawing.Point(200, 0);
+            this.panelSuperior.Name = "panelSuperior";
+            this.panelSuperior.Size = new System.Drawing.Size(1080, 32);
+            this.panelSuperior.TabIndex = 1;
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblBienvenido.Location = new System.Drawing.Point(6, 4);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(131, 25);
+            this.lblBienvenido.TabIndex = 6;
+            this.lblBienvenido.Text = "Bienvenido :";
+            // 
+            // panelFormulariosFondo
+            // 
+            this.panelFormulariosFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.panelFormulariosFondo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFormulariosFondo.Location = new System.Drawing.Point(200, 32);
+            this.panelFormulariosFondo.Name = "panelFormulariosFondo";
+            this.panelFormulariosFondo.Size = new System.Drawing.Size(1080, 741);
+            this.panelFormulariosFondo.TabIndex = 2;
+            // 
+            // btnCer
+            // 
+            this.btnCer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCer.BackgroundImage")));
+            this.btnCer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCer.FlatAppearance.BorderSize = 0;
+            this.btnCer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(15)))), ((int)(((byte)(33)))));
+            this.btnCer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.btnCer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCer.Location = new System.Drawing.Point(1050, -1);
+            this.btnCer.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCer.Name = "btnCer";
+            this.btnCer.Size = new System.Drawing.Size(30, 30);
+            this.btnCer.TabIndex = 33;
+            this.btnCer.UseVisualStyleBackColor = true;
+            this.btnCer.Click += new System.EventHandler(this.btnCer_Click);
+            // 
+            // btnMax
+            // 
+            this.btnMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMax.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMax.BackgroundImage")));
+            this.btnMax.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMax.FlatAppearance.BorderSize = 0;
+            this.btnMax.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(164)))), ((int)(((byte)(46)))));
+            this.btnMax.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(157)))), ((int)(((byte)(43)))));
+            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMax.Location = new System.Drawing.Point(924, -1);
+            this.btnMax.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMax.Name = "btnMax";
+            this.btnMax.Size = new System.Drawing.Size(30, 30);
+            this.btnMax.TabIndex = 32;
+            this.btnMax.UseVisualStyleBackColor = true;
+            this.btnMax.Visible = false;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMin.BackgroundImage")));
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.Location = new System.Drawing.Point(1020, -1);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(30, 30);
+            this.btnMin.TabIndex = 31;
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // pbUser
+            // 
+            this.pbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbUser.Image = global::TECSystem.Properties.Resources.User_muski1;
+            this.pbUser.Location = new System.Drawing.Point(997, 4);
+            this.pbUser.Name = "pbUser";
+            this.pbUser.Size = new System.Drawing.Size(20, 20);
+            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUser.TabIndex = 7;
+            this.pbUser.TabStop = false;
+            this.pbUser.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnDetActividades
             // 
@@ -346,6 +495,7 @@
             // 
             // btnPrinMaterias
             // 
+            this.btnPrinMaterias.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPrinMaterias.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrinMaterias.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrinMaterias.FlatAppearance.BorderSize = 0;
@@ -359,20 +509,8 @@
             this.btnPrinMaterias.Size = new System.Drawing.Size(200, 43);
             this.btnPrinMaterias.TabIndex = 25;
             this.btnPrinMaterias.Text = "Materias";
-            this.btnPrinMaterias.UseVisualStyleBackColor = true;
+            this.btnPrinMaterias.UseVisualStyleBackColor = false;
             this.btnPrinMaterias.Click += new System.EventHandler(this.BtnPrinMaterias_Click);
-            // 
-            // panelAlumnos
-            // 
-            this.panelAlumnos.Controls.Add(this.btnAlumnos);
-            this.panelAlumnos.Controls.Add(this.btnCalificaciones);
-            this.panelAlumnos.Controls.Add(this.btnInasistencias);
-            this.panelAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAlumnos.Location = new System.Drawing.Point(0, 461);
-            this.panelAlumnos.Name = "panelAlumnos";
-            this.panelAlumnos.Size = new System.Drawing.Size(200, 80);
-            this.panelAlumnos.TabIndex = 24;
-            this.panelAlumnos.Visible = false;
             // 
             // btnAlumnos
             // 
@@ -487,6 +625,7 @@
             // 
             // btnPrinAlumnos
             // 
+            this.btnPrinAlumnos.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPrinAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrinAlumnos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrinAlumnos.FlatAppearance.BorderSize = 0;
@@ -500,20 +639,8 @@
             this.btnPrinAlumnos.Size = new System.Drawing.Size(200, 43);
             this.btnPrinAlumnos.TabIndex = 26;
             this.btnPrinAlumnos.Text = "Alumnos";
-            this.btnPrinAlumnos.UseVisualStyleBackColor = true;
+            this.btnPrinAlumnos.UseVisualStyleBackColor = false;
             this.btnPrinAlumnos.Click += new System.EventHandler(this.BtnPrinAlumnos_Click);
-            // 
-            // panelEmpleados
-            // 
-            this.panelEmpleados.Controls.Add(this.btnEmpleos);
-            this.panelEmpleados.Controls.Add(this.btnEmpleados);
-            this.panelEmpleados.Controls.Add(this.btnProfesores);
-            this.panelEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEmpleados.Location = new System.Drawing.Point(0, 343);
-            this.panelEmpleados.Name = "panelEmpleados";
-            this.panelEmpleados.Size = new System.Drawing.Size(200, 75);
-            this.panelEmpleados.TabIndex = 24;
-            this.panelEmpleados.Visible = false;
             // 
             // btnEmpleos
             // 
@@ -628,6 +755,7 @@
             // 
             // btnPrinEmpleados
             // 
+            this.btnPrinEmpleados.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPrinEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrinEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrinEmpleados.FlatAppearance.BorderSize = 0;
@@ -641,20 +769,8 @@
             this.btnPrinEmpleados.Size = new System.Drawing.Size(200, 43);
             this.btnPrinEmpleados.TabIndex = 26;
             this.btnPrinEmpleados.Text = "Empleados";
-            this.btnPrinEmpleados.UseVisualStyleBackColor = true;
+            this.btnPrinEmpleados.UseVisualStyleBackColor = false;
             this.btnPrinEmpleados.Click += new System.EventHandler(this.BtnPrinEmpleados_Click);
-            // 
-            // panelCarreras
-            // 
-            this.panelCarreras.Controls.Add(this.btnCarreras);
-            this.panelCarreras.Controls.Add(this.btnEspecialidades);
-            this.panelCarreras.Controls.Add(this.btnAcademias);
-            this.panelCarreras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCarreras.Location = new System.Drawing.Point(0, 218);
-            this.panelCarreras.Name = "panelCarreras";
-            this.panelCarreras.Size = new System.Drawing.Size(200, 82);
-            this.panelCarreras.TabIndex = 24;
-            this.panelCarreras.Visible = false;
             // 
             // btnCarreras
             // 
@@ -769,6 +885,7 @@
             // 
             // btnPrinCarreras
             // 
+            this.btnPrinCarreras.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPrinCarreras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrinCarreras.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrinCarreras.FlatAppearance.BorderSize = 0;
@@ -782,21 +899,8 @@
             this.btnPrinCarreras.Size = new System.Drawing.Size(200, 43);
             this.btnPrinCarreras.TabIndex = 24;
             this.btnPrinCarreras.Text = "Carreras";
-            this.btnPrinCarreras.UseVisualStyleBackColor = true;
+            this.btnPrinCarreras.UseVisualStyleBackColor = false;
             this.btnPrinCarreras.Click += new System.EventHandler(this.BtnPrinCarreras_Click);
-            // 
-            // panelUbicacion
-            // 
-            this.panelUbicacion.Controls.Add(this.btnEstados);
-            this.panelUbicacion.Controls.Add(this.btnMunicipios);
-            this.panelUbicacion.Controls.Add(this.btnLocalidades);
-            this.panelUbicacion.Controls.Add(this.btnTiposLocalidad);
-            this.panelUbicacion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUbicacion.Location = new System.Drawing.Point(0, 75);
-            this.panelUbicacion.Name = "panelUbicacion";
-            this.panelUbicacion.Size = new System.Drawing.Size(200, 100);
-            this.panelUbicacion.TabIndex = 22;
-            this.panelUbicacion.Visible = false;
             // 
             // btnEstados
             // 
@@ -948,6 +1052,7 @@
             // 
             // btnPrinUbicacion
             // 
+            this.btnPrinUbicacion.BackColor = System.Drawing.Color.AliceBlue;
             this.btnPrinUbicacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrinUbicacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPrinUbicacion.FlatAppearance.BorderSize = 0;
@@ -961,11 +1066,12 @@
             this.btnPrinUbicacion.Size = new System.Drawing.Size(200, 43);
             this.btnPrinUbicacion.TabIndex = 23;
             this.btnPrinUbicacion.Text = "Ubicación";
-            this.btnPrinUbicacion.UseVisualStyleBackColor = true;
+            this.btnPrinUbicacion.UseVisualStyleBackColor = false;
             this.btnPrinUbicacion.Click += new System.EventHandler(this.BtnPrinUbicacion_Click);
             // 
             // Logo
             // 
+            this.Logo.BackColor = System.Drawing.Color.AliceBlue;
             this.Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.Logo.ErrorImage = global::TECSystem.Properties.Resources.Logo;
             this.Logo.Image = global::TECSystem.Properties.Resources.ITSM;
@@ -976,83 +1082,11 @@
             this.Logo.TabIndex = 0;
             this.Logo.TabStop = false;
             // 
-            // panelSuperior
-            // 
-            this.panelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(45)))), ((int)(((byte)(57)))));
-            this.panelSuperior.Controls.Add(this.pbUser);
-            this.panelSuperior.Controls.Add(this.lblBienvenido);
-            this.panelSuperior.Controls.Add(this.pbMinimizar);
-            this.panelSuperior.Controls.Add(this.pbCerrar);
-            this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSuperior.Location = new System.Drawing.Point(200, 0);
-            this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(1080, 32);
-            this.panelSuperior.TabIndex = 1;
-            // 
-            // pbMinimizar
-            // 
-            this.pbMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("pbMinimizar.Image")));
-            this.pbMinimizar.Location = new System.Drawing.Point(1001, 3);
-            this.pbMinimizar.Name = "pbMinimizar";
-            this.pbMinimizar.Size = new System.Drawing.Size(20, 20);
-            this.pbMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbMinimizar.TabIndex = 5;
-            this.pbMinimizar.TabStop = false;
-            this.pbMinimizar.Click += new System.EventHandler(this.PbMinimizar_Click);
-            // 
-            // pbCerrar
-            // 
-            this.pbCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbCerrar.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrar.Image")));
-            this.pbCerrar.Location = new System.Drawing.Point(1039, 4);
-            this.pbCerrar.Name = "pbCerrar";
-            this.pbCerrar.Size = new System.Drawing.Size(20, 20);
-            this.pbCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbCerrar.TabIndex = 4;
-            this.pbCerrar.TabStop = false;
-            this.pbCerrar.Click += new System.EventHandler(this.PictureBox3_Click);
-            // 
-            // panelFormulariosFondo
-            // 
-            this.panelFormulariosFondo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
-            this.panelFormulariosFondo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFormulariosFondo.Location = new System.Drawing.Point(200, 32);
-            this.panelFormulariosFondo.Name = "panelFormulariosFondo";
-            this.panelFormulariosFondo.Size = new System.Drawing.Size(1080, 708);
-            this.panelFormulariosFondo.TabIndex = 2;
-            // 
-            // lblBienvenido
-            // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenido.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblBienvenido.Location = new System.Drawing.Point(6, 4);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(131, 25);
-            this.lblBienvenido.TabIndex = 6;
-            this.lblBienvenido.Text = "Bienvenido :";
-            // 
-            // pbUser
-            // 
-            this.pbUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbUser.Image = ((System.Drawing.Image)(resources.GetObject("pbUser.Image")));
-            this.pbUser.Location = new System.Drawing.Point(963, 3);
-            this.pbUser.Name = "pbUser";
-            this.pbUser.Size = new System.Drawing.Size(20, 20);
-            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUser.TabIndex = 7;
-            this.pbUser.TabStop = false;
-            this.pbUser.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 740);
+            this.ClientSize = new System.Drawing.Size(1280, 773);
             this.Controls.Add(this.panelFormulariosFondo);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.panelMenu);
@@ -1067,12 +1101,10 @@
             this.panelEmpleados.ResumeLayout(false);
             this.panelCarreras.ResumeLayout(false);
             this.panelUbicacion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1092,7 +1124,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnCarreras;
         private Bunifu.Framework.UI.BunifuFlatButton btnCalificaciones;
         private Bunifu.Framework.UI.BunifuFlatButton btnAlumnos;
-        private System.Windows.Forms.PictureBox pbCerrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnTiposLocalidad;
         private Bunifu.Framework.UI.BunifuFlatButton btnProfesores;
         private Bunifu.Framework.UI.BunifuFlatButton btnEmpleos;
@@ -1114,9 +1145,11 @@
         private System.Windows.Forms.Panel panelCarreras;
         private System.Windows.Forms.Panel panelAlumnos;
         private System.Windows.Forms.Button btnPrinAlumnos;
-        private System.Windows.Forms.PictureBox pbMinimizar;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.PictureBox pbUser;
+        private System.Windows.Forms.Button btnCer;
+        private System.Windows.Forms.Button btnMax;
+        private System.Windows.Forms.Button btnMin;
     }
 }
 

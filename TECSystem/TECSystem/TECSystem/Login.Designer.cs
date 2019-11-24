@@ -63,7 +63,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
             this.label1.Location = new System.Drawing.Point(428, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 23);
@@ -74,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
             this.label2.Location = new System.Drawing.Point(428, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 23);
@@ -149,10 +149,10 @@
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox3);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Azure;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.LightBlue;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.RoyalBlue;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Silver;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
@@ -174,7 +174,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox2.Image = global::TECSystem.Properties.Resources.Pass_muski;
             this.pictureBox2.Location = new System.Drawing.Point(716, 221);
             this.pictureBox2.Name = "pictureBox2";
@@ -186,7 +186,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pictureBox1.Image = global::TECSystem.Properties.Resources.User_muski;
             this.pictureBox1.Location = new System.Drawing.Point(714, 100);
             this.pictureBox1.Name = "pictureBox1";
@@ -201,10 +201,10 @@
             this.btnIniciar.FlatAppearance.BorderSize = 0;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.btnIniciar.ForeColor = System.Drawing.Color.White;
+            this.btnIniciar.ForeColor = System.Drawing.Color.DarkGray;
             this.btnIniciar.Image = global::TECSystem.Properties.Resources.Flecha_muski;
             this.btnIniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIniciar.Location = new System.Drawing.Point(516, 328);
+            this.btnIniciar.Location = new System.Drawing.Point(513, 309);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(182, 47);
             this.btnIniciar.TabIndex = 100;

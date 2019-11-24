@@ -80,6 +80,12 @@
     <Compile Include="Calles.Designer.cs">
       <DependentUpon>Calles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cargando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cargando.Designer.cs">
+      <DependentUpon>Cargando.cs</DependentUpon>
+    </Compile>
     <Compile Include="Carreras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="Calles.resx">
       <DependentUpon>Calles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cargando.resx">
+      <DependentUpon>Cargando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Carreras.resx">
       <DependentUpon>Carreras.cs</DependentUpon>
@@ -374,6 +383,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Flecha_muski.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ubicacion_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ubicacion_new1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Estados_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ubicacion_new2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_muski1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cargando.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

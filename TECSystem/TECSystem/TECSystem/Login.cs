@@ -33,8 +33,11 @@ namespace TECSystem
                 Program.nombre = sdrLeer["nombre"].ToString();
                 Program.apellidos = sdrLeer["apellidos"].ToString();
                 Program.correo = sdrLeer["email"].ToString();
-                Principal _Pri = new Principal();
-                _Pri.Show();
+
+                Cargando car = new Cargando();
+                car.Show();
+                //Principal _Pri = new Principal();
+                //_Pri.Show();
                 this.Hide();
             }
             else
