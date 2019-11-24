@@ -78,8 +78,7 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _CN_Personas.EditarPersonas(txtIdPersona.Text,txtPaterno.Text, txtMaterno.Text, txtNombre.Text, txtNacimiento.Value, txtSexo.Text,
-                txtCURP.Text, txtTel.Text, txtCalle.Text, txtnumExterior.Text, txtInterior.Text, txtCP.Text, txtEdoCivil.Text, txtDiscapacidad.Text);
+           
             MostrarPersonas();
             Limpiartxt();
             btnEliminar.Enabled = false;
