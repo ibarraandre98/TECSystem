@@ -78,5 +78,34 @@ namespace TECSystem
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
         }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Calles.AgregarCalles(txtLocalidad.Text, txtNombre.Text);
+            Limpiartxt();
+            MostrarTabla();
+
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Calles.EditarCalles(txtIdCalle.Text, txtLocalidad.Text, txtNombre.Text);
+            Limpiartxt();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Calles.EliminarCalles(txtIdCalle.Text);
+            Limpiartxt();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+        }
     }
 }

@@ -402,5 +402,20 @@
   <ItemGroup>
     <None Include="Resources\Cargando.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar_new_peque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar_new_peque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar_new_peque.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar_new.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

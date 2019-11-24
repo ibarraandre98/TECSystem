@@ -221,6 +221,47 @@ namespace TECSystem
                 }
             }
         }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            CN_Personas _CN_Personas = new CN_Personas();
+            _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, dtpFechaNac.Value,
+                cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text,
+                cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,
+                cbLocalidad.SelectedValue.ToString());
+            IDPersona = _CN_Personas.ultimoID();
+
+            _CN_Alumnos.agregar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
+            mostrar_alumnos();
+            limpiar();
+        }
+
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+            var fe = dtpFechaNac.Value;
+            var fe2 = DateTime.Parse(fe.ToString());
+            var final = fe2.ToShortDateString();
+            MessageBox.Show(final);
+            CN_Personas _CN_Personas = new CN_Personas();
+            IDPersona = _CN_Personas.ultimoID();
+
+            _CN_Personas.EditarPersonas(Convert.ToString(IDPersona), txtPaterno.Text, txtMaterno.Text, txtNombre.Text,
+                dtpFechaNac.Value, cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text,
+                txtInt.Text, txtCP.Text, cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text, cbLocalidad.SelectedIndex.ToString());
+
+
+
+            _CN_Alumnos.editar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
+            mostrar_alumnos();
+            limpiar();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Alumnos.eliminar_alumno(txtMatricula.Text);
+            mostrar_alumnos();
+            limpiar();
+        }
     }
     }
     

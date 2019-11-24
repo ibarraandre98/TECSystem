@@ -201,7 +201,7 @@
             this.btnIniciar.FlatAppearance.BorderSize = 0;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciar.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.btnIniciar.ForeColor = System.Drawing.Color.DarkGray;
+            this.btnIniciar.ForeColor = System.Drawing.Color.White;
             this.btnIniciar.Image = global::TECSystem.Properties.Resources.Flecha_muski;
             this.btnIniciar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIniciar.Location = new System.Drawing.Point(513, 309);
