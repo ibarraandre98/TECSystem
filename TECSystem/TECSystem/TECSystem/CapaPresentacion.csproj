@@ -348,5 +348,32 @@
   <ItemGroup>
     <None Include="Resources\ITSM.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tecnologico_de_el_Mante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tecnologico_de_el_Mante copia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sign up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check_NEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_muski.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pass_muski.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flecha_muski.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

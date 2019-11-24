@@ -17,7 +17,7 @@ namespace TECSystem
         public Login()
         {
             InitializeComponent();
-
+            
         }
 
 
@@ -39,7 +39,7 @@ namespace TECSystem
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -51,6 +51,32 @@ namespace TECSystem
         }
 
         private void pbMinimizar_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void pnlTransparente_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnCer_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro de salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+                Application.Exit();
+        }
+
+        private void btnMax_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
