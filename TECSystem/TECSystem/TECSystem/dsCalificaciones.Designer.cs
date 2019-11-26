@@ -315,6 +315,8 @@ namespace TECSystem {
             
             private global::System.Data.DataColumn columnfecha;
             
+            private global::System.Data.DataColumn columnnombre2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public dtCalificacionesDataTable() {
@@ -494,6 +496,14 @@ namespace TECSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn nombre2Column {
+                get {
+                    return this.columnnombre2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -547,7 +557,8 @@ namespace TECSystem {
                         string tipoEval, 
                         byte tipoInasistencia, 
                         string grupo1, 
-                        System.DateTime fecha) {
+                        System.DateTime fecha, 
+                        string nombre2) {
                 dtCalificacionesRow rowdtCalificacionesRow = ((dtCalificacionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         grupo,
@@ -567,7 +578,8 @@ namespace TECSystem {
                         tipoEval,
                         tipoInasistencia,
                         grupo1,
-                        fecha};
+                        fecha,
+                        nombre2};
                 rowdtCalificacionesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdtCalificacionesRow);
                 return rowdtCalificacionesRow;
@@ -608,6 +620,7 @@ namespace TECSystem {
                 this.columntipoInasistencia = base.Columns["tipoInasistencia"];
                 this.columngrupo1 = base.Columns["grupo1"];
                 this.columnfecha = base.Columns["fecha"];
+                this.columnnombre2 = base.Columns["nombre2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -649,6 +662,8 @@ namespace TECSystem {
                 base.Columns.Add(this.columngrupo1);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
+                this.columnnombre2 = new global::System.Data.DataColumn("nombre2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombre2);
                 this.columngrupo.AllowDBNull = false;
                 this.columngrupo.MaxLength = 10;
                 this.columnmateria.AllowDBNull = false;
@@ -677,6 +692,8 @@ namespace TECSystem {
                 this.columngrupo1.AllowDBNull = false;
                 this.columngrupo1.MaxLength = 10;
                 this.columnfecha.AllowDBNull = false;
+                this.columnnombre2.AllowDBNull = false;
+                this.columnnombre2.MaxLength = 40;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1022,6 +1039,17 @@ namespace TECSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string nombre2 {
+                get {
+                    return ((string)(this[this.tabledtCalificaciones.nombre2Column]));
+                }
+                set {
+                    this[this.tabledtCalificaciones.nombre2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsmaternoNull() {
                 return this.IsNull(this.tabledtCalificaciones.maternoColumn);
             }
@@ -1210,6 +1238,7 @@ namespace TECSystem.dsCalificacionesTableAdapters {
             tableMapping.ColumnMappings.Add("tipoInasistencia", "tipoInasistencia");
             tableMapping.ColumnMappings.Add("grupo1", "grupo1");
             tableMapping.ColumnMappings.Add("fecha", "fecha");
+            tableMapping.ColumnMappings.Add("nombre2", "nombre2");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1229,7 +1258,7 @@ namespace TECSystem.dsCalificacionesTableAdapters {
             this._commandCollection[0].CommandText = @"select calificaciones.grupo, grupos.materia, grupos.profesor,
 calificaciones.matricula, alumnos.idCarrera, carreras.nombre,alumnos.idEspecialidad, especialidades.nombre, alumnos.idPersona, 
 personas.nombres, personas.paterno, personas.materno, calificaciones.tema, calificaciones.calificacion,
-calificaciones.tipoEval, inasistencias.tipoInasistencia, inasistencias.grupo, inasistencias.fecha
+calificaciones.tipoEval, inasistencias.tipoInasistencia, inasistencias.grupo, inasistencias.fecha, materias.nombre 
 from calificaciones
 join grupos on calificaciones.grupo = grupos.cveGrupo
 join alumnos on calificaciones.matricula = alumnos.matricula
@@ -1237,6 +1266,7 @@ join personas on alumnos.idPersona = personas.idPersona
 join carreras on alumnos.idCarrera = carreras.idCarrera
 join especialidades on alumnos.idEspecialidad = especialidades.idEspecialidad
 join inasistencias on grupos.cveGrupo = inasistencias.grupo
+join materias on materias.cveMateria =grupos.materia
 where calificaciones.matricula = '1601F0040';";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
