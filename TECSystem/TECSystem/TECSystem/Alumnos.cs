@@ -221,6 +221,14 @@ namespace TECSystem
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setMatricula(txtMatricula.Text);
+            r.setReporte(2);
+            r.ShowDialog();
+        }
     }
     }
     

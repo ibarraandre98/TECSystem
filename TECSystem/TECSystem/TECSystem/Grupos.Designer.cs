@@ -41,6 +41,7 @@
             this.dgvMaterias = new System.Windows.Forms.DataGridView();
             this.txtMateria = new System.Windows.Forms.TextBox();
             this.dgvProfesores = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgGrupos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMaterias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfesores)).BeginInit();
@@ -176,12 +177,23 @@
             this.dgvProfesores.TabIndex = 91;
             this.dgvProfesores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProfesores_CellDoubleClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(755, 516);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 34);
+            this.button1.TabIndex = 92;
+            this.button1.Text = "ReporteHorarios";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Grupos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(903, 595);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvProfesores);
             this.Controls.Add(this.txtMateria);
             this.Controls.Add(this.dgvMaterias);
@@ -221,5 +233,6 @@
         private System.Windows.Forms.DataGridView dgvMaterias;
         private System.Windows.Forms.TextBox txtMateria;
         private System.Windows.Forms.DataGridView dgvProfesores;
+        private System.Windows.Forms.Button button1;
     }
 }

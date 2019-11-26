@@ -103,6 +103,13 @@ namespace TECSystem
             idMateria = dgvMaterias.CurrentRow.Cells["cveMateria"].Value.ToString();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setReporte(7);
+            r.ShowDialog();
+        }
+
         private void DgvProfesores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtProfesor.Text = dgvProfesores.CurrentRow.Cells["nombres"].Value.ToString() +" "+

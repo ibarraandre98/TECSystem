@@ -45,6 +45,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cbCarrera = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -213,12 +214,23 @@
             this.cbCarrera.Size = new System.Drawing.Size(162, 21);
             this.cbCarrera.TabIndex = 37;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(632, 482);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 33);
+            this.button3.TabIndex = 38;
+            this.button3.Text = "Reportes";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Materias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(811, 539);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.cbCarrera);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -265,5 +277,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbCarrera;
+        private System.Windows.Forms.Button button3;
     }
 }

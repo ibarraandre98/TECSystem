@@ -36,9 +36,16 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,11 +75,23 @@
     <Compile Include="Alumnos.Designer.cs">
       <DependentUpon>Alumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlumnosReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlumnosReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Calificaciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Calificaciones.Designer.cs">
       <DependentUpon>Calificaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalificacionesReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalificacionesReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Calles.cs">
       <SubType>Form</SubType>
@@ -104,6 +123,44 @@
     <Compile Include="detGrupos.Designer.cs">
       <DependentUpon>detGrupos.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsAlumnos.cs">
+      <DependentUpon>dsAlumnos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsAlumnos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAlumnos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsCalificaciones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsCalificaciones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsGrupos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGrupos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsHorarioMaterias.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHorarioMaterias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsHorarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHorarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsHorariosEspecificos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHorariosEspecificos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsProfesores.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProfesores.xsd</DependentUpon>
+    </Compile>
     <Compile Include="empleos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +172,24 @@
     </Compile>
     <Compile Include="especialidades.Designer.cs">
       <DependentUpon>especialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GruposReportes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GruposReportes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HorariosEspecificosReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HorariosEspecificosReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HorariosReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HorariosReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Localidad.cs">
       <SubType>Form</SubType>
@@ -133,6 +208,23 @@
     </Compile>
     <Compile Include="Materias.Designer.cs">
       <DependentUpon>Materias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dsMaterias1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsMaterias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MateriasReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MateriasReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MateriasReportes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MateriasReportes.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Municipio.cs">
       <SubType>Form</SubType>
@@ -188,8 +280,20 @@
     <Compile Include="Profesores.Designer.cs">
       <DependentUpon>Profesores.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfesoresReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfesoresReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="TiposLocalidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +306,14 @@
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlumnosReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AlumnosReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalificacionesReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CalificacionesReporte.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calles.resx">
       <DependentUpon>Calles.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,6 +338,18 @@
     <EmbeddedResource Include="especialidades.resx">
       <DependentUpon>especialidades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GruposReportes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GruposReportes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorariosEspecificosReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HorariosEspecificosReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorariosReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>HorariosReporte.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Localidad.resx">
       <DependentUpon>Localidad.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +358,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Materias.resx">
       <DependentUpon>Materias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriasReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MateriasReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MateriasReportes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MateriasReportes.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Municipio.resx">
       <DependentUpon>Municipio.cs</DependentUpon>
@@ -271,6 +403,10 @@
     <EmbeddedResource Include="Profesores.resx">
       <DependentUpon>Profesores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfesoresReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProfesoresReporte.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -281,12 +417,103 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TiposLocalidad.resx">
       <DependentUpon>TiposLocalidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dsAlumnos.xsc">
+      <DependentUpon>dsAlumnos.xsd</DependentUpon>
+    </None>
+    <None Include="dsAlumnos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAlumnos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsAlumnos.xss">
+      <DependentUpon>dsAlumnos.xsd</DependentUpon>
+    </None>
+    <None Include="dsCalificaciones.xsc">
+      <DependentUpon>dsCalificaciones.xsd</DependentUpon>
+    </None>
+    <None Include="dsCalificaciones.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsCalificaciones.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsCalificaciones.xss">
+      <DependentUpon>dsCalificaciones.xsd</DependentUpon>
+    </None>
+    <None Include="dsGrupos.xsc">
+      <DependentUpon>dsGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="dsGrupos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGrupos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsGrupos.xss">
+      <DependentUpon>dsGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="dsHorarioMaterias.xsc">
+      <DependentUpon>dsHorarioMaterias.xsd</DependentUpon>
+    </None>
+    <None Include="dsHorarioMaterias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHorarioMaterias.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsHorarioMaterias.xss">
+      <DependentUpon>dsHorarioMaterias.xsd</DependentUpon>
+    </None>
+    <None Include="dsHorarios.xsc">
+      <DependentUpon>dsHorarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsHorarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHorarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsHorarios.xss">
+      <DependentUpon>dsHorarios.xsd</DependentUpon>
+    </None>
+    <None Include="dsHorariosEspecificos.xsc">
+      <DependentUpon>dsHorariosEspecificos.xsd</DependentUpon>
+    </None>
+    <None Include="dsHorariosEspecificos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHorariosEspecificos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsHorariosEspecificos.xss">
+      <DependentUpon>dsHorariosEspecificos.xsd</DependentUpon>
+    </None>
+    <None Include="dsMaterias.xsc">
+      <DependentUpon>dsMaterias.xsd</DependentUpon>
+    </None>
+    <None Include="dsMaterias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsMaterias1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsMaterias.xss">
+      <DependentUpon>dsMaterias.xsd</DependentUpon>
+    </None>
+    <None Include="dsProfesores.xsc">
+      <DependentUpon>dsProfesores.xsd</DependentUpon>
+    </None>
+    <None Include="dsProfesores.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProfesores.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsProfesores.xss">
+      <DependentUpon>dsProfesores.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -401,6 +628,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Cargando.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

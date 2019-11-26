@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGrupos = new System.Windows.Forms.DataGridView();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
@@ -235,12 +236,23 @@
             this.dgvAlumnos.TabIndex = 55;
             this.dgvAlumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellDoubleClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(806, 528);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 34);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Reporte";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Calificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1064, 669);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.dgvGrupos);
             this.Controls.Add(this.btnEliminar);
@@ -293,5 +305,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvGrupos;
         private System.Windows.Forms.DataGridView dgvAlumnos;
+        private System.Windows.Forms.Button button1;
     }
 }

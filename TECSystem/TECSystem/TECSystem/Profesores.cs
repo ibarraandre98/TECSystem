@@ -77,5 +77,12 @@ namespace TECSystem
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setReporte(4);
+            r.ShowDialog();
+        }
     }
 }

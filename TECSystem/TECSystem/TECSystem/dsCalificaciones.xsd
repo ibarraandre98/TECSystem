@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCalificaciones" targetNamespace="http://tempuri.org/dsCalificaciones.xsd" xmlns:mstns="http://tempuri.org/dsCalificaciones.xsd" xmlns="http://tempuri.org/dsCalificaciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BaseDeDatosTecConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BaseDeDatosTecConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TECSystem.Properties.Settings.GlobalReference.Default.BaseDeDatosTecConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtCalificacionesTableAdapter" GeneratorDataComponentClassName="dtCalificacionesTableAdapter" Name="dtCalificaciones" UserDataComponentName="dtCalificacionesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BaseDeDatosTecConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="calificaciones" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="calificaciones" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="calificaciones">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select calificaciones.grupo, grupos.materia, grupos.profesor,
+calificaciones.matricula, alumnos.idCarrera, carreras.nombre,alumnos.idEspecialidad, especialidades.nombre, alumnos.idPersona, 
+personas.nombres, personas.paterno, personas.materno, calificaciones.tema, calificaciones.calificacion,
+calificaciones.tipoEval, inasistencias.tipoInasistencia, inasistencias.grupo, inasistencias.fecha
+from calificaciones
+join grupos on calificaciones.grupo = grupos.cveGrupo
+join alumnos on calificaciones.matricula = alumnos.matricula
+join personas on alumnos.idPersona = personas.idPersona
+join carreras on alumnos.idCarrera = carreras.idCarrera
+join especialidades on alumnos.idEspecialidad = especialidades.idEspecialidad
+join inasistencias on grupos.cveGrupo = inasistencias.grupo
+where calificaciones.matricula = '1601F0040';</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="grupo" DataSetColumn="grupo" />
+              <Mapping SourceColumn="materia" DataSetColumn="materia" />
+              <Mapping SourceColumn="profesor" DataSetColumn="profesor" />
+              <Mapping SourceColumn="matricula" DataSetColumn="matricula" />
+              <Mapping SourceColumn="idCarrera" DataSetColumn="idCarrera" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="idEspecialidad" DataSetColumn="idEspecialidad" />
+              <Mapping SourceColumn="nombre1" DataSetColumn="nombre1" />
+              <Mapping SourceColumn="idPersona" DataSetColumn="idPersona" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+              <Mapping SourceColumn="paterno" DataSetColumn="paterno" />
+              <Mapping SourceColumn="materno" DataSetColumn="materno" />
+              <Mapping SourceColumn="tema" DataSetColumn="tema" />
+              <Mapping SourceColumn="calificacion" DataSetColumn="calificacion" />
+              <Mapping SourceColumn="tipoEval" DataSetColumn="tipoEval" />
+              <Mapping SourceColumn="tipoInasistencia" DataSetColumn="tipoInasistencia" />
+              <Mapping SourceColumn="grupo1" DataSetColumn="grupo1" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCalificaciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCalificaciones" msprop:Generator_UserDSName="dsCalificaciones">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtCalificaciones" msprop:Generator_TableClassName="dtCalificacionesDataTable" msprop:Generator_TableVarName="tabledtCalificaciones" msprop:Generator_TablePropName="dtCalificaciones" msprop:Generator_RowDeletingName="dtCalificacionesRowDeleting" msprop:Generator_RowChangingName="dtCalificacionesRowChanging" msprop:Generator_RowEvHandlerName="dtCalificacionesRowChangeEventHandler" msprop:Generator_RowDeletedName="dtCalificacionesRowDeleted" msprop:Generator_UserTableName="dtCalificaciones" msprop:Generator_RowChangedName="dtCalificacionesRowChanged" msprop:Generator_RowEvArgName="dtCalificacionesRowChangeEvent" msprop:Generator_RowClassName="dtCalificacionesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="grupo" msprop:Generator_ColumnVarNameInTable="columngrupo" msprop:Generator_ColumnPropNameInRow="grupo" msprop:Generator_ColumnPropNameInTable="grupoColumn" msprop:Generator_UserColumnName="grupo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materia" msprop:Generator_ColumnVarNameInTable="columnmateria" msprop:Generator_ColumnPropNameInRow="materia" msprop:Generator_ColumnPropNameInTable="materiaColumn" msprop:Generator_UserColumnName="materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="profesor" msprop:Generator_ColumnVarNameInTable="columnprofesor" msprop:Generator_ColumnPropNameInRow="profesor" msprop:Generator_ColumnPropNameInTable="profesorColumn" msprop:Generator_UserColumnName="profesor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="matricula" msprop:Generator_ColumnVarNameInTable="columnmatricula" msprop:Generator_ColumnPropNameInRow="matricula" msprop:Generator_ColumnPropNameInTable="matriculaColumn" msprop:Generator_UserColumnName="matricula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idCarrera" msprop:Generator_ColumnVarNameInTable="columnidCarrera" msprop:Generator_ColumnPropNameInRow="idCarrera" msprop:Generator_ColumnPropNameInTable="idCarreraColumn" msprop:Generator_UserColumnName="idCarrera" type="xs:unsignedByte" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEspecialidad" msprop:Generator_ColumnVarNameInTable="columnidEspecialidad" msprop:Generator_ColumnPropNameInRow="idEspecialidad" msprop:Generator_ColumnPropNameInTable="idEspecialidadColumn" msprop:Generator_UserColumnName="idEspecialidad" type="xs:unsignedByte" />
+              <xs:element name="nombre1" msprop:Generator_ColumnVarNameInTable="columnnombre1" msprop:Generator_ColumnPropNameInRow="nombre1" msprop:Generator_ColumnPropNameInTable="nombre1Column" msprop:Generator_UserColumnName="nombre1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idPersona" msprop:Generator_ColumnVarNameInTable="columnidPersona" msprop:Generator_ColumnPropNameInRow="idPersona" msprop:Generator_ColumnPropNameInTable="idPersonaColumn" msprop:Generator_UserColumnName="idPersona" type="xs:int" />
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paterno" msprop:Generator_ColumnVarNameInTable="columnpaterno" msprop:Generator_ColumnPropNameInRow="paterno" msprop:Generator_ColumnPropNameInTable="paternoColumn" msprop:Generator_UserColumnName="paterno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materno" msprop:Generator_ColumnVarNameInTable="columnmaterno" msprop:Generator_ColumnPropNameInRow="materno" msprop:Generator_ColumnPropNameInTable="maternoColumn" msprop:Generator_UserColumnName="materno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tema" msprop:Generator_ColumnVarNameInTable="columntema" msprop:Generator_ColumnPropNameInRow="tema" msprop:Generator_ColumnPropNameInTable="temaColumn" msprop:Generator_UserColumnName="tema" type="xs:unsignedByte" />
+              <xs:element name="calificacion" msprop:Generator_ColumnVarNameInTable="columncalificacion" msprop:Generator_ColumnPropNameInRow="calificacion" msprop:Generator_ColumnPropNameInTable="calificacionColumn" msprop:Generator_UserColumnName="calificacion" type="xs:double" />
+              <xs:element name="tipoEval" msprop:Generator_ColumnVarNameInTable="columntipoEval" msprop:Generator_ColumnPropNameInRow="tipoEval" msprop:Generator_ColumnPropNameInTable="tipoEvalColumn" msprop:Generator_UserColumnName="tipoEval">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tipoInasistencia" msprop:Generator_ColumnVarNameInTable="columntipoInasistencia" msprop:Generator_ColumnPropNameInRow="tipoInasistencia" msprop:Generator_ColumnPropNameInTable="tipoInasistenciaColumn" msprop:Generator_UserColumnName="tipoInasistencia" type="xs:unsignedByte" />
+              <xs:element name="grupo1" msprop:Generator_ColumnVarNameInTable="columngrupo1" msprop:Generator_ColumnPropNameInRow="grupo1" msprop:Generator_ColumnPropNameInTable="grupo1Column" msprop:Generator_UserColumnName="grupo1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

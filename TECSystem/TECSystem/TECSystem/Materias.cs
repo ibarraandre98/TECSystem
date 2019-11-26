@@ -67,5 +67,12 @@ namespace TECSystem
             _CN_Materia.EliminarMateria(Convert.ToInt32(txtMateria.Text));
             MostrarMaterias();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setReporte(8);
+            r.ShowDialog();
+        }
     }
 }

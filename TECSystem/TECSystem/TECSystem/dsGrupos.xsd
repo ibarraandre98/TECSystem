@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGrupos" targetNamespace="http://tempuri.org/dsGrupos.xsd" xmlns:mstns="http://tempuri.org/dsGrupos.xsd" xmlns="http://tempuri.org/dsGrupos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BaseDeDatosTecConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BaseDeDatosTecConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TECSystem.Properties.Settings.GlobalReference.Default.BaseDeDatosTecConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="dtGruposTableAdapter" GeneratorDataComponentClassName="dtGruposTableAdapter" Name="dtGrupos" UserDataComponentName="dtGruposTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BaseDeDatosTecConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="dsGrupos" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="dsGrupos" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="dsGrupos">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select horarios.idHorario, horarios.grupo, grupos.materia, grupos.profesor, profesores.idEmpleado, empleados.idPersona,
+personas.nombres, personas.paterno, personas.materno, horarios.dia, horarios.hora, horarios.aula, materias.nombre,
+materias.creditos, materias.hPracticas, materias.hTeoricas, materias.carrera, carreras.nombre
+ from horarios
+ join grupos on horarios.grupo = grupos.cveGrupo
+ join profesores on grupos.profesor = profesores.idProfesor
+ join empleados on profesores.idEmpleado = empleados.idEmpleado
+ join personas on empleados.idPersona = personas.idPersona
+ join materias on materias.cveMateria = grupos.materia
+ join carreras on materias.carrera = carreras.idCarrera
+where grupos.cveGrupo = 'Grupo1'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idHorario" DataSetColumn="idHorario" />
+              <Mapping SourceColumn="grupo" DataSetColumn="grupo" />
+              <Mapping SourceColumn="materia" DataSetColumn="materia" />
+              <Mapping SourceColumn="profesor" DataSetColumn="profesor" />
+              <Mapping SourceColumn="idEmpleado" DataSetColumn="idEmpleado" />
+              <Mapping SourceColumn="idPersona" DataSetColumn="idPersona" />
+              <Mapping SourceColumn="nombres" DataSetColumn="nombres" />
+              <Mapping SourceColumn="paterno" DataSetColumn="paterno" />
+              <Mapping SourceColumn="materno" DataSetColumn="materno" />
+              <Mapping SourceColumn="dia" DataSetColumn="dia" />
+              <Mapping SourceColumn="hora" DataSetColumn="hora" />
+              <Mapping SourceColumn="aula" DataSetColumn="aula" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="creditos" DataSetColumn="creditos" />
+              <Mapping SourceColumn="hPracticas" DataSetColumn="hPracticas" />
+              <Mapping SourceColumn="hTeoricas" DataSetColumn="hTeoricas" />
+              <Mapping SourceColumn="carrera" DataSetColumn="carrera" />
+              <Mapping SourceColumn="nombre1" DataSetColumn="nombre1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGrupos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGrupos" msprop:Generator_UserDSName="dsGrupos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtGrupos" msprop:Generator_TableClassName="dtGruposDataTable" msprop:Generator_TableVarName="tabledtGrupos" msprop:Generator_TablePropName="dtGrupos" msprop:Generator_RowDeletingName="dtGruposRowDeleting" msprop:Generator_RowChangingName="dtGruposRowChanging" msprop:Generator_RowEvHandlerName="dtGruposRowChangeEventHandler" msprop:Generator_RowDeletedName="dtGruposRowDeleted" msprop:Generator_UserTableName="dtGrupos" msprop:Generator_RowChangedName="dtGruposRowChanged" msprop:Generator_RowEvArgName="dtGruposRowChangeEvent" msprop:Generator_RowClassName="dtGruposRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idHorario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidHorario" msprop:Generator_ColumnPropNameInRow="idHorario" msprop:Generator_ColumnPropNameInTable="idHorarioColumn" msprop:Generator_UserColumnName="idHorario" type="xs:short" />
+              <xs:element name="grupo" msprop:Generator_ColumnVarNameInTable="columngrupo" msprop:Generator_ColumnPropNameInRow="grupo" msprop:Generator_ColumnPropNameInTable="grupoColumn" msprop:Generator_UserColumnName="grupo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materia" msprop:Generator_ColumnVarNameInTable="columnmateria" msprop:Generator_ColumnPropNameInRow="materia" msprop:Generator_ColumnPropNameInTable="materiaColumn" msprop:Generator_UserColumnName="materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="profesor" msprop:Generator_ColumnVarNameInTable="columnprofesor" msprop:Generator_ColumnPropNameInRow="profesor" msprop:Generator_ColumnPropNameInTable="profesorColumn" msprop:Generator_UserColumnName="profesor">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idEmpleado" msprop:Generator_ColumnVarNameInTable="columnidEmpleado" msprop:Generator_ColumnPropNameInRow="idEmpleado" msprop:Generator_ColumnPropNameInTable="idEmpleadoColumn" msprop:Generator_UserColumnName="idEmpleado" type="xs:short" />
+              <xs:element name="idPersona" msprop:Generator_ColumnVarNameInTable="columnidPersona" msprop:Generator_ColumnPropNameInRow="idPersona" msprop:Generator_ColumnPropNameInTable="idPersonaColumn" msprop:Generator_UserColumnName="idPersona" type="xs:int" />
+              <xs:element name="nombres" msprop:Generator_ColumnVarNameInTable="columnnombres" msprop:Generator_ColumnPropNameInRow="nombres" msprop:Generator_ColumnPropNameInTable="nombresColumn" msprop:Generator_UserColumnName="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paterno" msprop:Generator_ColumnVarNameInTable="columnpaterno" msprop:Generator_ColumnPropNameInRow="paterno" msprop:Generator_ColumnPropNameInTable="paternoColumn" msprop:Generator_UserColumnName="paterno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materno" msprop:Generator_ColumnVarNameInTable="columnmaterno" msprop:Generator_ColumnPropNameInRow="materno" msprop:Generator_ColumnPropNameInTable="maternoColumn" msprop:Generator_UserColumnName="materno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dia" msprop:Generator_ColumnVarNameInTable="columndia" msprop:Generator_ColumnPropNameInRow="dia" msprop:Generator_ColumnPropNameInTable="diaColumn" msprop:Generator_UserColumnName="dia" type="xs:unsignedByte" />
+              <xs:element name="hora" msprop:Generator_ColumnVarNameInTable="columnhora" msprop:Generator_ColumnPropNameInRow="hora" msprop:Generator_ColumnPropNameInTable="horaColumn" msprop:Generator_UserColumnName="hora" type="xs:unsignedByte" />
+              <xs:element name="aula" msprop:Generator_ColumnVarNameInTable="columnaula" msprop:Generator_ColumnPropNameInRow="aula" msprop:Generator_ColumnPropNameInTable="aulaColumn" msprop:Generator_UserColumnName="aula">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="creditos" msprop:Generator_ColumnVarNameInTable="columncreditos" msprop:Generator_ColumnPropNameInRow="creditos" msprop:Generator_ColumnPropNameInTable="creditosColumn" msprop:Generator_UserColumnName="creditos" type="xs:unsignedByte" />
+              <xs:element name="hPracticas" msprop:Generator_ColumnVarNameInTable="columnhPracticas" msprop:Generator_ColumnPropNameInRow="hPracticas" msprop:Generator_ColumnPropNameInTable="hPracticasColumn" msprop:Generator_UserColumnName="hPracticas" type="xs:unsignedByte" />
+              <xs:element name="hTeoricas" msprop:Generator_ColumnVarNameInTable="columnhTeoricas" msprop:Generator_ColumnPropNameInRow="hTeoricas" msprop:Generator_ColumnPropNameInTable="hTeoricasColumn" msprop:Generator_UserColumnName="hTeoricas" type="xs:unsignedByte" />
+              <xs:element name="carrera" msprop:Generator_ColumnVarNameInTable="columncarrera" msprop:Generator_ColumnPropNameInRow="carrera" msprop:Generator_ColumnPropNameInTable="carreraColumn" msprop:Generator_UserColumnName="carrera" type="xs:unsignedByte" />
+              <xs:element name="nombre1" msprop:Generator_ColumnVarNameInTable="columnnombre1" msprop:Generator_ColumnPropNameInRow="nombre1" msprop:Generator_ColumnPropNameInTable="nombre1Column" msprop:Generator_UserColumnName="nombre1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtGrupos" />
+      <xs:field xpath="mstns:idHorario" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

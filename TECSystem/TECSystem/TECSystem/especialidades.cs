@@ -47,5 +47,12 @@ namespace TECSystem
         {
             txtCarrera.Text = dtgCarreras.CurrentRow.Cells["idCarrera"].Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setReporte(1);
+            r.ShowDialog();
+        }
     }
 }

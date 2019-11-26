@@ -87,5 +87,19 @@ namespace TECSystem
         {
             Grupo.Text = dgvGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setReporte(5);
+            r.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setReporte(6);
+            r.ShowDialog();
+        }
     }
 }

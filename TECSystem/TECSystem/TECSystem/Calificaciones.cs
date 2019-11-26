@@ -102,5 +102,12 @@ namespace TECSystem
             Matricula = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
             matricula.Text = Matricula;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Reportes r = new Reportes();
+            r.setReporte(3);
+            r.ShowDialog();
+        }
     }
 }

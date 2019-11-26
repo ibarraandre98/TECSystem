@@ -43,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNuevoIdProfesor = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgProfesores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,12 +198,23 @@
             this.label6.TabIndex = 64;
             this.label6.Text = "Nuevo idProfesor";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(746, 606);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 34);
+            this.button1.TabIndex = 66;
+            this.button1.Text = "Reporte";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Profesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtNuevoIdProfesor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnEliminar);
@@ -245,5 +257,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNuevoIdProfesor;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
