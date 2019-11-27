@@ -103,30 +103,70 @@ namespace TECSystem
             cbLocalidad.DisplayMember = "nombre";
         }
 
+        public void limpiar() {
+            txtPaterno.Text = "";
+            txtMaterno.Text = "";
+            txtNombre.Text= "";
+            dtpFechaNac.Text = "";
+            cbSexo.Text = "";
+            txtCurp.Text = "";
+            txtTelefono.Text = "";
+            txtExt.Text = "";
+            txtInt.Text = "";
+            txtCP.Text = "";
+            cbEdoCivil.Text = "";
+            cbDiscapacidad.Text = "";
+            txtCalle.Text = "";
+            cbLocalidad.Text = "";
 
+
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            CN_Personas _CN_Personas = new CN_Personas();
-            CN_Profesores _CN_Profesores = new CN_Profesores();
-            _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, dtpFechaNac.Value, 
-                cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text, 
-                cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text, 
-                cbLocalidad.SelectedValue.ToString());
-            IDPersona = _CN_Personas.ultimoID();
-            _CN_Empleados.Agregarempleados(IDPersona.ToString(),cbEmpleo.SelectedValue.ToString());
-            IDEmpleado = _CN_Empleados.UltimoID();
-            _CN_Profesores.AgregarProfesores(txtIDProfesor.Text, IDEmpleado.ToString(), cbAcademia.SelectedValue.ToString(), 
-                cbTipoMemb.SelectedIndex.ToString());
-            MostrarEmpleados();
+            if (txtPaterno.Text == "" || txtMaterno.Text == "" || txtNombre.Text == "" || dtpFechaNac.Text == "" || cbSexo.Text == "" || txtCurp.Text == "" ||
+                txtTelefono.Text == "" || txtExt.Text == "" || txtInt.Text == "" || txtCP.Text == "" || cbEdoCivil.Text == "" || cbDiscapacidad.Text == "" || txtCalle.Text == "" ||
+                cbLocalidad.Text == "")
+            {
+                MessageBox.Show("No puede ingresar un empleado, aún faltan datos por completar", "Datos incompletos",
+                               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+                CN_Personas _CN_Personas = new CN_Personas();
+                CN_Profesores _CN_Profesores = new CN_Profesores();
+                _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, dtpFechaNac.Value,
+                    cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text,
+                    cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,
+                    cbLocalidad.SelectedValue.ToString());
+                IDPersona = _CN_Personas.ultimoID();
+                _CN_Empleados.Agregarempleados(IDPersona.ToString(), cbEmpleo.SelectedValue.ToString());
+                IDEmpleado = _CN_Empleados.UltimoID();
+                _CN_Profesores.AgregarProfesores(txtIDProfesor.Text, IDEmpleado.ToString(), cbAcademia.SelectedValue.ToString(),
+                    cbTipoMemb.SelectedIndex.ToString());
+                MostrarEmpleados();
+                limpiar();
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
-            MostrarEmpleados();
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnAgregar.Enabled = true;
+            if (txtPaterno.Text == "" || txtMaterno.Text == "" || txtNombre.Text == "" || dtpFechaNac.Text == "" || cbSexo.Text == "" || txtCurp.Text == "" ||
+                txtTelefono.Text == "" || txtExt.Text == "" || txtInt.Text == "" || txtCP.Text == "" || cbEdoCivil.Text == "" || cbDiscapacidad.Text == "" || txtCalle.Text == "" ||
+                cbLocalidad.Text == "")
+            {
+                MessageBox.Show("No puede editar un empleado, aún faltan datos por completar", "Datos incompletos",
+                               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+
+                MostrarEmpleados();
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnAgregar.Enabled = true;
+                limpiar();
+            }
         }
 
         private void dtgempleados_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -160,6 +200,61 @@ namespace TECSystem
             row = MostrarLocalidadesMunicipio.Rows[Convert.ToInt32(cbLocalidad.SelectedValue)-1];
             cbTipoLocalidad.SelectedValue = Convert.ToInt32(row["tipo"].ToString());
             //MessageBox.Show(row["nombre"].ToString());
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtExt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtInt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIDProfesor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }

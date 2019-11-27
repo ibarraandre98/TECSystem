@@ -47,9 +47,18 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_Profesores.AgregarProfesores(txtIdProfesor.Text, txtIdEmpleado.Text, txtIdAcademia.Text, txttipoMem.Text);
-            MostrarProfesores();
-            Limpiartxt();
+            if (txtIdProfesor.Text == "" || txtIdEmpleado.Text == "" || txtIdAcademia.Text == "" || txtNuevoIdProfesor.Text == "" || txttipoMem.Text == "")
+            {
+                MessageBox.Show("No puede ingresar un profesor, aún faltan datos por completar", "Datos incompletos",
+                               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                _CN_Profesores.AgregarProfesores(txtIdProfesor.Text, txtIdEmpleado.Text, txtIdAcademia.Text, txttipoMem.Text);
+                MostrarProfesores();
+                Limpiartxt();
+            }
         }
 
         private void Limpiartxt()
@@ -62,11 +71,20 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _CN_Profesores.EditarProfesores(txtIdProfesor.Text, txtIdEmpleado.Text, txtIdAcademia.Text, txttipoMem.Text, txtNuevoIdProfesor.Text);
-            MostrarProfesores();
-            Limpiartxt();
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
+            if (txtIdProfesor.Text == "" || txtIdEmpleado.Text == "" || txtIdAcademia.Text == "" || txtNuevoIdProfesor.Text == "" || txttipoMem.Text == "")
+            {
+                MessageBox.Show("No puede editar un profesor, aún faltan datos por completar", "Datos incompletos",
+                               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                _CN_Profesores.EditarProfesores(txtIdProfesor.Text, txtIdEmpleado.Text, txtIdAcademia.Text, txttipoMem.Text, txtNuevoIdProfesor.Text);
+                MostrarProfesores();
+                Limpiartxt();
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
@@ -83,6 +101,39 @@ namespace TECSystem
             Reportes r = new Reportes();
             r.setReporte(4);
             r.ShowDialog();
+        }
+
+        private void txtIdEmpleado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIdAcademia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txttipoMem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsControl(e.KeyChar)) { e.Handled = false; }
+            else if (Char.IsSeparator(e.KeyChar)) { e.Handled = false; }
+            else
+            {
+                e.Handled = true;
+            }
         }
     }
 }
