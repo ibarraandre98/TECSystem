@@ -394,9 +394,11 @@
             this.txtTelefono.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtTelefono.ForeColor = System.Drawing.Color.White;
             this.txtTelefono.Location = new System.Drawing.Point(404, 237);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(193, 23);
             this.txtTelefono.TabIndex = 173;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label15
             // 
@@ -622,6 +624,7 @@
             this.tutor.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.tutor.ForeColor = System.Drawing.Color.White;
             this.tutor.Location = new System.Drawing.Point(404, 525);
+            this.tutor.MaxLength = 240;
             this.tutor.Name = "tutor";
             this.tutor.ReadOnly = true;
             this.tutor.Size = new System.Drawing.Size(193, 23);
@@ -726,6 +729,7 @@
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(147, 23);
             this.txtCP.TabIndex = 204;
+            this.txtCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCP_KeyPress);
             // 
             // panel10
             // 
@@ -746,6 +750,7 @@
             this.txtInt.Name = "txtInt";
             this.txtInt.Size = new System.Drawing.Size(107, 23);
             this.txtInt.TabIndex = 206;
+            this.txtInt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInt_KeyPress);
             // 
             // panel11
             // 
@@ -766,6 +771,7 @@
             this.txtExt.Name = "txtExt";
             this.txtExt.Size = new System.Drawing.Size(107, 23);
             this.txtExt.TabIndex = 208;
+            this.txtExt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExt_KeyPress);
             // 
             // label3
             // 
