@@ -112,6 +112,7 @@
             this.txttipoMem.Name = "txttipoMem";
             this.txttipoMem.Size = new System.Drawing.Size(162, 20);
             this.txttipoMem.TabIndex = 41;
+            this.txttipoMem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipoMem_KeyPress);
             // 
             // label5
             // 
@@ -130,6 +131,7 @@
             this.txtIdAcademia.Name = "txtIdAcademia";
             this.txtIdAcademia.Size = new System.Drawing.Size(162, 20);
             this.txtIdAcademia.TabIndex = 39;
+            this.txtIdAcademia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdAcademia_KeyPress);
             // 
             // label4
             // 
@@ -148,6 +150,7 @@
             this.txtIdEmpleado.Name = "txtIdEmpleado";
             this.txtIdEmpleado.Size = new System.Drawing.Size(162, 20);
             this.txtIdEmpleado.TabIndex = 37;
+            this.txtIdEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdEmpleado_KeyPress);
             // 
             // label3
             // 
@@ -163,6 +166,7 @@
             // txtIdProfesor
             // 
             this.txtIdProfesor.Location = new System.Drawing.Point(160, 381);
+            this.txtIdProfesor.MaxLength = 40;
             this.txtIdProfesor.Name = "txtIdProfesor";
             this.txtIdProfesor.ReadOnly = true;
             this.txtIdProfesor.Size = new System.Drawing.Size(162, 20);

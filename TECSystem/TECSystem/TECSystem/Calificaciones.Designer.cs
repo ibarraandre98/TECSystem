@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dgvGrupos = new System.Windows.Forms.DataGridView();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tipoevaluacion = new System.Windows.Forms.TextBox();
@@ -47,10 +46,9 @@
             this.idCalificacion = new System.Windows.Forms.TextBox();
 
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGrupos = new System.Windows.Forms.DataGridView();
-            this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
 
             this.panel2 = new System.Windows.Forms.Panel();
