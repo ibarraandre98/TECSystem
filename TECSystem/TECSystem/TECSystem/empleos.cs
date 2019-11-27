@@ -33,9 +33,17 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_Empleos.Agregarempleos(txtEmpleo.Text);
-            limpiarCampos();
-            MostrarEmpleos();
+            if (txtEmpleo.Text == "")
+            {
+                MessageBox.Show("No puede ingresar un empleo, aún faltan datos por completar", "Datos incompletos",
+                           MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else {
+                _CN_Empleos.Agregarempleos(txtEmpleo.Text);
+                limpiarCampos();
+                MostrarEmpleos();
+            }
+           
         }
 
         private void limpiarCampos()
@@ -53,10 +61,17 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _CN_Empleos.Editarempleos(IDEmpleo, txtEmpleo.Text);
-            limpiarCampos();
-            habilitarAgregar();
-            MostrarEmpleos();
+            if (txtEmpleo.Text == "")
+            {
+                MessageBox.Show("No puede editar un empleo, aún faltan datos por completar", "Datos incompletos",
+                               MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else {
+                _CN_Empleos.Editarempleos(IDEmpleo, txtEmpleo.Text);
+                limpiarCampos();
+                habilitarAgregar();
+                MostrarEmpleos();
+            }        
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
