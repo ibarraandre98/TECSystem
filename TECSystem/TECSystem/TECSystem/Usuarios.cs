@@ -104,5 +104,43 @@ namespace TECSystem
         {
             HabilitarAgregar();
         }
+
+        private void btnAgregar2_Click(object sender, EventArgs e)
+        {
+            _CN_Login.AgregarUsuario(txtUsuario.Text, txtNombre.Text, txtApellidos.Text, txtEmail.Text, txtContraseña.Text);
+            MostrarUsuarios();
+            limpiarCampos();
+        }
+
+        private void btnEditar3_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals("Admin"))
+                MessageBox.Show("No puede editar este usuario");
+            else
+            {
+                _CN_Login.EditarUsuario(txtUsuario.Text, txtNombre.Text, txtApellidos.Text, txtEmail.Text, txtContraseña.Text);
+                HabilitarAgregar();
+                MostrarUsuarios();
+                limpiarCampos();
+            }
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals("Admin"))
+                MessageBox.Show("No puede eliminar este usuario");
+            else
+            {
+                _CN_Login.EliminarUsuario(txtUsuario.Text);
+                HabilitarAgregar();
+                MostrarUsuarios();
+                limpiarCampos();
+            }
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            HabilitarAgregar();
+        }
     }
 }

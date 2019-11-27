@@ -70,5 +70,19 @@ namespace TECSystem
             btnEliminar.Enabled = true;
             btnAgregar.Enabled = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _CN_Academia.EditarAcademia((idAcademia.Text), nombre.Text);
+            Limpiar();
+            MostrarAcademias();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            _CN_Academia.EliminarAcademia(idAcademia.Text);
+            MostrarAcademias();
+            Limpiar();
+        }
     }
 }

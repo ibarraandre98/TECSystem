@@ -28,202 +28,283 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tema = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.grupo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.descripcion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.nombre = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ponderacion = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.fecha = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvGrupos = new System.Windows.Forms.DataGridView();
+            this.btnEliminar3 = new System.Windows.Forms.Button();
+            this.btnEditar3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnAgregar2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.grupo = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.nombre2 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.descripcion2 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tema = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.ponderacion = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
             // 
-            // tema
-            // 
-            this.tema.Location = new System.Drawing.Point(266, 471);
-            this.tema.Name = "tema";
-            this.tema.Size = new System.Drawing.Size(162, 20);
-            this.tema.TabIndex = 75;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(206, 471);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 20);
-            this.label6.TabIndex = 74;
-            this.label6.Text = "tema:";
-            // 
-            // grupo
-            // 
-            this.grupo.Enabled = false;
-            this.grupo.Location = new System.Drawing.Point(629, 469);
-            this.grupo.Name = "grupo";
-            this.grupo.Size = new System.Drawing.Size(162, 20);
-            this.grupo.TabIndex = 73;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(563, 469);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 72;
-            this.label5.Text = "grupo:";
-            // 
-            // descripcion
-            // 
-            this.descripcion.Location = new System.Drawing.Point(266, 442);
-            this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(162, 20);
-            this.descripcion.TabIndex = 71;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(155, 442);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
-            this.label4.TabIndex = 70;
-            this.label4.Text = "descripcion:";
-            // 
-            // nombre
-            // 
-            this.nombre.Location = new System.Drawing.Point(266, 416);
-            this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(162, 20);
-            this.nombre.TabIndex = 69;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(186, 416);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 20);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "nombre:";
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(57, 71);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(398, 282);
+            this.dataGridView1.Size = new System.Drawing.Size(453, 282);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
+            // 
+            // fecha
+            // 
+            this.fecha.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.fecha.Location = new System.Drawing.Point(659, 439);
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(333, 30);
+            this.fecha.TabIndex = 81;
+            // 
+            // dgvGrupos
+            // 
+            this.dgvGrupos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrupos.Location = new System.Drawing.Point(539, 71);
+            this.dgvGrupos.Name = "dgvGrupos";
+            this.dgvGrupos.Size = new System.Drawing.Size(453, 282);
+            this.dgvGrupos.TabIndex = 85;
+            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrupos_CellDoubleClick);
+            // 
+            // btnEliminar3
+            // 
+            this.btnEliminar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.btnEliminar3.FlatAppearance.BorderSize = 0;
+            this.btnEliminar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar3.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnEliminar3.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar3.Image = global::TECSystem.Properties.Resources.Eliminar_new_peque;
+            this.btnEliminar3.Location = new System.Drawing.Point(656, 558);
+            this.btnEliminar3.Name = "btnEliminar3";
+            this.btnEliminar3.Size = new System.Drawing.Size(128, 49);
+            this.btnEliminar3.TabIndex = 111;
+            this.btnEliminar3.Text = "Eliminar";
+            this.btnEliminar3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar3.UseVisualStyleBackColor = false;
+            this.btnEliminar3.Click += new System.EventHandler(this.btnEliminar_Click_1);
+            // 
+            // btnEditar3
+            // 
+            this.btnEditar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.btnEditar3.FlatAppearance.BorderSize = 0;
+            this.btnEditar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar3.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnEditar3.ForeColor = System.Drawing.Color.White;
+            this.btnEditar3.Image = global::TECSystem.Properties.Resources.Editar_new_peque;
+            this.btnEditar3.Location = new System.Drawing.Point(461, 558);
+            this.btnEditar3.Name = "btnEditar3";
+            this.btnEditar3.Size = new System.Drawing.Size(128, 49);
+            this.btnEditar3.TabIndex = 110;
+            this.btnEditar3.Text = "Editar";
+            this.btnEditar3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditar3.UseVisualStyleBackColor = false;
+            this.btnEditar3.Click += new System.EventHandler(this.btnEditar_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(52, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(159, 29);
+            this.label2.TabIndex = 109;
+            this.label2.Text = "ACTIVIDADES";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label9.ForeColor = System.Drawing.Color.DarkGray;
+            this.label9.Location = new System.Drawing.Point(99, 396);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(84, 23);
+            this.label9.TabIndex = 108;
+            this.label9.Text = "Nombre:";
+            // 
+            // btnAgregar2
+            // 
+            this.btnAgregar2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.btnAgregar2.FlatAppearance.BorderSize = 0;
+            this.btnAgregar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar2.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.btnAgregar2.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar2.Image = global::TECSystem.Properties.Resources.Agregar_new_peque;
+            this.btnAgregar2.Location = new System.Drawing.Point(265, 558);
+            this.btnAgregar2.Name = "btnAgregar2";
+            this.btnAgregar2.Size = new System.Drawing.Size(128, 49);
+            this.btnAgregar2.TabIndex = 107;
+            this.btnAgregar2.Text = "Agregar";
+            this.btnAgregar2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAgregar2.UseVisualStyleBackColor = false;
+            this.btnAgregar2.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(26, 19);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(70, 440);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 31);
-            this.label1.TabIndex = 77;
-            this.label1.Text = "ACTIVIDADES";
+            this.label1.Size = new System.Drawing.Size(113, 23);
+            this.label1.TabIndex = 112;
+            this.label1.Text = "Descripción:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label10.ForeColor = System.Drawing.Color.DarkGray;
+            this.label10.Location = new System.Drawing.Point(119, 492);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 23);
+            this.label10.TabIndex = 113;
+            this.label10.Text = "Tema:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label11.ForeColor = System.Drawing.Color.DarkGray;
+            this.label11.Location = new System.Drawing.Point(535, 396);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 23);
+            this.label11.TabIndex = 114;
+            this.label11.Text = "Ponderación:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label12.ForeColor = System.Drawing.Color.DarkGray;
+            this.label12.Location = new System.Drawing.Point(586, 445);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(67, 23);
+            this.label12.TabIndex = 115;
+            this.label12.Text = "Fecha:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.label13.ForeColor = System.Drawing.Color.DarkGray;
+            this.label13.Location = new System.Drawing.Point(586, 492);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 23);
+            this.label13.TabIndex = 116;
+            this.label13.Text = "Grupo:";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(661, 514);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(331, 1);
+            this.panel2.TabIndex = 118;
+            // 
+            // grupo
+            // 
+            this.grupo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.grupo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grupo.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.grupo.ForeColor = System.Drawing.Color.White;
+            this.grupo.Location = new System.Drawing.Point(661, 492);
+            this.grupo.Name = "grupo";
+            this.grupo.Size = new System.Drawing.Size(329, 23);
+            this.grupo.TabIndex = 117;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Location = new System.Drawing.Point(190, 418);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(310, 1);
+            this.panel1.TabIndex = 120;
+            // 
+            // nombre2
+            // 
+            this.nombre2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.nombre2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nombre2.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.nombre2.ForeColor = System.Drawing.Color.White;
+            this.nombre2.Location = new System.Drawing.Point(191, 396);
+            this.nombre2.Name = "nombre2";
+            this.nombre2.Size = new System.Drawing.Size(308, 23);
+            this.nombre2.TabIndex = 119;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(190, 461);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(310, 1);
+            this.panel3.TabIndex = 122;
+            // 
+            // descripcion2
+            // 
+            this.descripcion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.descripcion2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descripcion2.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.descripcion2.ForeColor = System.Drawing.Color.White;
+            this.descripcion2.Location = new System.Drawing.Point(191, 439);
+            this.descripcion2.Name = "descripcion2";
+            this.descripcion2.Size = new System.Drawing.Size(308, 23);
+            this.descripcion2.TabIndex = 121;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(189, 514);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(312, 1);
+            this.panel4.TabIndex = 124;
+            // 
+            // tema
+            // 
+            this.tema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.tema.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tema.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.tema.ForeColor = System.Drawing.Color.White;
+            this.tema.Location = new System.Drawing.Point(190, 492);
+            this.tema.Name = "tema";
+            this.tema.Size = new System.Drawing.Size(310, 23);
+            this.tema.TabIndex = 123;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(661, 418);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(331, 1);
+            this.panel5.TabIndex = 126;
             // 
             // ponderacion
             // 
-            this.ponderacion.Location = new System.Drawing.Point(629, 418);
+            this.ponderacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.ponderacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ponderacion.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.ponderacion.ForeColor = System.Drawing.Color.White;
+            this.ponderacion.Location = new System.Drawing.Point(661, 396);
             this.ponderacion.Name = "ponderacion";
-            this.ponderacion.Size = new System.Drawing.Size(162, 20);
-            this.ponderacion.TabIndex = 79;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(510, 418);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 20);
-            this.label7.TabIndex = 78;
-            this.label7.Text = "ponderacion:";
-            // 
-            // fecha
-            // 
-            this.fecha.Location = new System.Drawing.Point(629, 443);
-            this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(162, 20);
-            this.fecha.TabIndex = 81;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(564, 444);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 20);
-            this.label8.TabIndex = 80;
-            this.label8.Text = "fecha:";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(629, 554);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(138, 34);
-            this.btnEliminar.TabIndex = 84;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(465, 554);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(138, 34);
-            this.btnEditar.TabIndex = 83;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(292, 554);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(138, 34);
-            this.btnAgregar.TabIndex = 82;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // dgvGrupos
-            // 
-            this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrupos.Location = new System.Drawing.Point(514, 71);
-            this.dgvGrupos.Name = "dgvGrupos";
-            this.dgvGrupos.Size = new System.Drawing.Size(398, 282);
-            this.dgvGrupos.TabIndex = 85;
-            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrupos_CellDoubleClick);
+            this.ponderacion.Size = new System.Drawing.Size(329, 23);
+            this.ponderacion.TabIndex = 125;
             // 
             // Actividades
             // 
@@ -231,24 +312,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1080, 708);
-            this.Controls.Add(this.dgvGrupos);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.fecha);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.ponderacion);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.tema);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.descripcion2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.nombre2);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.grupo);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.descripcion);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.nombre);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnEliminar3);
+            this.Controls.Add(this.btnEditar3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnAgregar2);
+            this.Controls.Add(this.dgvGrupos);
+            this.Controls.Add(this.fecha);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Actividades";
             this.Text = "Actividades";
@@ -261,24 +347,28 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tema;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox grupo;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox descripcion;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox nombre;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ponderacion;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker fecha;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvGrupos;
+        private System.Windows.Forms.Button btnEliminar3;
+        private System.Windows.Forms.Button btnEditar3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnAgregar2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox grupo;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox nombre2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox descripcion2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox tema;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox ponderacion;
     }
 }

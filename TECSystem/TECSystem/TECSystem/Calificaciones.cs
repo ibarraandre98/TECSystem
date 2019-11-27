@@ -24,7 +24,7 @@ namespace TECSystem
         public void Limpiar()
         {
             grupo.Text = "";
-            matricula.Text = "";
+            matriculaa.Text = "";
             tema.Text = "";
             calificacion.Text = "";
             tipoevaluacion.Text = "";
@@ -34,7 +34,7 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            obj.AgregarCalificacion(grupo.Text, matricula.Text, tema.Text,calificacion.Text, tipoevaluacion.Text);
+            obj.AgregarCalificacion(grupo.Text, matriculaa.Text, tema.Text,calificacion.Text, tipoevaluacion.Text);
             MostrarCalificaciones();
             Limpiar();
         }
@@ -48,7 +48,7 @@ namespace TECSystem
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            obj.EditarCalificacion((idCalificacion.Text),grupo.Text, matricula.Text, (tema.Text), (calificacion.Text), tipoevaluacion.Text);
+            obj.EditarCalificacion((idCalificacion.Text),grupo.Text, matriculaa.Text, (tema.Text), (calificacion.Text), tipoevaluacion.Text);
             MostrarCalificaciones();
             Limpiar();
         }
@@ -70,7 +70,7 @@ namespace TECSystem
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
             idCalificacion.Text = dataGridView1.CurrentRow.Cells["idCalifiacion"].Value.ToString();
-            matricula.Text = dataGridView1.CurrentRow.Cells["matricula"].Value.ToString();
+            matriculaa.Text = dataGridView1.CurrentRow.Cells["matricula"].Value.ToString();
             tema.Text = dataGridView1.CurrentRow.Cells["tema"].Value.ToString();
             calificacion.Text = dataGridView1.CurrentRow.Cells["calificacion"].Value.ToString();
             tipoevaluacion.Text = dataGridView1.CurrentRow.Cells["tipoEval"].Value.ToString();
@@ -100,7 +100,28 @@ namespace TECSystem
         private void dgvAlumnos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Matricula = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
-            matricula.Text = Matricula;
+            matriculaa.Text = Matricula;
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+            obj.AgregarCalificacion(grupo.Text, matriculaa.Text, tema.Text, calificacion.Text, tipoevaluacion.Text);
+            MostrarCalificaciones();
+            Limpiar();
+        }
+
+        private void btnEditar3_Click(object sender, EventArgs e)
+        {
+            obj.EditarCalificacion((idCalificacion.Text), grupo.Text, matriculaa.Text, (tema.Text), (calificacion.Text), tipoevaluacion.Text);
+            MostrarCalificaciones();
+            Limpiar();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            obj.EliminarCalificacion(idCalificacion.Text);
+            MostrarCalificaciones();
+            Limpiar();
         }
 
         private void button1_Click(object sender, EventArgs e)
