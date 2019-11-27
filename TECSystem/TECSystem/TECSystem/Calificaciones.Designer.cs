@@ -363,7 +363,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.tipoevaluacion);
-            this.Controls.Add(this.label15);
+
 
             this.Controls.Add(this.panel6);
           
@@ -423,10 +423,7 @@
         private System.Windows.Forms.TextBox idCalificacion;
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvGrupos;
-        private System.Windows.Forms.DataGridView dgvAlumnos;
         private System.Windows.Forms.Button button1;
 
         private System.Windows.Forms.Panel panel2;

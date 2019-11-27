@@ -148,18 +148,7 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackColor = System.Drawing.Color.White;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Location = new System.Drawing.Point(576, 592);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(100, 34);
-            this.btnAgregar.TabIndex = 34;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
+
 
             // cbDiscapacidad
             // 
@@ -832,7 +821,6 @@
 
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbEstatus);
-            this.Controls.Add(this.label4);
 
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel11);

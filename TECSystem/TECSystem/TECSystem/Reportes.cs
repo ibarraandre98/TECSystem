@@ -13,7 +13,7 @@ namespace TECSystem
 {
     public partial class Reportes : Form
     {
-        private SqlConnection Conexion = new SqlConnection("Server=LAPTOP-KF9P88JK\\SQLEXPRESS;DataBase=BaseDeDatosTec;Integrated Security=true");
+        private SqlConnection Conexion = new SqlConnection("Data Source =.;Initial Catalog=BaseDeDatosTec;Integrated Security=true");
         int reporte = 1;
         string matricula = "";
 

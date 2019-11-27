@@ -45,6 +45,7 @@
     <Compile Include="CN_Actividades.cs" />
     <Compile Include="CN_Alumnos.cs" />
     <Compile Include="CN_Calificaciones.cs" />
+    <Compile Include="CN_Conexion.cs" />
     <Compile Include="CN_empleados.cs" />
     <Compile Include="CN_empleos.cs" />
     <Compile Include="CN_especialidades.cs" />

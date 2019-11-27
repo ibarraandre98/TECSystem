@@ -23,6 +23,7 @@ namespace CapaDatos
             leer = comando.ExecuteReader();
             tablaEstados.Load(leer);
             leer.Close();
+            
             conexion.CerrarConexion();
             return tablaEstados;
         }

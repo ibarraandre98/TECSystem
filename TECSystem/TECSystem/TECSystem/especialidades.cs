@@ -54,7 +54,7 @@ namespace TECSystem
             Reportes r = new Reportes();
             r.setReporte(1);
             r.ShowDialog();
-
+        }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
 

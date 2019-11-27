@@ -76,7 +76,6 @@ namespace TECSystem
             var fe = dtpFechaNac.Value;
             var fe2 = DateTime.Parse(fe.ToString());
             var final = fe2.ToShortDateString();
-            MessageBox.Show(final);
             CN_Personas _CN_Personas = new CN_Personas();
             IDPersona = _CN_Personas.ultimoID();
 
@@ -228,6 +227,8 @@ namespace TECSystem
             r.setMatricula(txtMatricula.Text);
             r.setReporte(2);
             r.ShowDialog();
+
+        }
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             CN_Personas _CN_Personas = new CN_Personas();
@@ -247,7 +248,6 @@ namespace TECSystem
             var fe = dtpFechaNac.Value;
             var fe2 = DateTime.Parse(fe.ToString());
             var final = fe2.ToShortDateString();
-            MessageBox.Show(final);
             CN_Personas _CN_Personas = new CN_Personas();
             IDPersona = _CN_Personas.ultimoID();
 
