@@ -41,8 +41,8 @@ namespace CapaDatos
         public void EditarPersonas(int idPersona, String paterno, String materno, String nombres, DateTime fecha_nac, int sexo, String curp, String telefono, String numExt, String numInt, String cp, int edoCivil, int discapacidad, String calle, int localidad)
         {
             comando.Connection = conexion.AbrirConexion();
-            comando.CommandText = "update personas set paterno = '" + paterno + "', materno = '" + materno + "', nombres = '" + nombres + "',fecha_nac = convert(datetime,'" + fecha_nac.ToString("MM-dd-yyyy") + "',101), sexo ='" + sexo+ "', curp = '"+curp+ "', telefono = '"+telefono+"', numExt = '"+numExt+ 
-                "', numInt = '"+numInt+ "', cp = '"+cp+ "', edoCivil = '"+edoCivil+"', discapacidad = '" +discapacidad+ "', calle = '" + calle + "', localidades = '" + localidad + "' where idPersona = '" +idPersona+"';";
+            comando.CommandText = "update personas set paterno = '" + paterno + "', materno = '" + materno + "', nombres = '" + nombres + "',fecha_nac = convert(datetime,'" + fecha_nac.ToString("MM-dd-yyyy") + "',101), sexo =" + sexo+ ", curp = '"+curp+ "', telefono = '"+telefono+"', numExt = '"+numExt+ 
+                "', numInt = '"+numInt+ "', cp = '"+cp+ "', edoCivil = "+edoCivil+", discapacidad = " +discapacidad+ ", calle = '" + calle + "', localidades = " + localidad + " where idPersona = " +idPersona+";";
             comando.CommandType = CommandType.Text;
             comando.ExecuteNonQuery();
         }
