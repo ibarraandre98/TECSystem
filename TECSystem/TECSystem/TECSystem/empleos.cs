@@ -88,5 +88,34 @@ namespace TECSystem
             habilitarAgregar();
             MostrarEmpleos();
         }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            _CN_Empleos.Agregarempleos(txtEmpleo.Text);
+            limpiarCampos();
+            MostrarEmpleos();
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Empleos.Editarempleos(IDEmpleo, txtEmpleo.Text);
+            limpiarCampos();
+            habilitarAgregar();
+            MostrarEmpleos();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            _CN_Empleos.Eliminarempleos(IDEmpleo);
+            limpiarCampos();
+            habilitarAgregar();
+            MostrarEmpleos();
+        }
+
+        private void BtnCancelar_Click_1(object sender, EventArgs e)
+        {
+            limpiarCampos();
+            habilitarAgregar();
+        }
     }
 }

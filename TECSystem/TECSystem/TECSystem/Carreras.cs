@@ -87,5 +87,32 @@ namespace TECSystem
         {
             txtCoordinador.Text = dtgEmpleados.CurrentRow.Cells["idEmpleado"].Value.ToString();
         }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Carrera.AgregarCarrera(txtNombre.Text, txtCoordinador.Text);
+            MostrarTabla();
+            Limpiartxt();
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Carrera.EditarCarrera(txtIdCarrera.Text, txtNombre.Text, txtCoordinador.Text);
+            Limpiartxt();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+        }
+
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Carrera.EliminarCarrera(txtIdCarrera.Text);
+            Limpiartxt();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+        }
     }
 }

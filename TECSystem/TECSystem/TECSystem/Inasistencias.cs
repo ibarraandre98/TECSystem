@@ -104,5 +104,35 @@ namespace TECSystem
             Matricula = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
             txtMatricula.Text = Matricula;
         }
+
+        private void Label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            inasistencias.agregar_inasistencias(IDGrupo, Matricula, dtpFecha.Value, Convert.ToInt32(tipoInasistencia.Text));
+
+            limpiar();
+            MostrarInasistencias();
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            inasistencias.editar_inasistencias(Convert.ToInt32(idInasistencia.Text), Grupo.Text, Matricula, dtpFecha.Value, Convert.ToInt32(tipoInasistencia.Text));
+            MostrarInasistencias();
+            limpiar();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+        }
+
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
+        {
+            inasistencias.eliminar_inasistencias(Convert.ToInt32(idInasistencia.Text));
+            idInasistencia.Clear();
+            MostrarInasistencias();
+        }
     }
 }

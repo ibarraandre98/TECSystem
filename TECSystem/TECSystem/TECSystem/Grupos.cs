@@ -103,6 +103,33 @@ namespace TECSystem
             idMateria = dgvMaterias.CurrentRow.Cells["cveMateria"].Value.ToString();
         }
 
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            grupos.agregar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
+            limpiar();
+            MostrarTabla();
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            grupos.editar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
+            limpiar();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+        }
+
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
+        {
+            grupos.eliminar_grupo(cveGrupo.Text);
+            limpiar();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+        }
+
         private void DgvProfesores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             txtProfesor.Text = dgvProfesores.CurrentRow.Cells["nombres"].Value.ToString() +" "+
