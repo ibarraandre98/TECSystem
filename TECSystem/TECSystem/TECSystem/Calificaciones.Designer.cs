@@ -30,8 +30,6 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tipoevaluacion = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,13 +42,10 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.idCalificacion = new System.Windows.Forms.TextBox();
-
             this.label2 = new System.Windows.Forms.Label();
-
             this.label1 = new System.Windows.Forms.Label();
             this.dgvGrupos = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-
             this.panel2 = new System.Windows.Forms.Panel();
             this.grupo = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -59,10 +54,10 @@
             this.tema = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.calificacion = new System.Windows.Forms.TextBox();
-
+            this.cbEvaluacion = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,16 +70,6 @@
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
-            // dgvGrupos
-            // 
-            this.dgvGrupos.BackgroundColor = System.Drawing.Color.White;
-            this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrupos.Location = new System.Drawing.Point(340, 64);
-            this.dgvGrupos.Name = "dgvGrupos";
-            this.dgvGrupos.Size = new System.Drawing.Size(288, 282);
-            this.dgvGrupos.TabIndex = 54;
-            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrupos_CellDoubleClick);
-            // 
             // dgvAlumnos
             // 
             this.dgvAlumnos.BackgroundColor = System.Drawing.Color.White;
@@ -94,25 +79,6 @@
             this.dgvAlumnos.Size = new System.Drawing.Size(288, 282);
             this.dgvAlumnos.TabIndex = 55;
             this.dgvAlumnos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAlumnos_CellDoubleClick);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(696, 513);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(253, 1);
-            this.panel4.TabIndex = 131;
-            // 
-            // tipoevaluacion
-            // 
-            this.tipoevaluacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
-            this.tipoevaluacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tipoevaluacion.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.tipoevaluacion.ForeColor = System.Drawing.Color.White;
-            this.tipoevaluacion.Location = new System.Drawing.Point(696, 491);
-            this.tipoevaluacion.Name = "tipoevaluacion";
-            this.tipoevaluacion.Size = new System.Drawing.Size(249, 23);
-            this.tipoevaluacion.TabIndex = 130;
             // 
             // btnEliminar
             // 
@@ -258,8 +224,43 @@
             this.idCalificacion.ForeColor = System.Drawing.Color.White;
             this.idCalificacion.Location = new System.Drawing.Point(183, 387);
             this.idCalificacion.Name = "idCalificacion";
+            this.idCalificacion.ReadOnly = true;
             this.idCalificacion.Size = new System.Drawing.Size(247, 23);
             this.idCalificacion.TabIndex = 138;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 23);
+            this.label2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 0;
+            // 
+            // dgvGrupos
+            // 
+            this.dgvGrupos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvGrupos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrupos.Location = new System.Drawing.Point(340, 64);
+            this.dgvGrupos.Name = "dgvGrupos";
+            this.dgvGrupos.Size = new System.Drawing.Size(288, 282);
+            this.dgvGrupos.TabIndex = 54;
+            this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGrupos_CellDoubleClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(808, 584);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 34);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "Reporte";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -276,7 +277,9 @@
             this.grupo.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.grupo.ForeColor = System.Drawing.Color.White;
             this.grupo.Location = new System.Drawing.Point(183, 438);
+            this.grupo.MaxLength = 10;
             this.grupo.Name = "grupo";
+            this.grupo.ReadOnly = true;
             this.grupo.Size = new System.Drawing.Size(247, 23);
             this.grupo.TabIndex = 140;
             // 
@@ -295,7 +298,9 @@
             this.matriculaa.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.matriculaa.ForeColor = System.Drawing.Color.White;
             this.matriculaa.Location = new System.Drawing.Point(183, 491);
+            this.matriculaa.MaxLength = 9;
             this.matriculaa.Name = "matriculaa";
+            this.matriculaa.ReadOnly = true;
             this.matriculaa.Size = new System.Drawing.Size(248, 23);
             this.matriculaa.TabIndex = 142;
             // 
@@ -314,6 +319,7 @@
             this.tema.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.tema.ForeColor = System.Drawing.Color.White;
             this.tema.Location = new System.Drawing.Point(696, 387);
+            this.tema.MaxLength = 3;
             this.tema.Name = "tema";
             this.tema.Size = new System.Drawing.Size(249, 23);
             this.tema.TabIndex = 144;
@@ -333,19 +339,23 @@
             this.calificacion.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.calificacion.ForeColor = System.Drawing.Color.White;
             this.calificacion.Location = new System.Drawing.Point(696, 438);
+            this.calificacion.MaxLength = 9;
             this.calificacion.Name = "calificacion";
             this.calificacion.Size = new System.Drawing.Size(250, 23);
             this.calificacion.TabIndex = 146;
             // 
-            // button1
+            // cbEvaluacion
             // 
-            this.button1.Location = new System.Drawing.Point(806, 528);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 34);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "Reporte";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cbEvaluacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEvaluacion.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.cbEvaluacion.FormattingEnabled = true;
+            this.cbEvaluacion.Items.AddRange(new object[] {
+            "O",
+            "C"});
+            this.cbEvaluacion.Location = new System.Drawing.Point(698, 491);
+            this.cbEvaluacion.Name = "cbEvaluacion";
+            this.cbEvaluacion.Size = new System.Drawing.Size(250, 31);
+            this.cbEvaluacion.TabIndex = 148;
             // 
             // Calificaciones
             // 
@@ -353,18 +363,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1064, 669);
-
+            this.Controls.Add(this.cbEvaluacion);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvAlumnos);
-            this.Controls.Add(this.dgvGrupos);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.tipoevaluacion);
-
-
             this.Controls.Add(this.panel6);
-          
             this.Controls.Add(this.calificacion);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.tema);
@@ -380,8 +381,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.tipoevaluacion);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.label6);
@@ -394,8 +393,8 @@
             this.Text = "Calificaciones";
             this.Load += new System.EventHandler(this.Calificaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrupos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,8 +404,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dgvGrupos;
         private System.Windows.Forms.DataGridView dgvAlumnos;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox tipoevaluacion;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label6;
@@ -432,6 +429,6 @@
         private System.Windows.Forms.TextBox tema;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox calificacion;
-
+        private System.Windows.Forms.ComboBox cbEvaluacion;
     }
 }

@@ -41,10 +41,10 @@
             this.dtgInasistencias = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMatricula = new System.Windows.Forms.TextBox();
-            this.tipoInasistencia = new System.Windows.Forms.TextBox();
             this.dgvAlumnos = new System.Windows.Forms.DataGridView();
             this.dgvGrupo = new System.Windows.Forms.DataGridView();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+            this.cbInasistencia = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgInasistencias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrupo)).BeginInit();
@@ -123,7 +123,9 @@
             // Grupo
             // 
             this.Grupo.Location = new System.Drawing.Point(158, 466);
+            this.Grupo.MaxLength = 10;
             this.Grupo.Name = "Grupo";
+            this.Grupo.ReadOnly = true;
             this.Grupo.Size = new System.Drawing.Size(162, 20);
             this.Grupo.TabIndex = 97;
             // 
@@ -180,16 +182,11 @@
             // txtMatricula
             // 
             this.txtMatricula.Location = new System.Drawing.Point(158, 498);
+            this.txtMatricula.MaxLength = 9;
             this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.ReadOnly = true;
             this.txtMatricula.Size = new System.Drawing.Size(162, 20);
             this.txtMatricula.TabIndex = 107;
-            // 
-            // tipoInasistencia
-            // 
-            this.tipoInasistencia.Location = new System.Drawing.Point(515, 464);
-            this.tipoInasistencia.Name = "tipoInasistencia";
-            this.tipoInasistencia.Size = new System.Drawing.Size(162, 20);
-            this.tipoInasistencia.TabIndex = 109;
             // 
             // dgvAlumnos
             // 
@@ -216,16 +213,29 @@
             this.dtpFecha.Size = new System.Drawing.Size(161, 20);
             this.dtpFecha.TabIndex = 112;
             // 
+            // cbInasistencia
+            // 
+            this.cbInasistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInasistencia.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.cbInasistencia.FormattingEnabled = true;
+            this.cbInasistencia.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cbInasistencia.Location = new System.Drawing.Point(517, 460);
+            this.cbInasistencia.Name = "cbInasistencia";
+            this.cbInasistencia.Size = new System.Drawing.Size(250, 31);
+            this.cbInasistencia.TabIndex = 149;
+            // 
             // Inasistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.cbInasistencia);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.dgvGrupo);
-            this.Controls.Add(this.tipoInasistencia);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -264,9 +274,9 @@
         private System.Windows.Forms.DataGridView dtgInasistencias;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMatricula;
-        private System.Windows.Forms.TextBox tipoInasistencia;
         private System.Windows.Forms.DataGridView dgvAlumnos;
         private System.Windows.Forms.DataGridView dgvGrupo;
         private System.Windows.Forms.DateTimePicker dtpFecha;
+        private System.Windows.Forms.ComboBox cbInasistencia;
     }
 }

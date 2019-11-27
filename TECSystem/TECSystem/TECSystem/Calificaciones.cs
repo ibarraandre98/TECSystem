@@ -27,14 +27,11 @@ namespace TECSystem
             matriculaa.Text = "";
             tema.Text = "";
             calificacion.Text = "";
-            tipoevaluacion.Text = "";
-
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            obj.AgregarCalificacion(grupo.Text, matriculaa.Text, tema.Text,calificacion.Text, tipoevaluacion.Text);
+            obj.AgregarCalificacion(grupo.Text, matriculaa.Text, tema.Text,calificacion.Text, cbEvaluacion.Text);
             MostrarCalificaciones();
             Limpiar();
         }
@@ -48,7 +45,7 @@ namespace TECSystem
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            obj.EditarCalificacion((idCalificacion.Text),grupo.Text, matriculaa.Text, (tema.Text), (calificacion.Text), tipoevaluacion.Text);
+            obj.EditarCalificacion((idCalificacion.Text),grupo.Text, matriculaa.Text, (tema.Text), (calificacion.Text), cbEvaluacion.Text);
             MostrarCalificaciones();
             Limpiar();
         }
@@ -60,6 +57,7 @@ namespace TECSystem
 
         private void Calificaciones_Load(object sender, EventArgs e)
         {
+            cbEvaluacion.SelectedIndex = 0;
             MostrarCalificaciones();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
@@ -73,7 +71,8 @@ namespace TECSystem
             matriculaa.Text = dataGridView1.CurrentRow.Cells["matricula"].Value.ToString();
             tema.Text = dataGridView1.CurrentRow.Cells["tema"].Value.ToString();
             calificacion.Text = dataGridView1.CurrentRow.Cells["calificacion"].Value.ToString();
-            tipoevaluacion.Text = dataGridView1.CurrentRow.Cells["tipoEval"].Value.ToString();
+            grupo.Text = dataGridView1.CurrentRow.Cells["grupo"].Value.ToString();
+            cbEvaluacion.Text = dataGridView1.CurrentRow.Cells["tipoEval"].Value.ToString();
             btnEditar.Enabled = true;
             btnEliminar.Enabled = true;
             btnAgregar.Enabled = false;
@@ -105,16 +104,46 @@ namespace TECSystem
 
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            obj.AgregarCalificacion(grupo.Text, matriculaa.Text, tema.Text, calificacion.Text, tipoevaluacion.Text);
-            MostrarCalificaciones();
-            Limpiar();
+            try
+            {
+                if(grupo.Text == "" || matriculaa.Text == ""|| tema.Text == "" || calificacion.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar calificación, aún faltan datos por completar", "Datos incompletos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    obj.AgregarCalificacion(grupo.Text, matriculaa.Text, tema.Text, calificacion.Text, cbEvaluacion.Text);
+                    MostrarCalificaciones();
+                    Limpiar();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void btnEditar3_Click(object sender, EventArgs e)
         {
-            obj.EditarCalificacion((idCalificacion.Text), grupo.Text, matriculaa.Text, (tema.Text), (calificacion.Text), tipoevaluacion.Text);
-            MostrarCalificaciones();
-            Limpiar();
+            try
+            {
+                if (grupo.Text == "" || matriculaa.Text == "" || tema.Text == "" || calificacion.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar calificación, aún faltan datos por completar", "Datos incompletos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    obj.EditarCalificacion((idCalificacion.Text), grupo.Text, matriculaa.Text, (tema.Text), (calificacion.Text), cbEvaluacion.Text);
+                    MostrarCalificaciones();
+                    Limpiar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
@@ -129,6 +158,11 @@ namespace TECSystem
             Reportes r = new Reportes();
             r.setReporte(3);
             r.ShowDialog();
+        }
+
+        private void tipoevaluacion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

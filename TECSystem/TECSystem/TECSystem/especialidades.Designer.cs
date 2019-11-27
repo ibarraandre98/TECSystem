@@ -50,6 +50,7 @@
             this.dtgEspecialidades.Name = "dtgEspecialidades";
             this.dtgEspecialidades.Size = new System.Drawing.Size(264, 282);
             this.dtgEspecialidades.TabIndex = 37;
+            this.dtgEspecialidades.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEspecialidades_CellDoubleClick);
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             // txtCarrera
             // 
             this.txtCarrera.Location = new System.Drawing.Point(139, 410);
+            this.txtCarrera.MaxLength = 240;
             this.txtCarrera.Name = "txtCarrera";
             this.txtCarrera.Size = new System.Drawing.Size(162, 20);
             this.txtCarrera.TabIndex = 45;
@@ -83,6 +85,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(139, 384);
+            this.txtNombre.MaxLength = 40;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(162, 20);
             this.txtNombre.TabIndex = 43;
@@ -110,6 +113,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.White;
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Location = new System.Drawing.Point(461, 481);
             this.btnEliminar.Name = "btnEliminar";
@@ -130,6 +134,7 @@
             this.btnEditar.TabIndex = 67;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 

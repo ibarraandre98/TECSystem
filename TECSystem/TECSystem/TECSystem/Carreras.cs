@@ -22,9 +22,23 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_Carrera.AgregarCarrera(txtNombre.Text, txtCoordinador.Text);
-            MostrarTabla();
-            Limpiartxt();
+            try
+            {
+                if(txtNombre.Text == "" || txtCoordinador.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar carreras, aún faltan datos por completar", "Datos incompletos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    _CN_Carrera.AgregarCarrera(txtNombre.Text, txtCoordinador.Text);
+                    MostrarTabla();
+                    Limpiartxt();
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MostrarTabla()
@@ -49,12 +63,28 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _CN_Carrera.EditarCarrera(txtIdCarrera.Text, txtNombre.Text, txtCoordinador.Text);
-            Limpiartxt();
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnAgregar.Enabled = true;
-            MostrarTabla();
+
+            try
+            {
+                if (txtNombre.Text == "" || txtCoordinador.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar carreras, aún faltan datos por completar", "Datos incompletos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    _CN_Carrera.EditarCarrera(txtIdCarrera.Text, txtNombre.Text, txtCoordinador.Text);
+                    Limpiartxt();
+                    btnEliminar.Enabled = false;
+                    btnEditar.Enabled = false;
+                    btnAgregar.Enabled = true;
+                    MostrarTabla();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

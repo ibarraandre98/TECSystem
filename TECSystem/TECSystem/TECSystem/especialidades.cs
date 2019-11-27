@@ -13,6 +13,7 @@ namespace TECSystem
 {
     public partial class Especialidades : Form
     {
+        String idEspecialidad = null;
         CN_Especialidades _CN_Especialidades = new CN_Especialidades();
         public Especialidades()
         {
@@ -39,8 +40,24 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_Especialidades.Agregarespecialidades(txtNombre.Text, txtCarrera.Text);
-            MostrarEspecialidades();
+            try
+            {
+                if (txtNombre.Text == "" || txtCarrera.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar carreras, aún faltan datos por completar", "Datos incompletos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    _CN_Especialidades.Agregarespecialidades(txtNombre.Text, txtCarrera.Text);
+                    MostrarEspecialidades();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void DtgCarreras_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -57,7 +74,60 @@ namespace TECSystem
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txtNombre.Text == "" || txtCarrera.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar carreras, aún faltan datos por completar", "Datos incompletos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    _CN_Especialidades.Eliminarespecialidades(idEspecialidad);
+                    MostrarEspecialidades();
+                    btnAgregar.Enabled = true;
+                    btnEditar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtNombre.Text == "" || txtCarrera.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar carreras, aún faltan datos por completar", "Datos incompletos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    _CN_Especialidades.Editarespecialidades(idEspecialidad,txtNombre.Text, txtCarrera.Text);
+                    MostrarEspecialidades();
+                    btnAgregar.Enabled = true;
+                    btnEditar.Enabled = false;
+                    btnEliminar.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dtgEspecialidades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            idEspecialidad = dtgEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();
+            txtNombre.Text = dtgEspecialidades.CurrentRow.Cells["nombre"].Value.ToString();
+            txtCarrera.Text = dtgEspecialidades.CurrentRow.Cells["carrera"].Value.ToString();
+            btnAgregar.Enabled = false;
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
         }
     }
 }

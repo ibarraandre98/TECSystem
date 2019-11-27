@@ -84,6 +84,7 @@
             // txtCoordinador
             // 
             this.txtCoordinador.Location = new System.Drawing.Point(145, 461);
+            this.txtCoordinador.MaxLength = 60;
             this.txtCoordinador.Name = "txtCoordinador";
             this.txtCoordinador.Size = new System.Drawing.Size(162, 20);
             this.txtCoordinador.TabIndex = 41;
@@ -102,6 +103,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(145, 435);
+            this.txtNombre.MaxLength = 60;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(162, 20);
             this.txtNombre.TabIndex = 39;

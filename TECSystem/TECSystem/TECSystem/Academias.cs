@@ -13,6 +13,7 @@ namespace TECSystem
 {
     public partial class Academias : Form
     {
+        
         CN_Academia _CN_Academia = new CN_Academia();
         public Academias()
         {
@@ -31,9 +32,27 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_Academia.AgregarAcademia(nombre.Text);
-            MostrarAcademias();
-            Limpiar();
+
+            try
+            {
+                if (nombre.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar academia, aún faltan datos por completar", "Datos incompletos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    _CN_Academia.AgregarAcademia(nombre.Text);
+                    MostrarAcademias();
+                    Limpiar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
         }
 
         private void Academias_Load(object sender, EventArgs e)
@@ -73,16 +92,34 @@ namespace TECSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _CN_Academia.EditarAcademia((idAcademia.Text), nombre.Text);
-            Limpiar();
-            MostrarAcademias();
+            try
+            {
+                if (nombre.Text == "")
+                {
+                    MessageBox.Show("No puede ingresar academia, aún faltan datos por completar", "Datos incompletos",
+                            MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    _CN_Academia.EditarAcademia(idAcademia.Text, nombre.Text);
+                    Limpiar();
+                    MostrarAcademias();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            _CN_Academia.EliminarAcademia(idAcademia.Text);
-            MostrarAcademias();
-            Limpiar();
+            
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
