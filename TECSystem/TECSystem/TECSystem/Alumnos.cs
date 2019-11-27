@@ -307,6 +307,8 @@ namespace TECSystem
                     var final = fe2.ToShortDateString();
                     CN_Personas _CN_Personas = new CN_Personas();
                     IDPersona = _CN_Personas.ultimoID();
+           
+            IDPersona = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["idPersona"].Value.ToString());
 
                     _CN_Personas.EditarPersonas(Convert.ToString(IDPersona), txtPaterno.Text, txtMaterno.Text, txtNombre.Text,
                         dtpFechaNac.Value, cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text,

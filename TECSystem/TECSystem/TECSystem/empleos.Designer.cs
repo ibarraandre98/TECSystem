@@ -103,6 +103,7 @@
             // txtEmpleo
             // 
             this.txtEmpleo.Location = new System.Drawing.Point(60, 351);
+            this.txtEmpleo.MaxLength = 50;
             this.txtEmpleo.Name = "txtEmpleo";
             this.txtEmpleo.Size = new System.Drawing.Size(162, 20);
             this.txtEmpleo.TabIndex = 72;
