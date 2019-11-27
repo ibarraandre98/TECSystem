@@ -362,7 +362,7 @@ namespace TECSystem
 
         private void txtInt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            soloNumeros(e);
+            
         }
 
         private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)

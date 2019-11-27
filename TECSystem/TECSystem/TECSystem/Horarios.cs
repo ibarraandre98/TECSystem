@@ -21,9 +21,18 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            horarios.agregar_horarios(Grupo.Text,Convert.ToInt32(comboBox1.SelectedIndex.ToString()),Convert.ToInt32(comboBox2.SelectedIndex.ToString()),Convert.ToString(comboBox3.SelectedIndex.ToString()));
-            MostrarTabla();
-            limpiar();
+            if (txtGrupo.Text == "" || txtanula.Text == "" || txtDia.Text == "" || txthora.Text == "")
+            {
+                MessageBox.Show("No puede ingresar Horarios, aún faltan datos por completar", "Datos incompletos",
+                          MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                horarios.agregar_horarios(txtGrupo.Text, Convert.ToInt32(txtDia.SelectedIndex.ToString()), Convert.ToInt32(txthora.SelectedIndex.ToString()), Convert.ToString(txtanula.SelectedIndex.ToString()));
+                MostrarTabla();
+                limpiar();
+            }
+            
         }
 
         private void MostrarTabla()
@@ -35,12 +44,12 @@ namespace TECSystem
         void limpiar()
         {
             idHorarios.Clear();
-            Grupo.Clear();
+            txtGrupo.Clear();
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            horarios.editar_horarios(Convert.ToInt32(idHorarios.Text), Grupo.Text, Convert.ToInt32(comboBox1.SelectedItem), Convert.ToInt32(comboBox2.SelectedItem), Convert.ToString(comboBox3.SelectedItem));
+            horarios.editar_horarios(Convert.ToInt32(idHorarios.Text), txtGrupo.Text, Convert.ToInt32(txtDia.SelectedItem), Convert.ToInt32(txthora.SelectedItem), Convert.ToString(txtanula.SelectedItem));
             limpiar();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
@@ -68,10 +77,10 @@ namespace TECSystem
         private void DtgHorarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             idHorarios.Text = dtgHorarios.CurrentRow.Cells["idHorario"].Value.ToString();
-            Grupo.Text = dtgHorarios.CurrentRow.Cells["grupo"].Value.ToString();
-            comboBox1.Text = dtgHorarios.CurrentRow.Cells["dia"].Value.ToString();
-            comboBox2.Text = dtgHorarios.CurrentRow.Cells["hora"].Value.ToString();
-            comboBox3.Text = dtgHorarios.CurrentRow.Cells["aula"].Value.ToString();
+            txtGrupo.Text = dtgHorarios.CurrentRow.Cells["grupo"].Value.ToString();
+            txtDia.Text = dtgHorarios.CurrentRow.Cells["dia"].Value.ToString();
+            txthora.Text = dtgHorarios.CurrentRow.Cells["hora"].Value.ToString();
+            txtanula.Text = dtgHorarios.CurrentRow.Cells["aula"].Value.ToString();
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
@@ -85,7 +94,7 @@ namespace TECSystem
 
         private void DgvGrupos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Grupo.Text = dgvGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
+            txtGrupo.Text = dgvGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

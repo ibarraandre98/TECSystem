@@ -33,9 +33,16 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            estados.agregar_estado(Nombre.Text);
-            limpiar();
-            MostrarEstados();
+            if (idEstados.TextLength <= 0 || Nombre.TextLength<=0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                estados.agregar_estado(Nombre.Text);
+                limpiar();
+                MostrarEstados();
+            }
         }
 
         void MostrarEstados()
@@ -52,17 +59,31 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            estados.editar_alumno(Convert.ToInt32(idEstados.Text), Nombre.Text);
-            limpiar();
-            MostrarEstados();
+            if (idEstados.TextLength <= 0 || Nombre.TextLength <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                estados.editar_alumno(Convert.ToInt32(idEstados.Text), Nombre.Text);
+                limpiar();
+                MostrarEstados();
+            }
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            estados.eliminar_alumno(Convert.ToInt32(idEstados.Text));
-            limpiar();
-            MostrarEstados();
-        }
+            if (idEstados.TextLength <= 0 || Nombre.TextLength <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                estados.eliminar_alumno(Convert.ToInt32(idEstados.Text));
+                limpiar();
+                MostrarEstados();
+            }
+            }
 
         private void DtgEstados_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -71,6 +92,15 @@ namespace TECSystem
             btnAgregar.Enabled = false;
             btnEliminar.Enabled = true;
             btnEditar.Enabled = true;
+        }
+
+        private void SoloLetras(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

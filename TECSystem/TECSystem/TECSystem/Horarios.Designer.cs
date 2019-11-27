@@ -31,7 +31,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.Grupo = new System.Windows.Forms.TextBox();
+            this.txtGrupo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.idHorarios = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,10 +40,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtanula = new System.Windows.Forms.ComboBox();
             this.dgvGrupos = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txthora = new System.Windows.Forms.ComboBox();
+            this.txtDia = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHorarios)).BeginInit();
@@ -87,12 +87,12 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
-            // Grupo
+            // txtGrupo
             // 
-            this.Grupo.Location = new System.Drawing.Point(143, 441);
-            this.Grupo.Name = "Grupo";
-            this.Grupo.Size = new System.Drawing.Size(162, 20);
-            this.Grupo.TabIndex = 82;
+            this.txtGrupo.Location = new System.Drawing.Point(143, 441);
+            this.txtGrupo.Name = "txtGrupo";
+            this.txtGrupo.Size = new System.Drawing.Size(162, 20);
+            this.txtGrupo.TabIndex = 82;
             // 
             // label3
             // 
@@ -177,15 +177,15 @@
             this.label6.TabIndex = 88;
             this.label6.Text = "Aula";
             // 
-            // comboBox3
+            // txtanula
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.txtanula.FormattingEnabled = true;
+            this.txtanula.Items.AddRange(new object[] {
             "123"});
-            this.comboBox3.Location = new System.Drawing.Point(471, 441);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(162, 21);
-            this.comboBox3.TabIndex = 91;
+            this.txtanula.Location = new System.Drawing.Point(471, 441);
+            this.txtanula.Name = "txtanula";
+            this.txtanula.Size = new System.Drawing.Size(162, 21);
+            this.txtanula.TabIndex = 91;
             // 
             // dgvGrupos
             // 
@@ -196,25 +196,25 @@
             this.dgvGrupos.TabIndex = 92;
             this.dgvGrupos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrupos_CellDoubleClick);
             // 
-            // comboBox2
+            // txthora
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.txthora.FormattingEnabled = true;
+            this.txthora.Items.AddRange(new object[] {
             "1"});
-            this.comboBox2.Location = new System.Drawing.Point(471, 414);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 21);
-            this.comboBox2.TabIndex = 90;
+            this.txthora.Location = new System.Drawing.Point(471, 414);
+            this.txthora.Name = "txthora";
+            this.txthora.Size = new System.Drawing.Size(162, 21);
+            this.txthora.TabIndex = 90;
             // 
-            // comboBox1
+            // txtDia
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.txtDia.FormattingEnabled = true;
+            this.txtDia.Items.AddRange(new object[] {
             "1"});
-            this.comboBox1.Location = new System.Drawing.Point(143, 472);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 21);
-            this.comboBox1.TabIndex = 89;
+            this.txtDia.Location = new System.Drawing.Point(143, 472);
+            this.txtDia.Name = "txtDia";
+            this.txtDia.Size = new System.Drawing.Size(162, 21);
+            this.txtDia.TabIndex = 89;
             // 
             // button1
             // 
@@ -245,16 +245,16 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvGrupos);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txtanula);
+            this.Controls.Add(this.txthora);
+            this.Controls.Add(this.txtDia);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.Grupo);
+            this.Controls.Add(this.txtGrupo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.idHorarios);
             this.Controls.Add(this.label2);
@@ -275,7 +275,7 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox Grupo;
+        private System.Windows.Forms.TextBox txtGrupo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox idHorarios;
         private System.Windows.Forms.Label label2;
@@ -284,10 +284,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox txtanula;
         private System.Windows.Forms.DataGridView dgvGrupos;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txthora;
+        private System.Windows.Forms.ComboBox txtDia;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

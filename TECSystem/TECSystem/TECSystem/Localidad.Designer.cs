@@ -90,9 +90,11 @@
             // txtLocalidad
             // 
             this.txtLocalidad.Location = new System.Drawing.Point(127, 371);
+            this.txtLocalidad.MaxLength = 40;
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(162, 20);
             this.txtLocalidad.TabIndex = 35;
+            this.txtLocalidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloLetras);
             // 
             // label3
             // 
