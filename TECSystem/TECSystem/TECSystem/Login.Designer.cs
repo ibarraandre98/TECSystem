@@ -58,6 +58,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(278, 23);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Text = "muski";
             // 
             // label1
             // 
@@ -92,6 +93,7 @@
             this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(278, 23);
             this.txtContraseña.TabIndex = 2;
+            this.txtContraseña.Text = "3qi2qtccj";
             // 
             // panel1
             // 

@@ -32,9 +32,15 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+            if (txtIdTipoLocalidad.TextLength <= 0 || txtTipo.TextLength <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else { 
             _CN_TiposLocalidad.AgregarTiposLocalidad(txtTipo.Text);
             MostrarTiposLocalidades();
             Limpiartxt();
+        }
         }
 
         private void Limpiartxt()
@@ -53,18 +59,33 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            if (txtIdTipoLocalidad.TextLength <= 0 || txtTipo.TextLength <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else { 
             _CN_TiposLocalidad.EditarTiposLocalidad(txtIdTipoLocalidad.Text, txtTipo.Text);
             MostrarTiposLocalidades();
             btnEditar.Enabled = false;
             btnEliminar.Enabled = false;
         }
+        }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            _CN_TiposLocalidad.EliminarTiposLocalidad(txtIdTipoLocalidad.Text);
-            MostrarTiposLocalidades();
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
+            if (txtIdTipoLocalidad.TextLength <= 0 || txtTipo.TextLength <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                _CN_TiposLocalidad.EliminarTiposLocalidad(txtIdTipoLocalidad.Text);
+                MostrarTiposLocalidades();
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
         }
+
+        
     }
 }

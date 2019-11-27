@@ -101,9 +101,11 @@
             // Nombre
             // 
             this.Nombre.Location = new System.Drawing.Point(138, 454);
+            this.Nombre.MaxLength = 32;
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(162, 20);
             this.Nombre.TabIndex = 71;
+            this.Nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloLetras);
             // 
             // label3
             // 

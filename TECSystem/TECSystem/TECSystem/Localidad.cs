@@ -58,9 +58,16 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (txtLocalidad.TextLength <= 0|| cbEstado.Text.Length<=0 || cbMunicipio.Text.Length<=0 || cbTipo.Text.Length<=0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else {
             CN_Localidades _CN_Localidad = new CN_Localidades();
-            _CN_Localidad.AgregarLocalidad(Convert.ToInt32(cbMunicipio.Text),txtLocalidad.Text, Convert.ToInt32(cbTipo.Text));
+            _CN_Localidad.AgregarLocalidad(Convert.ToInt32(cbMunicipio.Text), txtLocalidad.Text, Convert.ToInt32(cbTipo.Text));
             MostrarLocalidad();
+            limpiar();
+        }
         }
 
         private void dtgPersonas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -75,16 +82,32 @@ namespace TECSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CN_Localidades _CN_Localidades = new CN_Localidades();
-            _CN_Localidades.EditarMunicipio(Convert.ToInt32(cbMunicipio.Text), txtLocalidad.Text, id,Convert.ToInt32(cbTipo.Text));
-            MostrarLocalidad();
+            if (txtLocalidad.TextLength <= 0 || cbEstado.Text.Length <= 0 || cbMunicipio.Text.Length <= 0 || cbTipo.Text.Length <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                CN_Localidades _CN_Localidades = new CN_Localidades();
+                _CN_Localidades.EditarMunicipio(Convert.ToInt32(cbMunicipio.Text), txtLocalidad.Text, id, Convert.ToInt32(cbTipo.Text));
+                MostrarLocalidad();
+                limpiar();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CN_Localidades _CN_Localidades = new CN_Localidades();
-            _CN_Localidades.Eliminar(id);
-            MostrarLocalidad();
+            if (txtLocalidad.TextLength <= 0 || cbEstado.Text.Length <= 0 || cbMunicipio.Text.Length <= 0 || cbTipo.Text.Length <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                CN_Localidades _CN_Localidades = new CN_Localidades();
+                _CN_Localidades.Eliminar(id);
+                MostrarLocalidad();
+                limpiar();
+            }
         }
 
         private void cbEstado_SelectionChangeCommitted(object sender, EventArgs e)
@@ -99,6 +122,22 @@ namespace TECSystem
 
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void limpiar()
+        {
+            txtLocalidad.Clear();
+            
+        }
+
+
+        private void SoloLetras(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
         }
     }
 }
