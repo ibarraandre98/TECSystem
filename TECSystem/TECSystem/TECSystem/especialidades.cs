@@ -47,5 +47,10 @@ namespace TECSystem
         {
             txtCarrera.Text = dtgCarreras.CurrentRow.Cells["idCarrera"].Value.ToString();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
