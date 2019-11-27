@@ -49,12 +49,7 @@ namespace TECSystem
         }
         private void Alumnos_Load(object sender, EventArgs e)
         {
-
-           
             mostrar_alumnos();
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
-
             MostrarEstados();
             MostrarMunicipio(cbEstado.SelectedValue.ToString());
             MostrarTiposLocalidades();
@@ -97,6 +92,7 @@ namespace TECSystem
             cbSexo.SelectedIndex = 0;
             cbEdoCivil.SelectedIndex = 0;
             cbDiscapacidad.SelectedIndex = 0;
+            cbEstatus.SelectedIndex = 0;
         }
 
         private void MostrarEstados()
@@ -209,7 +205,8 @@ namespace TECSystem
             txtCP.Text = dgvAlumnos.CurrentRow.Cells["cp"].Value.ToString();
             txtMatricula.Text = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
             cbEstatus.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["estatus"].Value.ToString());
-
+            habilitarEdicion();
+            
             IDProfesor = dgvAlumnos.CurrentRow.Cells["tutor"].Value.ToString();
             foreach (DataGridViewRow row in dgvProfesores.Rows)
             {
@@ -219,6 +216,20 @@ namespace TECSystem
                     break;
                 }
             }
+        }
+
+        private void deshabilitarEdicion()
+        {
+            btnEditar.Enabled = false;
+            btnEliminar.Enabled = false;
+            btnAgregar2.Enabled = true;
+        }
+
+        private void habilitarEdicion()
+        {
+            btnEditar.Enabled = true;
+            btnEliminar.Enabled = true;
+            btnAgregar2.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -255,7 +266,7 @@ namespace TECSystem
                 dtpFechaNac.Value, cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text,
                 txtInt.Text, txtCP.Text, cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text, cbLocalidad.SelectedIndex.ToString());
 
-
+            deshabilitarEdicion();
 
             _CN_Alumnos.editar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
             mostrar_alumnos();
@@ -266,6 +277,7 @@ namespace TECSystem
         {
             _CN_Alumnos.eliminar_alumno(txtMatricula.Text);
             mostrar_alumnos();
+            deshabilitarEdicion();
             limpiar();
         }
     }

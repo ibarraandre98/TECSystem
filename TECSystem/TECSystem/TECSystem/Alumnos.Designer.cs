@@ -41,9 +41,7 @@
             this.dgvProfesores = new System.Windows.Forms.DataGridView();
             this.cbEspecialidad = new System.Windows.Forms.ComboBox();
             this.cbEstatus = new System.Windows.Forms.ComboBox();
-
             this.button1 = new System.Windows.Forms.Button();
-
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -92,66 +90,13 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtExt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProfesores)).BeginInit();
             this.SuspendLayout();
             // 
-
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ALUMNOS";
-            // 
-            // tutor
-            // 
-            this.tutor.Location = new System.Drawing.Point(452, 426);
-            this.tutor.Name = "tutor";
-            this.tutor.Size = new System.Drawing.Size(162, 20);
-            this.tutor.TabIndex = 29;
-            // 
-            // txtMatricula
-            // 
-            this.txtMatricula.Location = new System.Drawing.Point(451, 373);
-            this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(162, 20);
-            this.txtMatricula.TabIndex = 23;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.White;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Location = new System.Drawing.Point(866, 592);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(138, 34);
-            this.btnEliminar.TabIndex = 36;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.White;
-            this.btnEditar.Enabled = false;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(702, 592);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(138, 34);
-            this.btnEditar.TabIndex = 35;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-
-
             // cbDiscapacidad
             // 
+            this.cbDiscapacidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDiscapacidad.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbDiscapacidad.FormattingEnabled = true;
             this.cbDiscapacidad.Items.AddRange(new object[] {
@@ -168,6 +113,7 @@
             // 
             // cbEdoCivil
             // 
+            this.cbEdoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEdoCivil.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbEdoCivil.FormattingEnabled = true;
             this.cbEdoCivil.Items.AddRange(new object[] {
@@ -180,6 +126,7 @@
             // 
             // cbTipoLocalidad
             // 
+            this.cbTipoLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoLocalidad.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbTipoLocalidad.FormattingEnabled = true;
             this.cbTipoLocalidad.Location = new System.Drawing.Point(404, 378);
@@ -189,6 +136,7 @@
             // 
             // cbLocalidad
             // 
+            this.cbLocalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLocalidad.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbLocalidad.FormattingEnabled = true;
             this.cbLocalidad.Location = new System.Drawing.Point(841, 297);
@@ -199,6 +147,7 @@
             // 
             // cbMunicipio
             // 
+            this.cbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMunicipio.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbMunicipio.FormattingEnabled = true;
             this.cbMunicipio.Location = new System.Drawing.Point(626, 297);
@@ -209,6 +158,7 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstado.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Location = new System.Drawing.Point(404, 298);
@@ -219,6 +169,7 @@
             // 
             // cbSexo
             // 
+            this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSexo.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbSexo.FormattingEnabled = true;
             this.cbSexo.Items.AddRange(new object[] {
@@ -239,6 +190,7 @@
             // 
             // cbCarrera
             // 
+            this.cbCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCarrera.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbCarrera.FormattingEnabled = true;
             this.cbCarrera.Location = new System.Drawing.Point(626, 449);
@@ -269,6 +221,7 @@
             // 
             // cbEspecialidad
             // 
+            this.cbEspecialidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEspecialidad.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Location = new System.Drawing.Point(624, 517);
@@ -278,6 +231,7 @@
             // 
             // cbEstatus
             // 
+            this.cbEstatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEstatus.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbEstatus.FormattingEnabled = true;
             this.cbEstatus.Items.AddRange(new object[] {
@@ -288,6 +242,16 @@
             this.cbEstatus.Name = "cbEstatus";
             this.cbEstatus.Size = new System.Drawing.Size(193, 31);
             this.cbEstatus.TabIndex = 162;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(460, 592);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 33);
+            this.button1.TabIndex = 163;
+            this.button1.Text = "Reporte";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -304,6 +268,7 @@
             this.txtMatricula.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtMatricula.ForeColor = System.Drawing.Color.White;
             this.txtMatricula.Location = new System.Drawing.Point(404, 450);
+            this.txtMatricula.MaxLength = 9;
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(193, 23);
             this.txtMatricula.TabIndex = 168;
@@ -322,6 +287,7 @@
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.btnEliminar.Enabled = false;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Tahoma", 14.25F);
@@ -339,6 +305,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.btnEditar.Enabled = false;
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Tahoma", 14.25F);
@@ -407,6 +374,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtNombre.ForeColor = System.Drawing.Color.White;
             this.txtNombre.Location = new System.Drawing.Point(404, 83);
+            this.txtNombre.MaxLength = 40;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(193, 23);
             this.txtNombre.TabIndex = 171;
@@ -655,6 +623,7 @@
             this.tutor.ForeColor = System.Drawing.Color.White;
             this.tutor.Location = new System.Drawing.Point(404, 525);
             this.tutor.Name = "tutor";
+            this.tutor.ReadOnly = true;
             this.tutor.Size = new System.Drawing.Size(193, 23);
             this.tutor.TabIndex = 194;
             // 
@@ -673,6 +642,7 @@
             this.txtPaterno.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtPaterno.ForeColor = System.Drawing.Color.White;
             this.txtPaterno.Location = new System.Drawing.Point(626, 83);
+            this.txtPaterno.MaxLength = 40;
             this.txtPaterno.Name = "txtPaterno";
             this.txtPaterno.Size = new System.Drawing.Size(169, 23);
             this.txtPaterno.TabIndex = 196;
@@ -692,6 +662,7 @@
             this.txtMaterno.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtMaterno.ForeColor = System.Drawing.Color.White;
             this.txtMaterno.Location = new System.Drawing.Point(841, 83);
+            this.txtMaterno.MaxLength = 40;
             this.txtMaterno.Name = "txtMaterno";
             this.txtMaterno.Size = new System.Drawing.Size(193, 23);
             this.txtMaterno.TabIndex = 198;
@@ -711,6 +682,7 @@
             this.txtCurp.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtCurp.ForeColor = System.Drawing.Color.White;
             this.txtCurp.Location = new System.Drawing.Point(841, 161);
+            this.txtCurp.MaxLength = 18;
             this.txtCurp.Name = "txtCurp";
             this.txtCurp.Size = new System.Drawing.Size(193, 23);
             this.txtCurp.TabIndex = 200;
@@ -730,6 +702,7 @@
             this.txtCalle.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtCalle.ForeColor = System.Drawing.Color.White;
             this.txtCalle.Location = new System.Drawing.Point(626, 381);
+            this.txtCalle.MaxLength = 30;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(193, 23);
             this.txtCalle.TabIndex = 202;
@@ -749,6 +722,7 @@
             this.txtCP.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtCP.ForeColor = System.Drawing.Color.White;
             this.txtCP.Location = new System.Drawing.Point(887, 449);
+            this.txtCP.MaxLength = 5;
             this.txtCP.Name = "txtCP";
             this.txtCP.Size = new System.Drawing.Size(147, 23);
             this.txtCP.TabIndex = 204;
@@ -768,6 +742,7 @@
             this.txtInt.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtInt.ForeColor = System.Drawing.Color.White;
             this.txtInt.Location = new System.Drawing.Point(927, 386);
+            this.txtInt.MaxLength = 5;
             this.txtInt.Name = "txtInt";
             this.txtInt.Size = new System.Drawing.Size(107, 23);
             this.txtInt.TabIndex = 206;
@@ -787,6 +762,7 @@
             this.txtExt.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtExt.ForeColor = System.Drawing.Color.White;
             this.txtExt.Location = new System.Drawing.Point(927, 355);
+            this.txtExt.MaxLength = 5;
             this.txtExt.Name = "txtExt";
             this.txtExt.Size = new System.Drawing.Size(107, 23);
             this.txtExt.TabIndex = 208;
@@ -802,26 +778,13 @@
             this.label3.TabIndex = 210;
             this.label3.Text = "Fecha de nac:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(460, 592);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 33);
-            this.button1.TabIndex = 163;
-            this.button1.Text = "Reporte";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Alumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1064, 669);
-
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cbEstatus);
-
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.txtExt);
