@@ -32,7 +32,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cveGrupo = new System.Windows.Forms.TextBox();
+            this.txtcveGrupo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgGrupos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -95,12 +95,13 @@
             this.label3.TabIndex = 81;
             this.label3.Text = "Materia";
             // 
-            // cveGrupo
+            // txtcveGrupo
             // 
-            this.cveGrupo.Location = new System.Drawing.Point(126, 401);
-            this.cveGrupo.Name = "cveGrupo";
-            this.cveGrupo.Size = new System.Drawing.Size(162, 20);
-            this.cveGrupo.TabIndex = 80;
+            this.txtcveGrupo.Location = new System.Drawing.Point(126, 401);
+            this.txtcveGrupo.MaxLength = 10;
+            this.txtcveGrupo.Name = "txtcveGrupo";
+            this.txtcveGrupo.Size = new System.Drawing.Size(162, 20);
+            this.txtcveGrupo.TabIndex = 80;
             // 
             // label2
             // 
@@ -137,6 +138,7 @@
             // txtProfesor
             // 
             this.txtProfesor.Location = new System.Drawing.Point(126, 453);
+            this.txtProfesor.MaxLength = 40;
             this.txtProfesor.Name = "txtProfesor";
             this.txtProfesor.Size = new System.Drawing.Size(162, 20);
             this.txtProfesor.TabIndex = 87;
@@ -164,6 +166,7 @@
             // txtMateria
             // 
             this.txtMateria.Location = new System.Drawing.Point(126, 427);
+            this.txtMateria.MaxLength = 8;
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.Size = new System.Drawing.Size(162, 20);
             this.txtMateria.TabIndex = 90;
@@ -203,7 +206,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cveGrupo);
+            this.Controls.Add(this.txtcveGrupo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtgGrupos);
             this.Controls.Add(this.label1);
@@ -224,7 +227,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox cveGrupo;
+        private System.Windows.Forms.TextBox txtcveGrupo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtgGrupos;
         private System.Windows.Forms.Label label1;

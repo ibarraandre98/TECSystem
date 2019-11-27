@@ -24,16 +24,24 @@ namespace TECSystem
 
         void limpiar()
         {
-            cveGrupo.Clear();
+            txtcveGrupo.Clear();
             txtProfesor.Clear();
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-
-            grupos.agregar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
-            limpiar();
-            MostrarTabla();
+            if (txtMateria.Text==""||txtProfesor.Text==""||txtcveGrupo.Text=="")
+            {
+                MessageBox.Show("No puede ingresar Grupo, aún faltan datos por completar", "Datos incompletos",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                grupos.agregar_grupo(txtcveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
+                limpiar();
+                MostrarTabla();
+            }
+           
         }
 
         private void MostrarTabla()
@@ -56,17 +64,26 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            grupos.editar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
-            limpiar();
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnAgregar.Enabled = true;
-            MostrarTabla();
+            if (txtMateria.Text == "" || txtProfesor.Text == "" || txtcveGrupo.Text == "")
+            {
+                MessageBox.Show("No puede editar Grupo, aún faltan datos por completar", "Datos incompletos",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                grupos.editar_grupo(txtcveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
+                limpiar();
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnAgregar.Enabled = true;
+                MostrarTabla();
+            }
+         
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            grupos.eliminar_grupo(cveGrupo.Text);
+            grupos.eliminar_grupo(txtcveGrupo.Text);
             limpiar();
             btnEliminar.Enabled = false;
             btnEditar.Enabled = false;
@@ -81,7 +98,7 @@ namespace TECSystem
 
         private void DtgGrupos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            cveGrupo.Text = dtgGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
+            txtcveGrupo.Text = dtgGrupos.CurrentRow.Cells["cveGrupo"].Value.ToString();
             
             txtProfesor.Text = dtgGrupos.CurrentRow.Cells["profesor"].Value.ToString();
 

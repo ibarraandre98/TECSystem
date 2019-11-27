@@ -99,6 +99,7 @@
             // txtMatricula
             // 
             this.txtMatricula.Location = new System.Drawing.Point(145, 461);
+            this.txtMatricula.MaxLength = 9;
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(162, 20);
             this.txtMatricula.TabIndex = 74;
@@ -117,6 +118,7 @@
             // txtCveGrupo
             // 
             this.txtCveGrupo.Location = new System.Drawing.Point(145, 435);
+            this.txtCveGrupo.MaxLength = 10;
             this.txtCveGrupo.Name = "txtCveGrupo";
             this.txtCveGrupo.Size = new System.Drawing.Size(162, 20);
             this.txtCveGrupo.TabIndex = 72;

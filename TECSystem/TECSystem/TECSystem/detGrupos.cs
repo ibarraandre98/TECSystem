@@ -24,9 +24,18 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_detGrupos.AgregarGrupo(IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
-            MostrarTabla();
-            Limpiartxt();
+            if (txtMatricula.Text == "" || txtCveGrupo.Text == "" ||cbTipoCurso.Text == "")
+            {
+                MessageBox.Show("No puede agregar detalle de Grupo, aún faltan datos por completar", "Datos incompletos",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                _CN_detGrupos.AgregarGrupo(IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
+                MostrarTabla();
+                Limpiartxt();
+            }
+           
         }
 
         private void MostrarTabla()
@@ -45,12 +54,21 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            _CN_detGrupos.EditarGrupo(txtiddetGpo.Text, IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
-            MostrarTabla();
-            Limpiartxt();
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnAgregar.Enabled = true;
+            if (txtMatricula.Text == "" || txtCveGrupo.Text == "" || cbTipoCurso.Text == "")
+            {
+                MessageBox.Show("No puede editar detalle de Grupo, aún faltan datos por completar", "Datos incompletos",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                _CN_detGrupos.EditarGrupo(txtiddetGpo.Text, IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
+                MostrarTabla();
+                Limpiartxt();
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnAgregar.Enabled = true;
+            }
+           
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
