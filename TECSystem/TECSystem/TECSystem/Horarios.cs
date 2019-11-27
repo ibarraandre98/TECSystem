@@ -21,6 +21,7 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
+
             horarios.agregar_horarios(Grupo.Text,Convert.ToInt32(comboBox1.SelectedIndex.ToString()),Convert.ToInt32(comboBox2.SelectedIndex.ToString()),Convert.ToString(comboBox3.SelectedIndex.ToString()));
             MostrarTabla();
             limpiar();

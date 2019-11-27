@@ -98,6 +98,7 @@
             // cveGrupo
             // 
             this.cveGrupo.Location = new System.Drawing.Point(126, 401);
+            this.cveGrupo.MaxLength = 10;
             this.cveGrupo.Name = "cveGrupo";
             this.cveGrupo.Size = new System.Drawing.Size(162, 20);
             this.cveGrupo.TabIndex = 80;
@@ -137,6 +138,7 @@
             // txtProfesor
             // 
             this.txtProfesor.Location = new System.Drawing.Point(126, 453);
+            this.txtProfesor.MaxLength = 40;
             this.txtProfesor.Name = "txtProfesor";
             this.txtProfesor.Size = new System.Drawing.Size(162, 20);
             this.txtProfesor.TabIndex = 87;
@@ -164,6 +166,7 @@
             // txtMateria
             // 
             this.txtMateria.Location = new System.Drawing.Point(126, 427);
+            this.txtMateria.MaxLength = 8;
             this.txtMateria.Name = "txtMateria";
             this.txtMateria.Size = new System.Drawing.Size(162, 20);
             this.txtMateria.TabIndex = 90;
