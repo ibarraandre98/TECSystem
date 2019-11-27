@@ -74,5 +74,26 @@ namespace TECSystem
             r.setReporte(8);
             r.ShowDialog();
         }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            CN_Materia _CN_Materia = new CN_Materia();
+            _CN_Materia.AgregarMateria(txtMateria.Text, txtNombre.Text, Convert.ToInt32(txtTeoricas.Text), Convert.ToInt32(txtPracticas.Text), Convert.ToInt32(txtCreditos.Text), Convert.ToInt32(cbCarrera.SelectedValue.ToString()));
+            MostrarMaterias();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            CN_Materia _CN_Materia = new CN_Materia();
+            _CN_Materia.EditarMateria(Convert.ToInt32(txtMateria.Text), txtNombre.Text, Convert.ToInt32(txtTeoricas.Text), Convert.ToInt32(txtPracticas.Text), Convert.ToInt32(txtCreditos.Text), Convert.ToInt32(cbCarrera.SelectedValue.ToString()));
+            MostrarMaterias();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            CN_Materia _CN_Materia = new CN_Materia();
+            _CN_Materia.EliminarMateria(Convert.ToInt32(txtMateria.Text));
+            MostrarMaterias();
+        }
     }
 }

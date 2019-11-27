@@ -115,6 +115,33 @@ namespace TECSystem
             Matricula = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
             txtMatricula.Text = Matricula;
         }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            _CN_detGrupos.AgregarGrupo(IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
+            MostrarTabla();
+            Limpiartxt();
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            _CN_detGrupos.EditarGrupo(txtiddetGpo.Text, IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
+            MostrarTabla();
+            Limpiartxt();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+        }
+
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
+        {
+            _CN_detGrupos.EliminarGrupo(txtiddetGpo.Text);
+            MostrarTabla();
+            Limpiartxt();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+        }
     }
     }
 

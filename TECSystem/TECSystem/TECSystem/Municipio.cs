@@ -135,5 +135,26 @@ namespace TECSystem
             
             txtNombre.Clear();
         }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            CN_Municipio _CN_Municipio = new CN_Municipio();
+            _CN_Municipio.AgregarMunicipio(Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()), txtNombre.Text);
+            MostrarMunicipio();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            CN_Municipio _CN_Municipio = new CN_Municipio();
+            _CN_Municipio.EditarMunicipio(txtNombre.Text, id, Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()));
+            MostrarMunicipio();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            CN_Municipio _CN_Municipio = new CN_Municipio();
+            _CN_Municipio.eliminarMunicipio(id);
+            MostrarMunicipio();
+        }
     }
 }

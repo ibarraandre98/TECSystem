@@ -47,6 +47,7 @@
             // 
             // dtgCalles
             // 
+            this.dtgCalles.BackgroundColor = System.Drawing.Color.White;
             this.dtgCalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCalles.Location = new System.Drawing.Point(43, 91);
             this.dtgCalles.Name = "dtgCalles";

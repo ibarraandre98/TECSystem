@@ -65,6 +65,23 @@ namespace TECSystem
             txtCarrera.Text = dtgCarreras.CurrentRow.Cells["idCarrera"].Value.ToString();
         }
 
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            _CN_Especialidades.Agregarespecialidades(txtNombre.Text, txtCarrera.Text);
+            MostrarEspecialidades();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            //Aquí no hay nada 
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            //_CN_Especialidades.Editarespecialidades();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -119,7 +136,12 @@ namespace TECSystem
                 MessageBox.Show("Ha ocurrido un error" + ex, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+           // _CN_Especialidades.Eliminarespecialidades();
+        }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            //No habia nada
         private void dtgEspecialidades_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             idEspecialidad = dtgEspecialidades.CurrentRow.Cells["idEspecialidad"].Value.ToString();

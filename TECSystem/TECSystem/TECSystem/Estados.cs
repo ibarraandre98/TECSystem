@@ -94,6 +94,27 @@ namespace TECSystem
             btnEditar.Enabled = true;
         }
 
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            estados.agregar_estado(Nombre.Text);
+            limpiar();
+            MostrarEstados();
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            estados.editar_alumno(Convert.ToInt32(idEstados.Text), Nombre.Text);
+            limpiar();
+            MostrarEstados();
+        }
+
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
+        {
+            estados.eliminar_alumno(Convert.ToInt32(idEstados.Text));
+            limpiar();
+            MostrarEstados();
+        }
+
         private void SoloLetras(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))

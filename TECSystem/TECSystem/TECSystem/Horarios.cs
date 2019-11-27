@@ -110,5 +110,32 @@ namespace TECSystem
             r.setReporte(6);
             r.ShowDialog();
         }
+
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            horarios.agregar_horarios(Grupo.Text, Convert.ToInt32(comboBox1.SelectedIndex.ToString()), Convert.ToInt32(comboBox2.SelectedIndex.ToString()), Convert.ToString(comboBox3.SelectedIndex.ToString()));
+            MostrarTabla();
+            limpiar();
+        }
+
+        private void BtnEditar_Click_1(object sender, EventArgs e)
+        {
+            horarios.editar_horarios(Convert.ToInt32(idHorarios.Text), Grupo.Text, Convert.ToInt32(comboBox1.SelectedItem), Convert.ToInt32(comboBox2.SelectedItem), Convert.ToString(comboBox3.SelectedItem));
+            limpiar();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+        }
+
+        private void BtnEliminar_Click_1(object sender, EventArgs e)
+        {
+            horarios.eliminar_horarios(Convert.ToInt32(idHorarios.Text));
+            limpiar();
+            btnEliminar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnAgregar.Enabled = true;
+            MostrarTabla();
+        }
     }
 }

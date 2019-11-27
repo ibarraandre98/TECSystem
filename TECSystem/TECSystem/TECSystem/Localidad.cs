@@ -124,6 +124,27 @@ namespace TECSystem
         {
         }
 
+        private void BtnAgregar_Click_1(object sender, EventArgs e)
+        {
+            CN_Localidades _CN_Localidad = new CN_Localidades();
+            _CN_Localidad.AgregarLocalidad(Convert.ToInt32(cbMunicipio.Text), txtLocalidad.Text, Convert.ToInt32(cbTipo.Text));
+            MostrarLocalidad();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            CN_Localidades _CN_Localidades = new CN_Localidades();
+            _CN_Localidades.EditarMunicipio(Convert.ToInt32(cbMunicipio.Text), txtLocalidad.Text, id, Convert.ToInt32(cbTipo.Text));
+            MostrarLocalidad();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            CN_Localidades _CN_Localidades = new CN_Localidades();
+            _CN_Localidades.Eliminar(id);
+            MostrarLocalidad();
+        }
+
         private void limpiar()
         {
             txtLocalidad.Clear();
