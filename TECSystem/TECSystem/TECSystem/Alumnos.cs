@@ -26,6 +26,18 @@ namespace TECSystem
         {
             txtMatricula.Text = "";
             tutor.Text = "";
+            txtPaterno.Text = "";
+            txtMaterno.Text = "";
+            txtNombre.Text = "";
+            txtCurp.Text = "";
+            txtTelefono.Text = "";
+            txtExt.Text = "";
+            txtInt.Text = "";
+            txtCP.Text = "";
+            txtCalle.Text = "";
+            cbLocalidad.Text = "";
+            txtMatricula.Text = "";
+            cbCarrera.Text = "";
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -36,7 +48,7 @@ namespace TECSystem
                 cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,
                 cbLocalidad.SelectedValue.ToString());
             IDPersona = _CN_Personas.ultimoID();
-           
+
             _CN_Alumnos.agregar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
             mostrar_alumnos();
             limpiar();
@@ -74,9 +86,9 @@ namespace TECSystem
             CN_Personas _CN_Personas = new CN_Personas();
             IDPersona = _CN_Personas.ultimoID();
 
-            _CN_Personas.EditarPersonas(Convert.ToString(IDPersona),txtPaterno.Text,txtMaterno.Text,txtNombre.Text,
-                dtpFechaNac.Value,cbSexo.SelectedIndex.ToString(),txtCurp.Text,txtTelefono.Text,txtExt.Text,
-                txtInt.Text,txtCP.Text,cbEdoCivil.SelectedIndex.ToString(),cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,cbLocalidad.SelectedIndex.ToString());
+            _CN_Personas.EditarPersonas(Convert.ToString(IDPersona), txtPaterno.Text, txtMaterno.Text, txtNombre.Text,
+                dtpFechaNac.Value, cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text,
+                txtInt.Text, txtCP.Text, cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text, cbLocalidad.SelectedIndex.ToString());
 
 
 
@@ -85,7 +97,7 @@ namespace TECSystem
             limpiar();
         }
 
-       
+
 
         private void primerValorCB()
         {
@@ -206,7 +218,7 @@ namespace TECSystem
             txtMatricula.Text = dgvAlumnos.CurrentRow.Cells["matricula"].Value.ToString();
             cbEstatus.SelectedIndex = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["estatus"].Value.ToString());
             habilitarEdicion();
-            
+
             IDProfesor = dgvAlumnos.CurrentRow.Cells["tutor"].Value.ToString();
             foreach (DataGridViewRow row in dgvProfesores.Rows)
             {
@@ -242,35 +254,78 @@ namespace TECSystem
         }
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            CN_Personas _CN_Personas = new CN_Personas();
-            _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, dtpFechaNac.Value,
-                cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text,
-                cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,
-                cbLocalidad.SelectedValue.ToString());
-            IDPersona = _CN_Personas.ultimoID();
+            try
+            {
+                if (txtPaterno.Text == "" || txtMaterno.Text == "" || txtNombre.Text == "" || txtCurp.Text == "" ||
+                txtTelefono.Text == "" || txtExt.Text == "" || txtInt.Text == "" || txtCP.Text == "" ||
+                txtCalle.Text == "" || cbLocalidad.Text == "" || txtMatricula.Text == "" || cbCarrera.Text == ""
+                )
+                {
+                    MessageBox.Show("No puede ingresar Alumno, aún faltan datos por completar", "Datos incompletos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    CN_Personas _CN_Personas = new CN_Personas();
+                    _CN_Personas.AgregarPersonas(txtPaterno.Text, txtMaterno.Text, txtNombre.Text, dtpFechaNac.Value,
+                        cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text, txtInt.Text, txtCP.Text,
+                        cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text,
+                        cbLocalidad.SelectedValue.ToString());
+                    IDPersona = _CN_Personas.ultimoID();
 
-            _CN_Alumnos.agregar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
-            mostrar_alumnos();
-            limpiar();
+                    _CN_Alumnos.agregar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()),
+                        IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()),
+                        Convert.ToInt32(cbEstatus.SelectedIndex));
+                    mostrar_alumnos();
+                    limpiar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
 
         private void btnEditar_Click_1(object sender, EventArgs e)
         {
-            var fe = dtpFechaNac.Value;
-            var fe2 = DateTime.Parse(fe.ToString());
-            var final = fe2.ToShortDateString();
-            CN_Personas _CN_Personas = new CN_Personas();
-            IDPersona = _CN_Personas.ultimoID();
+            try
+            {
+                if (txtPaterno.Text == "" || txtMaterno.Text == "" || txtNombre.Text == "" || txtCurp.Text == "" ||
+                txtTelefono.Text == "" || txtExt.Text == "" || txtInt.Text == "" || txtCP.Text == "" ||
+                txtCalle.Text == "" || cbLocalidad.Text == "" || txtMatricula.Text == "" || cbCarrera.Text == ""
+                )
+                {
+                    MessageBox.Show("No puede editar Alumno, aún faltan datos por completar", "Datos incompletos",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    var fe = dtpFechaNac.Value;
+                    var fe2 = DateTime.Parse(fe.ToString());
+                    var final = fe2.ToShortDateString();
+                    CN_Personas _CN_Personas = new CN_Personas();
+                    IDPersona = _CN_Personas.ultimoID();
+           
+            IDPersona = Convert.ToInt32(dgvAlumnos.CurrentRow.Cells["idPersona"].Value.ToString());
 
-            _CN_Personas.EditarPersonas(Convert.ToString(IDPersona), txtPaterno.Text, txtMaterno.Text, txtNombre.Text,
-                dtpFechaNac.Value, cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text,
-                txtInt.Text, txtCP.Text, cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text, cbLocalidad.SelectedIndex.ToString());
+                    _CN_Personas.EditarPersonas(Convert.ToString(IDPersona), txtPaterno.Text, txtMaterno.Text, txtNombre.Text,
+                        dtpFechaNac.Value, cbSexo.SelectedIndex.ToString(), txtCurp.Text, txtTelefono.Text, txtExt.Text,
+                        txtInt.Text, txtCP.Text, cbEdoCivil.SelectedIndex.ToString(), cbDiscapacidad.SelectedIndex.ToString(), txtCalle.Text, cbLocalidad.SelectedIndex.ToString());
 
-            deshabilitarEdicion();
+                    deshabilitarEdicion();
 
-            _CN_Alumnos.editar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
-            mostrar_alumnos();
-            limpiar();
+                    _CN_Alumnos.editar_alumno(txtMatricula.Text, IDPersona, Convert.ToInt32(cbCarrera.SelectedValue.ToString()), IDProfesor, Convert.ToInt32(cbEspecialidad.SelectedValue.ToString()), Convert.ToInt32(cbEstatus.SelectedIndex));
+                    mostrar_alumnos();
+                    limpiar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnEliminar_Click_1(object sender, EventArgs e)
@@ -280,6 +335,45 @@ namespace TECSystem
             deshabilitarEdicion();
             limpiar();
         }
+
+        private void soloNumeros(KeyPressEventArgs e)
+        {
+            //Para obligar a que sólo se introduzcan números 
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan 
+                e.Handled = true;
+            }
+        }
+
+        private void txtExt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(e);
+        }
+
+        private void txtInt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(e);
+        }
+
+        private void txtCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            soloNumeros(e);
+        }
     }
-    }
-    
+}
+

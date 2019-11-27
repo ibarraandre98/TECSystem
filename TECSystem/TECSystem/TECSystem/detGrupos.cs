@@ -24,9 +24,18 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            _CN_detGrupos.AgregarGrupo(IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
-            MostrarTabla();
-            Limpiartxt();
+            if (txtCveGrupo.Text == "" || txtMatricula.Text == "" ||cbTipoCurso.Text == "")
+            {
+                MessageBox.Show("No puede ingresar Grupo, aún faltan datos por completar", "Datos incompletos",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                _CN_detGrupos.AgregarGrupo(IDGrupo, Matricula, cbTipoCurso.Text.Split(':').ElementAt(0));
+                MostrarTabla();
+                Limpiartxt();
+            }
+           
         }
 
         private void MostrarTabla()

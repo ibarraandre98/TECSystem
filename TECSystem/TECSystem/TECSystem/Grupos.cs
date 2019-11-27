@@ -30,10 +30,17 @@ namespace TECSystem
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-
-            grupos.agregar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
-            limpiar();
-            MostrarTabla();
+            if (txtMateria.Text==""||txtProfesor.Text==""||cveGrupo.Text=="")
+            {
+                MessageBox.Show("No puede ingresar Grupo, aún faltan datos por completar", "Datos incompletos",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                grupos.agregar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
+                limpiar();
+                MostrarTabla();
+            }
         }
 
         private void MostrarTabla()
@@ -56,12 +63,21 @@ namespace TECSystem
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            grupos.editar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
-            limpiar();
-            btnEliminar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnAgregar.Enabled = true;
-            MostrarTabla();
+            if (txtMateria.Text == "" || txtProfesor.Text == "" || cveGrupo.Text == "")
+            {
+                MessageBox.Show("No puede editar Grupo, aún faltan datos por completar", "Datos incompletos",
+                       MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                grupos.editar_grupo(cveGrupo.Text, idMateria.ToString(), idProfesor.ToString());
+                limpiar();
+                btnEliminar.Enabled = false;
+                btnEditar.Enabled = false;
+                btnAgregar.Enabled = true;
+                MostrarTabla();
+            }
+      
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

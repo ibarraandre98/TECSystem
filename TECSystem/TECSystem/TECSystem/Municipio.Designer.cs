@@ -65,9 +65,11 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(146, 393);
+            this.txtNombre.MaxLength = 40;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(162, 20);
             this.txtNombre.TabIndex = 13;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloLetras);
             // 
             // label4
             // 
@@ -94,9 +96,11 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(146, 341);
+            this.txtNumero.MaxLength = 10;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(162, 20);
             this.txtNumero.TabIndex = 9;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumeros);
             // 
             // label2
             // 
