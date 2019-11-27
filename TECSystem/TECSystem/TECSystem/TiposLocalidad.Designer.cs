@@ -44,6 +44,7 @@
             // 
             this.txtTipo.Location = new System.Drawing.Point(202, 407);
             this.txtTipo.Name = "txtTipo";
+            this.txtTipo.ReadOnly = true;
             this.txtTipo.Size = new System.Drawing.Size(162, 20);
             this.txtTipo.TabIndex = 71;
             // 

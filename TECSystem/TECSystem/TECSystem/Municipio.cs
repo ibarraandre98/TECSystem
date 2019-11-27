@@ -40,9 +40,17 @@ namespace TECSystem
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            CN_Municipio _CN_Municipio = new CN_Municipio();
-            _CN_Municipio.AgregarMunicipio(Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()), txtNombre.Text);
-            MostrarMunicipio();
+            if (txtNombre.TextLength<=0 || txtNumero.TextLength<=0 || cbEstado.Text.Length<=0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                CN_Municipio _CN_Municipio = new CN_Municipio();
+                _CN_Municipio.AgregarMunicipio(Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()), txtNombre.Text);
+                MostrarMunicipio();
+                limpiar();
+            }
         }
 
         private void dtgPersonas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -55,16 +63,32 @@ namespace TECSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CN_Municipio _CN_Municipio = new CN_Municipio();
-            _CN_Municipio.EditarMunicipio(txtNombre.Text, id, Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()));
-            MostrarMunicipio();
+            if (txtNombre.TextLength <= 0 || txtNumero.TextLength <= 0 || cbEstado.Text.Length <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                CN_Municipio _CN_Municipio = new CN_Municipio();
+                _CN_Municipio.EditarMunicipio(txtNombre.Text, id, Convert.ToInt32(txtNumero.Text), Convert.ToInt32(cbEstado.SelectedValue.ToString()));
+                MostrarMunicipio();
+                limpiar();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CN_Municipio _CN_Municipio = new CN_Municipio();
-            _CN_Municipio.eliminarMunicipio(id);
-            MostrarMunicipio();
+            if (txtNombre.TextLength <= 0 || txtNumero.TextLength <= 0 || cbEstado.Text.Length <= 0)
+            {
+                MessageBox.Show("Faltan datos por ingresar");
+            }
+            else
+            {
+                CN_Municipio _CN_Municipio = new CN_Municipio();
+                _CN_Municipio.eliminarMunicipio(id);
+                MostrarMunicipio();
+                limpiar();
+            }
         }
 
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,6 +99,41 @@ namespace TECSystem
         private void cbEstado_SelectionChangeCommitted(object sender, EventArgs e)
         {
             MessageBox.Show(cbEstado.SelectedValue.ToString());
+        }
+
+        
+
+        private void SoloNumeros(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso 
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                //el resto de teclas pulsadas se desactivan 
+                e.Handled = true;
+            }
+        }
+        private void SoloLetras(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void limpiar()
+        {
+            txtNumero.Clear();
+            
+            txtNombre.Clear();
         }
     }
 }
